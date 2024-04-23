@@ -1,17 +1,16 @@
 <x-main-layout>
 <header class="bg-white dark:bg-gray-800">
-@livewire('main-nav')
-<div
-    class="relative h-[350px] overflow-hidden bg-[url('https://tecdn.b-cdn.net/img/new/slides/041.webp')] bg-cover bg-[50%] bg-no-repeat">
     <div
-      class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
-      <div class="flex h-full items-center justify-center">
-        <div class="px-6 text-center text-white md:px-12">
-          <h1 class="mb-6 text-5xl font-bold">Heading</h1>
+        class="relative h-[350px] overflow-hidden bg-[url('https://tecdn.b-cdn.net/img/new/slides/041.webp')] bg-cover bg-[50%] bg-no-repeat">
+        <div
+        class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
+        <div class="flex h-full items-center justify-center">
+            <div class="px-6 text-center text-white md:px-12">
+            <h1 class="mb-6 text-5xl font-bold">Heading</h1>
+            </div>
         </div>
-      </div>
+        </div>
     </div>
-</div>
 </header>
   <section class="bg-white dark:bg-gray-900 items-center">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">

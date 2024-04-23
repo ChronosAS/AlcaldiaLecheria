@@ -20,9 +20,9 @@
         @stack('styles')
         <!-- Styles -->
         @livewireStyles
-    </head> 
-    <body class="bg-gray-500 w-full ">
-        
+    </head>
+    <body class="bg-gray-500 h-full ">
+        @livewire('main-nav')
         <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">
             {{ $slot }}
         </div>
