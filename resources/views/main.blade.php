@@ -1,5 +1,6 @@
 <x-main-layout>
 <header class="bg-white dark:bg-gray-800">
+@livewire('main-nav')
     <div
         class="relative h-[350px] overflow-hidden bg-[url('https://tecdn.b-cdn.net/img/new/slides/041.webp')] bg-cover bg-[50%] bg-no-repeat">
         <div
@@ -12,7 +13,7 @@
         </div>
     </div>
 </header>
-  <section class="bg-white dark:bg-gray-900 items-center">
+  <section class="bg-white dark:bg-gray-500 items-center">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400 text-center">
           <div class="mx-auto">
