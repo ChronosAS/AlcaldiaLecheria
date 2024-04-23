@@ -32,9 +32,9 @@
                     Copyright © Alcaldía de Lechería 2024
                 </span>
                  <div class="m-2 text-center">
-                        <a class="btn btn-md p-2 text-black dark:text-black text-center sm:text-center " href="https://twitter.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a class="btn btn-md p-2 text-violet-400 dark:text-violet-400 text-center sm:text-center " href="https://www.instagram.com/alcaldiadelecheria/"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-md p-2 text-red-500  dark:text-red-500 text-center sm:text-center " href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-md p-2 text-black dark:text-blak text-center sm:text-center border border-black border-solid rounded-border " href="https://twitter.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a class="btn btn-md p-2 text-violet-400 dark:text-violet-400 text-center sm:text-center border border-black border-solid-black rounded-border" href="https://www.instagram.com/alcaldiadelecheria/"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-md p-2 text-red-500  dark:text-red-500 text-center sm:text-center border border-black border-solid rounded-border" href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
                     </div>
                 <ul class="flex flex-wrap items-center mt-3  font-medium text-gray-500 dark:text-gray-400 sm:text-center">
                     <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
