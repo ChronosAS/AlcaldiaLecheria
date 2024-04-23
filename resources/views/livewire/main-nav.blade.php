@@ -1,5 +1,5 @@
-<div>
-<nav class="flex flex-wrap items-center justify-between p-3 dark:bg-slate-800 bg-slate-200">
+<div class="">
+<nav class="flex flex-no-wrap  items-center  top-0 justify-between p-3 dark:bg-black bg-slate-200">
     
     <div class="flex md:hidden">
         <button id="hamburger">
