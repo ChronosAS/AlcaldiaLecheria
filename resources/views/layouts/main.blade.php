@@ -21,8 +21,8 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="bg-gray-500 h-full ">
-        
+    <body class="bg-gray-500 h-full" x-data="{ showBar: false }">
+
         <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">
             {{ $slot }}
         </div>
@@ -31,11 +31,6 @@
                 <span class="flex flex-wrap items-center sm:text text-gray-500 sm:text-center dark:text-gray-400 mx-12">
                     Copyright © Alcaldía de Lechería 2024
                 </span>
-                 <div class="m-2 text-center">
-                        <a class="btn btn-md p-2 text-black dark:text-blak text-center sm:text-center border border-gray-500 border-solid rounded-border hover:border-blue-600 rounded-full " href="https://twitter.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a class="btn btn-md p-2 text-violet-400 dark:text-violet-400 text-center sm:text-center border border-gray-500 border-solid-black rounded-border hover:border-blue-600 rounded-full" href="https://www.instagram.com/alcaldiadelecheria/"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-md p-2 text-red-500  dark:text-red-500 text-center sm:text-center border border-gray-500 border-solid rounded-border hover:border-blue-600 rounded-full" href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-                    </div>
                 <ul class="flex flex-wrap items-center mt-3  font-medium text-gray-500 dark:text-gray-400 sm:text-center">
                     <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
                     <li><a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
