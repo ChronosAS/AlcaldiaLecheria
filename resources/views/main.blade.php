@@ -13,6 +13,12 @@
         </div>
     </div>
 </header>
+<section class="bg-white dark:bg-gray-500 items-center">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400 text-center">
+      </div>
+  </div>
+</section>
   <section class="bg-white dark:bg-gray-500 items-center">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400 text-center">
