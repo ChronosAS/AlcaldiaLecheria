@@ -40,7 +40,7 @@
             class="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 sm:mb-0 sm:mt-0"
             href="{{ route('app') }}">
             <img
-              src="{{ asset('storage/img/logo-lecheria.png') }}"
+              src="{{ asset('assets/img/logo-lecheria.png') }}"
               style="height: 35px"
               alt="Logo Lecheria"
               loading="lazy" />

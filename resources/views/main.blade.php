@@ -1,8 +1,8 @@
 @push('styles')
-    <style>  
+    <style>
         section#contact {
                 background-color: gray;
-                background-image: url("../storage/img/map-image.png");
+                background-image: url("../assets/img/map-image.png");
                 background-repeat: no-repeat;
                 background-position: center;
         }
