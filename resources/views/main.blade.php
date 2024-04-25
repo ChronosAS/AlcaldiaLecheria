@@ -17,7 +17,7 @@
             class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
             <div class="flex h-full items-center justify-center">
                 <div class="px-6  text-center text-white md:px-12 sm:absolute sm:bottom-0 sm:right-0 sm:m-6">
-                    <h1 class="text-5xl font-bold ">LECHERÍA </h1>
+                    <h1 class="text-5xl font-bold ">LECHERÍA</h1>
                     <h1 class="text-2xl font-bold ">¡UN ESTILO DE VIDA!</h1>
                 </div>
             </div>
@@ -32,8 +32,8 @@
             class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
             <div class="flex h-full items-center justify-center">
                 <div class="px-6  text-center text-white md:px-12 sm:absolute sm:bottom-0 sm:right-0 sm:m-6">
-                    <h1 class="text-5xl font-bold ">LECHERÍA </h1>
-                    <h1 class="text-2xl font-bold ">¡UN ESTILO DE VIDA!</h1>
+                    <h1 class="text-2xl font-bold "> Nacer en Lechería es sinónimo de fe<br>mariana, de amar sus amaneceres y<br>atardeceres. Esta ciudad, me vio nacer<br>y me ha visto crecer trabajando por ella</h1>
+                    <h1 class="text-2xl font-bold ">¡Gracias vecino por la confianza<br>brindada, seguimos juntos!</h1>
                 </div>
             </div>
             </div>
