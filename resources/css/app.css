@@ -5,12 +5,3 @@
 [x-cloak] {
     display: flex;   
 }
-
-
-section#contact {
-    background-color: gray;
-    background-image: url("../assets/img/map-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
