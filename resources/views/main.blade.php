@@ -1,20 +1,11 @@
-@push('styles')
-    <style>
-        section#contact {
-                background-color: gray;
-                background-image: url("../assets/img/map-image.png");
-                background-repeat: no-repeat;
-                background-position: center;
-        }
-    </style>
-@endpush
+
 <x-main-layout>
-    <header class="bg-white dark:bg-gray-800">
+    <header id="header1">
         @livewire('main-nav')
         <div
-            class="relative h-[350px] overflow-hidden bg-[url('https://tecdn.b-cdn.net/img/new/slides/041.webp')] bg-cover bg-[50%] bg-no-repeat">
+            class="relative h-[350px] overflow-hidden bg-[url('../assets/img/lecheria-bg.jpg')] bg-cover bg-[50%] bg-no-repeat">
             <div
-            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
+            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
             <div class="flex h-full items-center justify-center">
                 <div class="px-6  text-center text-white md:px-12 sm:absolute sm:bottom-0 sm:right-0 sm:m-6">
                     <h1 class="text-5xl font-bold ">LECHERÍA</h1>
@@ -24,10 +15,10 @@
             </div>
         </div>
     </header>
-    <header class="bg-white dark:bg-gray-800">
+    <header class="bg-white">
         @livewire('main-nav')
         <div
-            class="relative h-[350px] overflow-hidden bg-[url('https://tecdn.b-cdn.net/img/new/slides/041.webp')] bg-cover bg-[50%] bg-no-repeat">
+            class="relative h-[350px] overflow-hidden bg-[url('')] bg-cover bg-[50%] bg-no-repeat">
             <div
             class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
             <div class="flex h-full items-center justify-center">
