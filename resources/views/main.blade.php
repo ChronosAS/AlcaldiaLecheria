@@ -38,7 +38,7 @@ section#contact {
                 </div>
             </div>
             </div>
-        </div>
+        </div>s
     </header>
     <header class=" dark:bg-white max-h-150" id="header2" >
         <div class="sm:grid sm:grid-rows-2 sm:grid-flow-col grid-cols-1"> 
