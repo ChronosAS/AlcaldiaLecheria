@@ -40,13 +40,13 @@ section#contact {
             </div>
         </div>
     </header>
-    <header class=" dark:bg-slate-400 max-h-150" id="header2" >
+    <header class=" dark:bg-white max-h-150" id="header2" >
         <div class="sm:grid sm:grid-rows-2 sm:grid-flow-col grid-cols-1"> 
             <div class="sm:col-span-2 alig-middle text-center text-black pt-20">
                   <h1 class="text-2xl font-bold "> Nacer en Lechería es sinónimo de fe<br>mariana, de amar sus amaneceres y<br>atardeceres. Esta ciudad, me vio nacer<br>y me ha visto crecer trabajando por ella<br>¡Gracias vecino por la confianza<br>brindada, seguimos juntos!</h1>
             </div>
-            <div class="sm:row-span-1 sm:object-center dark:text-black">
-                <img src="{{asset('assets/img/firma-alcalde.png')}}" class="h-[15rem] w-max relative">
+            <div class="sm:row-span-1 sm:object-center dark:text-black justify-self-center">
+                <img src="{{asset('assets/img/firma-alcalde-b.png')}}" class="h-[15rem] w-max relative objet">
             </div>
             <div class="sm:row-span-3 sm:col-span-2">
                 <img src="{{asset('assets/img/alcalde.png')}}" class="h-[400px] sm:min-h-[600px] px-12">
