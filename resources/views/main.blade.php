@@ -27,18 +27,12 @@ section#contact {
 <x-main-layout>
     <header id="header1" class="pt-40 pb-56 xl:bg-cover">
         @livewire('main-nav')
-        <div
-            class="relative h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
-            <div
-            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
-            <div class="flex h-full items-center justify-center">
-                <div class="px-6  text-center text-white md:px-12 sm:absolute sm:bottom-0 sm:right-0 sm:m-6">
+            <div class="flex h-full items-center justify-end  top-0  left-0">
+                <div class=" text-white  sm:absolute leading-none">
                     <h1 class="text-7xl font-bold  ">LECHERÍA</h1>
-                    <h1 class="text-xl font-bold ">¡UN ESTILO DE VIDA!</h1>
+                    <h1 class="text-4xl font-bold ">¡UN ESTILO DE VIDA!</h1>
                 </div>
             </div>
-            </div>
-        </div>s
     </header>
     <header class=" dark:bg-white max-h-150" id="header2" >
         <div class="sm:grid sm:grid-rows-2 sm:grid-flow-col grid-cols-1"> 
