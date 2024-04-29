@@ -25,25 +25,25 @@ section#contact {
 </style>
 @endpush
 <x-main-layout>
-    <header id="header1" class="pt-40 pb-56 xl:bg-cover">
+    <header id="header1" class="pt-40 pb-56 xl:bg-cover relative">
         @livewire('main-nav')
-            <div class="flex h-full items-center justify-end  top-0  left-0">
-                <div class=" text-white  sm:absolute leading-none">
+            <div class="flex">
+                <div class=" text-white text-center sm:absolute  sm:bottom-0 sm:right-0 sm:m-6 px-6 md:px-12">
                     <h1 class="text-7xl font-bold  ">LECHERÍA</h1>
                     <h1 class="text-4xl font-bold ">¡UN ESTILO DE VIDA!</h1>
                 </div>
             </div>
     </header>
     <header class=" dark:bg-white max-h-150" id="header2" >
-        <div class="sm:grid sm:grid-rows-2 sm:grid-flow-col grid-cols-1"> 
-            <div class="sm:col-span-2 alig-middle text-center text-black pt-20">
+        <div class="sm:grid place-items-center  sm:grid-rows-2 sm:grid-flow-col grid-cols-1"> 
+            <div class="sm:col-span-2  text-center text-black pt-20">
                   <h1 class="text-4xl font-bold "> Nacer en Lechería es sinónimo de fe<br>mariana, de amar sus amaneceres y<br>atardeceres. Esta ciudad, me vio nacer<br>y me ha visto crecer trabajando por ella<br>¡Gracias vecino por la confianza<br>brindada, seguimos juntos!</h1>
             </div>
-            <div class="sm:row-span-1 sm:object-center dark:text-black justify-self-center">
-                <img src="{{asset('assets/img/firma-alcalde-b.png')}}" class="h-[15rem] w-max relative objet">
+            <div class="sm:row-span-1 sm:object-center ">
+                <img src="{{asset('assets/img/firma-alcalde-b.png')}}" class="h-[15rem] w-max ">
             </div>
-            <div class="sm:row-span-3 sm:col-span-2">
-                <img src="{{asset('assets/img/alcalde.png')}}" class="h-[400px] sm:min-h-[600px] px-12 justify-self-center">
+            <div class="sm:row-span-3 sm:col-span-2 ">
+                <img src="{{asset('assets/img/alcalde.png')}}" class="h-[400px] sm:min-h-[600px] px-12 ">
             </div>
         </div>
     </header>
