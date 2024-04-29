@@ -29,9 +29,9 @@ section#contact {
     <header id="header1" class="pt-40 pb-56 xl:bg-cover relative">
         @livewire('main-nav')
             <div class="flex">
-                <div class=" text-white text-center sm:absolute  sm:bottom-0 sm:right-0 sm:m-6 px-6 md:px-12">
-                    <h1 class="text-7xl font-bold  ">LECHERÍA</h1>
-                    <h1 class="text-4xl font-bold ">¡UN ESTILO DE VIDA!</h1>
+                <div class=" text-white text-center sm:absolute  sm:bottom-0 sm:right-0 sm:m-6 px-6 md:px-12 font-sans font-black">
+                    <h1 class="text-7xl ">LECHERÍA</h1>
+                    <h1 class="text-4xl ">¡UN ESTILO DE VIDA!</h1>
                 </div>
             </div>
     </header>
@@ -40,7 +40,7 @@ section#contact {
             <div class="sm:col-span-2 sm:row-span-5 sm:h-auto sm:w-auto h-0 w-0">
                 <img src="{{asset('assets/img/alcalde.png')}}" class="sm:h-[40rem]">
             </div>
-            <div class="sm:col-span-3 sm:row-span-3 col-start-3 sm:object-center text-center text-black pt-20">
+            <div class="sm:col-span-3 sm:row-span-3 col-start-3 sm:object-center text-center text-black pt-20 font-sans">
                   <h1 class="sm:text-4xl text-xl font-bold "> Nacer en Lechería es sinónimo de fe<br>mariana, de amar sus amaneceres y<br>atardeceres. Esta ciudad, me vio nacer<br>y me ha visto crecer trabajando por ella<br>¡Gracias vecino por la confianza<br>brindada, seguimos juntos!</h1>
             </div>
             <div class="sm:col-span-3 sm:row-span-2 col-start-3 row-start-4 flex items-center justify-center">
