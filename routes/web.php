@@ -16,6 +16,10 @@ Route::get('/', function (){
     return view('main');
 })->name('app');
 
+Route::get('/historia', function (){
+    return view('history');
+})->name('app.history');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
