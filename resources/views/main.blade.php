@@ -7,36 +7,22 @@ section#contact {
     background-position: center;
 }
 
-#header1 {
+/* #header1 {
     background-image: url("../assets/img/lecheria-bg.jpg");
     height: 100%;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
-}
-/**#header2 {
-    background-color: white;
-    background-image: url("../assets/img/alcalde.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
-    
-
-}**/
+} */
 </style>
 @endpush
 <x-main-layout>
-    <header id="header1" class="pt-40 pb-56 xl:bg-cover relative">
-        @livewire('main-nav')
-            <div class="flex">
-                <div class=" text-white text-center sm:absolute  sm:bottom-0 sm:right-0 sm:m-6 px-6 md:px-12 font-sans font-black">
-                    <h1 class="text-7xl ">LECHERÍA</h1>
-                    <h1 class="text-4xl ">¡UN ESTILO DE VIDA!</h1>
-                </div>
-            </div>
-    </header>
+    <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
+        <h1 class="text-7xl ">LECHERÍA</h1>
+        <h1 class="text-4xl ">¡UN ESTILO DE VIDA!</h1>
+    </x-main-header>
     <header class=" dark:bg-white max-h-150" id="header2" >
-        <div class="place-items-center sm:grid sm:grid-cols-5 sm:grid-rows-5 gap-4"> 
+        <div class="place-items-center sm:grid sm:grid-cols-5 sm:grid-rows-5 gap-4">
             <div class="sm:col-span-2 sm:row-span-5 sm:h-auto sm:w-auto h-0 w-0">
                 <img src="{{asset('assets/img/alcalde.png')}}" class="sm:h-[40rem]">
             </div>
