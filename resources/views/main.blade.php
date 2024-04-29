@@ -20,6 +20,7 @@ section#contact {
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
+    
 
 }**/
 </style>
@@ -36,8 +37,8 @@ section#contact {
     </header>
     <header class=" dark:bg-white max-h-150" id="header2" >
         <div class="place-items-center sm:grid sm:grid-cols-5 sm:grid-rows-5 gap-4"> 
-            <div class="sm:col-span-2 sm:row-span-5 sm:h-auto sm:w-auto h-0 w-0 ">
-                <img src="{{asset('assets/img/alcalde.png')}}" class="h-[400px] sm:min-h-[600px] px-12 ">
+            <div class="sm:col-span-2 sm:row-span-5 sm:h-auto sm:w-auto h-0 w-0">
+                <img src="{{asset('assets/img/alcalde.png')}}" class="sm:h-[40rem]">
             </div>
             <div class="sm:col-span-3 sm:row-span-3 col-start-3 sm:object-center text-center text-black pt-20">
                   <h1 class="sm:text-4xl text-xl font-bold "> Nacer en Lechería es sinónimo de fe<br>mariana, de amar sus amaneceres y<br>atardeceres. Esta ciudad, me vio nacer<br>y me ha visto crecer trabajando por ella<br>¡Gracias vecino por la confianza<br>brindada, seguimos juntos!</h1>
