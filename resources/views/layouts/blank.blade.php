@@ -22,25 +22,10 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body {{ $attributes->merge(['class'=>'bg-gray-500 h-full']) }} x-data="{ showBar: false }">
-        @livewire('main-nav')
+    <body {{ $attributes->merge(['bg-gray-500 h-full']) }}>
         <main>
             {{ $slot }}
         </main>
-        <footer class="bg-white shadow m-auto dark:bg-white">
-            <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between sm:items-center sm:justify-center">
-                <span class="flex flex-wrap items-center sm:text text-gray-500 sm:text-center dark:text-gray-400 mx-12">
-                    Copyright © Alcaldía de Lechería 2024
-                </span>
-                <ul class="flex flex-wrap items-center mt-3  font-medium text-gray-500 dark:text-gray-400 sm:text-center">
-                    <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
-                    <li><a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:underline me-4 md:me-6">Licensing</a></li>
-                    <li><a href="#" class="hover:underline">Contact</a></li>
-                </ul>
-            </div>
-        </footer>
-
         @livewireScripts
         @stack('scripts')
     </body>
