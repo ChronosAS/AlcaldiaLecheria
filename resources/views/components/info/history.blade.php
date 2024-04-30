@@ -1,7 +1,7 @@
-<div class="my-8 space-y-4 px-4 mx-auto max-w-7xl">
+<div class="my-8 mt-0 space-y-4 px-4 mx-auto max-w-7xl">
     <x-full-card>
         <x-slot name="title">
-        <div class=" text-5xl">
+        <div class=" text-3xl">
             Lechería: Historia de una ciudad modelo
             </div>
         </x-slot>
