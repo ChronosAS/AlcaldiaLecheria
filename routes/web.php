@@ -20,6 +20,10 @@ Route::get('/historia', function (){
     return view('history');
 })->name('app.history');
 
+Route::get('/himno', function (){
+    return view('hymn');
+})->name('app.hymn');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
