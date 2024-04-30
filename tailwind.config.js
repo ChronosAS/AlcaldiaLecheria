@@ -3,6 +3,7 @@ import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
+
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
@@ -19,6 +20,6 @@ export default {
             },
         },
     },
-
-    plugins: [forms, typography,require("tw-elements/plugin.cjs, flowbite/plugin")],
+    darkMode: 'media',
+    plugins: [forms, typography,require("tw-elements/plugin.cjs"),require("flowbite/plugin")],
 };
