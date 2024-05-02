@@ -2,7 +2,7 @@
     <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
         <h1 class="text-7xl">Historia</h1>
     </x-main-header>
-    <div class="mt-4 px-4 mx-auto max-w-7xl border-b border-gray-200 dark:border-gray-700 dark:bg-gray-700m sm:rounded-xl">
+    <div class="mt-4 px-4 mx-auto max-w-7xl border-b border-gray-200 dark:border-gray-700 dark:bg-gray-700 sm:rounded-xl">
         <ul 
             class="flex flex-wrap -mb-px text-lg font-medium text-center items-center justify-evenly"
             id="default-tab" 
