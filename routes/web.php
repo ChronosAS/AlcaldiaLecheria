@@ -16,13 +16,9 @@ Route::get('/', function (){
     return view('main');
 })->name('app');
 
-Route::get('/historia', function (){
-    return view('history');
-})->name('app.history');
-
-Route::get('/himno', function (){
-    return view('hymn');
-})->name('app.hymn');
+Route::get('/informacion', function (){
+    return view('info');
+})->name('app.info');
 
 Route::middleware([
     'auth:sanctum',
