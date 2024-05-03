@@ -1,8 +1,8 @@
 <!-- Navbar -->
-<div>
+<div x-data="{ contact: false }">
     <nav
-      :class="{ 'bg-blue-900 shadow transition duration-100' : showBar, 'bg-blue-900 sm:bg-transparent' : !showBar}"
-      @scroll.window="showBar = (window.pageYOffset > 20) ? true : false"
+      :class="{ 'bg-blue-900 shadow transition duration-100' : showBar, 'bg-blue-900 sm:bg-transparent' : !showBar }"
+      @scroll.window="showBar = (window.pageYOffset > 20) ? true : false, contact = (window.pageYOffset > document.querySelector('#contact').getBoundingClientRect().top) ? true : false"
       class=" flex-no-wrap z-10 fixed top-0 flex w-full items-center justify-between py-2 sm:flex-wrap sm:justify-start sm:py-4"
       >
       <div class="flex w-full flex-wrap items-center justify-between px-3">
@@ -52,34 +52,39 @@
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <!-- Projects link -->
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-400 dark:[&.active]:text-orange-400"
-                href="http://pdul.lecheria.gov.ve">
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                href="http://pdul.lecheria.gov.ve" target="_blank" data-twe-nav-link-ref>
                             PDUL LECHERÍA
                         </a>
             </li>
             <!-- About me link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-400 dark:[&.active]:text-orange-400"
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
                 href="http://200.41.118.109/appweb/"
+                target="_blank"
                 data-twe-nav-link-ref
                 >DECLARACIÓN EN LÍNEA</a
               >
             </li>
             <!-- Testimonials link -->
-            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-400 dark:[&.active]:text-orange-400"
-                href="#contact"
-                data-twe-nav-link-ref
-                >ATENCIÓN AL CIUDADANO</a
-              >
-            </li>
+            @if (request()->routeIs('app'))
+                <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+                <a
+                    class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                    :class="{ 'active': contact }"
+                    href="#contact"
+                    data-twe-nav-link-ref
+                    >ATENCIÓN AL CIUDADANO</a
+                >
+                </li>
+            @endif
             <!-- Contact link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-400 dark:[&.active]:text-orange-400"
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
                 href="https://lecheria.bmeurl.co/10FF3CFB"
+                target="_blank"
                 data-twe-nav-link-ref
                 >BOLETÍN DE NOTICIAS</a
               >
@@ -87,7 +92,7 @@
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-400 dark:[&.active]:text-orange-400"
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }}"
                 href="{{ route('app.info') }}"
                 data-twe-nav-link-ref
                 >NUESTRO MUNICIPIO</a

@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 [x-cloak] {
-    display: flex;   
+    display: flex;
+}
+
+html {
+    scroll-behavior: smooth;
 }
