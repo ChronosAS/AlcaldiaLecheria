@@ -8,6 +8,9 @@
         <x-slot name="subTitle">
         <div class="text-xl">
             <h1>Letra y música: José Enrique (Chelique) Sarabia. <br> Arreglos corales: Ali Agüero.</h1>
+            <audio controls>
+                <source src="{{ asset('assets/audio/03 Himno Municipal completa.mp3') }}" type="audio/mpeg">
+            </audio>
             <hr class="border border-orange-400 px-10">
         </div>
         </x-slot>
