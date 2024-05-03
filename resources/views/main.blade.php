@@ -18,8 +18,10 @@ section#contact {
 @endpush
 <x-main-layout>
     <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
-        <h1 class="text-7xl ">LECHERÍA</h1>
-        <h1 class="text-4xl ">¡UN ESTILO DE VIDA!</h1>
+        <div class="text-center">
+            <h1 class="sm:text-7xl text-6xl">LECHERÍA</h1>
+            <h1 class="sm:text-4xl text-3xl">¡UN ESTILO DE VIDA!</h1>
+        </div>
     </x-main-header>
     <header class=" dark:bg-white max-h-150" id="header2" >
         <div class="place-items-center sm:grid sm:grid-cols-5 sm:grid-rows-5 gap-4">
