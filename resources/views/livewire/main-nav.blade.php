@@ -47,7 +47,7 @@
           </a>
           <!-- Left navigation links -->
           <ul
-            class="text-lg list-style-none me-auto flex flex-col ps-0 sm:flex-row"
+            class="text-md list-style-none me-auto flex flex-col ps-0 sm:flex-row"
             data-twe-navbar-nav-ref>
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <!-- Projects link -->
