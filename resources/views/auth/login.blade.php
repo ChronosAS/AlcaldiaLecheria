@@ -17,12 +17,12 @@
 
             <div>
                 <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full dark:bg-white text-black dark:text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="email" name="email" :value="old('email')" required autofocus autocomplete="username"  />
+                <x-input id="email" class="block mt-1 w-full dark:bg-white focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="email" name="email" :value="old('email')" required autofocus autocomplete="username"  style="color:black"/>
             </div>
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full focus:border-orange-500 dark:focus:border-orange-500  focus:ring-orange-500 dark:focus:ring-orange-600 dark:bg-white text-black dark:text-black" type="password" name="password" required autocomplete="current-password" />
+                <x-input id="password" class="block mt-1 w-full focus:border-orange-500 dark:focus:border-orange-500  focus:ring-orange-500 dark:focus:ring-orange-600 dark:bg-white" type="password" name="password" required autocomplete="current-password" style="color:black"/>
             </div>
 
             <div class="block mt-4">
