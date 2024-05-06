@@ -57,7 +57,7 @@
                                     @if (Auth::user()->allTeams()->count() > 1)
                                         <div class="border-t border-slate-200 dark:border-slate-300"></div>
 
-                                        <div class="block px-4 py-2 text-xs text-gray-400">
+                                        <div class="block px-4 py-2 text-xs text-white">
                                             {{ __('Switch Teams') }}
                                         </div>
 
