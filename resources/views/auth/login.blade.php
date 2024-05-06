@@ -40,7 +40,7 @@
                 @endif
 
                 <x-button class="ms-4 text-blue-900">
-                    {{ __('Log in') }}
+                    {{ __('Login') }}
                 </x-button>
             </div>
         </form>
