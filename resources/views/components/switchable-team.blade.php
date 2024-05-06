@@ -7,7 +7,7 @@
     <!-- Hidden Team ID -->
     <input type="hidden" name="team_id" value="{{ $team->id }}">
 
-    <x-dynamic-component :component="$component" class="text-white dark:text-white" href="#" x-on:click.prevent="$root.submit();">
+    <x-dynamic-component :component="$component" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500" href="#" x-on:click.prevent="$root.submit();">
         <div class="flex items-center">
             @if (Auth::user()->isCurrentTeam($team))
                 <svg class="me-2 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

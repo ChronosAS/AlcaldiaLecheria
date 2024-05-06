@@ -28,7 +28,7 @@
 
             <x-input id="name"
                         type="text"
-                        class="mt-1 block w-full"
+                        class="mt-1 block w-full bg-white dark:bg-white text-black dark:text-black focus:border-orange-500 dark:focus:border-orange-600 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-600"
                         wire:model="state.name"
                         :disabled="! Gate::check('update', $team)" />
 

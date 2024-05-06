@@ -43,12 +43,12 @@
                                     </div>
 
                                     <!-- Team Settings -->
-                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" class="text-white dark:text-white hover:bg-orange-500 dark:hover:bg-orange-500">
+                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
                                         {{ __('Team Settings') }}
                                     </x-dropdown-link>
 
                                     @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                        <x-dropdown-link href="{{ route('teams.create') }}" class="text-white dark:text-white hover:bg-orange-500 dark:hover:bg-orange-500">
+                                        <x-dropdown-link href="{{ route('teams.create') }}" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
                                             {{ __('Create New Team') }}
                                         </x-dropdown-link>
                                     @endcan
@@ -98,12 +98,12 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}" class="text-white dark:text-white hover:bg-orange-500 dark:hover:bg-orange-500">
+                            <x-dropdown-link href="{{ route('profile.show') }}" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                <x-dropdown-link href="{{ route('api-tokens.index') }}" class="text-white dark:text-white hover:bg-orange-500 dark:hover:bg-orange-500">
+                                <x-dropdown-link href="{{ route('api-tokens.index') }}" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
                                     {{ __('API Tokens') }}
                                 </x-dropdown-link>
                             @endif
@@ -115,7 +115,7 @@
                                 @csrf
 
                                 <x-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();" class="text-white dark:text-white hover:bg-orange-500 dark:hover:bg-orange-500">
+                                         @click.prevent="$root.submit();" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
@@ -183,7 +183,7 @@
 
                 <!-- Team Management -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="border-t border-gray-200 dark:border-gray-600"></div>
+                    <div class="border-t border-gray-200 dark:border-gray-600 hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500"></div>
 
                     <div class="block px-4 py-2 text-xs text-gray-400">
                         {{ __('Manage Team') }}
@@ -202,7 +202,7 @@
 
                     <!-- Team Switcher -->
                     @if (Auth::user()->allTeams()->count() > 1)
-                        <div class="border-t border-gray-200 dark:border-gray-600"></div>
+                        <div class="border-t border-gray-200 dark:border-gray-600 hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500"></div>
 
                         <div class="block px-4 py-2 text-xs text-gray-400">
                             {{ __('Switch Teams') }}
