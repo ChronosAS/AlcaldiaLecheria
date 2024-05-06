@@ -25,7 +25,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/admin', function () {
+    Route::get('admin/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 });
