@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Posts extends Model implements HasMedia
+class Post extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes, HasUuids;
 
