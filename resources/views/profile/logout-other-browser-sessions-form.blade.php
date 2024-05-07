@@ -76,7 +76,8 @@
                                 placeholder="{{ __('Password') }}"
                                 x-ref="password"
                                 wire:model="password"
-                                wire:keydown.enter="logoutOtherBrowserSessions" />
+                                wire:keydown.enter="logoutOtherBrowserSessions" 
+                                style="color: black"/>
 
                     <x-input-error for="password" class="mt-2" />
                 </div>

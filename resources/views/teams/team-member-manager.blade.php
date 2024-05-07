@@ -23,7 +23,7 @@
                     <!-- Member Email -->
                     <div class="col-span-6 sm:col-span-4">
                         <x-label for="email" value="{{ __('Email') }}" />
-                        <x-input id="email" type="email" class="mt-1 block w-full bg-white dark:bg-white text-black dark:text-black focus:border-orange-500 dark:focus:border-orange-600 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="addTeamMemberForm.email" />
+                        <x-input id="email" type="email"  style="color: black" class="mt-1 block w-full bg-white dark:bg-white text-black dark:text-black focus:border-orange-500 dark:focus:border-orange-600 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="addTeamMemberForm.email" />
                         <x-input-error for="email" class="mt-2" />
                     </div>
 

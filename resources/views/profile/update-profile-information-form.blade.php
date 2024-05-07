@@ -55,14 +55,14 @@
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="name" value="{{ __('Name') }}" />
-            <x-input id="name" type="text" class="mt-1 block w-full dark:bg-white dark:text-black  bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="state.name" required autocomplete="name" />
+            <x-input id="name" type="text" style="color: black" class="mt-1 block w-full dark:bg-white dark:text-black  bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="state.name" required autocomplete="name" />
             <x-input-error for="name" class="mt-2" />
         </div>
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="email" value="{{ __('Email') }}" />
-            <x-input id="email" type="email" class="mt-1 block w-full dark:bg-white dark:text-black bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="state.email" required autocomplete="username" />
+            <x-input id="email" type="email" style="color: black" class="mt-1 block w-full dark:bg-white dark:text-black bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="state.email" required autocomplete="username" />
             <x-input-error for="email" class="mt-2" />
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) && ! $this->user->hasVerifiedEmail())
