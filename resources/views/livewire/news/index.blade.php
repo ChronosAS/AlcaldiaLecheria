@@ -3,8 +3,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-blue-900 overflow-hidden shadow-xl sm:rounded-lg">
                 <x-table.table>
-                    <x-slot name="thead" class="bg-blue-900">
-                        <tr >
+                    <x-slot name="thead" >
+                        <tr class="bg-blue-900 text-white">
                             <x-table.th>
                                 <x-table.th-sortable title="Titulo" field="title" :sortAsc="$sortAsc" :sortField="$sortField" />
                             </x-table.th>
@@ -57,7 +57,7 @@
                 </x-table.table>
             </div>
             <div class="m-4 text-white dark:text-white">
-                {{ $posts->links() }}
+                {{ $posts->links('vendor.livewire.tailwind') }}
             </div>
         </div>
     </div>
