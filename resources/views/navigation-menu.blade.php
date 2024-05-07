@@ -15,9 +15,11 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                        <x-nav-link href="{{ route('news.index') }}" :active="request()->routeIs('dashboard')">
+                    @if(Auth::user()->currentTeam->name == 'Prensa')
+                        <x-nav-link href="{{ route('news.index') }}" :active="request()->routeIs('news.index')">
                             Noticias
                         </x-nav-link>
+                    @endif
                 </div>
             </div>
 
