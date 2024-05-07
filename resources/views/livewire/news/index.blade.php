@@ -3,8 +3,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-blue-900 overflow-hidden shadow-xl sm:rounded-lg">
                 <x-table.table>
-                    <x-slot name="thead">
-                        <tr>
+                    <x-slot name="thead" class="bg-blue-900">
+                        <tr >
                             <x-table.th>
                                 <x-table.th-sortable title="Titulo" field="title" :sortAsc="$sortAsc" :sortField="$sortField" />
                             </x-table.th>
@@ -21,7 +21,7 @@
                     </x-slot>
                     <x-slot name="tbody">
                         @foreach ($posts as $post)
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <tr class="bg-white border-b dark:bg-blue-950 dark:border-gray-700">
                                 <x-table.td>{{ $post->title }}</x-table.td>
                                 {{-- <x-table.td>{{ $post->subtitle }}</x-table.td> --}}
                                 <x-table.td>{{ date('d-m-Y',strtotime($post->created_at)) }}</x-table.td>
