@@ -118,7 +118,7 @@
                     </span>
                   </a>
                   <ul
-                    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-blue-800 bg-clip-padding text-left text-base shadow-lg font-sans data-[twe-dropdown-show]:block dark:bg-blue-800"
+                    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-blue-800 bg-clip-padding text-left text-base shadow-lg font-sans data-[twe-dropdown-show]:block dark:bg-blue-800 text-md p-5 sm:p-0"
                     aria-labelledby="dropdownMenuButton1"
                     data-twe-dropdown-menu-ref>
                     <li>
