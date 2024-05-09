@@ -96,41 +96,48 @@
                 data-twe-nav-link-ref
                 >NUESTRO MUNICIPIO</a>
             </li>
-              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-dropdown-ref>
-                  <a
-                    class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 font-sans"
+             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+              <a
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }}"
+                href="{{ route('app.ordinances') }}"
+                data-twe-nav-link-ref
+                >ORDENANZAS</a>
+            </li>
+            {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-dropdown-ref>
+                <a
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 font-sans"
+                href="#"
+                type="button"
+                id="dropdownMenuButton2"
+                data-twe-dropdown-toggle-ref
+                aria-expanded="false">
+                DROPDOWN
+                <span class=" absolute [&>svg]:w-5">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                        fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd" />
+                    </svg>
+                </span>
+                </a>
+                <ul
+                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-blue-800 bg-clip-padding text-left text-base shadow-lg font-sans data-[twe-dropdown-show]:block dark:bg-blue-800 text-md p-5 sm:p-0"
+                aria-labelledby="dropdownMenuButton1"
+                data-twe-dropdown-menu-ref>
+                <li>
+                    <a
+                    class="block w-full whitespace-nowrap bg-blue-800 px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline  dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
                     href="#"
-                    type="button"
-                    id="dropdownMenuButton2"
-                    data-twe-dropdown-toggle-ref
-                    aria-expanded="false">
-                    DROPDOWN
-                    <span class=" absolute [&>svg]:w-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor">
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd" />
-                      </svg>
-                    </span>
-                  </a>
-                  <ul
-                    class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-blue-800 bg-clip-padding text-left text-base shadow-lg font-sans data-[twe-dropdown-show]:block dark:bg-blue-800 text-md p-5 sm:p-0"
-                    aria-labelledby="dropdownMenuButton1"
-                    data-twe-dropdown-menu-ref>
-                    <li>
-                      <a
-                        class="block w-full whitespace-nowrap bg-blue-800 px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline  dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                        href="#"
-                        data-twe-dropdown-item-ref
-                        >ORDENANZA</a
-                      >
-                    </li>
-                  </ul>
-              </li>
+                    data-twe-dropdown-item-ref
+                    >ORDENANZA</a
+                    >
+                </li>
+                </ul>
+            </li> --}}
           </ul>
         </div>
 

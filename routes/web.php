@@ -16,6 +16,8 @@ Route::get('/', function (){
     return view('main');
 })->name('app');
 
+Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');
+
 Route::get('/informacion', function (){
     return view('info');
 })->name('app.info');
