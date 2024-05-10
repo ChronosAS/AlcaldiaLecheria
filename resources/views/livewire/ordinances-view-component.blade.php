@@ -2,18 +2,16 @@
   <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
       <h1 class="text-7xl">ORDENANZAS</h1>
   </x-main-header>
-  <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
-    <div>
-      <div class=" text-center">
+  <div class="bg-white mx-20 shadow px-4 py-5 ">
       <div class="mt-5 space-y-4 md:space-y-6">
-      <div class="grid grid-cols-5 grid-rows-5 gap-0">
+         <div class="grid grid-cols-5 grid-rows-5 gap-0">
             <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="inline-flex items-center  mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-            <span class="sr-only">Open sidebar</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-            </svg>
+               <span class="sr-only">Open sidebar</span>
+               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+               </svg>
             </button>
-            <aside id="separator-sidebar" class=" col-span-2 row-span-5" aria-label="Sidebar">
+            <aside id="separator-sidebar" class="row-span-5 col-start-2" aria-label="Sidebar">
                <div class=" bg-gray-50 dark:bg-blue-800">
                   <ul class="font-medium">
                      <li>
@@ -115,54 +113,55 @@
                   </ul>
                </div>
             </aside>
-            <div id="accordionFlushExample" class="col-span-3 row-span-5 col-start-3">
+            <div id="accordionFlushExample" class="col-span-2 row-span-5 col-start-3">
                <div class="border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-body-dark">
-            <h2 class="mb-0" id="headingTwo">
-               <button
-               class="group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
-               type="button"
-               data-twe-collapse-init
-               data-twe-collapse-collapsed
-               data-twe-target="#collapseTwo"
-               aria-expanded="false"
-               aria-controls="collapseTwo">
-               Accordion Item #2
-               <span
-                  class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6 ">
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     fill="none"
-                     viewBox="0 0 24 24"
-                     stroke-width="1.5"
-                     stroke="currentColor">
-                     <path
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-               </span>
-               </button>
-            </h2>
-            <div
-               id="collapseTwo"
-               class="!visible hidden"
-               data-twe-collapse-item
-               aria-labelledby="headingTwo"
-               data-twe-parent="#accordionExample">
-               <div class="px-5 py-4">
-               <strong>This is the second item's accordion body.</strong> It is
-               hidden by default, until the collapse plugin adds the appropriate
-               classes that we use to style each element. These classes control
-               the overall appearance, as well as the showing and hiding via CSS
-               transitions. You can modify any of this with custom CSS or
-               overriding our default variables. It's also worth noting that just
-               about any HTML can go within the <code>.accordion-body</code>,
-               though the transition does limit overflow.
+                  <h2 class="mb-0" id="headingTwo">
+                  <button
+                  class="group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                  type="button"
+                  data-twe-collapse-init
+                  data-twe-collapse-collapsed
+                  data-twe-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                     Accordion Item #2
+                     <span
+                        class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6 ">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           fill="none"
+                           viewBox="0 0 24 24"
+                           stroke-width="1.5"
+                           stroke="currentColor">
+                           <path
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                     </span>
+                  </button>
+                  </h2>
+               </div>
+               <div
+                  id="collapseTwo"
+                  class="!visible hidden"
+                  data-twe-collapse-item
+                  aria-labelledby="headingTwo"
+                  data-twe-parent="#accordionExample">
+                  <div class="px-5 py-4">
+                  <strong>This is the second item's accordion body.</strong> It is
+                  hidden by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                  </div>
                </div>
             </div>
          </div>
       </div>
-     </div>
-    </div>
+   </div>
 </div>
 
