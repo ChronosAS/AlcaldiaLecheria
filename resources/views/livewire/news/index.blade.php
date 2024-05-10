@@ -2,7 +2,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-blue-900 overflow-hidden shadow-xl sm:rounded-lg">
-                <x-table.table>
+                <x-table.table-rounded>
                     <x-slot name="thead" >
                         <tr class="bg-blue-900 text-white">
                             <x-table.th>
@@ -54,7 +54,7 @@
                     </x-slot>
                     <x-slot name="tfoot">
                     </x-slot>
-                </x-table.table>
+                </x-table.table-rounded>
             </div>
             <div class="m-4 text-white dark:text-white">
                 {{ $posts->links('vendor.livewire.tailwind') }}
