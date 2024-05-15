@@ -6,6 +6,12 @@ use Livewire\Component;
 
 class OrdinancesViewComponent extends Component
 {
+
+    public function loadOrdinances()
+    {
+
+    }
+
     public function render()
     {
         return view('livewire.ordinances-view-component')->layout('layouts.main');
