@@ -2,7 +2,7 @@
     <div>
         <div class=" text-center">
             <h3 class="text-lg font-medium leading-6 text-slate-900">
-                {{ $title }}
+                {{ $title ?? '' }}
             </h3>
             <p class="mt-1 text-sm text-slate-500">
                 {{ $subTitle ?? '' }}

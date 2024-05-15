@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-blank-layout>
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
@@ -33,4 +33,4 @@
             </div>
         </form>
     </x-authentication-card>
-</x-main-layout>
+</x-blank-layout>
