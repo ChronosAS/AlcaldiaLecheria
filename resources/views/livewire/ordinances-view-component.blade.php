@@ -129,24 +129,6 @@
                 <!--   Product card Ends -->
 
             </section>
-            {{-- <section
-            class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 items-start ">
-                <section class="p-2 w-[12rem] mx-auto py-5 sm:m-0 bg-blue-200 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
-                    <h1 class="">Soft Plushy</h1>
-                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, incidunt!</p>
-                    <button class="p-2 px-6 bg-blue-500 text-white rounded-md hover:bg-blue-600">Add To Cart</button>
-                </section>
-                <section class="p-2 w-[12rem] mx-auto py-5 sm:m-0 bg-blue-200 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
-                    <h1 class="">Soft Plushy</h1>
-                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, incidunt!</p>
-                    <button class="p-2 px-6 bg-blue-500 text-white rounded-md hover:bg-blue-600">Add To Cart</button>
-                </section>
-                <section class="p-2 w-[12rem] mx-auto py-5 sm:m-0 bg-blue-200 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
-                    <h1 class="">Soft Plushy</h1>
-                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, incidunt!</p>
-                    <button class="p-2 px-6 bg-blue-500 text-white rounded-md hover:bg-blue-600">Add To Cart</button>
-                </section>
-            </section> --}}
           </div>
         </div>
     </div>
