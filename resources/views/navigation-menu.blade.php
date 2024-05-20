@@ -20,6 +20,11 @@
                             Noticias
                         </x-nav-link>
                     @endif
+                    @if(Auth::user()->currentTeam->name == 'Despacho')
+                        <x-nav-link href="{{ route('ordinance.index') }}" :active="request()->routeIs('ordinance.index')">
+                            Ordenanzas
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 

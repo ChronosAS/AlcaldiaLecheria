@@ -37,7 +37,7 @@
                 </ul>
             </div>
         </footer>
-
+        @stack('modals')
         @livewireScripts
         @stack('scripts')
     </body>

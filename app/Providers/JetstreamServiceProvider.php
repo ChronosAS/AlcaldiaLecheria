@@ -49,6 +49,7 @@ class JetstreamServiceProvider extends ServiceProvider
             'create',
             'read',
             'update',
+            'soft-delete',
             'delete',
         ])->description('Administrator users can perform any action.');
 
@@ -56,6 +57,7 @@ class JetstreamServiceProvider extends ServiceProvider
             'read',
             'create',
             'update',
+            'soft-delete',
         ])->description('Editor users have the ability to read, create, and update.');
     }
 }

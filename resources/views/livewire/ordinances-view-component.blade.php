@@ -9,9 +9,9 @@
 
                 <!--    Product card  -->
                 <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    <a href="#" wire:click="$toggle('ordinance006Modal')">
+                        <img src="{{ asset('assets/img/ordinances/N006-2024/frontpage.jpg') }}"
+                                alt="N006-2024" class="h-90 w-72 object-cover rounded-t-xl" />
                         <div class="px-4 py-3 w-72">
                             <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
                             <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
@@ -22,114 +22,36 @@
                     </a>
                 </div>
                 <!--   Product card Ends -->
-                <!--    Product card  -->
-                <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-                        <div class="px-4 py-3 w-72">
-                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
-                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
-                            <div class="flex items-center">
-                                <p class="text-lg font-semibold text-white cursor-auto my-3">$149</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!--   Product card Ends -->
-                <!--    Product card  -->
-                <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-                        <div class="px-4 py-3 w-72">
-                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
-                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
-                            <div class="flex items-center">
-                                <p class="text-lg font-semibold text-white cursor-auto my-3">$149</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!--   Product card Ends -->
-                <!--    Product card  -->
-                <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-                        <div class="px-4 py-3 w-72">
-                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
-                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
-                            <div class="flex items-center">
-                                <p class="text-lg font-semibold text-white cursor-auto my-3">$149</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!--   Product card Ends -->
-                <!--    Product card  -->
-                <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-                        <div class="px-4 py-3 w-72">
-                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
-                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
-                            <div class="flex items-center">
-                                <p class="text-lg font-semibold text-white cursor-auto my-3">$149</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!--   Product card Ends -->
-                <!--    Product card  -->
-                <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-                        <div class="px-4 py-3 w-72">
-                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
-                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
-                            <div class="flex items-center">
-                                <p class="text-lg font-semibold text-white cursor-auto my-3">$149</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!--   Product card Ends -->
-                <!--    Product card  -->
-                <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-                        <div class="px-4 py-3 w-72">
-                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
-                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
-                            <div class="flex items-center">
-                                <p class="text-lg font-semibold text-white cursor-auto my-3">$149</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!--   Product card Ends -->
-                <!--    Product card  -->
-                <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-                        <div class="px-4 py-3 w-72">
-                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
-                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
-                            <div class="flex items-center">
-                                <p class="text-lg font-semibold text-white cursor-auto my-3">$149</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!--   Product card Ends -->
-
             </section>
           </div>
         </div>
     </div>
+    @push('modals')
+        <x-dialog-modal wire:model.live="ordinance006Modal">
+            <x-slot name="title">
+
+            </x-slot>
+
+            <x-slot name="content">
+               <x-carousel>
+                    <x-slot name="items">
+                        @foreach ($images as $image)
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="{{ asset($image) }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                        @endforeach
+                    </x-slot>
+                    <x-slot name="indicators">
+                        {{-- @foreach ($images as $index => $image)
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide {{ $index }}" data-carousel-slide-to="{{ $index }}"></button>
+                        @endforeach--}}
+                    </x-slot>
+               </x-carousel>
+            </x-slot>
+
+            <x-slot name="footer">
+
+            </x-slot>
+        </x-dialog-modal>
+    @endpush
 </div>

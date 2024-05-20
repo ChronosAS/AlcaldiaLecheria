@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\News;
+namespace App\Livewire\Admin\News;
 
 use App\Concerns\LivewireCustomPagination;
 use App\Models\News\Post;
@@ -38,7 +38,7 @@ class Index extends Component
 
     public function render()
     {
-        return view('livewire.news.index',[
+        return view('livewire.admin.news.index',[
             'posts' => $this->loadPosts()
         ])->layout('layouts.admin',['header'=>'Noticias']);
     }
