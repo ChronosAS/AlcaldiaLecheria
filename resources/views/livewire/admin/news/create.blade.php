@@ -12,7 +12,8 @@
 
             <x-slot name="form">
                 <div class="col-span-6 sm:col-span-4">
-                   
+                    <x-label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titular de la noticia</label>
+                    <x-input type="text" id="small-input" class="block w-full p-2  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600">
                 </div>
                 <div class="col-span-6 sm:col-span-4">
                     <x-label for="date" value="Fecha" required="true"/>
@@ -20,7 +21,11 @@
                     <x-input-error for="date" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-4">
-                   
+                   <x-label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Noticia</label>
+                    <textarea id="message" rows="4" class="block p-2.5 mt-1 w-full text-sm  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600" placeholder="Escribe La noticia"></textarea>
+                    {{--<x-label for="file" value="Archivo PDF" required="true"/>
+                    <x-input id="file" type="file" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600" wire:model="state.name" autofocus />
+                    <x-input-error for="file" class="mt-2" />--}}
                 </div>
             </x-slot>
 
