@@ -6,7 +6,7 @@
             </x-slot>
 
             <x-slot name="description">
-                Agregar numero y fecha de la ordenanza
+                Agregue el número y fecha de la ordenanza
             </x-slot>
 
             <x-slot name="form">
@@ -28,7 +28,7 @@
             </x-slot>
 
             <x-slot name="actions">
-                <x-button>
+                <x-button data-twe-ripple-init data-twe-ripple-color="light">
                     Agregar
                 </x-button>
             </x-slot>

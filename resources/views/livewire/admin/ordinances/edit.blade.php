@@ -3,11 +3,11 @@
   <div class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 dark:bg-blue-900 rounded-lg">
         <x-form-section submit="create">
             <x-slot name="title">
-                Detalles
+                Edición
             </x-slot>
 
             <x-slot name="description">
-                Edita el Número y fecha de la ordenanza
+                Edita el número y fecha de la ordenanza
             </x-slot>
 
             <x-slot name="form">
@@ -29,7 +29,7 @@
             </x-slot>
 
             <x-slot name="actions">
-                <x-button>
+                <x-button data-twe-ripple-init data-twe-ripple-color="light">
                     Editar
                 </x-button>
             </x-slot>
