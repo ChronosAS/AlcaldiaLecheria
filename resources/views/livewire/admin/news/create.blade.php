@@ -26,7 +26,7 @@
 
             <x-slot name="actions">
                 <x-button data-twe-ripple-init data-twe-ripple-color="light">
-                    Agregar
+                    Crear
                 </x-button>
             </x-slot>
         </x-form-section>
