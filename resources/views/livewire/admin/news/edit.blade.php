@@ -29,7 +29,7 @@
             </x-slot>
 
             <x-slot name="actions">
-                <x-button>
+                <x-button data-twe-ripple-init data-twe-ripple-color="light">
                     Editar
                 </x-button>
             </x-slot>
