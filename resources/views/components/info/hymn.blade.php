@@ -9,7 +9,7 @@
         <div class="text-xl">
             <h1>Letra y música: José Enrique (Chelique) Sarabia. <br> Arreglos corales: Ali Agüero.</h1>
             <div>
-            <audio controls style="margin: 0 auto; display: block;">
+            <audio controls style="margin: 0 auto; display: block; ">
                 <source src="{{ asset('assets/audio/03 Himno Municipal completa.mp3') }}" type="audio/mpeg">
             </audio>
             </div>

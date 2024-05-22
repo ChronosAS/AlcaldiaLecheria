@@ -9,7 +9,7 @@
         <div class="text-xl">
             <h1>Diseñado por: Francia Zaurin</h1>
             <div class="flex items-center justify-center">
-            <img src="{{asset('assets/img/bandera.jpg')}}" class="h-[7rem] m-4">
+            <img src="{{asset('assets/img/bandera.jpg')}}" class="h-[7rem] m-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 ">
             </div>
             <hr class="border border-orange-400 px-10">
         </div>

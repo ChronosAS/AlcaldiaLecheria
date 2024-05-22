@@ -9,7 +9,7 @@
         <div class="text-xl">
             <h1>Creado por: Raúl Jesús Orta Pardo y Maximilian Köpp Marcano</h1>
             <div class="flex items-center justify-center">
-            <img src="{{asset('assets/img/Escudo.png')}}" class="h-[15rem]">
+            <img src="{{asset('assets/img/Escudo.png')}}" class="h-[15rem] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 ">
             </div>
             <hr class="border border-orange-400 px-10">
         </div>
