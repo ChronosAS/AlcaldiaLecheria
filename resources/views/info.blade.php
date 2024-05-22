@@ -5,7 +5,7 @@
         </x-main-header>
         <div x-data="{ tab: 'Historia'}" class="mt-4 px-4 mx-auto max-w-7xl border-b border-gray-200 dark:border-gray-700 dark:bg-blue-900 sm:rounded-xl ">
             <ul
-                class="flex flex-wrap -mb-px text-lg font-medium text-center items-center justify-evenly text-white shadow-2xl "
+                class="flex flex-wrap -mb-px text-lg font-medium text-center items-center justify-evenly text-white shadow-2xl"
                 id="default-tab"
                 data-tabs-toggle="#default-tab-content"
                 role="tablist"
