@@ -15,7 +15,7 @@
                                 <x-table.th-sortable title="Fecha" field="date" :sortAsc="$sortAsc" :sortField="$sortField" />
                             </x-table.th>
                             <x-table.th>
-                                <x-buttons.primary-href title="Agregar" class="" href="{{ route('ordinance.create') }}" role="button"/>
+                                <x-buttons.primary-href title="Agregar" class="" wire:navigate.hover href="{{ route('ordinance.create') }}" role="button"/>
                             </x-table.th>
                         </tr>
                     </x-slot>
