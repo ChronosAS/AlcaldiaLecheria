@@ -8,7 +8,7 @@
                 {{ $subTitle ?? '' }}
             </p>
         </div>
-        <div class="mt-5 space-y-4 md:space-y-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-150 ease-out hover:ease-in-out hover:shadow-blue-400 ">
+        <div class="mt-5 space-y-4 md:space-y-6 rounded-lg ">
             {{ $content }}
         </div>
     </div>
