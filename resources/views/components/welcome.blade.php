@@ -1,12 +1,9 @@
 <div class=" bg-white dark:bg-blue-950 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
-    <img src="{{ asset('assets/img/logo-lecheria.png') }}" class="h-50 w-70" alt="Logo Lecheria" loading="lazy" />
-    {{--<x-application-logo class="block h-auto w-auto" />--}}
-    <h1 class="mt-8 text-2xl font-medium text-gray-900 dark:text-gray-200 text-center">
-   
-    </h1>
-
-    <p class="mt-6 text-gray-500 dark:text-gray-400 leading-relaxed  text-justify">
-        
+    <a class="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 sm:mb-0 sm:mt-0" wire:navigate href="{{ route('app') }}">
+    <img src="{{ asset('assets/img/logo-lecheria.png') }}" class="h-50 w-70" alt="Logo Lecheria" loading="lazy"/>
+    </a>
+    <p class="mt-6 text-white dark:text-white leading-relaxed  text-justify">
+       
     </p>
 </div>
 
@@ -15,7 +12,7 @@
         <div class="flex items-center">
             
             <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-gray-200">
-                {{--<a href="https://laravel.com/docs"></a>--}}
+              
             </h2>
         </div>
 
@@ -24,7 +21,7 @@
         </p>
 
         <p class="mt-4 text-sm">
-            <a href="https://laravel.com/docs" class="inline-flex items-center font-semibold text-indigo-700 dark:text-indigo-300">
+            <a href="https://laravel.com/docs" class="inline-flex items-center font-semibold  dark:text-white">
                
 
                 
@@ -35,16 +32,16 @@
     <div>
         <div class="flex items-center">
            
-            <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-gray-200">
-                {{--<a href="https://laracasts.com"></a>--}}
+            <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-white">
+              
             </h2>
         </div>
 
-        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed text-justify">
+        <p class="mt-4 text-white dark:text-white text-sm leading-relaxed text-justify">
             
 
         <p class="mt-4 text-sm">
-            {{--<a href="https://laracasts.com" class="inline-flex items-center font-semibold text-indigo-700 dark:text-indigo-300">--}}
+        
                 
 
                 
@@ -55,12 +52,12 @@
     <div>
         <div class="flex items-center">
            
-            <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-gray-200">
-                {{--<a href="https://tailwindcss.com/"></a>--}}
+            <h2 class="ms-3 text-xl font-semibold text-white dark:text-white">
+               
             </h2>
         </div>
 
-        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed text-justify">
+        <p class="mt-4 text-white dark:text-white text-sm leading-relaxed text-justify">
             
         </p>
     </div>
@@ -68,12 +65,12 @@
     <div>
         <div class="flex items-center">
             
-            <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-gray-200">
+            <h2 class="ms-3 text-xl font-semibold text-whiet dark:text-white">
                
             </h2>
         </div>
 
-        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed text-justify">
+        <p class="mt-4 text-white dark:text-gray-400 text-sm leading-relaxed text-justify">
             
         </p>
     </div>
