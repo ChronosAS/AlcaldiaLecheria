@@ -7,6 +7,7 @@
     <div class="text-left col-span-2 row-span-2 col-start-4 ">
         <h1 class="mt-8 sm:text-4xl text-4xl text-white dark:text-white font-sans font-black">PANEL<br>ADMINISTRATIVO</h1>
     </div>
+    
 </div>
 
 <div class="bg-gray-200 dark:bg-blue-900 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
