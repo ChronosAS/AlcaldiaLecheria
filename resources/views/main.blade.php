@@ -23,7 +23,7 @@ section#contact {
             <h1 class="sm:text-4xl text-3xl">¡UN ESTILO DE VIDA!</h1>
         </div>
     </x-main-header>
-    <header class=" dark:bg-white max-h-150" id="header2" >
+    <header class=" bg-white max-h-150" id="header2" >
         <div class="place-items-center sm:grid sm:grid-cols-5 sm:grid-rows-5 gap-4">
             <div class="sm:col-span-2 sm:row-span-5 sm:h-auto sm:w-auto h-0 w-0">
                 <img src="{{asset('assets/img/alcalde.png')}}" class="sm:h-[40rem]">
