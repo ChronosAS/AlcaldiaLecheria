@@ -14,6 +14,7 @@ class Ordinance extends Model implements HasMedia
     use HasFactory, InteractsWithMedia, HasUuids, SoftDeletes;
 
     protected $fillable = [
+        'title',
         'number',
         'date'
     ];
@@ -32,8 +33,8 @@ class Ordinance extends Model implements HasMedia
     public function scopeSearch($query, $term) : void
     {
         if($term) {
-            $query->where('uuid', 'like', '%' . $term . '%')
-                  ->orWhere('id', 'like', '%' . $term . '%')
+            $query->where('id', 'like', '%' . $term . '%')
+                  ->orWhere('title', 'like', '%' . $term . '%')
                   ->orWhere('number', 'like', '%' . $term . '%')
                   ->orWhere('date', 'like', '%' . $term . '%');
         }

@@ -22,6 +22,7 @@ class Index extends Component
         return Ordinance::query()
             ->select([
                 'id',
+                'title',
                 'number',
                 'date',
                 'created_at',
