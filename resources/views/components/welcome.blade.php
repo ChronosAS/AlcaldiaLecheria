@@ -12,6 +12,6 @@
 
 <div class="bg-gray-200 dark:bg-blue-900 bg-opacity-25 ">
     <div>
-    <x-team-cards/>
+    
     </div> 
 </div> 
