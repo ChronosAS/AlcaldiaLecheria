@@ -5,19 +5,50 @@
     <div class="my-8 space-y-4 px-4 mx-auto max-w-7xl">
         <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6 ">
           <div class="mt-5 space-y-4 md:space-y-6">
-            <section id="Projects" class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+            <section id="Projects" class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center">
 
                 <!--    Product card  -->
-                <div class="w-72 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                <div class="w-72 scale-75 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-90 hover:shadow-xl">
                     <a href="#" wire:click="$toggle('ordinance006Modal')">
                         <img src="{{ asset('assets/img/ordinances/N006-2024/frontpage.jpg') }}"
-                                alt="N006-2024" class="h-90 w-72 object-cover rounded-t-xl" />
+                                alt="N006-2024" class="scale-80 object-cover rounded-t-xl" />
                         <div class="px-4 py-3 w-72">
                             <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
                             <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
-                            <div class="flex items-center">
-                                <p class="text-lg font-semibold text-white cursor-auto my-3">$149</p>
-                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                  <div class="w-72 scale-75 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-90 hover:shadow-xl">
+                    <a href="#" wire:click="$toggle('ordinance006Modal')">
+                        <img src="{{ asset('assets/img/ordinances/N006-2024/frontpage.jpg') }}"
+                                alt="N006-2024" class="scale-80 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
+
+                        </div>
+                    </a>
+                </div>
+                  <div class="w-72 scale-75 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-90 hover:shadow-xl">
+                    <a href="#" wire:click="$toggle('ordinance006Modal')">
+                        <img src="{{ asset('assets/img/ordinances/N006-2024/frontpage.jpg') }}"
+                                alt="N006-2024" class="scale-80 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
+
+                        </div>
+                    </a>
+                </div>
+                  <div class="w-72 scale-75 bg-blue-800 shadow-md rounded-xl duration-500 hover:scale-90 hover:shadow-xl">
+                    <a href="#" wire:click="$toggle('ordinance006Modal')">
+                        <img src="{{ asset('assets/img/ordinances/N006-2024/frontpage.jpg') }}"
+                                alt="N006-2024" class="scale-80 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-200 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-white truncate block capitalize">Product Name</p>
+
                         </div>
                     </a>
                 </div>
