@@ -6,7 +6,7 @@
     </x-slot>
 
     <div>
-        <div class="max-w-7xl mx-auto py-10 sm:px-6  m-5 lg:px-8 dark:bg-blue-900 rounded-lg text-white">
+        <div class="max-w-7xl mx-auto py-10 sm:px-6  m-5 lg:px-8 bg-blue-900 rounded-lg text-white">
             @livewire('teams.update-team-name-form', ['team' => $team])
 
             @livewire('teams.team-member-manager', ['team' => $team])

@@ -35,7 +35,7 @@
                         <x-dropdown align="right" width="60" contentClasses="bg-blue-600">
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-white dark:bg-blue-800 hover:text-slate-100 dark:hover:text-slate-100 focus:outline-none focus:bg-gray-50 dark:focus:bg-blue-600 active:bg-gray-50 dark:active:bg-blue-600 transition ease-in-out duration-150">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-blue-800 dark:bg-blue-800 hover:text-slate-100 dark:hover:text-slate-100 focus:outline-none  dark:focus:bg-blue-600 focus:bg-blue-600  dark:active:bg-blue-600 active:bg-blue-600 transition ease-in-out duration-150">
                                         {{ Auth::user()->currentTeam->name }}
 
                                         <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -91,7 +91,7 @@
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-white dark:bg-blue-800 hover:text-slate-100 dark:hover:text-slate-100 focus:outline-none focus:bg-gray-50 dark:focus:bg-blue-600 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-blue-800 dark:bg-blue-800 hover:text-slate-100 dark:hover:text-slate-100 focus:outline-none  dark:focus:bg-blue-600 focus:bg-blue-600 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
                                         {{ Auth::user()->name }}
 
                                         <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -164,7 +164,7 @@
                 @endif
 
                 <div>
-                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-base text-gray-200">{{ Auth::user()->name }}</div>
                     <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
                 </div>
             </div>
