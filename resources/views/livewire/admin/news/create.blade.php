@@ -8,7 +8,6 @@
             <x-slot name="description">
                 Agregue el número y fecha de la ordenanza
             </x-slot>
-
             <x-slot name="form">
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="name" value="Titulo" required="true"/>
@@ -46,7 +45,6 @@
                     <x-input-error for="file" class="mt-2" />
                 </div>
             </x-slot>
-
             <x-slot name="actions">
                 <div class="">
                     <x-button data-twe-ripple-init data-twe-ripple-color="light">
