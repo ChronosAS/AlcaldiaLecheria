@@ -8,7 +8,9 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/css/components.css',
                 'resources/js/app.js',
-                'resources/css/custom.css'
+                'resources/css/custom.css',
+                'public/vendor/ckeditor5/sample/styles.css',
+                'public/vendor/ckeditor5/build/translations/es.js',
             ],
             refresh: true,
         }),

@@ -15,12 +15,12 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    @if(Auth::user()->currentTeam->name == 'Prensa')
+                    @if(Auth::user()->currentTeam->name == 'Prensa' || Auth::user()->isAdmin())
                         <x-nav-link href="{{ route('news.index') }}" :active="request()->routeIs('news.index')">
                             Noticias
                         </x-nav-link>
                     @endif
-                    @if(Auth::user()->currentTeam->name == 'Despacho')
+                    @if(Auth::user()->currentTeam->name == 'Despacho' || Auth::user()->isAdmin())
                         <x-nav-link href="{{ route('ordinance.index') }}" :active="request()->routeIs('ordinance.index')">
                             Ordenanzas
                         </x-nav-link>

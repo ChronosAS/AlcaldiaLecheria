@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('subtitle')->nullable();
             $table->text('content');
             $table->string('slug', 100)->nullable()->unique();
+            $table->foreignUuid('user_id')->constrained('users');
             $table->timestamps();
             $table->softDeletes();
         });
