@@ -38,7 +38,7 @@
           <!-- Logo -->
           <a
             class="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 sm:mb-0 sm:mt-0"
-            href="{{ route('app') }}">
+            wire:navigate href="{{ route('app') }}">
             <img
               src="{{ asset('assets/img/logo-lecheria.png') }}"
               style="height: 35px"
@@ -97,7 +97,7 @@
                   <div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
                       <ul class="py-2 text-sm text-white dark:text-white" aria-labelledby="dropdownDelayButton">
                         <li>
-                          <a  class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans"  href="{{ route('app.info') }}" >Historia y Simbolos</a>
+                          <a  class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
                         </li>
                         <li>
                           <a href="{{ route('app.ordinances') }}" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
@@ -115,7 +115,7 @@
             {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-dropdown-ref>
                 <a
                 class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 font-sans"
-                href="#"
+                wire:navigate href="#"
                 type="button"
                 id="dropdownMenuButton2"
                 data-twe-dropdown-toggle-ref
@@ -140,7 +140,7 @@
                 <li>
                     <a
                     class="block w-full whitespace-nowrap bg-blue-800 px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline  dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="#"
+                    wire:navigate href="#"
                     data-twe-dropdown-item-ref
                     >ORDENANZA</a
                     >
@@ -153,9 +153,9 @@
         <!-- Right elements -->
         <div class="relative flex items-center">
             <div class="m-2 text-center text-xl space-x-3">
-                <a class="btn btn-lg text-white dark:text-blak text-center sm:text-center  " href="https://twitter.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a class="btn btn-lg text-violet-400 dark:text-violet-400 text-center sm:text-center" href="https://www.instagram.com/alcaldiadelecheria/"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-lg text-red-500  dark:text-red-500 text-center sm:text-center " href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-lg text-white dark:text-blak text-center sm:text-center  " wire:navigate href="https://twitter.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a class="btn btn-lg text-violet-400 dark:text-violet-400 text-center sm:text-center" wire:navigate href="https://www.instagram.com/alcaldiadelecheria/"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-lg text-red-500  dark:text-red-500 text-center sm:text-center " wire:navigate href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
       </div>

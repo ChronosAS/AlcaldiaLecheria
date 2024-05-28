@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\News;
+namespace App\Livewire\Admin\News;
 
 use Livewire\Component;
 
@@ -8,6 +8,6 @@ class Create extends Component
 {
     public function render()
     {
-        return view('livewire.news.create');
+        return view('livewire.admin.news.create');
     }
 }

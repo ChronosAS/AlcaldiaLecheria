@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Main;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function (){
-    return view('main');
-})->name('app');
+Route::get('/', App\Livewire\Main::class)->name('app');
 
 Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');
 
@@ -33,8 +32,14 @@ Route::middleware([
     })->name('dashboard');
 
     Route::prefix('noticias')->group(function(){
-        Route::get('/', App\Livewire\News\Index::class)->name('news.index');
-        Route::get('/crear', App\Livewire\News\create::class)->name('news.create');
-        Route::get('/editar/{$post}', App\Livewire\News\create::class)->name('news.edit');
+        Route::get('/', App\Livewire\Admin\News\Index::class)->name('news.index');
+        Route::get('/crear', App\Livewire\Admin\News\create::class)->name('news.create');
+        Route::get('/editar/{$post}', App\Livewire\Admin\News\create::class)->name('news.edit');
+    });
+
+    Route::prefix('ordinances')->group(function(){
+        Route::get('/',App\Livewire\Admin\Ordinances\Index::class)->name('ordinance.index');
+        Route::get('/crear',App\Livewire\Admin\Ordinances\Create::class)->name('ordinance.create');
+        Route::get('/editar',App\Livewire\Admin\Ordinances\Edit::class)->name('ordinance.edit');
     });
 });

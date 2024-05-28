@@ -3,16 +3,16 @@
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl" x-text='title' ></h1>
         </x-main-header>
-        <div x-data="{ tab: 'Historia'}" class="mt-4 px-4 mx-auto max-w-7xl border-b border-gray-200 dark:border-gray-700 dark:bg-blue-900 sm:rounded-xl">
+        <div x-data="{ tab: 'Historia'}" class="mt-4 px-4 mx-auto max-w-7xl border-b border-gray-200 dark:border-gray-700 dark:bg-blue-900 sm:rounded-xl ">
             <ul
-                class="flex flex-wrap -mb-px text-lg font-medium text-center items-center justify-evenly text-white"
+                class="flex flex-wrap -mb-px text-lg font-medium text-center items-center justify-evenly text-white shadow-2xl"
                 id="default-tab"
                 data-tabs-toggle="#default-tab-content"
                 role="tablist"
                 data-tabs-active-classes="text-white hover:text-orange-500 dark:text-white dark:hover:text-orange-400 border-orange-500 dark:border-orange-400"
                 data-tabs-inactive-classes="dark:border-transparent text-white hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300">
                 <li class="me-2" role="presentation">
-                    <button @click="title = 'Historia'"  class="inline-block p-4 border-b-2 rounded-t-lg dark:text-white" id="history-tab" data-tabs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="false">Historia</button>
+                    <button @click="title = 'Historia'"  class="inline-block  p-4 border-b-2 rounded-t-lg dark:text-white" id="history-tab" data-tabs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="false">Historia</button>
                 </li>
                 <li class="me-2" role="presentation">
                     <button @click="title = 'Himno'" class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-300 hover:border-gray-300 dark:hover:text-gray-300 dark:text-white" id="hymn-tab" data-tabs-target="#hymn" type="button" role="tab" aria-controls="hymn" aria-selected="false">Himno</button>
@@ -21,7 +21,7 @@
                     <button @click="title = 'Escudo'" class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-300 hover:border-gray-300 dark:hover:text-gray-300 dark:text-white" id="shield-tab" data-tabs-target="#shield" type="button" role="tab" aria-controls="shield" aria-selected="false">Escudo</button>
                 </li>
                 <li role="presentation">
-                    <button @click="title = 'Bandera'" class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-300 hover:border-gray-300 dark:hover:text-gray-300 dark:text-white" id="flag-tab" data-tabs-target="#flag" type="button" role="tab" aria-controls="flag" aria-selected="false">Bandera</button>
+                    <button @click="title = 'Bandera'" class="inline-block  p-4 border-b-2 rounded-t-lg hover:text-gray-300 hover:border-gray-300 dark:hover:text-gray-300 dark:text-white" id="flag-tab" data-tabs-target="#flag" type="button" role="tab" aria-controls="flag" aria-selected="false">Bandera</button>
                 </li>
             </ul>
         </div>
