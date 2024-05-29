@@ -4,20 +4,83 @@ namespace App\Livewire\Admin\News;
 
 use App\Models\Team;
 use App\Models\User;
+use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Create extends Component
 {
+    use WithFileUploads;
+
+
     public $title;
-    public $sub_title;
+    public $subtitle;
     public $user;
     public $date;
     public $content;
+    public $images = [];
+
+
+    public function mount()
+    {
+        $this->images[] = $this->additionalImage();
+        $this->user = auth()->user()->id;
+    }
+
+    public function addImage()
+    {
+        if (count($this->images) <= 9) {
+            $this->images[] = $this->additionalImage();
+        }
+    }
+
+    public function removeImage($line)
+    {
+        $this->resetErrorBag();
+
+        unset($this->images[$line]);
+
+        $this->images = array_values($this->images);
+    }
+
+    public function additionalImage()
+    {
+        return [
+            'image',
+            'description'
+        ];
+    }
+
+    public function save()
+    {
+
+        $this->validate([
+            'title' => ['required','string','max:200','unique:posts'],
+            'subtitle' => ['nullable','string','max:200'],
+            'date' => ['required','date'],
+            'user' => ['required','string','exists:users,id'],
+            'images.*.image' => ['required','image','max:4096'],
+            'images.*.description' => ['nullable','string','max:150'],
+            'images' => ['required','max:10']
+        ],[
+            'title.required' => 'Porfavor ingrese un titulo.',
+            'title.unique' => 'Ya existe un post con este titulo',
+            'max' => 'Maximo de caracteres exedido.',
+            'date.required' => 'Porfavor elija una fecha',
+            'images.max' => 'Ingrese un maximo de 10 imagenes.',
+            'images.required' => 'Ingrese un minimo de 1 imagen.',
+            'images.*.image.required' => 'El campo de imagen no puede estar vacio.',
+            'images.*.description.required' => 'El campo de descripcion no puede estar vacio.',
+            'images.*.image.max' => 'Achivo exeden el tamaño maximo de memoria.',
+        ]);
+
+
+    }
 
     public function render()
     {
         return view('livewire.admin.news.create',[
-            'users' => (Team::where('name','Prensa')->first())->allUsers()->where('id','!=',auth()->user()->id)
+            'users' => (Team::where('name','Prensa')->first())->allUsers()
         ])->layout('layouts.admin',['header'=>'Crear Noticia']);
     }
 }
