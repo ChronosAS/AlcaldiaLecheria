@@ -4,7 +4,9 @@
         <h1 class="text-7xl" x-text='title' >NOTICIAS</h1>
     </x-main-header>
     <x-full-card>
-         <x-slot name="content">
+        <x-slot name="title"> 
+        </x-slot>
+        <x-slot name="content">
         </x-slot>
     </x-full-card>
 </div>
