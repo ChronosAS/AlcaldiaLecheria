@@ -16,12 +16,12 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     @if(Auth::user()->currentTeam->name == 'Prensa' || Auth::user()->isAdmin())
-                        <x-nav-link href="{{ route('news.index') }}" :active="request()->routeIs('news.index')">
+                        <x-nav-link href="{{ route('admin.news.index') }}" :active="request()->routeIs('admin.news.index')">
                             Noticias
                         </x-nav-link>
                     @endif
                     @if(Auth::user()->currentTeam->name == 'Despacho' || Auth::user()->isAdmin())
-                        <x-nav-link href="{{ route('ordinance.index') }}" :active="request()->routeIs('ordinance.index')">
+                        <x-nav-link href="{{ route('admin.ordinance.index') }}" :active="request()->routeIs('admin.ordinance.index')">
                             Ordenanzas
                         </x-nav-link>
                     @endif

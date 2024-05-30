@@ -54,6 +54,12 @@ class Create extends Component
     public function save()
     {
 
+        $this->dispatch('alert-message',[
+            'message' => 'Mensaje de prueba'
+        ]);
+
+        return;
+
         $this->validate([
             'title' => ['required','string','max:200','unique:posts'],
             'subtitle' => ['nullable','string','max:200'],

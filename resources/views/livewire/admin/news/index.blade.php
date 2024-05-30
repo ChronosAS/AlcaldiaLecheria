@@ -27,7 +27,7 @@
                                     </x-table.th>
                                     <x-table.th>
                                         @if(auth()->user()->hasTeamPermission(auth()->user()->team,'create') || auth()->user()->isAdmin())
-                                            <x-buttons.primary-href title="Crear" class="" href="{{ route('news.create') }}" role="button"/>
+                                            <x-buttons.primary-href title="Crear" class="" href="{{ route('admin.news.create') }}" role="button"/>
                                         @endif
                                     </x-table.th>
                                 </tr>
