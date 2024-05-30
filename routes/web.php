@@ -30,21 +30,21 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
-])->prefix('admin')->group(function () {
+])->group(function () {
 
     Route::get('dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 
     Route::prefix('noticias')->group(function(){
-        Route::get('/', App\Livewire\Admin\News\Index::class)->name('news.index');
-        Route::get('/crear', App\Livewire\Admin\News\create::class)->name('news.create');
-        Route::get('/editar/{$post}', App\Livewire\Admin\News\create::class)->name('news.edit');
+        Route::get('/', App\Livewire\Admin\News\Index::class)->name('admin.news.index');
+        Route::get('/crear', App\Livewire\Admin\News\create::class)->name('admin.news.create');
+        Route::get('/editar/{$post}', App\Livewire\Admin\News\create::class)->name('admin.news.edit');
     });
 
     Route::prefix('ordinances')->group(function(){
-        Route::get('/',App\Livewire\Admin\Ordinances\Index::class)->name('ordinance.index');
-        Route::get('/crear',App\Livewire\Admin\Ordinances\Create::class)->name('ordinance.create');
-        Route::get('/editar',App\Livewire\Admin\Ordinances\Edit::class)->name('ordinance.edit');
+        Route::get('/',App\Livewire\Admin\Ordinances\Index::class)->name('admin.ordinance.index');
+        Route::get('/crear',App\Livewire\Admin\Ordinances\Create::class)->name('admin.ordinance.create');
+        Route::get('/editar',App\Livewire\Admin\Ordinances\Edit::class)->name('admin.ordinance.edit');
     });
 });

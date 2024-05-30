@@ -27,7 +27,7 @@
                                     </x-table.th>
                                     <x-table.th>
                                         @if(auth()->user()->hasTeamPermission(auth()->user()->team,'create') || auth()->user()->isAdmin())
-                                            <x-buttons.primary-href title="Agregar" class="" wire:navigate.hover href="{{ route('ordinance.create') }}" role="button"/>
+                                            <x-buttons.primary-href title="Agregar" class="" wire:navigate.hover href="{{ route('admin.ordinance.create') }}" role="button"/>
                                         @endif
                                     </x-table.th>
                                 </tr>
