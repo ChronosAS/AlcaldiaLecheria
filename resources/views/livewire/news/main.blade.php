@@ -13,7 +13,7 @@
                         </div>
                         <div class="p-4">
                             <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
                             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
                             <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
                                 egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="p-4">
                             <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
                             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
                             <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
                                 egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="p-4">
                             <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
                             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
                             <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
                                 egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="p-4">
                             <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
                             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
                             <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
                                 egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="p-4">
                             <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
                             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
                             <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
                                 egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="p-4">
                             <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
                             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
                             <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
                                 egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
