@@ -21,11 +21,16 @@ Route::get('/informacion', function (){
     return view('info');
 })->name('app.info');
 
+Route::prefix('noticias')->group(function(){
+    Route::get('/', App\Livewire\News\Main::class)->name('app.news');
+    Route::get('/{$post}', App\Livewire\News\Show::class)->name('app.news.show');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
-])->group(function () {
+])->prefix('admin')->group(function () {
 
     Route::get('dashboard', function () {
         return view('dashboard');
