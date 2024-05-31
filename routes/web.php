@@ -21,10 +21,9 @@ Route::get('/informacion', function (){
     return view('info');
 })->name('app.info');
 
-Route::prefix('noticias')->group(function(){
-    Route::get('/', App\Livewire\News\Main::class)->name('app.news');
-    Route::get('/{$post}', App\Livewire\News\Show::class)->name('app.news.show');
-});
+
+Route::get('/noticias', App\Livewire\News\Main::class)->name('app.news');
+Route::get('/noticias/{$post}', App\Livewire\News\Show::class)->name('app.news.show');
 
 Route::middleware([
     'auth:sanctum',
@@ -36,7 +35,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::prefix('noticias')->group(function(){
+    Route::prefix('admin/noticias')->group(function(){
         Route::get('/', App\Livewire\Admin\News\Index::class)->name('admin.news.index');
         Route::get('/crear', App\Livewire\Admin\News\create::class)->name('admin.news.create');
         Route::get('/editar/{$post}', App\Livewire\Admin\News\create::class)->name('admin.news.edit');

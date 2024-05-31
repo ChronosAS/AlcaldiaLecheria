@@ -9,12 +9,6 @@
 
         <!-- Icon -->
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <!-- FontAwesome icons -->
-        <script src="https://kit.fontawesome.com/7d5a02dee9.js" crossorigin="anonymous"></script>
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css','resources/css/components.css','resources/js/app.js'])

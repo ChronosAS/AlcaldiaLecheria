@@ -2,11 +2,13 @@
 
 namespace App\Models\News;
 
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -19,6 +21,7 @@ class Post extends Model implements HasMedia
         'title',
         'subtitle',
         'content',
+        'user_id',
         'slug'
     ];
 
@@ -27,6 +30,11 @@ class Post extends Model implements HasMedia
         return new Attribute(
             get: fn()=> ucwords(Carbon::parse($this->created_at)->isoFormat('dddd, d')).' de '.ucwords(Carbon::parse($this->created_at)->isoFormat('MMMM YYYY'))
         );
+    }
+
+    public function user() : BelongsTo
+    {
+        return $this->belongsTo(User::class);
     }
 
     public function registerMediaCollections(): void
@@ -38,9 +46,9 @@ class Post extends Model implements HasMedia
     public function scopeSearch($query, $term) : void
     {
         if($term) {
-            $query->where('uuid', 'like', '%' . $term . '%')
-                  ->orWhere('title', 'like', '%' . $term . '%')
-                  ->orWhere('subtitle', 'like', '%' . $term . '%');
+            $query->where('title', 'like', '%' . $term . '%')
+                  ->orWhere('subtitle', 'like', '%' . $term . '%')
+                  ->orWhereRelation('user','name','like','%'.$term.'%');
         }
     }
 }

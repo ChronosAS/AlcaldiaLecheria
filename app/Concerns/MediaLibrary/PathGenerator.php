@@ -2,6 +2,7 @@
 
 namespace App\Concerns\MediaLibrary;
 
+use App\Models\News\Post;
 use App\Models\Ordinance;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\Support\PathGenerator\PathGenerator as BasePathGenerator;
@@ -17,6 +18,10 @@ class PathGenerator implements BasePathGenerator
         //     $ordinance = Ordinance::find($media->model_id);
         //     return $ordinance->number.'/'.'';
         // }
+        if($media instanceof Post){
+            return $media->model_id.'/';
+        }
+
         return $this->getBasePath($media).'/';
     }
 
@@ -25,6 +30,7 @@ class PathGenerator implements BasePathGenerator
      */
     public function getPathForConversions(Media $media): string
     {
+
         return $this->getBasePath($media).'/conversions/';
     }
 
@@ -46,6 +52,11 @@ class PathGenerator implements BasePathGenerator
         if ($prefix !== '') {
             return $prefix.'/'.$media->getKey();
         }
+
+        if($media->model_type == 'App\Models\News\Post'){
+            return $media->model_id;
+        }
+
 
         return $media->getKey();
     }

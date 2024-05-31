@@ -93,6 +93,9 @@
                     </x-table.table>
                 </div>
                 <div class="col-span-6">
+                    @if (session()->has('message'))
+                        <p class='text-sm text-red-600 dark:text-red-400'>{{  session('message') }}</p>
+                    @endif
                     <div wire:ignore class="pt-4">
                         <textarea
                             id="editor"
