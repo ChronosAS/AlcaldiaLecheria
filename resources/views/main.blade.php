@@ -51,31 +51,6 @@
             </div>
         </section>
     </div>
-  {{--<x-carousel/>--}}
-    {{-- <x-dialog-modal wire:model="ordinance006Modal">
-        <x-slot name="title">
-
-        </x-slot>
-
-        <x-slot name="content">
-            <x-carousel>
-                <x-slot name="items">
-                    @foreach ($images as $image)
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="{{ asset($image) }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                        </div>
-                    @endforeach
-                </x-slot>
-                <x-slot name="indicators">
-                    {{-- @foreach ($images as $index => $image)
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide {{ $index }}" data-carousel-slide-to="{{ $index }}"></button>
-                    @endforeach
-                </x-slot>
-            </x-carousel>
-        </x-slot>
-
-        <x-slot name="footer">
-
-        </x-slot>
-    </x-dialog-modal> --}}
+  {{-- <x-carousel/> --}}
+  
 </div>
