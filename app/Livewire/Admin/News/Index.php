@@ -27,6 +27,7 @@ class Index extends Component
             'subtitle',
             'slug',
             'content',
+            'is_draft',
             'created_at',
             'updated_at',
             'deleted_at'
@@ -34,6 +35,11 @@ class Index extends Component
         ->search($this->search)
         ->orderBy($this->sortField ?? 'id', $this->sortAsc ? 'ASC' : 'DESC')
         ->paginate($this->perPage);
+    }
+
+    public function delete(Post $post)
+    {
+        $post->forceDelete();
     }
 
     public function render()

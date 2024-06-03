@@ -17,15 +17,20 @@ class Post extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes, HasUuids;
 
+    protected $casts = [
+        'is_draft' => 'boolean'
+    ];
+
     protected $fillable = [
         'title',
         'subtitle',
         'content',
         'user_id',
+        'is_draft',
         'slug'
     ];
 
-    public function postetAt(): Attribute
+    public function postedAt(): Attribute
     {
         return new Attribute(
             get: fn()=> ucwords(Carbon::parse($this->created_at)->isoFormat('dddd, d')).' de '.ucwords(Carbon::parse($this->created_at)->isoFormat('MMMM YYYY'))

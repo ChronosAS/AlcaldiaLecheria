@@ -49,7 +49,7 @@
                                                 {{-- <a href=" route('news.show',[ 'post' => $post->id, 'slug' => $post->slug ]) "></a>
                                                 <a href=" route('admin.news.edit',[ 'post' => $post->id]) " ></a> --}}
                                                 @if(!$post->trashed())
-                                                    <x-buttons.group-btn-href href="#" class="border rounded-e-lg">
+                                                    <x-buttons.group-btn-href @click="$wire.delete('{{ $post->id }}')" href="#" class="border rounded-e-lg">
                                                         <i class="fas fa-trash-alt text-red-500 w-6 h-6"></i>
                                                     </x-buttons.group-btn-href>
                                                     {{-- <a type="button" wire:click="delete( $post->id ) }})"><i class="fas fa-trash-alt text-red-500 w-6 h-6"></i></a> --}}

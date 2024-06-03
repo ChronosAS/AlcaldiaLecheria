@@ -18,9 +18,6 @@ class PathGenerator implements BasePathGenerator
         //     $ordinance = Ordinance::find($media->model_id);
         //     return $ordinance->number.'/'.'';
         // }
-        if($media instanceof Post){
-            return $media->model_id.'/';
-        }
 
         return $this->getBasePath($media).'/';
     }
@@ -54,7 +51,7 @@ class PathGenerator implements BasePathGenerator
         }
 
         if($media->model_type == 'App\Models\News\Post'){
-            return $media->model_id;
+            return 'posts/'.$media->model_id;
         }
 
 

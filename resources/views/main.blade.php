@@ -37,7 +37,11 @@
                 </div>
             </div>
         </header>
-  {{-- <x-carousel/> --}}
+        @if (\DB::table('posts')->count() > 0)
+            <div class="max-w-[70rem] mx-auto px-4 py-6">
+                @livewire('news-carousel')
+            </div>
+        @endif
         <section id="contact">
             <div class="text-center">
                 <div class=" text-gray-500 sm:text-lg dark:text-gray-400 sm:justify-center">
@@ -52,5 +56,5 @@
             </div>
         </section>
     </div>
-  
+
 </div>
