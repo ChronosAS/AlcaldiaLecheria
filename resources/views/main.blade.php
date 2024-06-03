@@ -37,6 +37,7 @@
                 </div>
             </div>
         </header>
+  {{-- <x-carousel/> --}}
         <section id="contact">
             <div class="text-center">
                 <div class=" text-gray-500 sm:text-lg dark:text-gray-400 sm:justify-center">
@@ -51,6 +52,5 @@
             </div>
         </section>
     </div>
-  {{-- <x-carousel/> --}}
   
 </div>
