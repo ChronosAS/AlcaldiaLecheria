@@ -1,5 +1,4 @@
 <div>
-   
     <div class="bg-slate-300 py-6 sm:py-8 lg:py-12">
         <div class=" text-center text-4xl text-black font-bold py-8">
         <h1> Noticias Recientes </h1>
