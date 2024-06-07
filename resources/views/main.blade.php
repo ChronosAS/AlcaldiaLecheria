@@ -37,8 +37,7 @@
                 </div>
             </div>
         </header>
-      
-        <x-news-carousel/>
+        @livewire('news-carousel')
         <section id="contact">
             <div class="text-center">
                 <div class=" text-gray-500 sm:text-lg dark:text-gray-400 sm:justify-center">

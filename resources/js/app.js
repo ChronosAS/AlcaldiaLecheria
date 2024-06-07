@@ -1,5 +1,5 @@
 import './bootstrap';
-import { Tooltip, initTWE, Collapse, Dropdown} from "tw-elements";
+import { Tooltip, initTWE, Collapse, Dropdown,Carousel} from "tw-elements";
 import 'flowbite';
 
-initTWE({ Tooltip, Collapse, Dropdown });
+initTWE({ Tooltip, Collapse, Dropdown,Carousel });

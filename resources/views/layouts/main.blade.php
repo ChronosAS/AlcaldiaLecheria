@@ -31,6 +31,7 @@
                 </ul>
             </div>
         </footer>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         @stack('modals')
         @livewireScripts
         @stack('scripts')

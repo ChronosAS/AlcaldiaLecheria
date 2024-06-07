@@ -44,7 +44,7 @@ class Post extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('post-images')
+        $this->addMediaCollection('post-image')
             ->useFallbackUrl('https://www.flaticon.com/free-icons/no-photo');
     }
 
