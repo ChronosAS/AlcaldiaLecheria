@@ -12,11 +12,10 @@
                             <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x360">
                         </div>
                         <div class="p-4">
-                            <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
-                            <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-                            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
-                                egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
+                            <div class="text-lg font-medium text-black mb-2">Title</div>
+                            <p class="text-gray-900">Subtitle</p>
+                            <hr class="h-px my-8 bg-black border-0 ">
+                            <a href="#"><p class="text-blue-500 text-sm"> click here for more</p></a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
@@ -24,11 +23,10 @@
                             <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x360">
                         </div>
                         <div class="p-4">
-                            <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
-                            <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-                            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
-                                egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
+                            <div class="text-lg font-medium text-black mb-2">Title</div>
+                            <p class="text-gray-900">Subtitle</p>
+                            <hr class="h-px my-8 bg-black border-0 ">
+                            <a href="#"><p class="text-blue-500 text-sm"> click here for more</p></a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
@@ -36,11 +34,10 @@
                             <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x360">
                         </div>
                         <div class="p-4">
-                            <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
-                            <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-                            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
-                                egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
+                            <div class="text-lg font-medium text-black mb-2">Title</div>
+                            <p class="text-gray-900">Subtitle</p>
+                            <hr class="h-px my-8 bg-black border-0 ">
+                      <a href="#"><p class="text-blue-500 text-sm"> click here for more</p></a>
                         </div>
                     </div>
 
@@ -49,11 +46,10 @@
                             <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x360">
                         </div>
                         <div class="p-4">
-                            <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
-                            <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-                            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
-                                egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
+                            <div class="text-lg font-medium text-black mb-2">Title</div>
+                            <p class="text-gray-900">Subtitle</p>
+                            <hr class="h-px my-8 bg-black border-0 ">
+                            <a href="#"><p class="text-blue-500 text-sm"> click here for more</p></a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
@@ -61,11 +57,10 @@
                             <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x360">
                         </div>
                         <div class="p-4">
-                            <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
-                            <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-                            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
-                                egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
+                            <div class="text-lg font-medium text-black mb-2">Title</div>
+                            <p class="text-gray-900">Subtitle</p>
+                            <hr class="h-px my-8 bg-black border-0 ">
+                           <a href="#"><p class="text-blue-500 text-sm"> click here for more</p></a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
@@ -73,11 +68,10 @@
                             <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x360">
                         </div>
                         <div class="p-4">
-                            <div class="text-lg font-medium text-gray-800 mb-2">Title</div>
-                            <p class="text-gray-500 dark:text-gray-400">Subtitle</p>
-                            <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-                            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed
-                                egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.</p>
+                            <div class="text-lg font-medium text-black mb-2">Title</div>
+                            <p class="text-gray-900">Subtitle</p>
+                            <hr class="h-px my-8 bg-black border-0 ">
+                        <a href="#"><p class="text-blue-500 text-sm"> click here for more</p></a>
                         </div>
                     </div>
                 </div>
