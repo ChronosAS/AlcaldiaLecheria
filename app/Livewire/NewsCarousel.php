@@ -20,7 +20,7 @@ class NewsCarousel extends Component
                 $post->image = $post->getFirstMediaUrl('post-image');
                 $post->imageAlt = $post->tile.'-img';
                 return $post;
-            })->toJson();
+            });
     }
 
     public function getImages()
