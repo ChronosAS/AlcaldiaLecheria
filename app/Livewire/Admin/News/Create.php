@@ -75,7 +75,6 @@ class Create extends Component
             'images.max' => 'Ingrese un maximo de 10 imagenes.',
             'images.required' => 'Ingrese un minimo de 1 imagen.',
             'images.*.image.required' => 'El campo de imagen no puede estar vacio.',
-            'images.*.image.max' => 'Achivo exeden el tamaño maximo de memoria.',
         ]);
 
         if($this->content){
