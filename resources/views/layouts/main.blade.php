@@ -9,7 +9,7 @@
 
         <!-- Icon -->
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-
+        {{-- <script src="https://kit.fontawesome.com/7d5a02dee9.js" crossorigin="anonymous"></script> --}}
         <!-- Scripts -->
         @vite(['resources/css/app.css','resources/css/components.css','resources/js/app.js'])
         @stack('styles')
@@ -31,7 +31,6 @@
                 </ul>
             </div>
         </footer>
-        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         @stack('modals')
         @livewireScripts
         @stack('scripts')
