@@ -23,7 +23,7 @@ Route::get('/informacion', function (){
 
 
 Route::get('/noticias', App\Livewire\News\Main::class)->name('app.news');
-Route::get('/noticias/{$post}', App\Livewire\News\Show::class)->name('app.news.show');
+Route::get('/noticias/{post}', App\Livewire\News\Show::class)->name('app.news.show');
 
 Route::middleware([
     'auth:sanctum',

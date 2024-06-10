@@ -23,15 +23,9 @@ class NewsCarousel extends Component
             });
     }
 
-    public function getImages()
+    public function show($post)
     {
-        $images = [];
-
-        foreach($this->posts as $post){
-            array_push($images,$post->getFirstMediaUrl('post-image'));
-        }
-
-        return $images;
+        return redirect()->route('app.news.show',$post);
     }
     public function render()
     {

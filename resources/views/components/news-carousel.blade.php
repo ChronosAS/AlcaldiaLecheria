@@ -44,10 +44,9 @@
             <div class="relative min-h-[50svh] w-full">
                 <template x-for="(slide, index) in slides">
                     <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
-
                         <!-- Title and description -->
                         <div class="lg:px-32 lg:py-14 absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 bg-gradient-to-t from-slate-900/85 to-transparent px-16 py-12 text-center">
-                            <h3 class="w-full lg:w-[80%] text-balance text-2xl lg:text-3xl font-bold text-white" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
+                            <h3 @click="$wire.show(slide.id)" class="w-full cursor-pointer lg:w-[80%] text-balance text-2xl lg:text-3xl font-bold text-white" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
                             <p class="lg:w-1/2 w-full text-pretty text-sm text-slate-300" x-text="slide.subtitle" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
                         </div>
 
