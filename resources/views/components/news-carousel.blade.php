@@ -50,7 +50,7 @@
                             <p class="lg:w-1/2 w-full text-pretty text-sm text-slate-300" x-text="slide.subtitle" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
                         </div>
 
-                        <img class="absolute w-full h-full inset-0 object-cover text-slate-700 dark:text-slate-300" x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
+                        <img class="absolute w-full h-full inset-0 object-cover text-slate-700 dark:text-slate-300 " x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
                     </div>
                 </template>
             </div>

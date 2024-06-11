@@ -43,7 +43,7 @@
                     <div class="text-center py-8 space-y-3">
                         <h1 class="section-heading text-uppercase text-[3rem] text-white ">Noticias</h1>
                     </div>
-                    <div class=" text-md sm:text-md ">
+                    <div class="sm:mx-[25%] sm:mb-5 sm:w-[50%] w-full text-md sm:text-md ">
                         @livewire('news-carousel')
                     </div>
                 </div>
