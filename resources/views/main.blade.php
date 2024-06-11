@@ -37,7 +37,19 @@
                 </div>
             </div>
         </header>
-        @livewire('news-carousel')
+        <section id="news">
+            <div class="text-center">
+                <div class=" sm:justify-center">
+                    <div class="text-center py-8 space-y-3">
+                        <h1 class="section-heading text-uppercase text-[3rem] text-white ">Noticias</h1>
+                    </div>
+                    <div class=" text-md sm:text-md ">
+                        @livewire('news-carousel')
+                    </div>
+                </div>
+            </div>
+        </section>
+                    
         <section id="contact">
             <div class="text-center">
                 <div class=" text-gray-500 sm:text-lg dark:text-gray-400 sm:justify-center">
