@@ -36,7 +36,7 @@
                     this.autoplayIntervalTime = newIntervalTime
                     this.autoplay()
                 },
-            }" x-init="autoplay" class="relative size-[800px] overflow-hidden"
+            }" x-init="autoplay" class="relative size-[700px] overflow-hidden"
         >
 
             <!-- slides -->
