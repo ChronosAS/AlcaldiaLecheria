@@ -9,7 +9,7 @@ export default function NewsCarousel(props){
     })
 
     return(
-    <div className="h-96">
+    <div className="h-96 ">
         <Carousel pauseOnHover>
             {posts}
         </Carousel>
