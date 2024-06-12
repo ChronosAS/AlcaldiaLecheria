@@ -1,7 +1,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
-
+import flowbite from 'flowbite-react/tailwind';
 /** @type {import('tailwindcss').Config} */
 
 export default {
@@ -11,7 +11,9 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './node_modules/tw-elements/js/**/*.js',
-        "./node_modules/flowbite/**/*.js"
+        "./node_modules/flowbite/**/*.js",
+        './src/**/*.{js,jsx,ts,tsx}',
+        flowbite.content(),
     ],
 
     theme: {
@@ -22,6 +24,12 @@ export default {
         },
     },
     darkMode: 'media',
-    plugins: [forms, typography,require("tw-elements/plugin.cjs"),require("flowbite/plugin")],
+    safelist: [
+        {
+          /* We want any bg color class to be generated */
+          pattern: /^bg-\w+-\d{2,3}$/,
+        }
+      ],
+    plugins: [forms, typography,require("tw-elements/plugin.cjs"),require("flowbite/plugin"),flowbite.plugin()],
 
 };

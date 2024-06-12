@@ -18,11 +18,9 @@ class Main extends Component
             ->get()
             ->map(function($post){
                 $post->image = $post->getFirstMediaUrl('post-image');
-                $post->imageAlt = $post->tile.'-img';
+                $post->imageAlt = $post->title.'-img';
                 return $post;
             })->toArray();
-
-
     }
 
     public function show($post)

@@ -6,9 +6,7 @@
             </div>
             <div class="flex-c sm:grid sm:grid-cols-10 sm:grid-rows-6 sm:gap-4 sm:mx-10">
                 <div class="col-span-8 row-span-4">
-                    <div class="w-full h-full text-md sm:text-md ">
-                        @livewire('news.news-carousel',['posts'=>$posts])
-                    </div>
+                    <div id="newsCarousel" posts="{{ json_encode($posts) }}"></div>
                 </div>
                 <div class="col-span-2 row-span-2 col-start-9">
                     <a href="#" class=" items-center bg-white border border-gray-200 rounded-lg shadow md:grid md:max-w-xl hover:bg-gray-100 ">
