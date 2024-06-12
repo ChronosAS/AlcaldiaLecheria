@@ -7,7 +7,7 @@
             <div class="sm:flex md:hidden lg:hidden xl:hidden">
 
             </div>
-            <div class=" sm:flex-wrap sm:grid sm:grid-cols-10 sm:grid-rows-6 sm:gap-4 lg:gap-2 sm:mx-10 mb-10">
+            <div class="sm:flex-wrap sm:grid sm:grid-cols-10 sm:grid-rows-6 sm:gap-7 lg:gap-2 sm:mx-10 mb-10">
 
                 <div class="col-span-4 row-span-3 col-start-3">
                     <div class="w-full h-full text-md sm:text-md justify-self-center">
