@@ -1,47 +1,64 @@
 <div>
     @if(count($posts)>0)
         <div x-data="{
-                // Sets the time between each slides in milliseconds
-                autoplayIntervalTime: 4000,
-                slides: {{ $posts }},
-                currentSlideIndex: 1,
-                isPaused: false,
-                autoplayInterval: null,
-                previous() {
-                    if (this.currentSlideIndex > 1) {
-                        this.currentSlideIndex = this.currentSlideIndex - 1
-                    } else {
-                        // If it's the first slide, go to the last slide
-                        this.currentSlideIndex = this.slides.length
+                  autoplayIntervalTime: 4000,  
+            slides: {{ $posts }},           
+            currentSlideIndex: 1,
+            touchStartX: null,
+            touchEndX: null,
+            swipeThreshold: 50,
+                previous() {                
+                    if (this.currentSlideIndex > 1) {                    
+                        this.currentSlideIndex = this.currentSlideIndex - 1                
+                    } else {   
+                        // If it's the first slide, go to the last slide           
+                        this.currentSlideIndex = this.slides.length                
+                    }            
+                },            
+                next() {                
+                    if (this.currentSlideIndex < this.slides.length) {                    
+                        this.currentSlideIndex = this.currentSlideIndex + 1                
+                    } else {                 
+                        // If it's the last slide, go to the first slide    
+                        this.currentSlideIndex = 1                
+                    }            
+                },        
+                handleTouchStart(event) {
+                    this.touchStartX = event.touches[0].clientX
+                },
+                handleTouchMove(event) {
+                    this.touchEndX = event.touches[0].clientX
+                },
+                handleTouchEnd() {
+                    if(this.touchEndX){
+                        if (this.touchStartX - this.touchEndX > this.swipeThreshold) {
+                            this.next()
+                        }
+                        if (this.touchStartX - this.touchEndX < -this.swipeThreshold) {
+                            this.previous()
+                        }
+                        this.touchStartX = null
+                        this.touchEndX = null
                     }
                 },
-                next() {
-                    if (this.currentSlideIndex < this.slides.length) {
-                        this.currentSlideIndex = this.currentSlideIndex + 1
-                    } else {
-                        // If it's the last slide, go to the first slide
-                        this.currentSlideIndex = 1
-                    }
-                },
-                autoplay() {
+                 autoplay() {
                     this.autoplayInterval = setInterval(() => {
                         if (! this.isPaused) {
                             this.next()
                         }
                     }, this.autoplayIntervalTime)
                 },
-                // Updates interval time
+                // Updates interval time   
                 setAutoplayInterval(newIntervalTime) {
                     clearInterval(this.autoplayInterval)
                     this.autoplayIntervalTime = newIntervalTime
                     this.autoplay()
-                },
-            }" x-init="autoplay" class="relative size-[700px] overflow-hidden rounded-xl "
-        >
+                },         
+            }" x-init="autoplay" class="relative overflow-hidden rounded-xl ">
 
             <!-- slides -->
             <!-- Change min-h-[50svh] to your preferred height size -->
-            <div class="relative min-h-[65svh] w-full rounded-xl">
+            <div class=" min-h-[65svh] w-full rounded-xl" x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()">
                 <template x-for="(slide, index) in slides">
                     <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0 rounded-xl" x-transition.opacity.duration.1000ms>
                         <!-- Title and description -->
