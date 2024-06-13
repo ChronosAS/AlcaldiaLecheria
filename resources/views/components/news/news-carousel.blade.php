@@ -1,7 +1,7 @@
 <div>
     @if(count($posts)>0)
         <div x-data="{
-                  autoplayIntervalTime: 4000,  
+            autoplayIntervalTime: 5000,  
             slides: {{ $posts }},           
             currentSlideIndex: 1,
             touchStartX: null,
