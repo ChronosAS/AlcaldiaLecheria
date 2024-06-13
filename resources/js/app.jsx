@@ -5,13 +5,13 @@ import 'flowbite';
 import React from "react"
 import ReactDOM from "react-dom/client";
 
-import NewsCarousel from './Components/NewsCarousel';
+// import NewsCarousel from './Components/NewsCarousel';
 
 initTWE({ Tooltip, Collapse, Dropdown,Carousel });
 
 
-if(document.getElementById('newsCarousel')){
-    const posts = document.getElementById('newsCarousel').getAttribute("posts");
-    ReactDOM.createRoot(document.getElementById('newsCarousel')).render(
-        <NewsCarousel posts={JSON.parse(posts)}/>);
-}
+// if(document.getElementById('newsCarousel')){
+//     const posts = document.getElementById('newsCarousel').getAttribute("posts");
+//     ReactDOM.createRoot(document.getElementById('newsCarousel')).render(
+//         <NewsCarousel posts={JSON.parse(posts)}/>);
+// }
