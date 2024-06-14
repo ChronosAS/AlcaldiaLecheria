@@ -22,6 +22,7 @@ class PostFactory extends Factory
             'title' => $title,
             'subtitle' => $this->faker->text(120),
             'content' => $this->faker->paragraph(10),
+            'date' => fake()->date(),
             'slug' =>   Str::slug($title),
         ];
     }

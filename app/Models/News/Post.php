@@ -26,6 +26,7 @@ class Post extends Model implements HasMedia
         'subtitle',
         'content',
         'user_id',
+        'date',
         'is_draft',
         'slug'
     ];
@@ -53,6 +54,7 @@ class Post extends Model implements HasMedia
         if($term) {
             $query->where('title', 'like', '%' . $term . '%')
                   ->orWhere('subtitle', 'like', '%' . $term . '%')
+                  ->orWhere('date','like','%'.$term.'%')
                   ->orWhereRelation('user','name','like','%'.$term.'%');
         }
     }

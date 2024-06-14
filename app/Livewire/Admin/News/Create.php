@@ -84,7 +84,7 @@ class Create extends Component
                 'content' => $this->content,
                 'user_id' => $this->user,
                 'is_draft' => $this->is_draft,
-                'date' => Carbon::createFromFormat('Y-m-d',$this->date)->format('d/m/Y'),
+                'date' => $this->date,
             ]),function($post){
                 if(isset($this->images[0]['image'])){
                     foreach($this->images as $image){

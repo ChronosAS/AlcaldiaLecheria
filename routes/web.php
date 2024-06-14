@@ -38,7 +38,7 @@ Route::middleware([
     Route::prefix('admin/noticias')->group(function(){
         Route::get('/', App\Livewire\Admin\News\Index::class)->name('admin.news.index');
         Route::get('/crear', App\Livewire\Admin\News\create::class)->name('admin.news.create');
-        Route::get('/editar/{$post}', App\Livewire\Admin\News\create::class)->name('admin.news.edit');
+        Route::get('/editar/{post}', App\Livewire\Admin\News\Edit::class)->name('admin.news.edit');
     });
 
     Route::prefix('ordinances')->group(function(){
