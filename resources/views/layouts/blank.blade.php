@@ -17,7 +17,7 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css','resources/css/components.css','resources/js/app.js'])
+        @vite(['resources/css/app.css','resources/css/components.css','resources/js/app.jsx'])
         @stack('styles')
         <!-- Styles -->
         @livewireStyles

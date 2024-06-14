@@ -1,28 +1,28 @@
 <div>
     @if(count($posts)>0)
         <div x-data="{
-            autoplayIntervalTime: 5000,  
-            slides: {{ $posts }},           
+            autoplayIntervalTime: 5000,
+            slides: {{ $posts }},
             currentSlideIndex: 1,
             touchStartX: null,
             touchEndX: null,
             swipeThreshold: 50,
-                previous() {                
-                    if (this.currentSlideIndex > 1) {                    
-                        this.currentSlideIndex = this.currentSlideIndex - 1                
-                    } else {   
-                        // If it's the first slide, go to the last slide           
-                        this.currentSlideIndex = this.slides.length                
-                    }            
-                },            
-                next() {                
-                    if (this.currentSlideIndex < this.slides.length) {                    
-                        this.currentSlideIndex = this.currentSlideIndex + 1                
-                    } else {                 
-                        // If it's the last slide, go to the first slide    
-                        this.currentSlideIndex = 1                
-                    }            
-                },        
+                previous() {
+                    if (this.currentSlideIndex > 1) {
+                        this.currentSlideIndex = this.currentSlideIndex - 1
+                    } else {
+                        // If it's the first slide, go to the last slide
+                        this.currentSlideIndex = this.slides.length
+                    }
+                },
+                next() {
+                    if (this.currentSlideIndex < this.slides.length) {
+                        this.currentSlideIndex = this.currentSlideIndex + 1
+                    } else {
+                        // If it's the last slide, go to the first slide
+                        this.currentSlideIndex = 1
+                    }
+                },
                 handleTouchStart(event) {
                     this.touchStartX = event.touches[0].clientX
                 },
@@ -48,12 +48,12 @@
                         }
                     }, this.autoplayIntervalTime)
                 },
-                // Updates interval time   
+                // Updates interval time
                 setAutoplayInterval(newIntervalTime) {
                     clearInterval(this.autoplayInterval)
                     this.autoplayIntervalTime = newIntervalTime
                     this.autoplay()
-                },         
+                },
             }" x-init="autoplay" class="relative overflow-hidden rounded-xl ">
 
             <!-- slides -->
@@ -63,11 +63,11 @@
                     <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0 rounded-xl" x-transition.opacity.duration.1000ms>
                         <!-- Title and description -->
                         <div class="rounded-xl lg:px-32 lg:py-14 absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 bg-gradient-to-t from-slate-900/85 to-transparent px-16 py-12 text-center">
-                            <h3 @click="$wire.show(slide.id)" class="w-full cursor-pointer lg:w-[80%] text-balance text-2xl lg:text-3xl font-bold text-white" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
-                            <p class="lg:w-1/2 w-full text-pretty text-sm text-slate-300" x-text="slide.subtitle" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
+                            <h3 @click="$wire.show(slide.id)" class="w-full cursor-pointer lg:w-[80%] text-balance text-sm lg:text-lg font-bold text-white" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
+                            <p class=" w-full text-pretty text-sm text-slate-300" x-text="slide.subtitle" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
                         </div>
 
-                        <img class="absolute w-full h-full rounded-xl inset-0 object-cover text-slate-700 dark:text-slate-300 " x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
+                        <img class="absolute w-full h-full rounded-xl inset-0 object-contain text-slate-700 dark:text-slate-300 " x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
                     </div>
                 </template>
             </div>

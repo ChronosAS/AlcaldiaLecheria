@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('slug', 100)->nullable()->unique();
             $table->foreignUuid('user_id')->constrained('users');
             $table->date('date');
-            $table->boolean('is_draft')->default(true);
+            $table->string('status')->default(App\Enums\News\PostStatus::DRAFT->value);
             $table->timestamps();
             $table->softDeletes();
         });

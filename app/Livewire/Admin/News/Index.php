@@ -11,9 +11,11 @@ class Index extends Component
     use LivewireCustomPagination;
 
 
+    public $status = null;
     public $sortField = null;
 
     protected $queryString = [
+        'status' => ['except'=>''],
         'sortField' => ['except' => ''],
         'perPage' => ['except' => 10],
         'sortAsc' => ['except' => false]
@@ -27,11 +29,17 @@ class Index extends Component
             'subtitle',
             'slug',
             'content',
-            'is_draft',
+            'date',
+            'user_id',
+            'status',
             'created_at',
             'updated_at',
             'deleted_at'
         ])
+        ->withAggregate('user','name')
+        ->when($this->status, function ($query) {
+            return $query->where('status', $this->status);
+        })
         ->search($this->search)
         ->orderBy($this->sortField ?? 'id', $this->sortAsc ? 'ASC' : 'DESC')
         ->paginate($this->perPage);
@@ -39,7 +47,7 @@ class Index extends Component
 
     public function delete(Post $post)
     {
-        $post->forceDelete();
+        $post->delete();
     }
 
     public function render()

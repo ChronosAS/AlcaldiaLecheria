@@ -19,7 +19,6 @@ class Create extends Component
     public $user;
     public $date;
     public $content;
-    public $is_draft = true;
     public $images = [];
 
 
@@ -83,7 +82,6 @@ class Create extends Component
                 'subtitle' => $this->subtitle,
                 'content' => $this->content,
                 'user_id' => $this->user,
-                'is_draft' => $this->is_draft,
                 'date' => $this->date,
             ]),function($post){
                 if(isset($this->images[0]['image'])){

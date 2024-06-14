@@ -20,7 +20,7 @@ class Edit extends Component
     public $user;
     public $date;
     public $content;
-    public $is_draft = true;
+    public $status = true;
 
 
     public function mount(Post $post)
@@ -32,7 +32,6 @@ class Edit extends Component
         $this->subtitle = $post->subtitle;
         $this->date = $this->post->date;
         $this->content = $post->content;
-        $this->is_draft = ($post->is_draft == 1) ? true : false;
     }
 
     // public function addImage()

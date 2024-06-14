@@ -2,6 +2,7 @@
 
 namespace Database\Factories\News;
 
+use App\Enums\News\PostStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -17,12 +18,15 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
-        $title = $this->faker->text(80);
+        $title = fake()->text(80);
         return [
             'title' => $title,
             'subtitle' => $this->faker->text(120),
             'content' => $this->faker->paragraph(10),
             'date' => fake()->date(),
+            'subtitle' => fake()->text(120),
+            'status' => fake()->randomElement(PostStatus::cases())->value,
+            'content' => fake()->paragraph(10),
             'slug' =>   Str::slug($title),
         ];
     }

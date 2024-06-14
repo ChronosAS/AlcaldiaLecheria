@@ -2,6 +2,7 @@
 
 namespace App\Models\News;
 
+use App\Enums\News\PostStatus;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -18,13 +19,14 @@ class Post extends Model implements HasMedia
     use HasFactory, InteractsWithMedia, SoftDeletes, HasUuids;
 
     protected $casts = [
-        'is_draft' => 'boolean'
+        'status' => PostStatus::class,
     ];
 
     protected $fillable = [
         'title',
         'subtitle',
         'content',
+        'status',
         'user_id',
         'date',
         'is_draft',
@@ -34,7 +36,7 @@ class Post extends Model implements HasMedia
     public function postedAt(): Attribute
     {
         return new Attribute(
-            get: fn()=> ucwords(Carbon::parse($this->created_at)->isoFormat('dddd, d')).' de '.ucwords(Carbon::parse($this->created_at)->isoFormat('MMMM YYYY'))
+            get: fn()=> ucwords(Carbon::parse($this->date)->isoFormat('dddd, d')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
         );
     }
 
@@ -54,6 +56,7 @@ class Post extends Model implements HasMedia
         if($term) {
             $query->where('title', 'like', '%' . $term . '%')
                   ->orWhere('subtitle', 'like', '%' . $term . '%')
+                  ->orWhere('status', 'like', '%' . $term . '%')
                   ->orWhere('date','like','%'.$term.'%')
                   ->orWhereRelation('user','name','like','%'.$term.'%');
         }
