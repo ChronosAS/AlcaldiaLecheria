@@ -11,6 +11,8 @@
                         autoplayIntervalTime: 8500,
                         slides: {{ collect($images) }},
                         currentSlideIndex: 1,
+                        touchStartX: null,
+                        touchEndX: null,
                         isPaused: false,
                         autoplayInterval: null,
                         previous() {
@@ -27,6 +29,24 @@
                             } else {
                                 // If it's the last slide, go to the first slide
                                 this.currentSlideIndex = 1
+                            }
+                        },
+                        handleTouchStart(event) {
+                            this.touchStartX = event.touches[0].clientX
+                        },
+                        handleTouchMove(event) {
+                            this.touchEndX = event.touches[0].clientX
+                        },
+                        handleTouchEnd() {
+                            if(this.touchEndX){
+                                if (this.touchStartX - this.touchEndX > this.swipeThreshold) {
+                                    this.next()
+                                }
+                                if (this.touchStartX - this.touchEndX < -this.swipeThreshold) {
+                                    this.previous()
+                                }
+                                this.touchStartX = null
+                                this.touchEndX = null
                             }
                         },
                         autoplay() {
@@ -60,7 +80,7 @@
                         </button>
                         <!-- slides -->
                         <!-- Change min-h-[50svh] to your preferred height size -->
-                        <div class="relative min-h-[50svh] w-full">
+                        <div class="relative min-h-[50svh] w-full " x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()">
                             <template x-for="(slide, index) in slides">
                                 <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
 
