@@ -75,7 +75,7 @@
             }
         </style>
     @endpush
-    @push('scripts')
+    @script
         <script>
 
             ClassicEditor
@@ -91,5 +91,5 @@
                 console.error( error );
             } );
         </script>
-    @endpush
+    @endscript
 </div>

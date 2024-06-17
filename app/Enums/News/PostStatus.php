@@ -2,7 +2,7 @@
 
 namespace App\Enums\News;
 
-use App\Attributes\BackgroundColor;
+use App\Attributes\Color;
 use App\Attributes\Description;
 use App\Attributes\Label;
 use App\Traits\EnumOptions;
@@ -14,11 +14,11 @@ enum PostStatus: string
 
     #[Label('Borrador')]
     #[Description('Post en borrador.')]
-    #[BackgroundColor('yellow')]
+    #[Color('yellow')]
     case DRAFT = 'draft';
 
     #[Label('Publicado')]
     #[Description('Post publicado.')]
-    #[BackgroundColor('green')]
+    #[Color('green')]
     case PUBLISHED = 'published';
 }

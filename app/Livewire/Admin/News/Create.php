@@ -4,8 +4,8 @@ namespace App\Livewire\Admin\News;
 
 use App\Models\News\Post;
 use App\Models\Team;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Livewire\Attributes\Locked;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -16,6 +16,7 @@ class Create extends Component
 
     public $title;
     public $subtitle;
+    #[Locked]
     public $user;
     public $date;
     public $content;

@@ -11,7 +11,7 @@
 
                 <div class="col-span-4 row-span-4 col-start-3">
                     <div class="w-full h-full text-md sm:text-md justify-self-center">
-                         @livewire('news.news-carousel',['posts'=>$posts])
+                         @livewire('news.news-carousel')
                     </div>
                 </div>
                 <div class="flex-col col-span-2 row-span-2 col-start-7 hidden sm:inline-block">

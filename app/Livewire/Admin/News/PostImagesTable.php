@@ -8,6 +8,8 @@ use Livewire\Component;
 class PostImagesTable extends Component
 {
     public Post $post;
+    public $showImage = false;
+    public $modal_image = "";
     public $images;
 
     public function mount($post)
@@ -53,6 +55,14 @@ class PostImagesTable extends Component
         $image->delete();
 
     }
+
+    public function showImageModal($image)
+    {
+        $this->showImage = !$this->showImage;
+
+        $this->modal_image = $image;
+    }
+
     public function render()
     {
         $this->images = $this->getImages();

@@ -1,8 +1,10 @@
 <div>
-    @if(count($posts)>0)
+    @if(count($this->posts)>0)
         <div x-data="{
             autoplayIntervalTime: 5000,
-            slides: {{ $posts }},
+            slides: {{ collect($this->posts) }},
+            isPaused: false,
+            autoplayInterval: null,
             currentSlideIndex: 1,
             touchStartX: null,
             touchEndX: null,
