@@ -17,6 +17,8 @@ Route::get('/', App\Livewire\Main::class)->name('app');
 
 Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');
 
+// Route::get('/directorio', App\Livewire\Directive::class)->name('app.directive');
+
 Route::get('/informacion', function (){
     return view('info');
 })->name('app.info');
