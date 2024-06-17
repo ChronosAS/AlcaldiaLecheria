@@ -17,7 +17,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body {{ $attributes->merge(['class'=>'bg-gray-500 h-full']) }} x-data="{ showBar: false }">
+    <body {{ $attributes->merge(['class'=>'bg-gray-500 h-full']) }} x-data="{}">
         @livewire('main-nav')
         <main>
             {{ $slot }}

@@ -1,8 +1,14 @@
 <!-- Navbar -->
-<div x-data="{ contact: false }">
+<div x-data="{ contact: false, showBar: false, route: '{{ Route::currentRouteName() }}' }">
     <nav
       :class="{ 'bg-blue-900 shadow transition duration-100' : showBar, 'bg-blue-900 sm:bg-transparent' : !showBar }"
-      @scroll.window="showBar = (window.pageYOffset > 20) ? true : false, contact = (window.pageYOffset > document.querySelector('#contact').getBoundingClientRect().top) ? true : false"
+      @scroll.window="
+        showBar = (window.pageYOffset > 20)
+            ? true
+            : false,
+        contact = ((route === 'app') && (window.pageYOffset > document.querySelector('#contact').getBoundingClientRect().top))
+            ? true
+            : false"
       class=" flex-no-wrap z-10 fixed top-0 flex w-full items-center justify-between py-2 sm:flex-wrap sm:justify-start sm:py-4"
       >
       <div class="flex w-full flex-wrap items-center justify-between px-3">
@@ -49,14 +55,14 @@
           <ul
             class="text-md list-style-none me-auto flex flex-col ps-0 sm:flex-row"
             data-twe-navbar-nav-ref>
-            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+            {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <!-- Projects link -->
               <a
                 class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
                 href="http://pdul.lecheria.gov.ve" target="_blank" data-twe-nav-link-ref>
                             PDUL LECHERÍA
                         </a>
-            </li>
+            </li> --}}
             <!-- About me link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
