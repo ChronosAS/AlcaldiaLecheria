@@ -92,6 +92,13 @@
                 data-twe-nav-link-ref
                 >NOTICIAS</a
               >
+              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+              <a
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                href=""
+                data-twe-nav-link-ref
+                >DIRECTORIO</a
+              >
             </li>
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
