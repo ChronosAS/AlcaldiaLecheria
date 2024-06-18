@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin\News;
 
+use App\Models\Media;
 use App\Models\News\Post;
 use Livewire\Component;
 
@@ -9,12 +10,10 @@ class ImagesTable extends Component
 {
     public Post $post;
     public $images;
-    public $a = 0;
 
     public function mount($post)
     {
         $this->post = $post;
-        $this->images = $this->getImages();
     }
 
     public function getImages()
@@ -34,9 +33,8 @@ class ImagesTable extends Component
         $image->save();
         $prev_image->save();
 
-        $this->getImages();
-        // $this->emitUp('refreshComponent');
-        $this->emit('$refresh');
+        $this->render();
+
     }
 
     public function moveImageDown($order)
@@ -51,19 +49,16 @@ class ImagesTable extends Component
         $image->save();
         $next_image->save();
 
-        $this->getImages();
-        $this->emit('$refresh');
+        $this->render();
     }
 
-    public function deleteImage($index)
+    public function deleteImage($image)
     {
-        $image = $this->images[$index];
-
-        dd($image);
+        Media::find($image)->delete();
     }
     public function render()
     {
-        $this->a++;
+        $this->images = $this->getImages();
         return view('livewire.admin.news.images-table');
     }
 }

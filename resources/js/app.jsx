@@ -1,14 +1,14 @@
 import './bootstrap';
 import { Tooltip, initTWE, Collapse, Dropdown,Carousel} from "tw-elements";
 import 'flowbite';
-
+import jQuery from 'jquery';
 import React from "react"
 import ReactDOM from "react-dom/client";
 
 import NewsCarousel from './Components/NewsCarousel';
 
 initTWE({ Tooltip, Collapse, Dropdown,Carousel });
-
+window.$ = jQuery
 
 if(document.getElementById('newsCarousel')){
     const posts = document.getElementById('newsCarousel').getAttribute("posts");

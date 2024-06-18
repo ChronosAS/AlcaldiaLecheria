@@ -17,8 +17,9 @@ class NewsCarousel extends Component
         ->take(4)
         ->get()
         ->map(function($post){
-            $images = $post->getMedia('post-image');
-            $post->image = ($images->where('order_column',1)->first())->getUrl();
+            $post->image = $post->getFirstMediaUrl('post-image');
+            // $images = $post->getMedia('post-image');
+            // $post->image = ($images->where('order_column',1)->first())?->getUrl();
             $post->imageAlt = $post->title.'-img';
             return $post;
         })->toArray();

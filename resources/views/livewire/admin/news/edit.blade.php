@@ -6,7 +6,7 @@
             </x-slot>
 
             <x-slot name="description">
-                Agregue el número y fecha de la ordenanza
+
             </x-slot>
             <x-slot name="form">
                 <div class="col-span-6 sm:col-span-3">
@@ -66,6 +66,7 @@
                 </div>
             </x-slot>
         </x-one-column-form-section>
+        @livewire('admin.news.add-image-modal',['post' => $post])
     </div>
     @push('styles')
         <style>
@@ -76,7 +77,7 @@
         </style>
     @endpush
     @script
-        <script>
+        <script type="module">
 
             ClassicEditor
             .create( document.querySelector( '#editor' ), {

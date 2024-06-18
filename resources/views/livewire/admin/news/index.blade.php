@@ -52,7 +52,6 @@
                                         <x-table.td>{{ date('d-m-Y',strtotime($post->created_at)) }}</x-table.td>
                                         <x-table.td>
                                             <x-badge :title="$post->status->label()" :color="$post->status->color()"/>
-                                        </a>
                                         </x-table.td>
                                         <x-table.td>
                                             <x-buttons.group>
