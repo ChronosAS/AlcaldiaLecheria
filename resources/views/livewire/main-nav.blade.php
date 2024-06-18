@@ -92,13 +92,36 @@
                 data-twe-nav-link-ref
                 >NOTICIAS</a
               >
-              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+              {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
                 class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
                 href="{{ route('app.directives') }}"
                 data-twe-nav-link-ref
                 >DIRECTORIO</a
               >
+              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+              <a
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                href="{{ route('app.mayor') }}"
+                data-twe-nav-link-ref
+                >NUESTRO ALCALDE</a
+              >
+            </li> --}}
+            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+              <a
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2  [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ (request()->routeIs('app.directives') || request()->routeIs('app.mayor')) ? 'active' : '' }}"
+                data-twe-nav-link-ref
+                id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">ALCALDIA</a>
+                  <div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
+                      <ul class="py-2 text-sm text-white dark:text-white" aria-labelledby="dropdownDelayButton">
+                        <li>
+                          <a  class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.mayor') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >NUESTRO ALCALDE</a>
+                        </li>
+                        <li>
+                          <a href="{{ route('app.ordinances') }}" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.directives') ? 'active pointer-events-none' : '' }} text-lg font-sans">DIRECTORIO</a>
+                        </li>
+                      </ul>
+                  </div>
             </li>
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>

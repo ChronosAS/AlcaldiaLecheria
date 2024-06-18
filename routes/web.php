@@ -21,6 +21,10 @@ Route::get('/directorio', function (){
     return view('directive.directive-team');
 })->name('app.directives');
 
+Route::get('/alcalde', function (){
+    return view('directive.mayor-bio');
+})->name('app.mayor');
+
 Route::get('/informacion', function (){
     return view('info');
 })->name('app.info');
