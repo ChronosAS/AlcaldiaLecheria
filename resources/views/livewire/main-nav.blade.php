@@ -111,14 +111,14 @@
               <a
                 class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2  [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ (request()->routeIs('app.directives') || request()->routeIs('app.mayor')) ? 'active' : '' }}"
                 data-twe-nav-link-ref
-                id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">ALCALDIA</a>
-                  <div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
-                      <ul class="py-2 text-sm text-white dark:text-white" aria-labelledby="dropdownDelayButton">
+                id="dropdown1Button" data-dropdown-toggle="dropdown-1" data-dropdown-delay="500" type="button">ALCALDIA</a>
+                  <div id="dropdown-1" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
+                      <ul class="py-2 text-sm text-white dark:text-white" aria-labelledby="dropdown1Button">
                         <li>
-                          <a  class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.mayor') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >NUESTRO ALCALDE</a>
+                          <a  class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.mayor') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.mayor') }}" >NUESTRO ALCALDE</a>
                         </li>
                         <li>
-                          <a href="{{ route('app.ordinances') }}" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.directives') ? 'active pointer-events-none' : '' }} text-lg font-sans">DIRECTORIO</a>
+                          <a href="{{ route('app.directives') }}" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.directives') ? 'active pointer-events-none' : '' }} text-lg font-sans">DIRECTORIO</a>
                         </li>
                       </ul>
                   </div>
@@ -128,9 +128,9 @@
               <a
                 class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2  [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
                 data-twe-nav-link-ref
-                id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO</a>
-                  <div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
-                      <ul class="py-2 text-sm text-white dark:text-white" aria-labelledby="dropdownDelayButton">
+                id="dropdown2Button" data-dropdown-toggle="dropdown-2" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO</a>
+                  <div id="dropdown-2" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
+                      <ul class="py-2 text-sm text-white dark:text-white" aria-labelledby="dropdown2Button">
                         <li>
                           <a  class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
                         </li>
