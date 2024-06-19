@@ -64,14 +64,14 @@
                 <template x-for="(slide, index) in slides">
                     <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0 rounded-xl" x-transition.opacity.duration.1000ms>
                         <!-- Title and description -->
-                        <div class="rounded-xl lg:px-32 lg:py-14 absolute inset-0 z-10 flex flex-col items-center justify-end gap-2  px-16 py-12 text-center">
+                        <div class="rounded-xl absolute inset-0 flex flex-col items-center justify-end gap-2  px-16 py-12 text-center">
                             <div class="bg-slate-500/50 px-14">
-                                <h3 @click="$wire.show(slide.id)" class="w-full cursor-pointer lg:w-[80%] text-balance text-sm lg:text-lg font-bold text-white" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
+                                <h3 @click="$wire.show(slide.id)" class="w-full cursor-pointer lg:w-[80%]  text-sm lg:text-lg font-bold text-white" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
                                 <p class=" w-full text-pretty text-sm text-slate-300" x-text="slide.subtitle" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
                             </div>
                         </div>
 
-                        <img class="absolute w-full h-full rounded-xl inset-0 object-contain text-slate-300 " x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
+                        <img class="static w-full h-full rounded-xl inset-0  text-slate-300 " x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
                     </div>
                 </template>
             </div>
@@ -88,7 +88,7 @@
                 </button>
 
                 <!-- indicators -->
-                <div class=" relative justify-center rounded-xl bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 px-1.5 py-1 md:px-2" role="group" aria-label="slides" >
+                <div class=" static justify-center rounded-xl bottom-3 md:bottom-5  z-20 flex  gap-4 md:gap-3 px-1.5 py-1 md:px-2" role="group" aria-label="slides" >
                     <template x-for="(slide, index) in slides">
                         <button class="size-2 cursor-pointer rounded-full transition" x-on:click="(currentSlideIndex = index + 1), setAutoplayInterval(autoplayIntervalTime)" x-bind:class="[currentSlideIndex === index + 1 ? 'bg-slate-300' : 'bg-slate-300/50']" x-bind:aria-label="'slide ' + (index + 1)"></button>
                     </template>

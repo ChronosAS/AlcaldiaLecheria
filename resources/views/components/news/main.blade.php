@@ -6,10 +6,8 @@
             </div>
             <div class=" flex-row sm:grid sm:grid-cols-10 sm:grid-rows-6 sm:gap-8 sm:mx-10 mb-10 ">
                 <div class="col-span-4 row-span-4 col-start-3">
-                    <div class="w-full h-full text-md sm:text-md">
-                         @livewire('news.news-carousel',['posts' => $this->posts])
                     <div class="w-full h-full text-md sm:text-md static">
-                         @livewire('news.news-carousel')
+                         @livewire('news.news-carousel',['posts' => $this->posts])
                     </div>
                 </div>
                 <div class=" flex-row col-span-2 row-span-2 col-start-7 hidden max-w-80 sm:inline-block">
