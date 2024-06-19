@@ -13,8 +13,10 @@ class Index extends Component
     use LivewireCustomPagination;
 
 
+    public $date = null;
     public $status = null;
     public $sortField = null;
+
 
     protected $queryString = [
         'status' => ['except'=>''],
@@ -25,6 +27,7 @@ class Index extends Component
 
     #[Computed]
     private function posts(){
+
         return Post::query()
         ->select([
             'id',
@@ -44,9 +47,13 @@ class Index extends Component
         ->when($this->status, function ($query) {
             return $query->where('status', $this->status);
         })
+        ->when($this->date, function ($query) {
+            return $query->where('date', $this->date);
+        })
         ->search($this->search)
         ->orderBy($this->sortField ?? 'id', $this->sortAsc ? 'ASC' : 'DESC')
         ->paginate($this->perPage);
+
     }
 
     public function delete($post)

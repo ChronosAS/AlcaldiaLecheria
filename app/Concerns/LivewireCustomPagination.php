@@ -73,7 +73,7 @@ trait LivewireCustomPagination
             $this->page,
             [
                 'path' => Paginator::resolveCurrentPath()
-             ]
+            ]
         );
 
         return $data;

@@ -2,27 +2,17 @@
 
 namespace App\Livewire\News;
 
-use App\Enums\News\PostStatus;
-use App\Models\News\Post;
-use Livewire\Attributes\Computed;
+use Livewire\Attributes\Locked;
 use Livewire\Component;
 
 class NewsCarousel extends Component
 {
-    #[Computed]
-    public function posts()
+    #[Locked]
+    public $posts;
+
+    public function mount($posts)
     {
-        return Post::latest()
-        ->where('status',PostStatus::PUBLISHED->value)
-        ->take(4)
-        ->get()
-        ->map(function($post){
-            $post->image = $post->getFirstMediaUrl('post-image');
-            // $images = $post->getMedia('post-image');
-            // $post->image = ($images->where('order_column',1)->first())?->getUrl();
-            $post->imageAlt = $post->title.'-img';
-            return $post;
-        })->toArray();
+        $this->posts = $posts;
     }
 
     public function show($post)

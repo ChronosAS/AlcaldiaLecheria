@@ -36,7 +36,7 @@ class Post extends Model implements HasMedia
     public function postedAt(): Attribute
     {
         return new Attribute(
-            get: fn()=> ucwords(Carbon::parse($this->date)->isoFormat('dddd, d')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
+            get: fn()=> ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
         );
     }
 

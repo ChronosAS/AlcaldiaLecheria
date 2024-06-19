@@ -37,7 +37,7 @@
                 </div>
             </div>
         </header>
-        <x-news.main/>
+        @livewire('news.main')
         <section id="contact">
             <div class="text-center">
                 <div class=" text-gray-500 sm:text-lg dark:text-gray-400 sm:justify-center">

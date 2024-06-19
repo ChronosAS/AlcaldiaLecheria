@@ -6,7 +6,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-
+        <!-- X feed -->
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- Icon -->
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {{-- <script src="https://kit.fontawesome.com/7d5a02dee9.js" crossorigin="anonymous"></script> --}}
