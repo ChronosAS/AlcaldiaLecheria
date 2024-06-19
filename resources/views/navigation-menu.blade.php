@@ -152,6 +152,12 @@
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('admin.news.index') }}" :active="request()->routeIs('admin.news.index')">
+                Noticias
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('admin.ordinance.index') }}" :active="request()->routeIs('admin.ordinance.index')">
+                Ordenanzas
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
