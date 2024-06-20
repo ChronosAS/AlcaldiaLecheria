@@ -140,7 +140,7 @@
                 </div>
                 <ul class="grid grid-cols-1 sm:grid-cols-5 gap-y-10 gap-x-6 items-start p-8">
                     <li class="relative flex-col sm:flex-row xl:flex-col items-start">
-                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <img src="" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
                         <div class="order-1 sm:ml-6 xl:ml-0">
                             <h3 class="mb-1 text-slate-900 font-semibold">
                                 <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
@@ -161,7 +161,7 @@
                         </div>
                     </li>
                     <li class="relative  flex-col sm:flex-row xl:flex-col items-start">
-                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <img src="" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
                         <div class="order-1 sm:ml-6 xl:ml-0">
                             <h3 class="mb-1 text-slate-900 font-semibold">
                                 <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
@@ -182,7 +182,7 @@
                         </div>
                     </li>
                     <li class="relative flex-col sm:flex-row xl:flex-col items-start">
-                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <img src="" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
                         <div class="order-1 sm:ml-6 xl:ml-0">
                             <h3 class="mb-1 text-slate-900 font-semibold">
                                 <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
@@ -203,7 +203,7 @@
                         </div>
                     </li>
                     <li class="relative flex-col sm:flex-row xl:flex-col items-start">
-                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <img src="" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
                         <div class="order-1 sm:ml-6 xl:ml-0">
                             <h3 class="mb-1 text-slate-900 font-semibold">
                                 <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
@@ -224,7 +224,7 @@
                         </div>
                     </li>
                     <li class="relative  flex-col sm:flex-row xl:flex-col items-start">
-                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <img src="" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
                         <div class="order-1 sm:ml-6 xl:ml-0">
                             <h3 class="mb-1 text-slate-900 font-semibold">
                                 <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
