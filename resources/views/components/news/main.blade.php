@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 @foreach ($sidePosts as $key => $post)
-                    <div class=" flex-row col-span-2 row-span-2 hidden max-w-80 sm:inline-block
+                    <div class=" flex-row col-span-2 row-span-2 hidden m sm:inline-block max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-md 
                         @switch($key)
                             @case(5)
                                  col-start-7
@@ -31,14 +31,13 @@
 
                             @default
 
-                        @endswitch
-                    ">
-                    <a href="#" class=" items-center bg-white border border-gray-200 rounded-lg shadow md:grid md:max-w-xl lg:size-[340px] hover:bg-gray-100 ">
-                            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-full md:rounded-b-none" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
-                            <div class="grid justify-between p-4 text-center">
-                                <h5 class="mb-2 text-md font-bold tracking-tight text-gray-900 ">{{ $post->title }}</h5>
-                            </div>
-                        </a>
+                        @endswitch">
+                        <a href="#" class="relative">
+                                <img class="w-full h-56 object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
+                                <div class="grid justify-between  text-center">
+                                    <h5 class="text-xl font-semibold  ">{{ $post->title }}</h5>
+                                </div>
+                            </a>
                     </div>
                 @endforeach
                 {{-- <div class=" flex-row col-span-2 row-span-2 col-start-7 hidden max-w-80 sm:inline-block">
