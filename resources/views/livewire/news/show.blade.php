@@ -3,8 +3,8 @@
         <h1 class="text-7xl">Noticias</h1>
     </x-main-header>
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white ">
-        <div class="flex justify-between px-4  rounded-xl  ">
-            <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue">
+        <div class="justify-between px-4  rounded-xl ">
+            <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue ">
                 <header class="mb-4 lg:mb-6 not-format">
                     <div x-data="{
                         // Sets the time between each slides in milliseconds
@@ -126,10 +126,125 @@
                     
                 </header>
                 {!! $post->content !!}
-                <div class="pt-10"> 
-                <a type="button" href="{{ route('app.news') }}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-10 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none mt-20 dark:focus:ring-blue-800">Regresar</a>  
+                <div class="flex justify-self-center sm:text-center">
+                    <div class="pt-10 "> 
+                    <a type="button" href="{{ route('app.news') }}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-10 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none mt-20 dark:focus:ring-blue-800">Regresar</a>  
+                    </div>
+                    {{-- <div class="pt-10"> 
+                    <a type="button" href="" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-10 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none mt-20 dark:focus:ring-blue-800">Otras Noticias</a>  
+                    </div> --}}
                 </div>
             </article>
+                <div class="pt-10 text-center">
+                    <h1 class="text-2xl font-extrabold"> OTRAS NOTICIAS<h1>
+                </div>
+                <ul class="grid grid-cols-1 sm:grid-cols-5 gap-y-10 gap-x-6 items-start p-8">
+                    <li class="relative flex-col sm:flex-row xl:flex-col items-start">
+                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <div class="order-1 sm:ml-6 xl:ml-0">
+                            <h3 class="mb-1 text-slate-900 font-semibold">
+                                <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
+                                accessible UI components
+                            </h3>
+                            <div class="prose prose-slate prose-sm text-slate-600">
+                                <p>Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind
+                                    CSS.</p>
+                            </div><a
+                                class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
+                                href="">Learn
+                                more<span class="sr-only">, Completely unstyled, fully accessible UI components</span>
+                                <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                                    width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M0 0L3 3L0 6"></path>
+                                </svg></a>
+                        </div>
+                    </li>
+                    <li class="relative  flex-col sm:flex-row xl:flex-col items-start">
+                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <div class="order-1 sm:ml-6 xl:ml-0">
+                            <h3 class="mb-1 text-slate-900 font-semibold">
+                                <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
+                                accessible UI components
+                            </h3>
+                            <div class="prose prose-slate prose-sm text-slate-600">
+                                <p>Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind
+                                    CSS.</p>
+                            </div><a
+                                class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
+                                href="">Learn
+                                more<span class="sr-only">, Completely unstyled, fully accessible UI components</span>
+                                <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                                    width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M0 0L3 3L0 6"></path>
+                                </svg></a>
+                        </div>
+                    </li>
+                    <li class="relative flex-col sm:flex-row xl:flex-col items-start">
+                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <div class="order-1 sm:ml-6 xl:ml-0">
+                            <h3 class="mb-1 text-slate-900 font-semibold">
+                                <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
+                                accessible UI components
+                            </h3>
+                            <div class="prose prose-slate prose-sm text-slate-600">
+                                <p>Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind
+                                    CSS.</p>
+                            </div><a
+                                class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
+                                href="">Learn
+                                more<span class="sr-only">, Completely unstyled, fully accessible UI components</span>
+                                <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                                    width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M0 0L3 3L0 6"></path>
+                                </svg></a>
+                        </div>
+                    </li>
+                    <li class="relative flex-col sm:flex-row xl:flex-col items-start">
+                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <div class="order-1 sm:ml-6 xl:ml-0">
+                            <h3 class="mb-1 text-slate-900 font-semibold">
+                                <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
+                                accessible UI components
+                            </h3>
+                            <div class="prose prose-slate prose-sm text-slate-600">
+                                <p>Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind
+                                    CSS.</p>
+                            </div><a
+                                class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
+                                href="">Learn
+                                more<span class="sr-only">, Completely unstyled, fully accessible UI components</span>
+                                <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                                    width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M0 0L3 3L0 6"></path>
+                                </svg></a>
+                        </div>
+                    </li>
+                    <li class="relative  flex-col sm:flex-row xl:flex-col items-start">
+                        <img src="https://tailwindcss.com/_next/static/media/headlessui@75.c1d50bc1.jpg" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                        <div class="order-1 sm:ml-6 xl:ml-0">
+                            <h3 class="mb-1 text-slate-900 font-semibold">
+                                <span class="mb-1 block text-sm leading-6 text-indigo-500">Headless UI</span>Completely unstyled, fully
+                                accessible UI components
+                            </h3>
+                            <div class="prose prose-slate prose-sm text-slate-600">
+                                <p>Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind
+                                    CSS.</p>
+                            </div><a
+                                class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
+                                href="">Learn
+                                more<span class="sr-only">, Completely unstyled, fully accessible UI components</span>
+                                <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                                    width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M0 0L3 3L0 6"></path>
+                                </svg></a>
+                        </div>
+                    </li>
+                </ul> 
         </div>
     </main>
 </div>

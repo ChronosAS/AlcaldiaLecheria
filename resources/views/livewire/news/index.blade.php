@@ -14,7 +14,7 @@
                             </div>
                             <input wire:model.live='search' type="text" name="search" id="search" class=" flex p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar...">
                         </div>
-                        <x-input id="date" type="date" style="color: black" class="mt-1 flex w-[10rem] sm:col-start-3 text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model.live="date" />
+                        <x-input id="date" type="date" style="color: black" class="mt-1 flex  w-full sm:w-[10rem] sm:col-start-3 text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model.live="date" />
                     </div>
                 </x-slot>
                 <x-slot name="content" class="">
