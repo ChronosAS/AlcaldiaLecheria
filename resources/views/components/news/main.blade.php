@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 @foreach ($sidePosts as $key => $post)
-                    <div class=" flex-row col-span-2 row-span-2 hidden m sm:inline-block max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-md 
+                    <div class=" flex-row col-span-2 row-span-2 hidden m sm:inline-block max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-md
                         @switch($key)
                             @case(5)
                                  col-start-7
@@ -32,7 +32,7 @@
                             @default
 
                         @endswitch">
-                        <a href="#" class="relative">
+                        <a href="{{ route('app.news.show',$post->id) }}" class="relative">
                                 <img class="w-full h-56 object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
                                 <div class="grid justify-between  text-center">
                                     <h5 class="text-xl font-semibold  ">{{ $post->title }}</h5>
