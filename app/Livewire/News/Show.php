@@ -4,12 +4,15 @@ namespace App\Livewire\News;
 
 use App\Models\Media;
 use App\Models\News\Post;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Locked;
 use Livewire\Component;
 
 class Show extends Component
 {
-
-    public $post;
+    #[Locked]
+    public $navPosts;
+    public Post $post;
     public $images = [];
 
     public function mount(Post $post)
@@ -20,6 +23,7 @@ class Show extends Component
             $media->alt = str_replace(' ','-',$this->post->title).'-img';
             return $media;
         });
+        $this->navPosts = Post::where('id', '!=' , $post->id)->latest()->take(5)->get();
     }
 
     // public function getImages()
@@ -34,9 +38,9 @@ class Show extends Component
     //     dd($images);
     //     return ;
     // }
-
+    #[Layout('layouts.main')]
     public function render()
     {
-        return view('livewire.news.show')->layout('layouts.main');
+        return view('livewire.news.show');
     }
 }
