@@ -10,11 +10,12 @@ use Livewire\Component;
 
 class Main extends Component
 {
+    public $carouselPosts;
+    public $sidePosts;
 
-    #[Computed]
-    public function posts()
+    public function mount()
     {
-        return Post::latest()
+        $posts = Post::latest()
         ->where('status',PostStatus::PUBLISHED->value)
         ->take(10)
         ->get()
@@ -25,6 +26,9 @@ class Main extends Component
             $post->imageAlt = $post->title.'-img';
             return $post;
         });
+
+        $this->carouselPosts = $posts->take(5);
+        $this->sidePosts = $posts->take(-5);
     }
 
     public function render()
