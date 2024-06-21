@@ -62,7 +62,7 @@
                             this.autoplayIntervalTime = newIntervalTime
                             this.autoplay()
                         },
-                    }" x-init="autoplay" class="relative w-full bg-slate-400/50 overflow-hidden">
+                    }" x-init="autoplay" class="relative w-full bg-white overflow-hidden">
 
 
                          <!-- Previous Button -->
