@@ -8,7 +8,7 @@
     <div class="text-white text-center sm:absolute  sm:bottom-0 sm:right-0 sm:m-6 px-6 md:px-12 font-sans font-black">
         {{ $slot }}
     </div>
-    <div class=" sm:absolute  sm:bottom-0 sm:left-0  flex ">
+    <div class=" sm:absolute  sm:bottom-0 sm:left-0   sm:inline-block hidden">
         <x-weather-widget/>
     </div>
 </header>
