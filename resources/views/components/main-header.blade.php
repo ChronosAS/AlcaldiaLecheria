@@ -9,6 +9,6 @@
         {{ $slot }}
     </div>
     <div class=" sm:absolute  sm:bottom-0 sm:left-0  flex ">
-        <x-weather-widget/>
+        <x-weather-widget>
     </div>
 </header>
