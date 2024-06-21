@@ -32,7 +32,7 @@ class AddImageModal extends Component
         ],[
             'image.required' => 'El campo de imagen no puede estar vacio.',
             'image.image' => 'El archivo debe ser una imagen',
-            'image.max' => 'Archivo por ensima de el tamaño minimo.'
+            'image.max' => 'Imagen exede el tamaño maximo de 4mb.'
         ]);
 
         $this->post->addMedia($this->image->getRealPath())
