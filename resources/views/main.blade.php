@@ -18,8 +18,8 @@
         </style>
     @endpush
     <div>
-        <x-main-header bg_img="../assets/img/lecheria-bg.jpg" alt="Lecheria">
-            <div class="text-center">
+        <x-main-header bg_img="../assets/img/lecheria-bg.jpg" alt="Lecheria" >
+            <div class="text-center ">
                 <h1 class="sm:text-7xl text-6xl">LECHERÍA</h1>
                 <h1 class="sm:text-4xl text-3xl">¡UN ESTILO DE VIDA!</h1>
             </div>
