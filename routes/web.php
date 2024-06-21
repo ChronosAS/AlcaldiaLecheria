@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', App\Livewire\Main::class)->name('app');
 
-Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');
+// Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');
 
 Route::get('/directorio', function (){
     return view('directive.directive-team');
@@ -49,9 +49,9 @@ Route::middleware([
         Route::get('/editar/{post}', App\Livewire\Admin\News\Edit::class)->name('admin.news.edit');
     });
 
-    Route::prefix('ordinances')->group(function(){
-        Route::get('/',App\Livewire\Admin\Ordinances\Index::class)->name('admin.ordinance.index');
-        Route::get('/crear',App\Livewire\Admin\Ordinances\Create::class)->name('admin.ordinance.create');
-        Route::get('/editar',App\Livewire\Admin\Ordinances\Edit::class)->name('admin.ordinance.edit');
-    });
+    // Route::prefix('ordinances')->group(function(){
+    //     Route::get('/',App\Livewire\Admin\Ordinances\Index::class)->name('admin.ordinance.index');
+    //     Route::get('/crear',App\Livewire\Admin\Ordinances\Create::class)->name('admin.ordinance.create');
+    //     Route::get('/editar',App\Livewire\Admin\Ordinances\Edit::class)->name('admin.ordinance.edit');
+    // });
 });

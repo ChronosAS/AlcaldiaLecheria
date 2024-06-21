@@ -126,7 +126,7 @@
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2  [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
+                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2  [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ (request()->routeIs('app.info')) ? 'active' : '' }}"
                 data-twe-nav-link-ref
                 id="dropdown2Button" data-dropdown-toggle="dropdown-2" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO</a>
                   <div id="dropdown-2" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
@@ -134,9 +134,9 @@
                         <li>
                           <a  class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
                         </li>
-                        <li>
+                        {{-- <li>
                           <a href="{{ route('app.ordinances') }}" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
-                        </li>
+                        </li> --}}
                       </ul>
                   </div>
             </li>
