@@ -76,7 +76,7 @@ class Create extends Component
             'date.required' => 'Porfavor elija una fecha.',
             'user.required' => 'Porfavor elija un usuario.',
             'images.max' => 'Ingrese un maximo de 10 imagenes.',
-            'images.image.max' => 'Imagen exede el tamaño maximo de 4mb.',
+            'images.*.image.max' => 'Imagen exede el tamaño maximo de 4mb.',
             'images.required' => 'Ingrese un minimo de 1 imagen.',
             'images.*.image.required' => 'El campo de imagen no puede estar vacio.',
         ]);
