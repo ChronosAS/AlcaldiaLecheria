@@ -2,8 +2,10 @@
 
 namespace App\Livewire\Admin\News;
 
+use App\Enums\News\PostStatus;
 use App\Models\News\Post;
 use App\Models\Team;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Locked;
 use Livewire\Component;
@@ -20,6 +22,7 @@ class Create extends Component
     public $user;
     public $date;
     public $content;
+    public $status = true;
     public $images = [];
 
 
@@ -84,7 +87,9 @@ class Create extends Component
                 'subtitle' => $this->subtitle,
                 'content' => $this->content,
                 'user_id' => $this->user,
+                'status' => ($this->status) ? PostStatus::DRAFT->value : PostStatus::PUBLISHED->value,
                 'date' => $this->date,
+                'iso_date' => ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
             ]),function($post){
                 if(isset($this->images[0]['image'])){
                     foreach($this->images as $image){

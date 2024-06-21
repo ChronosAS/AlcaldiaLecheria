@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin\News;
 
+use App\Enums\News\PostStatus;
 use App\Models\News\Post;
 use App\Models\Team;
 use Illuminate\Support\Carbon;
@@ -22,7 +23,7 @@ class Edit extends Component
     public $user;
     public $date;
     public $content;
-    public $status = true;
+    public $status;
 
 
     public function mount($post)
@@ -33,6 +34,7 @@ class Edit extends Component
         $this->title = $this->post->title;
         $this->subtitle = $this->post->subtitle;
         $this->date = $this->post->date;
+        $this->status = ($this->post->status->value == PostStatus::DRAFT->value) ? true : false;
         $this->content = $this->post->content;
     }
 
@@ -89,7 +91,9 @@ class Edit extends Component
                 'subtitle' => $this->subtitle,
                 'content' => $this->content,
                 'user_id' => $this->user,
+                'status' => ($this->status) ? PostStatus::DRAFT->value : PostStatus::PUBLISHED->value,
                 'date' => $this->date,
+                'iso_date' => ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
             ]);
 
             session()->flash('flash.banner','Post actualizado con exito.');

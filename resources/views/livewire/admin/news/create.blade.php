@@ -113,7 +113,8 @@
                 </div>
             </x-slot>
             <x-slot name="actions">
-                <div class="flex mx-3 space-x-3 items-center">
+                <div class="flex mx-3 space-x-3 items-center text-white">
+                    <x-custom-checkbox name="status" title="Borrador" value="true"/>
                     <x-button>
                         Agregar
                     </x-button>

@@ -24,7 +24,7 @@
                             <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
                                 <div class="order-1 sm:ml-6 xl:ml-0">
                                     <h3 class="mb-1 text-slate-900 font-semibold">
-                                        <span class="mb-1 block text-sm leading-6 text-indigo-500">{{ $post->postedAt }}</span>{{ $post->title }}
+                                        <span class="mb-1 block text-sm leading-6 text-indigo-500">{{ $post->iso_date }}</span>{{ $post->title }}
                                     </h3>
                                     <div class="prose prose-slate prose-sm text-slate-600">
                                         <p>{{ $post->subtitle }}</p>

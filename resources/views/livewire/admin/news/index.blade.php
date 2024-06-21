@@ -56,10 +56,10 @@
                                         </x-table.td>
                                         <x-table.td>
                                             <x-buttons.group>
-                                                <x-buttons.group-btn-href href="#" class="border rounded-s-lg">
+                                                {{-- <x-buttons.group-btn-href href="#" class="border rounded-s-lg">
                                                     <i class="far fa-eye text-blue-500 w-6 h-6"></i>
-                                                </x-buttons.group-btn-href>
-                                                <x-buttons.group-btn-href href="{{ route('admin.news.edit',$post->id) }}" class="border-t border-b">
+                                                </x-buttons.group-btn-href> --}}
+                                                <x-buttons.group-btn-href href="{{ route('admin.news.edit',$post->id) }}" class="border rounded-s-lg">
                                                     <i class="fas fa-pen text-yellow-300 w-6 h-6"></i>
                                                 </x-buttons.group-btn-href>
                                                 {{-- <a href=" route('news.show',[ 'post' => $post->id, 'slug' => $post->slug ]) "></a>

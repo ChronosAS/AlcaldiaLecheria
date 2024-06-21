@@ -36,6 +36,7 @@ class Index extends Component
             'slug',
             'content',
             'date',
+            'iso_date',
             'user_id',
             'status',
             'created_at',

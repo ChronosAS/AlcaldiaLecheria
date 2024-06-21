@@ -29,16 +29,17 @@ class Post extends Model implements HasMedia
         'status',
         'user_id',
         'date',
-        'is_draft',
+        'iso_date',
+        'status',
         'slug'
     ];
 
-    public function postedAt(): Attribute
-    {
-        return new Attribute(
-            get: fn()=> ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
-        );
-    }
+    // public function postedAt(): Attribute
+    // {
+    //     return new Attribute(
+    //         get: fn()=> ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
+    //     );
+    // }
 
     public function user() : BelongsTo
     {
@@ -58,6 +59,7 @@ class Post extends Model implements HasMedia
                   ->orWhere('subtitle', 'like', '%' . $term . '%')
                   ->orWhere('status', 'like', '%' . $term . '%')
                   ->orWhere('date','like','%'.$term.'%')
+                  ->orWhere('iso_date','like','%'.$term.'%')
                   ->orWhereRelation('user','name','like','%'.$term.'%');
         }
     }
