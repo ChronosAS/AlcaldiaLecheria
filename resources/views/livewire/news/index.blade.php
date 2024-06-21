@@ -47,7 +47,7 @@
             </x-full-card>
             {{ $this->posts->links('vendor.livewire.tailwind') }}
         </div>
-        <div wire:ignore class="col-span-2 row-span-6 col-start-9 sm:w-[15rem] md:w-[25rem]  right-10 justify-self-center fixed hidden sm:inline-block">
+        <div wire:ignore class="col-span-2 row-span-6 col-start-9 sm:w-[25rem] w-[10rem] right-10 justify-self-center fixed hidden sm:inline-block">
             <a class="twitter-timeline" href="https://twitter.com/Urbanejalcaldia?ref_src=twsrc%5Etfw">Tweets Urbanejalcaldia</a>
         </div>
     </div>
