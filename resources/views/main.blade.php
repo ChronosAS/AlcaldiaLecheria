@@ -40,7 +40,7 @@
         @livewire('news.main')
         <section id="contact">
             <div class="text-center">
-                <div class=" text-gray-500 sm:text-lg dark:text-gray-400 sm:justify-center">
+                <div class=" sm:text-lg text-gray-400 sm:justify-center">
                         <div class="text-center py-8 space-y-3">
                             <h1 class="section-heading text-uppercase text-[3rem] text-white ">Contactanos</h1>
                             <h2 class="section-subheading text-black text-xl">Nuestra directora de Atención al Ciudadano esta atenta a sus solicitudes.</h2>
