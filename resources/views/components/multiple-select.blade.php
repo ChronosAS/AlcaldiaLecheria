@@ -79,7 +79,7 @@
 </select>
 <div x-data="dropdown()" x-init="loadOptions()" class="">
     <input name="values" type="hidden" x-bind:value="selectedValues()">
-    <div class="inline-block relative w-64">
+    <div class="inline-block relative w-96">
         <div class="flex flex-col items-center relative">
             <div x-on:click="open" class="w-full">
                 <div class="my-2 p-1 flex border border-gray-200 bg-white rounded">

@@ -44,7 +44,7 @@
                     </select>
                     <x-input-error for="user" class="mt-2" />
                 </div>
-                <div class="col-span-6 "> 
+                <div class=" col-span-6 sm:col-span-6 justify-self-center "> 
                  <x-multiple-select/>
                 </div>
                
