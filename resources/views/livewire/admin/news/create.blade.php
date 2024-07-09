@@ -40,7 +40,7 @@
                             <option disabled>No hay etiquetas disponibles</option>
                         @endforelse
                     </select>
-                    <x-button type="button" @click="$dispatch('create-tag')">
+                    <x-button class="mt-2" type="button" @click="$dispatch('create-tag')">
                         Crear Etiqueta
                     </x-button>
                     {{-- <x-input-error for="date" class="mt-2" /> --}}
