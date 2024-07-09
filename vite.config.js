@@ -9,6 +9,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/components.css',
+                'resources/js/components.js',
                 'resources/js/app.jsx',
                 'resources/css/custom.css',
                 'public/vendor/ckeditor5/sample/styles.css',

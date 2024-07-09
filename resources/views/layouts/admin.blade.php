@@ -17,7 +17,7 @@
         <script src="{{ asset('vendor/ckeditor5/build/ckeditor.js') }}"></script>
         <!-- Scripts -->
         @viteReactRefresh
-        @vite(['resources/css/custom.css','resources/css/app.css', 'resources/js/app.jsx','public/vendor/ckeditor5/sample/styles.css'])
+        @vite(['resources/css/custom.css','resources/css/app.css', 'resources/js/app.jsx','resources/js/components.js','public/vendor/ckeditor5/sample/styles.css'])
         <!-- Styles -->
         @livewireStyles
         @stack('styles')
