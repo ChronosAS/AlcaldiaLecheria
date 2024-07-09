@@ -1,7 +1,7 @@
 @props(['submit'])
 
 <div {{ $attributes->merge(['class' => 'grid']) }}>
-    
+
     <div class="mt-5 col-span-2 sm:">
         <form wire:submit="{{ $submit }}">
             <div class="px-4 py-5 bg-white dark:bg-blue-800 sm:p-6 shadow {{ isset($actions) ? 'sm:rounded-tl-md sm:rounded-tr-md' : 'sm:rounded-md' }}">

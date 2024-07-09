@@ -4,8 +4,11 @@ import 'flowbite';
 import jQuery from 'jquery';
 import React from "react"
 import ReactDOM from "react-dom/client";
+import select2 from 'select2';
 
 import NewsCarousel from './Components/NewsCarousel';
+
+select2(jQuery);
 
 initTWE({ Tooltip, Collapse, Dropdown,Carousel });
 window.$ = jQuery

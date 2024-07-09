@@ -7,9 +7,11 @@ use App\Models\News\Post;
 use App\Models\Team;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Locked;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Spatie\Tags\Tag;
 
 class Create extends Component
 {
@@ -24,12 +26,14 @@ class Create extends Component
     public $content;
     public $status = true;
     public $images = [];
+    public $postTags = [];
 
 
     public function mount()
     {
         $this->images[] = $this->additionalImage();
         $this->user = auth()->user()->id;
+
     }
 
     public function addImage()
@@ -112,11 +116,13 @@ class Create extends Component
 
     }
 
+    #[Layout('layouts.admin',['header'=>'Crear Noticia'])]
     public function render()
     {
 
         return view('livewire.admin.news.create',[
-            'users' => (Team::where('name','Prensa')->first())->allUsers()
-        ])->layout('layouts.admin',['header'=>'Crear Noticia']);
+            'users' => (Team::where('name','Prensa')->first())->allUsers(),
+            'tags' => Tag::all()
+        ]);
     }
 }

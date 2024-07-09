@@ -6,7 +6,7 @@
             </x-slot>
 
             <x-slot name="description">
-             
+
             </x-slot>
             <x-slot name="form">
                 <div class="col-span-6 sm:col-span-3">
@@ -14,7 +14,7 @@
                     <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model="title" />
                     <x-input-error for="title" class="mt-2" />
                 </div>
-                
+
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="subtitle" value="Sub Titulo"/>
                     <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model="subtitle" />
@@ -31,7 +31,27 @@
                         </label>
                    </div> --}}
                 </div>
-               
+                <div class="col-span-6 sm:col-span-3">
+                    <x-label for="tags" value="Etiquetas"/>
+                    <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
+                        @forelse ($tags as $tag)
+                            <option value="{{ $tag->name }}">{{ $tag->name }}</option>
+                        @empty
+                            <option disabled>No hay etiquetas disponibles</option>
+                        @endforelse
+                    </select>
+                    <x-button type="button" @click="$dispatch('create-tag')">
+                        Crear Etiqueta
+                    </x-button>
+                    {{-- <x-input-error for="date" class="mt-2" /> --}}
+                    {{-- <div  class="inline-flex ml-1 mt-5 text-white items-center">
+                        <x-checkbox id="is_draft" wire:model='is_draft' name="is_draft" class="text-orange-500 border-orange-300 focus:ring-orange-500"/>
+                        <label for="is_draft" class="cursor-pointer ms-2 mt-[0.10rem] text-md">
+                            Borrador
+                        </label>
+                   </div> --}}
+                </div>
+
 
                 <!-- Dropdown menu -->
                 <div class="col-span-6 sm:col-span-3">
@@ -44,10 +64,7 @@
                     </select>
                     <x-input-error for="user" class="mt-2" />
                 </div>
-                <div class=" col-span-6 sm:col-span-6 justify-self-center "> 
-                 <x-multiple-select/>
-                </div>
-               
+
                 <div class="col-span-6">
                     {{-- <div class="col">
                         <label for="images"><h5>Imagenes</h5></label>
@@ -130,6 +147,7 @@
                 </div>
             </x-slot>
         </x-one-column-form-section>
+        @livewire('admin.news.tags.create')
     </div>
     @push('styles')
         <style>
@@ -140,7 +158,17 @@
         </style>
     @endpush
     @script
-        <script>
+        <script type="module">
+
+            $(document).ready(function(){
+                $('#tagsSelect').select2({
+                    language: {
+                        noResults: function () {
+                            return 'No se encontraron resultados';
+                        },
+                    }
+                });
+            })
 
             ClassicEditor
             .create( document.querySelector( '#editor' ), {
