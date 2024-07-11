@@ -24,7 +24,7 @@
                     <x-label for="date" value="Fecha" required="true"/>
                     <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model="date" />
                     <x-input-error for="date" class="mt-2" />
-                    {{-- <div  class="inline-flex ml-1 mt-5 text-white items-center"> 
+                    {{-- <div  class="inline-flex ml-1 mt-5 text-white items-center">
                         <x-checkbox id="is_draft" wire:model='is_draft' name="is_draft" class="text-orange-500 border-orange-300 focus:ring-orange-500"/>
                         <label for="is_draft" class="cursor-pointer ms-2 mt-[0.10rem] text-md">
                             Borrador
@@ -33,14 +33,16 @@
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="tags" value="Etiquetas"/>
-                    <div wire:ignore >
-                        <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
-                            @forelse ($tags as $tag)
-                                <option value="{{ $tag->name }}">{{ $tag->name }}</option>
-                            @empty
-                                <option disabled>No hay etiquetas disponibles</option>
-                            @endforelse
-                        </select>
+                    <div wire:key>
+                        <div wire:ignore>
+                            <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
+                                @forelse ($tags as $tag)
+                                    <option value="{{ $tag->name }}">{{ $tag->name }}</option>
+                                @empty
+                                    <option disabled>No hay etiquetas disponibles</option>
+                                @endforelse
+                            </select>
+                        </div>
                     </div>
                     <x-button class="mt-2" type="button" @click="$dispatch('create-tag')">
                         Crear Etiqueta
@@ -149,7 +151,7 @@
                 </div>
             </x-slot>
         </x-one-column-form-section>
-        @livewire('admin.news.tags.create')
+        <livewire:admin.news.tags.create>
     </div>
     @push('styles')
         <style>
@@ -169,6 +171,11 @@
                             return 'No se encontraron resultados';
                         },
                     }
+                });
+
+                $('#tagsSelect').on('change',function(){
+                    let data = $(this).val();
+                    $wire.tags = data;
                 });
 
                 ClassicEditor

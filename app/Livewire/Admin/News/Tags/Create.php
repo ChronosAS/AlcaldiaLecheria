@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin\News\Tags;
 
+use App\Livewire\Admin\News\Create as NewsCreate;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Spatie\Tags\Tag;
@@ -28,6 +29,7 @@ class Create extends Component
             'name' => $this->name
         ]);
 
+        $this->dispatch('tag-created');
         $this->toggleCreateTagsModal();
     }
 

@@ -9,10 +9,12 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Locked;
+use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Spatie\Tags\Tag;
 
+#[Layout('layouts.admin',['header'=>'Crear Noticia'])]
 class Create extends Component
 {
     use WithFileUploads;
@@ -27,6 +29,7 @@ class Create extends Component
     public $status = true;
     public $images = [];
     public $postTags = [];
+    public $iteration = 0;
 
 
     public function mount()
@@ -34,6 +37,12 @@ class Create extends Component
         $this->images[] = $this->additionalImage();
         $this->user = auth()->user()->id;
 
+    }
+
+    #[On('tag-created')]
+    public function iterate()
+    {
+        $this->iteration++;
     }
 
     public function addImage()
@@ -116,7 +125,6 @@ class Create extends Component
 
     }
 
-    #[Layout('layouts.admin',['header'=>'Crear Noticia'])]
     public function render()
     {
 
