@@ -127,7 +127,7 @@
                         <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $tag->name }}</span>
                     @endforeach
                 </header>
-                <div class="whitespace-normal break-all ">
+                <div class=" break-all ">
                     {!! $post->content !!}
                 </div>
                 <div class="flex justify-self-center sm:text-center">
