@@ -64,7 +64,13 @@
                         },
                     }" x-init="autoplay" class="relative w-full bg-white overflow-hidden">
 
-
+                        <div class="relative min-h-[50svh] w-full " x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()">
+                            <template x-for="(slide, index) in slides">
+                                <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
+                                    <img class="absolute w-full h-full inset-0 object-contain text-slate-700 dark:text-slate-300" x-bind:src="slide.url" x-bind:alt="slide.alt" />
+                                </div>
+                            </template>
+                        </div>
                          <!-- Previous Button -->
                         <button type="button" class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0 dark:bg-slate-900/40 dark:text-slate-300 dark:hover:bg-slate-900/60 dark:focus-visible:outline-blue-600" aria-label="previous slide" x-on:click="previous()">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pr-0.5" aria-hidden="true">
@@ -80,20 +86,6 @@
                         </button>
                         <!-- slides -->
                         <!-- Change min-h-[50svh] to your preferred height size -->
-                        <div class="relative min-h-[50svh] w-full " x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()">
-                            <template x-for="(slide, index) in slides">
-                                <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
-
-                                    <!-- Title and description -->
-                                    {{-- <div class="lg:px-32 lg:py-14 absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 bg-gradient-to-t from-slate-900/85 to-transparent px-16 py-12 text-center">
-                                        <h3 class="w-full lg:w-[80%] text-balance text-2xl lg:text-3xl font-bold text-white" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
-                                        <p class="lg:w-1/2 w-full text-pretty text-sm text-slate-300" x-text="slide.description" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
-                                    </div> --}}
-
-                                    <img class="absolute w-full h-full inset-0 object-contain text-slate-700 dark:text-slate-300" x-bind:src="slide.url" x-bind:alt="slide.alt" />
-                                </div>
-                            </template>
-                        </div>
 
                         <!-- Pause/Play Button -->
                         <button type="button" class="absolute hidden bottom-5 right-5 z-20 rounded-full text-slate-300 opacity-50 transition hover:opacity-80 focus-visible:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:outline-offset-0" aria-label="pause carousel" x-on:click="(isPaused = !isPaused), setAutoplayInterval(autoplayIntervalTime)" x-bind:aria-pressed="isPaused">
