@@ -40,23 +40,7 @@
                     </div>
                     <x-button class="mt-2" type="button" @click="$dispatch('create-tag')">
                         Crear Etiqueta
-                    </x-button><div class="col-span-6 sm:col-span-3">
-                        <div wire:key="tags-select-version-{{ $iteration }}">
-                            <div wire:ignore>
-                                <x-label for="tags" value="Etiquetas"/>
-                                <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
-                                    @forelse ($tags as $tag)
-                                        <option value="{{ $tag->name }}">{{ $tag->name }}</option>
-                                    @empty
-                                        <option disabled>No hay etiquetas disponibles</option>
-                                    @endforelse
-                                </select>
-                            </div>
-                        </div>
-                        <x-button class="mt-2" type="button" @click="$dispatch('create-tag')">
-                            Crear Etiqueta
-                        </x-button>
-                    </div>
+                    </x-button>
 
                 </div>
 
