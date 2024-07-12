@@ -127,7 +127,9 @@
                         <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $tag->name }}</span>
                     @endforeach
                 </header>
-                {!! $post->content !!}
+                <div class="whitespace-normal break-all ">
+                    {!! $post->content !!}
+                </div>
                 <div class="flex justify-self-center sm:text-center">
                     <div class="pt-10 ">
                     <a type="button" href="{{ route('app.news') }}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-10 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none mt-20 dark:focus:ring-blue-800">Regresar</a>
