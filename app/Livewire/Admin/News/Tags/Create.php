@@ -29,8 +29,8 @@ class Create extends Component
             'name' => $this->name
         ]);
 
-        $this->dispatch('tag-created');
         $this->toggleCreateTagsModal();
+        $this->dispatch('tag-created');
     }
 
     public function render()

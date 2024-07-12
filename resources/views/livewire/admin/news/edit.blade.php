@@ -23,13 +23,25 @@
                     <x-label for="date" value="Fecha" required="true"/>
                     <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model="date" />
                     <x-input-error for="date" class="mt-2" />
-                    {{-- <div  class="inline-flex ml-1 mt-5 text-white items-center">
-                        <x-checkbox id="is_draft" wire:model='is_draft' name="is_draft" class="text-orange-500 border-orange-300 focus:ring-orange-500"/>
-                        <label for="is_draft" class="cursor-pointer ms-2 mt-[0.10rem] text-md">
-                            Borrador
-                        </label>
-                   </div> --}}
                 </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <div wire:key="tags-select-version-{{ $iteration }}">
+                        <div wire:ignore>
+                            <x-label for="tags" value="Etiquetas"/>
+                            <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
+                                @forelse ($tags as $tag)
+                                    <option value="{{ $tag->name }}">{{ $tag->name }}</option>
+                                @empty
+                                    <option disabled>No hay etiquetas disponibles</option>
+                                @endforelse
+                            </select>
+                        </div>
+                    </div>
+                    <x-button class="mt-2" type="button" @click="$dispatch('create-tag')">
+                        Crear Etiqueta
+                    </x-button>
+                </div>
+
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="user" value="Creado Por" required="true"/>
                     <select class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" wire:model='user' name="user" id="user">
@@ -68,6 +80,7 @@
             </x-slot>
         </x-one-column-form-section>
         @livewire('admin.news.add-image-modal',['post' => $post])
+        @livewire('admin.news.tags.create')
     </div>
     @push('styles')
         <style>
@@ -79,6 +92,26 @@
     @endpush
     @script
         <script type="module">
+
+            $wire.on('loadPage',function(){
+                $(document).ready(function(){
+                    $('#tagsSelect').select2({
+                        placeholder: "Seleccione etiquetas",
+                        allowClear: true,
+                        language: {
+                            noResults: function () {
+                                return 'No se encontraron resultados';
+                            },
+                        }
+                    });
+                    $('#tagsSelect').val($wire.postTags);
+                    $('#tagsSelect').on('change',function(){
+                        let data = $(this).val();
+                        $wire.postTags = data;
+                    });
+
+                })
+            })
 
             ClassicEditor
             .create( document.querySelector( '#editor' ), {
@@ -92,6 +125,7 @@
             .catch( error => {
                 console.error( error );
             } );
+
         </script>
     @endscript
 </div>

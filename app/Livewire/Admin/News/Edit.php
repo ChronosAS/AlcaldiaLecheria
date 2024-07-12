@@ -7,9 +7,12 @@ use App\Models\News\Post;
 use App\Models\Team;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Locked;
+use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Spatie\Tags\Tag;
 
 class Edit extends Component
 {
@@ -24,6 +27,8 @@ class Edit extends Component
     public $date;
     public $content;
     public $status;
+    public $postTags = [];
+    public $iteration = 0;
 
 
     public function mount($post)
@@ -36,8 +41,16 @@ class Edit extends Component
         $this->date = $this->post->date;
         $this->status = ($this->post->status->value == PostStatus::DRAFT->value) ? true : false;
         $this->content = $this->post->content;
+        $this->postTags = $this->post->tags->pluck('name')->toArray();
+        $this->dispatch('loadPage');
     }
 
+    #[On('tag-created')]
+        public function updatingTags()
+        {
+            $this->dispatch('loadPage');
+            $this->iteration++;
+        }
     // public function addImage()
     // {
     //     if (count($this->images) <= 9) {
@@ -96,6 +109,9 @@ class Edit extends Component
                 'iso_date' => ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
             ]);
 
+            if(!empty($this->postTags))
+                $this->post->syncTags($this->postTags);
+
             session()->flash('flash.banner','Post actualizado con exito.');
             session()->flash('flash.bannerStyle','success');
 
@@ -106,11 +122,13 @@ class Edit extends Component
 
     }
 
+    #[Layout('layouts.admin',['header'=>'Editar Noticia'])]
     public function render()
     {
 
         return view('livewire.admin.news.edit',[
-            'users' => (Team::where('name','Prensa')->first())->allUsers()
-        ])->layout('layouts.admin',['header'=>'Editar Noticia']);
+            'users' => (Team::where('name','Prensa')->first())->allUsers(),
+            'tags' => Tag::all()
+        ]);
     }
 }

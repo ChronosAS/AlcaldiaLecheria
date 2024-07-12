@@ -123,7 +123,9 @@
                     </address>
                     <h1 class="mb-1 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl ">{{ $post->title }}</h1>
                     <h3 class="mb-4 text-md text-center font-bold leading-tight text-gray-900 lg:mb-6 lg:text-xl ">{{ $post->subtitle }}</h3>
-
+                    @foreach ($post->tags as $tag)
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $tag->name }}</span>
+                    @endforeach
                 </header>
                 {!! $post->content !!}
                 <div class="flex justify-self-center sm:text-center">

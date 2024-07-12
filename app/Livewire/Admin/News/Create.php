@@ -34,14 +34,17 @@ class Create extends Component
 
     public function mount()
     {
+
         $this->images[] = $this->additionalImage();
         $this->user = auth()->user()->id;
+        $this->dispatch('loadPage');
 
     }
 
     #[On('tag-created')]
-    public function iterate()
+    public function updatingTags()
     {
+        $this->dispatch('loadPage');
         $this->iteration++;
     }
 
@@ -113,6 +116,8 @@ class Create extends Component
                             ->toMediaCollection('post-image');
                     }
                 }
+                if(!empty($this->postTags))
+                    $post->attachTags($this->postTags);
             });
 
             session()->flash('flash.banner','Post creado con exito.');
