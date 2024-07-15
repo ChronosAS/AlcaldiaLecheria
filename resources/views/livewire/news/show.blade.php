@@ -64,7 +64,7 @@
                         },
                     }" x-init="autoplay" class="relative w-full bg-white overflow-hidden">
 
-                       
+
 
                         <!-- Next Button -->
                         <div class="relative min-h-[50svh] w-full grid grid-cols-5 grid-rows-5 gap-4" x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()">
@@ -84,7 +84,7 @@
                                 </svg>
                             </button>
                         </div>
-                      
+
                          <!-- Previous Button -->
                         <!-- slides -->
                         <!-- Change min-h-[50svh] to your preferred height size -->
@@ -110,8 +110,8 @@
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900 ">
                             <div>
                                 <a href="#" rel="author" class="text-xl font-bold text-gray-900 "></a>
-                                <p class="text-base text-gray-500 "></p>
-                                <p class="text-base text-gray-500 "><time pubdate datetime="" title=""></time></p>
+                                <p class="text-base text-gray-500 ">Autor: {{ $post->user->name }}</p>
+                                <p class="text-base text-gray-500 ">{{ $post->iso_date }}</p>
                             </div>
                         </div>
                     </address>
