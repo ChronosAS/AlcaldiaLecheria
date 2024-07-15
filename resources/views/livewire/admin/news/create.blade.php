@@ -43,6 +43,9 @@
                     </x-button>
 
                 </div>
+               <!-- <div class="col-span-6 sm:col-span-3">
+                <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500"  />
+                <div>-->
 
 
                 <!-- Dropdown menu -->
