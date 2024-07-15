@@ -110,8 +110,8 @@
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900 ">
                             <div>
                                 <a href="#" rel="author" class="text-xl font-bold text-gray-900 "></a>
-                                <p class="text-base text-blue-400 ">Autor: {{ $post->user->name }}</p>
-                                <p class="text-base text-blue-400 ">{{ $post->iso_date }}</p>
+                                <p class="text-base text-gray-600 ">Autor: {{ $post->user->name }}</p>
+                                <p class="text-base text-gray-600 ">{{ $post->iso_date }}</p>
                             </div>
                         </div>
                     </address>
