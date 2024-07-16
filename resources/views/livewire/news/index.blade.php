@@ -57,7 +57,7 @@
                     <!-- inspired by tailwindcss.com -->
                     <ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
                         @forelse ($this->posts as $post)
-                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl divide-x-2">
+                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl shadow-md">
                                 <div class="order-1 sm:ml-6 xl:ml-0">
                                     @foreach ($post->tags as $tag)
                                         <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-900 text-blue-300">{{ $tag->name }}</span>
