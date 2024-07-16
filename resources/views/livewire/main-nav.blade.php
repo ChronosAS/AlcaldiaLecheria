@@ -14,7 +14,7 @@
       <div class="flex w-full flex-wrap items-center justify-between px-3">
         <!-- Hamburger button for mobile view -->
         <button
-          class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 sm:hidden"
+          class="block border-0 bg-transparent px-2 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 text-neutral-200 sm:hidden"
           type="button"
           data-twe-collapse-init
           data-twe-target="#navbarSupportedContent1"
@@ -43,7 +43,7 @@
           data-twe-collapse-item>
           <!-- Logo -->
           <a
-            class="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 sm:mb-0 sm:mt-0"
+            class="mb-4 me-5 ms-2 mt-3 flex items-center   text-neutral-200hover:text-neutral-400 focus:text-neutral-400 sm:mb-0 sm:mt-0"
             wire:navigate href="{{ route('app') }}">
             <img
               src="{{ asset('assets/img/logo-lecheria.png') }}"
@@ -58,7 +58,7 @@
             {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <!-- Projects link -->
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
                 href="http://pdul.lecheria.gov.ve" target="_blank" data-twe-nav-link-ref>
                             PDUL LECHERÍA
                         </a>
@@ -66,7 +66,7 @@
             <!-- About me link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
                 href="http://200.41.118.109/appweb/"
                 target="_blank"
                 data-twe-nav-link-ref
@@ -77,7 +77,7 @@
             @if (request()->routeIs('app'))
                 <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
                 <a
-                    class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                    class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
                     :class="{ 'active': contact }"
                     href="#contact"
                     data-twe-nav-link-ref
@@ -87,21 +87,21 @@
             <!-- Contact link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
                 href="{{ route('app.news') }}"
                 data-twe-nav-link-ref
                 >NOTICIAS</a
               >
               {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
                 href="{{ route('app.directives') }}"
                 data-twe-nav-link-ref
                 >DIRECTORIO</a
               >
               <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
+                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
                 href="{{ route('app.mayor') }}"
                 data-twe-nav-link-ref
                 >NUESTRO ALCALDE</a
@@ -109,16 +109,16 @@
             </li> --}}
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2  [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ (request()->routeIs('app.directives') || request()->routeIs('app.mayor')) ? 'active' : '' }}"
+                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2   [&.active]:text-orange-500 {{ (request()->routeIs('app.directives') || request()->routeIs('app.mayor')) ? 'active' : '' }}"
                 data-twe-nav-link-ref
                 id="dropdown1Button" data-dropdown-toggle="dropdown-1" data-dropdown-delay="500" type="button">ALCALDIA</a>
-                  <div id="dropdown-1" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
-                      <ul class="py-2 text-sm text-white dark:text-white text-center" aria-labelledby="dropdown1Button">
+                  <div id="dropdown-1" class="z-10 hidden divide-y divide-blue-100  shadow w-44 bg-blue-800">
+                      <ul class="py-2 text-sm text-white  text-center" aria-labelledby="dropdown1Button">
                         <li>
-                          <a  class="text-neutral-500  transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.mayor') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.mayor') }}" >Nuestro Alcalde</a>
+                          <a  class=" transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 darfocus:text-neutral-300 sm:px-2 [&.active]:text-orange-500  {{ request()->routeIs('app.mayor') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.mayor') }}" >Nuestro Alcalde</a>
                         </li>
                         <li>
-                          <a href="{{ route('app.directives') }}" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.directives') ? 'active pointer-events-none' : '' }} text-lg font-sans">Directorio</a>
+                          <a href="{{ route('app.directives') }}" class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 {{ request()->routeIs('app.directives') ? 'active pointer-events-none' : '' }} text-lg font-sans">Directorio</a>
                         </li>
                       </ul>
                   </div>
@@ -126,30 +126,30 @@
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2  [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ (request()->routeIs('app.info')) ? 'active' : '' }}"
+                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2   [&.active]:text-orange-500 {{ (request()->routeIs('app.info')) ? 'active' : '' }}"
                 data-twe-nav-link-ref
                 id="dropdown2Button" data-dropdown-toggle="dropdown-2" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO</a>
-                  <div id="dropdown-2" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 dark:bg-blue-800">
-                      <ul class="py-2 text-sm text-white text-center dark:text-white" aria-labelledby="dropdown2Button">
+                  <div id="dropdown-2" class="z-10 hidden  divide-y divide-blue-100  shadow w-44 bg-blue-800">
+                      <ul class="py-2 text-sm text-white text-center " aria-labelledby="dropdown2Button">
                         <li>
-                          <a  class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
+                          <a  class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
                         </li>
                         {{-- <li>
-                          <a href="{{ route('app.ordinances') }}" class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
+                          <a href="{{ route('app.ordinances') }}" class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
                         </li> --}}
                       </ul>
                   </div>
             </li>
              {{--<li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }}"
+                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }}"
 
                 data-twe-nav-link-ref
                 >ORDENANZAS</a>
             </li>--}}
             {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-dropdown-ref>
                 <a
-                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 font-sans"
+                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 font-sans"
                 wire:navigate href="#"
                 type="button"
                 id="dropdownMenuButton2"

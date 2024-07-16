@@ -16,13 +16,13 @@
             @csrf
 
             <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full dark:bg-white focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="email" name="email" :value="old('email')" required autofocus autocomplete="username"  style="color:black"/>
+                <x-label for="email" value="{{ __('Email') }}" class="text-white"/>
+                <x-input id="email" class="block mt-1 w-full bg-white focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="email" name="email" :value="old('email')" required autofocus autocomplete="username"  style="color:black"/>
             </div>
 
             <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full focus:border-orange-500 dark:focus:border-orange-500  focus:ring-orange-500 dark:focus:ring-orange-600 dark:bg-white" type="password" name="password" required autocomplete="current-password" style="color:black"/>
+                <x-label for="password" value="{{ __('Password') }}" class="text-white"/>
+                <x-input id="password" class="block mt-1 w-full focus:border-orange-500 dark:focus:border-orange-500  focus:ring-orange-500 dark:focus:ring-orange-600 bg-white" type="password" name="password" required autocomplete="current-password" style="color:black"/>
             </div>
 
             <div class="block mt-4">
@@ -32,13 +32,13 @@
                 </label>
             </div>
             <div class="">
-                <a class="underline text-sm text-white dark:text-white hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('register') }}">
+                <a class="underline text-sm text-white   hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 " href="{{ route('register') }}">
                     ¿No tienes una cuenta?
                 </a>
             </div>
             <div class="flex items-center justify-between ">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-white dark:text-white hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-white   hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 " href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif

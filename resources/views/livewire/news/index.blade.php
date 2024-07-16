@@ -12,8 +12,13 @@
                             <div class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
                                 <svg class="w-5 h-5 text-black" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                             </div>
-                            <input wire:model.live='search' type="text" name="search" id="search" class=" flex p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar...">
+                            <input wire:model.live='search' type="text" name="search" id="search" class=" flex p-2 ps-10 text-sm text-gray-900 border border-black rounded-lg  w-full sm:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700   " placeholder="Buscar...">
+                            
                         </div>
+                            <select id="pricingType" name="pricingType" class=" w-full sm:w-96 p-2 mt-1 dark:text-black focus:border-orange-500  focus:ring-2 focus:ring-orange-500  rounded-lg ">
+                                <option selected="">Todo</option>
+                            </select>
+
                         <x-input id="date" type="date" style="color: black" class="mt-1 flex  w-full sm:w-[10rem] sm:col-start-3 text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model.live="date" />
                     </div>
                 </x-slot>
@@ -47,7 +52,7 @@
             </x-full-card>
             {{ $this->posts->links('vendor.livewire.tailwind') }}
         </div>
-        <div wire:ignore class="row-start-1 col-start-9    xl:scale-[.7] md:scale-[.7] 2xl:scale-100   xl:w-[18rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 xl:right-4 2xl:right-10 justify-self-center fixed hidden sm:inline-block">
+        <div wire:ignore class="row-start-1 col-start-9   xl:scale-[.7] md:scale-[.7] lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[18rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 xl:right-4 2xl:right-10 justify-self-center fixed hidden sm:inline-block">
             <a class="twitter-timeline" href="https://twitter.com/Urbanejalcaldia?ref_src=twsrc%5Etfw">Tweets Urbanejalcaldia</a>
         </div>
     </div>
