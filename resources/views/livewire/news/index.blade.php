@@ -55,23 +55,27 @@
                 </x-slot>
                 <x-slot name="content" class="">
                     <!-- inspired by tailwindcss.com -->
-                    <ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
+                    <ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
                         @forelse ($this->posts as $post)
-                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
+                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl divide-x-2">
                                 <div class="order-1 sm:ml-6 xl:ml-0">
-                                    <h3 class="mb-1 text-slate-900 font-semibold">
-                                        <span class="mb-1 block text-sm leading-6 text-indigo-500">{{ $post->iso_date }}</span>{{ $post->title }}
+                                    @foreach ($post->tags as $tag)
+                                        <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-900 text-blue-300">{{ $tag->name }}</span>
+                                    @endforeach
+                                    <h3 class="mb-1 text-slate-900 font-semibold mx-3">
+                                        <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3">{{ $post->iso_date }}</span>{{ $post->title }}
                                     </h3>
-                                    <div class="prose prose-slate prose-sm text-slate-600">
-                                        <p>{{ $post->subtitle }}</p>
-                                    </div><a
-                                        class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
+                                    <div class="prose prose-slate prose-sm text-slate-600 ">
+                                        <p class="mx-3">{{ $post->subtitle }}</p>
+                                    </div>
+                                    <a class="group mx-3 my-3 inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 "
                                         href="{{ route('app.news.show',$post->id) }}">Ver...
                                         <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
                                             width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M0 0L3 3L0 6"></path>
-                                        </svg></a>
+                                        </svg>
+                                    </a>
                                 </div>
                                 <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
                             </li>
