@@ -11,22 +11,22 @@
 
             <div>
                 <x-label for="name" value="{{ __('Name') }}" class="text-white"/>
-                <x-input id="name" class="block mt-1 w-full  bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-input id="name" class="block mt-1 w-full  bg-white dark:bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" class="text-white"/>
-                <x-input id="email" class="block mt-1 w-full  text-black bg-white focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                <x-input id="email" class="block mt-1 w-full  text-black dark:bg-white bg-white focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" class="text-white"/>
-                <x-input id="password" class="block mt-1 w-full  bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="password" name="password" required autocomplete="new-password" />
+                <x-input id="password" class="block mt-1 w-full  bg-white dark:bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
                 <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" class="text-white"/>
-                <x-input id="password_confirmation" class="block mt-1 w-full  bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="password" name="password_confirmation" required autocomplete="new-password" />
+                <x-input id="password_confirmation" class="block mt-1 w-full  bg-white dark:bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
