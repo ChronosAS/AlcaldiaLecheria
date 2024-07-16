@@ -13,12 +13,43 @@
                                 <svg class="w-5 h-5 text-black" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                             </div>
                             <input wire:model.live='search' type="text" name="search" id="search" class=" flex p-2 ps-10 text-sm text-gray-900 border border-black rounded-lg  w-full sm:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700   " placeholder="Buscar...">
-                            
-                        </div>
-                            <select id="pricingType" name="pricingType" class=" w-full sm:w-96 p-2 mt-1 dark:text-black focus:border-orange-500  focus:ring-2 focus:ring-orange-500  rounded-lg ">
-                                <option selected="">Todo</option>
-                            </select>
 
+                        </div>
+                        <div wire:ignore>
+                            <button id="tags" data-dropdown-toggle="tagsDropdown"
+                              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                              type="button">
+                              Filtrar por Etiqueta
+                              <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                              </svg>
+                            </button>
+
+                            <!-- Dropdown menu -->
+                            <div id="tagsDropdown" class="z-10 hidden w-56 p-3 bg-white rounded-lg border border-gray-500 shadow ">
+                                <h6 class="mb-3 text-sm font-medium text-gray-900">
+                                    Etiquetas
+                                </h6>
+                                <ul class="space-y-2 text-sm" aria-labelledby="tags">
+                                    @forelse ($allTags as $key => $tag)
+                                        <li class="flex items-center">
+                                            <input wire:model.live='tags' type="checkbox" value="{{ $tag->id }}"
+                                                class="w-4 h-4 bg-white border-gray-300 rounded text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 " />
+
+                                            <label class="ml-2 text-sm font-medium text-gray-900">
+                                                {{ $tag->name }}
+                                            </label>
+                                        </li>
+                                    @empty
+                                        <li class="flex items-center text-white">
+                                            No hay etiquetas.
+                                        </li>
+                                    @endforelse
+
+                                </ul>
+                            </div>
+                        </div>
                         <x-input id="date" type="date" style="color: black" class="mt-1 flex  w-full sm:w-[10rem] sm:col-start-3 text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model.live="date" />
                     </div>
                 </x-slot>

@@ -9,6 +9,7 @@ use App\Models\News\Post;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
+use Spatie\Tags\Tag;
 
 class Index extends Component
 {
@@ -17,6 +18,7 @@ class Index extends Component
     public $date = null;
     public $status = null;
     public $sortField = null;
+    public $tags = [];
 
     protected $queryString = [
         'status' => ['except'=>''],
@@ -46,6 +48,11 @@ class Index extends Component
         ->when($this->date, function ($query) {
             return $query->where('date', $this->date);
         })
+        ->when($this->tags, function($query){
+            return $query->whereHas('tags',function($q){
+                $q->whereIn('id',$this->tags);
+            });
+        })
         ->withAggregate('user','name')
         ->search($this->search)
         ->orderBy('date','DESC')
@@ -55,6 +62,8 @@ class Index extends Component
     #[Layout('layouts.main')]
     public function render()
     {
-        return view('livewire.news.index');
+        return view('livewire.news.index',[
+            'allTags' => Tag::all()
+        ]);
     }
 }
