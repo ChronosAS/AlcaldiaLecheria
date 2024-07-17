@@ -1,18 +1,18 @@
 @push('styles')
 <style>
-section#contact {
-    background-color: gray;
-    background-image: url("../assets/img/map-image.png") !important;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    section #contact {
+        background-color: gray;
+        background-image: url("../assets/img/map-image.png") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 
-/* #header1 {
-    background-image: url("../assets/img/lecheria-bg.jpg");
-    height: 100%;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
+    /* #header1 {
+        background-image: url("../assets/img/lecheria-bg.jpg");
+        height: 100%;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center;
 } */
 </style>
 @endpush
@@ -49,5 +49,13 @@ section#contact {
             </div>
         </div>
     </section>
+    @livewire('main-page-modal')
+    @push('scripts')
+        <script type="module">
+            $(document).ready(function(){
+                Livewire.dispatch('show-ordinance');
+            })
+        </script>
+    @endpush
   {{--<x-carousel/>--}}
 </x-main-layout>
