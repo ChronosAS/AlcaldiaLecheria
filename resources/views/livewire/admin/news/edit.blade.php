@@ -1,5 +1,5 @@
 <div>
-    <div class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 dark:bg-blue-900 rounded-lg">
+    <div class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 bg-blue-900 rounded-lg">
         <x-one-column-form-section submit="update">
             <x-slot name="title">
                 Detalles
