@@ -48,7 +48,7 @@
                 <div>-->
 
                 <!-- Dropdown menu -->
-                <div class="col-span-6 sm:col-span-3">
+                {{-- <div class="col-span-6 sm:col-span-3">
                     <x-label for="user" value="Creado Por" required="true"/>
                     <select class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" wire:model='user' name="user" id="user">
                         <option value="" selected disabled>Elija uno...</option>
@@ -57,10 +57,11 @@
                         @endforeach
                     </select>
                     <x-input-error for="user" class="mt-2" />
-                </div>
+                </div> --}}
                 <div class="col-span-6 sm:col-span-3">
-                    <x-label for="Author" value="Autor" required="true"/>
-                    <x-input style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" type="text" id="name" name="name" />
+                    <x-label for="author" value="Autor" required="true"/>
+                    <x-input style="color: black" wire:model='author' class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" type="text" id="author" name="author" />
+                    <x-input-error for="author" class="mt-2" />
                 </div>
 
                 <div class="col-span-6">

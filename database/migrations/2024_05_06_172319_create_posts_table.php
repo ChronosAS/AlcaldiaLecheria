@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('content');
             $table->string('slug', 100)->nullable()->unique();
             $table->foreignUuid('user_id')->constrained('users');
+            $table->string('author',200)->nullable();
             $table->date('date');
             $table->string('iso_date',100);
             $table->string('status')->default(App\Enums\News\PostStatus::DRAFT->value);

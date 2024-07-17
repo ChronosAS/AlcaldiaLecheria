@@ -29,6 +29,7 @@ class Post extends Model implements HasMedia
         'content',
         'status',
         'user_id',
+        'author',
         'date',
         'iso_date',
         'status',
@@ -61,6 +62,7 @@ class Post extends Model implements HasMedia
                   ->orWhere('status', 'like', '%' . $term . '%')
                   ->orWhere('date','like','%'.$term.'%')
                   ->orWhere('iso_date','like','%'.$term.'%')
+                  ->orWhere('author','like','%'.$term.'%')
                   ->orWhereRelation('user','name','like','%'.$term.'%');
         }
     }

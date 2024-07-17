@@ -23,7 +23,7 @@ class Edit extends Component
 
     public $title;
     public $subtitle;
-    public $user;
+    public $author;
     public $date;
     public $content;
     public $status;
@@ -35,7 +35,7 @@ class Edit extends Component
     {
         $this->post = Post::withTrashed()->find($post);
 
-        $this->user = $this->post->user_id;
+        $this->author = $this->post->author;
         $this->title = $this->post->title;
         $this->subtitle = $this->post->subtitle;
         $this->date = $this->post->date;
@@ -84,18 +84,11 @@ class Edit extends Component
             'title' => ['required','string','max:200'],
             'subtitle' => ['nullable','string','max:200'],
             'date' => ['required','date'],
-            'user' => ['required','string','exists:users,id'],
-            // 'images.*.image' => ['required','image','max:4096'],
-            // 'images.*.description' => ['nullable','string','max:150'],
-            // 'images' => ['required','max:10']
+            'author' => ['nullable','string','max:200'],
         ],[
             'title.required' => 'Porfavor ingrese un titulo.',
             'max' => 'Maximo de caracteres exedido.',
             'date.required' => 'Porfavor elija una fecha.',
-            'user.required' => 'Porfavor elija un usuario.',
-            // 'images.max' => 'Ingrese un maximo de 10 imagenes.',
-            // 'images.required' => 'Ingrese un minimo de 1 imagen.',
-            // 'images.*.image.required' => 'El campo de imagen no puede estar vacio.',
         ]);
 
         if($this->content){
@@ -103,7 +96,7 @@ class Edit extends Component
                 'title' => $this->title,
                 'subtitle' => $this->subtitle,
                 'content' => $this->content,
-                'user_id' => $this->user,
+                'author' => $this->author,
                 'status' => ($this->status) ? PostStatus::DRAFT->value : PostStatus::PUBLISHED->value,
                 'date' => $this->date,
                 'iso_date' => ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
@@ -127,7 +120,6 @@ class Edit extends Component
     {
 
         return view('livewire.admin.news.edit',[
-            'users' => (Team::where('name','Prensa')->first())->allUsers(),
             'tags' => Tag::all()
         ]);
     }
