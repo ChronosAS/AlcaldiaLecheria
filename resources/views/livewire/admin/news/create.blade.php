@@ -1,5 +1,5 @@
 <div>
-    <div class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 dark:bg-blue-900 rounded-lg">
+    <div class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 bg-blue-900 rounded-lg">
         <x-one-column-form-section submit="save">
             <x-slot name="title">
                 Detalles
@@ -137,8 +137,8 @@
                 </div>
             </x-slot>
             <x-slot name="actions">
-                <div class="flex mx-3 space-x-3 items-center text-white">
-                    <x-custom-checkbox name="status" title="Borrador" value="true"/>
+                <div class="flex mx-3 space-x-3 items-center dark:text-white text-black">
+                    <x-custom-checkbox name="status" title="Borrador" value="true" />
                     <x-button>
                         Agregar
                     </x-button>
