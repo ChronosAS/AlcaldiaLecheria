@@ -50,12 +50,12 @@
         </div>
     </section>
     @livewire('main-page-modal')
-    @push('scripts')
+    {{-- @push('scripts')
         <script type="module">
             $(document).ready(function(){
                 Livewire.dispatch('show-ordinance');
             })
         </script>
-    @endpush
+    @endpush --}}
   {{--<x-carousel/>--}}
 </x-main-layout>
