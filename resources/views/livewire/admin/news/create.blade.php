@@ -47,7 +47,6 @@
                 <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500"  />
                 <div>-->
 
-
                 <!-- Dropdown menu -->
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="user" value="Creado Por" required="true"/>
@@ -58,6 +57,10 @@
                         @endforeach
                     </select>
                     <x-input-error for="user" class="mt-2" />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <x-label for="Author" value="Autor" required="true"/>
+                    <x-input style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" type="text" id="name" name="name" />
                 </div>
 
                 <div class="col-span-6">
