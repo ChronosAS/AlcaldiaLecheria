@@ -1,8 +1,8 @@
 <div>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-blue-900 overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="p-6 lg:p-8 bg-white dark:bg-blue-800 dark:bg-gradient-to-bl dark:from-blue-700/50 dark:via-transparent border-b border-gray-200 dark:border-blue-700">
+            <div class="bg-blue-900 overflow-hidden shadow-xl sm:rounded-lg">
+                <div class="p-6 lg:p-8 bg-blue-800 dark:bg-gradient-to-bl from-blue-700/50 dark:via-transparent border-b border-blue-700">
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <div class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">
                             <label for="table-search" class="sr-only">Buscar</label>
@@ -46,7 +46,7 @@
                             </x-slot>
                             <x-slot name="tbody">
                                 @foreach ($this->posts as $post)
-                                    <tr class="bg-white border-b dark:bg-blue-950 dark:border-gray-700">
+                                    <tr class=" border-b bg-blue-950 border-gray-700">
                                         <x-table.td class="w-80">{{ $post->title }}</x-table.td>
                                         <x-table.td>{{ $post->user_name }}</x-table.td>
                                         {{-- <x-table.td>{{ $post->subtitle }}</x-table.td> --}}
