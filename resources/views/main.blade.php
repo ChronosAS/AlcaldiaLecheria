@@ -1,6 +1,6 @@
 @push('styles')
 <style>
-    section #contact {
+    section#contact {
         background-color: gray;
         background-image: url("../assets/img/map-image.png") !important;
         background-repeat: no-repeat;
