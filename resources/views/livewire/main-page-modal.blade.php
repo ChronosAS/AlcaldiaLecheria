@@ -2,7 +2,7 @@
     <x-dialog-modal wire:model="ordinanceModal">
         <x-slot name="title">
             <h1 class="text-center">
-                Ver Ordenanzas
+                Ver Ordenanza
             </h1>
         </x-slot>
         <x-slot name="content">
