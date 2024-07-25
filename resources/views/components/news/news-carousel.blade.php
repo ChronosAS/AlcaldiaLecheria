@@ -60,7 +60,7 @@
 
             <!-- slides -->
             <!-- Change min-h-[50svh] to your preferred height size -->
-            <div class=" min-h-[50svh] sm:min-h-[52svh] w-full rounded-md" x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()">
+            <div class=" min-h-[50svh] sm:min-h-[56svh] w-full rounded-md" x-on:touchstart="handleTouchStart($event)" x-on:touchmove="handleTouchMove($event)" x-on:touchend="handleTouchEnd()">
                 <template x-for="(slide, index) in slides">
                     <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0 rounded-xl" x-transition.opacity.duration.1000ms>
                         <!-- Title and description -->

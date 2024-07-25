@@ -4,7 +4,7 @@
             <div class="text-center py-8 space-y-3">
                 <h1 class="section-heading text-uppercase text-[3rem] text-white ">Noticias</h1>
             </div>
-            <div class=" sm:grid sm:grid-cols-7 sm:grid-rows-4 sm:gap-1 sm:mx-10 mb-10 ">
+            <div class=" sm:grid sm:grid-cols-7 sm:grid-rows-4 sm:gap-4 sm:mx-10 mb-10 ">
                 <div class="col-span-3 row-span-4 {{ ($sidePosts) ? 'col-start-2' : 'col-start-3' }} ">
                     @livewire('news.news-carousel',['posts' => $this->carouselPosts])
                 </div>
@@ -36,13 +36,12 @@
                 @if($sidePosts)
                     <div class="container col-span-2 row-span-4 col-start-5 flex-wrap">
                         @foreach ( $sidePosts as $post)
-                            <div class="h-auto hidden max-w-60 min-h-25 sm:inline-block">
+                            <div class="hidden max-w-60 p-2 px-2 sm:inline-block">
                                 <a href="#">
                                     <div class="relative max-w-lg ">
-                                        <img class=" w-full object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
-
-                                        <div class="absolute flex truncate bg-slate-200">
-                                            <h5 class=" text-xs font-bold tracking-tight text-black  truncate flex flex-col text-wrap">{{ $post->title }}</h5>
+                                        <img class=" h-60  w-72 object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
+                                        <div class="static  truncate flex flex-col text-wrap bg-slate-200">
+                                            <h5 class=" text-xs font-bold tracking-tight text-black ">{{ $post->title }}</h5>
                                         </div>
                                     </div>
                                 </a>
