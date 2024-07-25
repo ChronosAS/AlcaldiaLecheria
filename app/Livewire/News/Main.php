@@ -26,9 +26,10 @@ class Main extends Component
             $post->imageAlt = $post->title.'-img';
             return $post;
         });
-
+        if(count($posts)>=10){
+            $this->sidePosts = $posts->take(-5);
+        }
         $this->carouselPosts = $posts->take(5);
-        $this->sidePosts = $posts->take(-5);
     }
 
     public function render()
