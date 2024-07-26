@@ -112,8 +112,8 @@
                                         </div>
                                     </div>
                                 </address>
-                                <h1 class="mb-1 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl ">{{ $post->title }}</h1>
-                                <h3 class="mb-4 text-md text-center font-bold leading-tight text-gray-900 lg:mb-6 lg:text-xl ">{{ $post->subtitle }}</h3>
+                                <h1 class="mb-1 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl break-all">{{ $post->title }}</h1>
+                                <h3 class="mb-4 text-md text-center font-bold leading-tight text-gray-900 lg:mb-6 lg:text-xl break-all">{{ $post->subtitle }}</h3>
                                 @foreach ($post->tags as $tag)
                                     <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $tag->name }}</span>
                                 @endforeach
@@ -138,7 +138,7 @@
                             @foreach ($navPosts as $post)
                             <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
                                 <div class="order-1 sm:ml-6 xl:ml-0">
-                                    <h3 class="mb-1 text-slate-900 font-semibold">
+                                    <h3 class="mb-1 text-slate-900 font-semibold break-all">
                                         <span class="mb-1 block text-sm leading-6 text-indigo-500">{{ $post->postedAt }}</span>{{ $post->title }}
                                     </h3>
                                     <div class="prose prose-slate prose-sm text-slate-600">

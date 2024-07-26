@@ -46,8 +46,8 @@
                             </x-slot>
                             <x-slot name="tbody">
                                 @foreach ($this->posts as $post)
-                                    <tr class=" border-b bg-blue-950 border-gray-700">
-                                        <x-table.td class="w-80">{{ $post->title }}</x-table.td>
+                                    <tr class=" border-b bg-blue-950 border-gray-700 break-all">
+                                        <x-table.td class=" w-72 ">{{ $post->title }}</x-table.td>
                                         <x-table.td>{{ $post->user_name }}</x-table.td>
                                         {{-- <x-table.td>{{ $post->subtitle }}</x-table.td> --}}
                                         <x-table.td>{{ date('d-m-Y',strtotime($post->created_at)) }}</x-table.td>

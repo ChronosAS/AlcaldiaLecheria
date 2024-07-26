@@ -27,7 +27,7 @@ class Main extends Component
             return $post;
         });
         if(count($posts)>=6){
-            $this->sidePosts = $posts->take(5-count($posts));
+            $this->sidePosts = $posts->take(6-count($posts));
         }
         $this->carouselPosts = $posts->take(5);
     }

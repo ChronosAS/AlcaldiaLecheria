@@ -40,7 +40,7 @@
                                 <a href="#">
                                     <div class="relative max-w-lg ">
                                         <img class=" h-60  w-72 object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
-                                        <div class="static  truncate flex flex-col text-wrap bg-slate-200">
+                                        <div class="static  truncate flex flex-col text-wrap  max-h-16  bg-slate-200">
                                             <h5 class=" text-xs font-bold tracking-tight text-black ">{{ $post->title }}</h5>
                                         </div>
                                     </div>
