@@ -17,7 +17,7 @@ class Main extends Component
     {
         $posts = Post::latest()
         ->where('status',PostStatus::PUBLISHED->value)
-        ->take(10)
+        ->take(9)
         ->get()
         ->map(function($post){
             $post->image = $post->getFirstMediaUrl('post-image');
@@ -27,7 +27,8 @@ class Main extends Component
             return $post;
         });
         if(count($posts)>=6){
-            $this->sidePosts = $posts->take(6-count($posts));
+            $this->sidePosts = $posts->take(5-count($posts));
+           
         }
         $this->carouselPosts = $posts->take(5);
     }
