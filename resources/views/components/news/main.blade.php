@@ -37,7 +37,7 @@
                     <div class="container col-span-2 row-span-4 col-start-5 flex-wrap">
                         @foreach ( $sidePosts as $post)
                             <div class="hidden max-w-60 p-2 px-2 sm:inline-block">
-                                <a href="#">
+                                <a href="{{ route('app.news.show',$post->id) }}">
                                     <div class="relative max-w-lg ">
                                         <img class=" h-60  w-72 object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
                                         <div class="static  truncate flex flex-col text-wrap  max-h-16  bg-slate-200">
