@@ -26,7 +26,7 @@ class Main extends Component
             $post->imageAlt = $post->title.'-img';
             return $post;
         });
-        if(count($posts)>=6){
+        if(count($posts)>5){
             $this->sidePosts = $posts->take(5-count($posts));
            
         }
