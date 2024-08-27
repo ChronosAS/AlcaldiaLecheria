@@ -5,10 +5,10 @@
       @scroll.window="showBar = (window.pageYOffset > 20) ? true : false, contact = (window.pageYOffset > document.querySelector('#contact').getBoundingClientRect().top) ? true : false"
       class=" flex-no-wrap z-10 fixed top-0 flex w-full items-center justify-between py-2 sm:flex-wrap sm:justify-start sm:py-4"
       >
-      <div class="flex w-full flex-wrap items-center justify-between px-3">
+      <div class="flex w-full flex-wrap items-center justify-between px-3 text-neutral-200">
         <!-- Hamburger button for mobile view -->
         <button
-          class="block border-0 bg-transparent px-2  hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 text-neutral-200 sm:hidden"
+          class="block border-0 bg-transparent px-2  hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 sm:hidden"
           type="button"
           data-twe-collapse-init
           data-twe-target="#navbarSupportedContent1"
@@ -37,7 +37,7 @@
           data-twe-collapse-item>
           <!-- Logo -->
           <a
-            class="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-200 hover:text-neutral-400 focus:text-neutral-400 sm:mb-0 sm:mt-0"
+            class="mb-4 me-5 ms-2 mt-3 flex items-center hover:text-neutral-400 focus:text-neutral-400 sm:mb-0 sm:mt-0"
             wire:navigate href="{{ route('app') }}">
             <img
               src="{{ asset('assets/img/logo-lecheria.png') }}"
@@ -52,7 +52,7 @@
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <!-- Projects link -->
                 <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 {{ request()->routeIs('app.vdv') ? 'active pointer-events-none' : '' }} [&.active]:text-orange-500"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 {{ request()->routeIs('app.vdv') ? 'active pointer-events-none' : '' }} [&.active]:text-blue-500"
                 href="{{ route('app.vdv') }}" data-twe-nav-link-ref>
                             VDV2024
                 </a>
@@ -60,7 +60,7 @@
             <!-- About me link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 "
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 "
                 href="http://200.41.118.109/appweb/"
                 target="_blank"
                 data-twe-nav-link-ref
@@ -71,7 +71,7 @@
             @if (request()->routeIs('app'))
                 <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
                 <a
-                    class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500"
+                    class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
                     :class="{ 'active': contact }"
                     href="#contact"
                     data-twe-nav-link-ref
@@ -81,7 +81,7 @@
             <!-- Contact link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
                 href="https://lecheria.bmeurl.co/10FF3CFB"
                 target="_blank"
                 data-twe-nav-link-ref
@@ -90,7 +90,7 @@
             </li>
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
             <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }}"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }}"
                 href="{{ route('app.info') }}"
                 data-twe-nav-link-ref
                 >NUESTRO MUNICIPIO</a>
@@ -98,30 +98,30 @@
             <!-- information link -->
              {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2  [&.active]:text-orange-500 [&.active]:text-orange-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2  [&.active]:text-blue-500 [&.active]:text-blue-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
                 data-twe-nav-link-ref
                 id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO</a>
                   <div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-blue-100  shadow w-44 bg-blue-800">
                       <ul class="py-2 text-sm text-white text-white" aria-labelledby="dropdownDelayButton">
                         <li>
-                          <a  class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
+                          <a  class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 [&.active]:text-blue-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
                         </li>
                         <li>
-                          <a href="{{ route('app.ordinances') }}" class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
+                          <a href="{{ route('app.ordinances') }}" class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 [&.active]:text-blue-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
                         </li>
                       </ul>
                   </div>
             </li> --}}
              {{--<li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }}"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 [&.active]:text-blue-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }}"
 
                 data-twe-nav-link-ref
                 >ORDENANZAS</a>
             </li>--}}
             {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-dropdown-ref>
                 <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500 font-sans"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 [&.active]:text-blue-500 font-sans"
                 wire:navigate href="#"
                 type="button"
                 id="dropdownMenuButton2"
