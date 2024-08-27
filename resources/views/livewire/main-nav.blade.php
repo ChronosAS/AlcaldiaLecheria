@@ -51,16 +51,16 @@
             data-twe-navbar-nav-ref>
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <!-- Projects link -->
-              <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
-                href="http://pdul.lecheria.gov.ve" target="_blank" data-twe-nav-link-ref>
-                            PDUL LECHERÍA
-                        </a>
+                <a
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 {{ request()->routeIs('app.vdv') ? 'active pointer-events-none' : '' }} [&.active]:text-orange-500"
+                href="{{ route('app.vdv') }}" data-twe-nav-link-ref>
+                            VDV2024
+                </a>
             </li>
             <!-- About me link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 "
                 href="http://200.41.118.109/appweb/"
                 target="_blank"
                 data-twe-nav-link-ref
@@ -71,7 +71,7 @@
             @if (request()->routeIs('app'))
                 <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
                 <a
-                    class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
+                    class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500"
                     :class="{ 'active': contact }"
                     href="#contact"
                     data-twe-nav-link-ref
@@ -81,7 +81,7 @@
             <!-- Contact link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500"
                 href="https://lecheria.bmeurl.co/10FF3CFB"
                 target="_blank"
                 data-twe-nav-link-ref
@@ -90,7 +90,7 @@
             </li>
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
             <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }}"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }}"
                 href="{{ route('app.info') }}"
                 data-twe-nav-link-ref
                 >NUESTRO MUNICIPIO</a>
@@ -161,8 +161,8 @@
         <div class="relative flex items-center">
             <div class="m-2 text-center text-xl space-x-3">
                 <a class="btn btn-lg text-white text-blak text-center sm:text-center  " wire:navigate href="https://twitter.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a class="btn btn-lg text-violet-400 text-violet-400 text-center sm:text-center" wire:navigate href="https://www.instagram.com/alcaldiadelecheria/"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-lg text-red-500  text-red-500 text-center sm:text-center " wire:navigate href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-lg text-violet-400 text-center sm:text-center" wire:navigate href="https://www.instagram.com/alcaldiadelecheria/"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-lg text-red-500 text-center sm:text-center " wire:navigate href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
       </div>

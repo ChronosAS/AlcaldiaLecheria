@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class MainPageModal extends Component
 {
-    public $ordinanceModal = true;
+    public $ordinanceModal = false;
 
     #[On('show-ordinance')]
     public function toggleModal()

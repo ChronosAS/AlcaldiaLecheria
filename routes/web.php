@@ -22,6 +22,12 @@ Route::get('/informacion', function (){
     return view('info');
 })->name('app.info');
 
+Route::get('/virgendelvalle2024', function (){
+    return view('vdv');
+})->name('app.vdv');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
