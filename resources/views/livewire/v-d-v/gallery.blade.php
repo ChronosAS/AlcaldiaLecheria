@@ -1,4 +1,4 @@
-<div>
+<div class="my-8 mt-0 space-y-4 p-4 mx-auto max-w-10xl">
     <x-full-card>
         <x-slot name="content">
             <div class="p-5 sm:p-8">
