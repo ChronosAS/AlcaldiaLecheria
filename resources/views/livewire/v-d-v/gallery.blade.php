@@ -233,7 +233,7 @@
                 <!-- Change min-h-[50svh] to your preferred height size -->
                 <div class="relative min-h-[50svh] w-full">
                     <template x-for="(slide, index) in slides">
-                        <div x-show="currentSlideIndex == index + 1" class="absolute  inset-0" x-transition.opacity.duration.1000ms>
+                        <div x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.50ms>
                             <img class="absolute w-full h-full inset-0 object-contain text-slate-700 dark:text-slate-300" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
                         </div>
                     </template>
