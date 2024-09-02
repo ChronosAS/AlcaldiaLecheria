@@ -137,7 +137,7 @@
             </div>
         </x-slot>
     </x-full-card>
-    <x-dialog-modal wire:model="galleryModal">
+    <x-dialog-modal maxWidth="xl" wire:model="galleryModal" transparent="true">
         <x-slot name="title">
             {{-- <h1 class="text-center">
                 Ver Ordenanza
@@ -216,14 +216,14 @@
             }" class="relative w-full overflow-hidden">
 
                 <!-- previous button -->
-                <button type="button" class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0  dark:text-slate-300  dark:focus-visible:outline-blue-600" aria-label="previous slide" x-on:click="previous()">
+                <button type="button" class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2  active:outline-offset-0  dark:text-slate-300  " aria-label="previous slide" x-on:click="previous()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pr-0.5" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                     </svg>
                 </button>
 
                 <!-- next button -->
-                <button type="button" class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0  dark:text-slate-300  dark:focus-visible:outline-blue-600" aria-label="next slide" x-on:click="next()">
+                <button type="button" class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2  active:outline-offset-0  dark:text-slate-300  " aria-label="next slide" x-on:click="next()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pl-0.5" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
@@ -231,7 +231,7 @@
 
                 <!-- slides -->
                 <!-- Change min-h-[50svh] to your preferred height size -->
-                <div class="relative min-h-[50svh] w-full">
+                <div class="relative min-h-[80svh] w-full">
                     <template x-for="(slide, index) in slides">
                         <div x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.50ms>
                             <img class="absolute w-full h-full inset-0 object-contain text-slate-700 dark:text-slate-300" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
