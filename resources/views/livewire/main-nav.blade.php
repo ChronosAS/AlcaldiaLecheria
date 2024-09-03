@@ -1,8 +1,14 @@
 <!-- Navbar -->
-<div x-data="{ contact: false }">
+<div x-data="{ contact: false, showBar: false, route: '{{ Route::currentRouteName() }}' }">
     <nav
       :class="{ 'bg-blue-900 shadow transition duration-100' : showBar, 'bg-blue-900 sm:bg-transparent' : !showBar }"
-      @scroll.window="showBar = (window.pageYOffset > 20) ? true : false, contact = (window.pageYOffset > document.querySelector('#contact').getBoundingClientRect().top) ? true : false"
+      @scroll.window="
+        showBar = (window.pageYOffset > 20)
+            ? true
+            : false,
+        contact = ((route === 'app') && (window.pageYOffset > document.querySelector('#contact').getBoundingClientRect().top))
+            ? true
+            : false"
       class=" flex-no-wrap z-10 fixed top-0 flex w-full items-center justify-between py-2 sm:flex-wrap sm:justify-start sm:py-4"
       >
       <div class="flex w-full flex-wrap items-center justify-between px-3 text-neutral-200">
