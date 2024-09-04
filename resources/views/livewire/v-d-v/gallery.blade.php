@@ -137,13 +137,22 @@
             </div>
         </x-slot>
     </x-full-card>
-    <x-dialog-modal maxWidth="xl" wire:model="galleryModal" transparent="true">
+    <x-dialog-modal maxWidth="md" wire:model="galleryModal" transparent="true">
         <x-slot name="title">
             {{-- <h1 class="text-center">
                 Ver Ordenanza
             </h1> --}}
+
         </x-slot>
         <x-slot name="content">
+            <div class="text-right mb-1">
+                <button type="button" @click='$wire.toggleModal()' class="text-white bg-red-600 hover:bg-red-500 hover:text-gray-200 rounded-lg text-sm w-10 h-10 ms-auto inline-flex justify-center items-center" data-modal-hide="default-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
             <div x-data="{
                 slides: [
                     {
@@ -231,10 +240,10 @@
 
                 <!-- slides -->
                 <!-- Change min-h-[50svh] to your preferred height size -->
-                <div class="relative min-h-[80svh] w-full">
+                <div class="relative min-h-[50svh] w-full">
                     <template x-for="(slide, index) in slides">
                         <div x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.50ms>
-                            <img class="absolute w-full h-full inset-0 object-contain text-slate-700 dark:text-slate-300" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
+                            <img class="absolute w-full h-full inset-0 object-scale-down text-slate-700 dark:text-slate-300" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
                         </div>
                     </template>
                 </div>

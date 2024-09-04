@@ -2,7 +2,7 @@
     <x-full-card>
         <x-slot name="title">
             <div class=" text-3xl">
-                    Reseña Historica
+                    Reseña Histórica
                 </div>
                 <hr class="border border-blue-400 mx-96">
             </div>
@@ -105,6 +105,6 @@
                 </p>
             </div>
         </x-slot>
-    
+
     </x-full-card>
 </div>

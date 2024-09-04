@@ -15,6 +15,11 @@ class Gallery extends Component
         $this->galleryModal = !$this->galleryModal;
     }
 
+    public function toggleModal()
+    {
+        $this->galleryModal = !$this->galleryModal;
+    }
+
     public function render()
     {
         return view('livewire.v-d-v.gallery');
