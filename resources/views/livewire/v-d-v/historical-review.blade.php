@@ -33,7 +33,7 @@
                         en el corazón de los habitantes de Lechería.
                     </p>
                     <p>
-                        En el libro Devociones, Virgen del Valle, publicado por Últimas Noticias en 2013 reseña que
+                        En el libro <i>Devociones, Virgen del Valle</i>, publicado por Últimas Noticias en 2013 reseña que
                         en 1960 los vecinos se organizaron para hacer proyecciones de películas, rifas y otras
                         actividades con el objetivo de recolectar los 800 bolívares, costo de la imagen de la Virgen
                         mandada hacer en Colombia, siendo la figura que se venera en la iglesia parroquial María
@@ -46,7 +46,7 @@
                     <p>
                         El inicio de las celebraciones comienzan con la Santa Misa donde se realiza la tradicional
                         bajada desde su altar, junto a la feligresía, autoridades municipales y eclesiásticas, además
-                        de su fiel cofradía Nuestra Señora Del Valle.
+                        de su fiel cofradía <i>Nuestra Señora Del Valle</i>.
                     </p>
                     <p>
                         En los días previos a la conmemoración, se lleva a la Patrona de los Pescadores por
