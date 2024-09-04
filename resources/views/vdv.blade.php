@@ -11,8 +11,8 @@
             id="vdv-tab"
             data-tabs-toggle="#vdv-tab-content"
             role="tablist"
-            data-tabs-active-classes="text-white hover:text-orange-500 dark:text-white dark:hover:text-orange-400 border-orange-500 dark:border-orange-400"
-            data-tabs-inactive-classes="border-transparent text-white hover:text-orange-500 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300">
+            data-tabs-active-classes="text-white hover:text-blue-500 dark:text-white dark:hover:text-blue-400 border-blue-500 dark:border-blue-400"
+            data-tabs-inactive-classes="border-transparent text-white hover:text-blue-500 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300">
             <li class="me-2" role="presentation">
                 <button class="inline-block p-4 border-b-2 rounded-t-lg dark:text-white" id="review-tab" data-tabs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="false">Historia</button>
             </li>

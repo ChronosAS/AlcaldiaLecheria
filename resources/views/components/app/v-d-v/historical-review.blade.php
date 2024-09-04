@@ -8,7 +8,7 @@
             </div>
         </x-slot>
         <x-slot name="content">
-            <div class="text-justify font-serif space-y-3 tracking-wide leading-loose p-3 m-4 mx-20">
+            <div class="text-justify font-serif space-y-3 tracking-wide leading-loose p-3 m-4 ">
                 <p>
                     <b class="text-lg">Una tradición que perdura: Virgen del Valle, patrona de Oriente</b><br>
                     <p>
