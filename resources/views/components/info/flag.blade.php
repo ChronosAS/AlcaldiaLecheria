@@ -11,7 +11,7 @@
             <div class="flex items-center justify-center">
             <img src="{{asset('assets/img/bandera.jpg')}}" class="h-[7rem] m-4">
             </div>
-            <hr class="border border-orange-400 px-10">
+            <hr class="border border-blue-400 px-10">
         </div>
         </x-slot>
         <x-slot name="content">
