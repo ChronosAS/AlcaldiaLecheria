@@ -8,7 +8,7 @@
         <x-slot name="subTitle">
         <div class="text-xl">
             <h1>Escrito por: Maximilian Kopp M.</h1>
-            <hr class="border border-orange-400 px-10">
+            <hr class="border border-blue-400 px-10">
         </div>
         </x-slot>
         <x-slot name="content">
