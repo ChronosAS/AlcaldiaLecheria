@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin\News;
 
+use App\Enums\News\NewsCategories;
 use App\Enums\News\PostStatus;
 use App\Models\News\Post;
 use Illuminate\Support\Carbon;
@@ -25,8 +26,9 @@ class Create extends Component
     public $content;
     public $status = true;
     public $images = [];
-    public $postTags = [];
-    public $iteration = 0;
+    public $postCategory;
+    public $subCategories = [];
+    // public $iteration = 0;
 
 
     public function mount()
@@ -37,12 +39,12 @@ class Create extends Component
 
     }
 
-    #[On('tag-created')]
-    public function updatingTags()
-    {
-        $this->dispatch('loadPage');
-        $this->iteration++;
-    }
+    // #[On('tag-created')]
+    // public function updatingTags()
+    // {
+    //     $this->dispatch('loadPage');
+    //     $this->iteration++;
+    // }
 
     public function addImage()
     {
@@ -74,7 +76,7 @@ class Create extends Component
         $this->title= Str::lower($this->title);
 
         $this->validate([
-            'title' => ['required','string','max:200','unique:posts'],
+            'title' => ['required','string','max:90','unique:posts'],
             'subtitle' => ['nullable','string','max:200'],
             'date' => ['required','date'],
             'author' => ['nullable','string','max:200'],
@@ -112,8 +114,6 @@ class Create extends Component
                             ->toMediaCollection('post-image');
                     }
                 }
-                if(!empty($this->postTags))
-                    $post->attachTags($this->postTags);
             });
 
             session()->flash('flash.banner','Post creado con exito.');
@@ -128,9 +128,13 @@ class Create extends Component
 
     public function render()
     {
+        $this->reset('subCategories');
+        if(!empty($this->postCategory)){
+            $this->subCategories = NewsCategories::from($this->postCategory)->subCategories();
+        }
 
         return view('livewire.admin.news.create',[
-            'tags' => Tag::all()
+            'categories' => NewsCategories::cases()
         ]);
     }
 }

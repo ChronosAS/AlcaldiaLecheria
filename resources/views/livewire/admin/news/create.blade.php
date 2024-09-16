@@ -1,5 +1,5 @@
 <div>
-    <div class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 bg-blue-900 rounded-lg">
+    <div x-data="{sub-categories: @entangle('subCategories')}" class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 bg-blue-900 rounded-lg">
         <x-one-column-form-section submit="save">
             <x-slot name="title">
                 Detalles
@@ -26,7 +26,12 @@
                     <x-input-error for="date" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
-                    <div wire:key="tags-select-version-{{ $iteration }}">
+                    <x-label for="author" value="Autor" required="true" class="text-white"/>
+                    <x-input style="color: black" wire:model='author' class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" type="text" id="author" name="author" />
+                    <x-input-error for="author" class="mt-2" />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    {{-- <div wire:key="tags-select-version-{{ $iteration }}">
                         <div wire:ignore>
                             <x-label for="tags" value="Etiquetas" class="text-white"/>
                             <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
@@ -40,9 +45,25 @@
                     </div>
                     <x-button class="mt-2" type="button" @click="$dispatch('create-tag')">
                         Crear Etiqueta
-                    </x-button>
-
+                    </x-button> --}}
+                    <x-label for="category" value="Categoria" class="text-white"/>
+                    <select wire:model.live='postCategory' name="categorie" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
+                        <option selected value=''>Elija una categoria</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->value }}">{{ $category->label() }}</option>
+                        @endforeach
+                    </select>
                 </div>
+                {{-- @if(count($subCategories)>0) --}}
+                <div x-cloak x-show="sub-categories.lenght > 0" class="col-span-6 sm:col-span-3">
+                    <x-label for="sub_categories" value="Sub-Categorias" class="text-white"/>
+                    <select wire:model='subCategories' name="sub_categories" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
+                        @foreach ($subCategories as $sub_category)
+                            <option value="{{ $sub_category['name'] }}">{{ $sub_category['label'] }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                {{-- @endif --}}
                <!-- <div class="col-span-6 sm:col-span-3">
                 <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500"  />
                 <div>-->
@@ -58,11 +79,6 @@
                     </select>
                     <x-input-error for="user" class="mt-2" />
                 </div> --}}
-                <div class="col-span-6 sm:col-span-3">
-                    <x-label for="author" value="Autor" required="true" class="text-white"/>
-                    <x-input style="color: black" wire:model='author' class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" type="text" id="author" name="author" />
-                    <x-input-error for="author" class="mt-2" />
-                </div>
 
                 <div class="col-span-6">
                     {{-- <div class="col">
@@ -159,7 +175,7 @@
     @script
         <script type="module">
 
-            $wire.on('loadPage',function(){
+            /*$wire.on('loadPage',function(){
                 $(document).ready(function(){
                     $('#tagsSelect').select2({
                         placeholder: "Seleccione etiquetas",
@@ -177,7 +193,7 @@
                     });
 
                 })
-            })
+            })*/
 
             ClassicEditor
             .create( document.querySelector( '#editor' ), {
