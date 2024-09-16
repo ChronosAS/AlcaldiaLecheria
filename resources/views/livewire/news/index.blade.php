@@ -3,11 +3,11 @@
         <h1 class="text-7xl" >Noticias</h1>
     </x-main-header>
 
-    <div class=" flex sm:grid sm:grid-cols-10 sm:grid-rows-6 gap-4">
-        <div class="sm:col-span-8 sm:row-span-6 my-8 mt-0 space-y-4 p-4 mx-auto max-w-7xl">
-            <x-full-card class="">
+    <div class=" flex sm:grid sm:grid-cols-10 sm:grid-rows-6 xl:grid xl:grid-cols-10 xl:grid-rows-6 md:grid-cols-1 md:grid gap-4">
+        <div class="sm:col-span-8 xl:col-span-8 xl:row-span-6 sm:row-span-6 md:col-span-1 my-8 mt-0 space-y-4 p-4 mx-auto max-w-7xl">
+            <x-full-card class=" ">
                 <x-slot name="title">
-                    <div class=" text-3xl grid  sm:grid-cols-1 2xl:grid-cols-6 xl:grid-cols-5 sm:grid-rows-1 2xl:grid-rows-1 xl:grid-rows-1 sm:gap-4">
+                    <div class=" text-3xl grid  sm:grid-cols-1  2xl:grid-cols-6 xl:grid-cols-5 sm:grid-rows-1 2xl:grid-rows-1 xl:grid-rows-1 sm:gap-4">
                         <div class="relative sm:mt-1 mt-2">
                             <div class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
                                 <svg class="w-5 h-5 text-black" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
@@ -57,18 +57,18 @@
                     <!-- inspired by tailwindcss.com -->
                     <ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
                         @forelse ($this->posts as $post)
-                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl shadow-md">
-                                <div class="order-1 sm:ml-6 xl:ml-0">
+                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl shadow-md max-h-[47rem]">
+                                <div class="order-1 sm:ml-6 xl:ml-0 ">
                                     @foreach ($post->tags as $tag)
-                                        <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-900 text-blue-300">{{ $tag->name }}</span>
+                                        <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ">{{ $tag->name }}</span>
                                     @endforeach
-                                    <h3 class="mb-1 text-slate-900 font-semibold mx-3 break-all">
+                                    <h3 class="mb-1 text-slate-900 font-semibold mx-3 break-all ">
                                         <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3 ">{{ $post->iso_date }}</span>{{ $post->title }}
                                     </h3>
                                     <div class="prose prose-slate prose-sm text-slate-600 ">
                                         <p class="mx-3">{{ $post->subtitle }}</p>
                                     </div>
-                                    <a class="group mx-3 my-3 inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 "
+                                    <a class="group mx-3 my-2 inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 "
                                         href="{{ route('app.news.show',$post->id) }}">Ver...
                                         <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
                                             width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
@@ -87,7 +87,7 @@
             </x-full-card>
             {{ $this->posts->links('vendor.livewire.tailwind') }}
         </div>
-        <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.7] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[18rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:right-4 2xl:right-10 justify-self-center fixed hidden sm:inline-block">
+        <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.7] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[18rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:right-4 2xl:right-10 justify-self-center fixed hidden sm:inline-block md:hidden xl:inline-block">
             <a class="twitter-timeline" href="https://twitter.com/Urbanejalcaldia?ref_src=twsrc%5Etfw">Tweets Urbanejalcaldia</a>
         </div>
     </div>
