@@ -4,8 +4,8 @@
             <div class="text-center py-8 space-y-3">
                 <h1 class="section-heading text-uppercase text-[3rem] text-white ">Noticias</h1>
             </div>
-            <div class=" sm:grid sm:grid-cols-7 sm:grid-rows-4 sm:gap-4 sm:mx-10 mb-10 ">
-                <div class="col-span-3 row-span-4 {{ ($sidePosts) ? 'col-start-2' : 'col-start-3' }} ">
+            <div class=" sm:grid sm:grid-cols-7 sm:grid-rows-4 sm:gap-4 sm:mx-10 mb-10 md:grid md:grid-cols-1 xl:grid-cols-7 xl:grid xl:grid-rows-4">
+                <div class="md:col-span-1 xl:col-span-3 row-span-4  {{ ($sidePosts) ? 'xl:col-start-2' : 'xl:col-start-3' }} ">
                     @livewire('news.news-carousel',['posts' => $this->carouselPosts])
                 </div>
                {{-- @foreach ($sidePosts as $key => $post)
@@ -34,9 +34,9 @@
                     </div>
                 @endforeach--}}
                 @if($sidePosts)
-                    <div class="container col-span-2 row-span-4 col-start-5 flex-wrap">
+                    <div class="container xl:col-span-3 2xl:col-span-2 col-span-2 row-span-4 col-start-5 flex-wrap">
                         @foreach ( $sidePosts as $post)
-                            <div class="hidden max-w-60 p-2 px-2 sm:inline-block">
+                            <div class="hidden md:hidden xl:inline-block max-w-60 p-2 px-2 sm:inline-block">
                                 <a href="{{ route('app.news.show',$post->id) }}">
                                     <div class="relative max-w-lg ">
                                         <img class=" h-60  w-72 object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
