@@ -36,6 +36,18 @@ return [
             'throw' => false,
         ],
 
+        'news' => [
+            'driver' => 'local',
+            'root' => public_path('news/img'),
+            'url' => env('APP_URL').'/noticias/img'
+        ],
+
+        'galleries' => [
+            'driver' => 'local',
+            'root' => storage_path('galleries'),
+            'url' => env('APP_URL').'/galleries'
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

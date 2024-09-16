@@ -10,7 +10,13 @@
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- Icon -->
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        {{-- <script src="https://kit.fontawesome.com/7d5a02dee9.js" crossorigin="anonymous"></script> --}}
+        <!-- FontAwesome icons -->
+        <script src="https://kit.fontawesome.com/7d5a02dee9.js" crossorigin="anonymous"></script>
+        <!-- Fonts -->
+        {{-- <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> --}}
+
         <!-- Scripts -->
         @viteReactRefresh
         @vite(['resources/css/app.css','resources/css/components.css','resources/js/app.jsx'])
@@ -28,7 +34,7 @@
                 <span class="flex flex-wrap items-center sm:text text-white sm:text-center  mx-12">
                     Copyright © Alcaldía de Lechería 2024
                 </span>
-                <ul class="flex flex-wrap items-center mt-3  font-medium text-white sm:text-center">
+                <ul class="flex flex-wrap items-center mt-3  font-medium text-gray-500 dark:text-gray-400 sm:text-center">
                     <li><a href="{{ route('login') }}" class="hover:underline me-4 md:me-6">Admin</a></li>
                 </ul>
             </div>

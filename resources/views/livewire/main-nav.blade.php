@@ -11,10 +11,10 @@
             : false"
       class=" flex-no-wrap z-10 fixed top-0 flex w-full items-center justify-between py-2 sm:flex-wrap sm:justify-start sm:py-4"
       >
-      <div class="flex w-full flex-wrap items-center justify-between px-3">
+      <div class="flex w-full flex-wrap items-center justify-between px-3 text-neutral-200">
         <!-- Hamburger button for mobile view -->
         <button
-          class="block border-0 bg-transparent px-2 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 text-neutral-200 sm:hidden"
+          class="block border-0 bg-transparent px-2  hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 sm:hidden"
           type="button"
           data-twe-collapse-init
           data-twe-target="#navbarSupportedContent1"
@@ -43,7 +43,7 @@
           data-twe-collapse-item>
           <!-- Logo -->
           <a
-            class="mb-4 me-5 ms-2 mt-3 flex items-center   text-neutral-200hover:text-neutral-400 focus:text-neutral-400 sm:mb-0 sm:mt-0"
+            class="mb-4 me-5 ms-2 mt-3 flex items-center hover:text-neutral-400 focus:text-neutral-400 sm:mb-0 sm:mt-0"
             wire:navigate href="{{ route('app') }}">
             <img
               src="{{ asset('assets/img/logo-lecheria.png') }}"
@@ -55,18 +55,18 @@
           <ul
             class="text-md list-style-none me-auto flex flex-col ps-0 sm:flex-row"
             data-twe-navbar-nav-ref>
-            {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <!-- Projects link -->
-              <a
-                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500"
-                href="http://pdul.lecheria.gov.ve" target="_blank" data-twe-nav-link-ref>
-                            PDUL LECHERÍA
-                        </a>
-            </li> --}}
+                <a
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 {{ request()->routeIs('app.vdv') ? 'active pointer-events-none' : '' }} [&.active]:text-blue-500"
+                href="{{ route('app.vdv') }}" data-twe-nav-link-ref>
+                            VDV2024
+                </a>
+            </li>
             <!-- About me link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 "
                 href="http://200.41.118.109/appweb/"
                 target="_blank"
                 data-twe-nav-link-ref
@@ -77,7 +77,7 @@
             @if (request()->routeIs('app'))
                 <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
                 <a
-                    class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
+                    class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
                     :class="{ 'active': contact }"
                     href="#contact"
                     data-twe-nav-link-ref
@@ -87,69 +87,63 @@
             <!-- Contact link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
+                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
                 href="{{ route('app.news') }}"
                 data-twe-nav-link-ref
                 >NOTICIAS</a
               >
-              {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
+                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 sm:px-2 [&.active]:text-blue-500"
                 href="{{ route('app.directives') }}"
                 data-twe-nav-link-ref
                 >DIRECTORIO</a
               >
-              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+              {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 [&.active]:text-orange-500"
+                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 sm:px-2 [&.active]:text-blue-500"
                 href="{{ route('app.mayor') }}"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
+                href="https://lecheria.bmeurl.co/10FF3CFB"
+                target="_blank"
                 data-twe-nav-link-ref
-                >NUESTRO ALCALDE</a
+                >BOLETÍN DE NOTICIAS</a
               >
             </li> --}}
-            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2   [&.active]:text-orange-500 {{ (request()->routeIs('app.directives') || request()->routeIs('app.mayor')) ? 'active' : '' }}"
+            {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+                <a
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }}"
+                href="{{ route('app.info') }}"
                 data-twe-nav-link-ref
-                id="dropdown1Button" data-dropdown-toggle="dropdown-1" data-dropdown-delay="500" type="button">ALCALDIA</a>
-                  <div id="dropdown-1" class="z-10 hidden divide-y divide-blue-100  shadow w-44 bg-blue-800">
-                      <ul class="py-2 text-sm text-white  text-center" aria-labelledby="dropdown1Button">
-                        <li>
-                          <a  class=" transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 darfocus:text-neutral-300 sm:px-2 [&.active]:text-orange-500  {{ request()->routeIs('app.mayor') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.mayor') }}" >Nuestro Alcalde</a>
-                        </li>
-                        <li>
-                          <a href="{{ route('app.directives') }}" class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 {{ request()->routeIs('app.directives') ? 'active pointer-events-none' : '' }} text-lg font-sans">Directorio</a>
-                        </li>
-                      </ul>
-                  </div>
-            </li>
+                >NUESTRO MUNICIPIO</a>
+            </li> --}}
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2   [&.active]:text-orange-500 {{ (request()->routeIs('app.info')) ? 'active' : '' }}"
+                class=" transition duration-200 cursor-pointer hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2  [&.active]:text-blue-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
                 data-twe-nav-link-ref
-                id="dropdown2Button" data-dropdown-toggle="dropdown-2" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO</a>
-                  <div id="dropdown-2" class="z-10 hidden  divide-y divide-blue-100  shadow w-44 bg-blue-800">
-                      <ul class="py-2 text-sm text-white text-center " aria-labelledby="dropdown2Button">
+                id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO</a>
+                  <div id="dropdownDelay" class="z-10 hidden divide-y divide-blue-100  shadow w-44 bg-blue-800">
+                      <ul class="py-2 text-sm text-white" aria-labelledby="dropdownDelayButton">
                         <li>
-                          <a  class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
+                          <a  class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
                         </li>
                         {{-- <li>
-                          <a href="{{ route('app.ordinances') }}" class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
+                          <a href="{{ route('app.ordinances') }}" class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
                         </li> --}}
                       </ul>
                   </div>
             </li>
-             {{--<li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+             {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }}"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }}"
 
                 data-twe-nav-link-ref
                 >ORDENANZAS</a>
-            </li>--}}
+            </li> --}}
             {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-dropdown-ref>
                 <a
-                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-orange-400 dark:focus:text-neutral-300 sm:px-2 [&.active]:text-orange-500 dark:[&.active]:text-orange-500 font-sans"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 [&.active]:text-blue-500 font-sans"
                 wire:navigate href="#"
                 type="button"
                 id="dropdownMenuButton2"
@@ -169,16 +163,15 @@
                 </span>
                 </a>
                 <ul
-                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-blue-800 bg-clip-padding text-left text-base shadow-lg font-sans data-[twe-dropdown-show]:block dark:bg-blue-800 text-md p-5 sm:p-0"
+                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-blue-800 bg-clip-padding text-left text-base shadow-lg font-sans data-[twe-dropdown-show]:block  text-md p-5 sm:p-0"
                 aria-labelledby="dropdownMenuButton1"
                 data-twe-dropdown-menu-ref>
                 <li>
                     <a
-                    class="block w-full whitespace-nowrap bg-blue-800 px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline  dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    class="block w-full whitespace-nowrap bg-blue-800 px-4 py-2 text-sm font-normal focus:outline-none active:no-underline  text-white hover:bg-neutral-800/25 focus:bg-neutral-800/25 active:bg-neutral-800/25"
                     wire:navigate href="#"
                     data-twe-dropdown-item-ref
-                    >ORDENANZA</a
-                    >
+                    >ORDENANZA</a>
                 </li>
                 </ul>
             </li> --}}
@@ -188,9 +181,9 @@
         <!-- Right elements -->
         <div class="relative flex items-center">
             <div class="m-2 text-center text-xl space-x-3">
-                <a class="btn btn-lg text-white dark:text-blak text-center sm:text-center  " wire:navigate href="https://twitter.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a class="btn btn-lg text-violet-400 dark:text-violet-400 text-center sm:text-center" wire:navigate href="https://www.instagram.com/alcaldiadelecheria/"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-lg text-red-500  dark:text-red-500 text-center sm:text-center " wire:navigate href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-lg text-white text-blak text-center sm:text-center  "  href="https://x.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a class="btn btn-lg text-violet-400 text-center sm:text-center"  href="https://www.instagram.com/alcaldiadelecheria/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-lg text-red-500 text-center sm:text-center "  href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
       </div>
