@@ -34,7 +34,7 @@
                     </div>
                 @endforeach--}}
                 @if($sidePosts)
-                    <div class="container xl:col-span-3 2xl:col-span-2 col-span-2 row-span-4 col-start-5 flex-wrap">
+                    <div class="container xl:col-span-3 2xl:col-span-2 col-span-2 row-span-4 col-start-5 md:hidden xl:inline-flex flex-wrap">
                         @foreach ( $sidePosts as $post)
                             <div class="hidden md:hidden xl:inline-block max-w-60 p-2 px-2 sm:inline-block">
                                 <a href="{{ route('app.news.show',$post->id) }}">
