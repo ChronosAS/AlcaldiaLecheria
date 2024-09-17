@@ -16,7 +16,7 @@
                     <div class="flex items-center justify-center">
                     <img src="{{asset('assets/img/manuel-ferreira.jpg')}}" class="h-[30rem] m-4 transition duration-300 ease-in-out hover:shadow-lg ">
                     </div>
-                    <hr class="border border-orange-400 px-10">
+                    <hr class="border border-blue-400 px-10">
                 </div>
                 </x-slot>
                 <x-slot name="content">

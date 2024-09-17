@@ -19,7 +19,7 @@
                                     placeholder="Estado"
                                     :values="App\Enums\News\PostStatus::options()"
                                 />
-                                <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model.live="date" />
+                                <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
                             </div>
                         </div>
                         <x-table.table-rounded>

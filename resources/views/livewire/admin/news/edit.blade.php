@@ -11,24 +11,24 @@
             <x-slot name="form">
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="title" value="Titulo" required="true" class="text-white"/>
-                    <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model="title" />
+                    <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="title" />
                     <x-input-error for="title" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="subtitle" value="Sub Titulo" class="text-white"/>
-                    <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model="subtitle" />
+                    <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
                     <x-input-error for="subtitle" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="date" value="Fecha" required="true" class="text-white"/>
-                    <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500" wire:model="date" />
+                    <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="date" />
                     <x-input-error for="date" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <div wire:key="tags-select-version-{{ $iteration }}">
                         <div wire:ignore>
                             <x-label for="tags" value="Etiquetas" class="text-white"/>
-                            <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
+                            <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" id="tagsSelect">
                                 @forelse ($tags as $tag)
                                     <option value="{{ $tag->name }}">{{ $tag->name }}</option>
                                 @empty
@@ -44,7 +44,7 @@
 
                 {{-- <div class="col-span-6 sm:col-span-3">
                     <x-label for="user" value="Creado Por" required="true"/>
-                    <select class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" wire:model='user' name="user" id="user">
+                    <select class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" wire:model='user' name="user" id="user">
                         <option value="" selected disabled>Elija uno...</option>
                         @foreach ($users as $user)
                             <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -54,7 +54,7 @@
                 </div> --}}
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="author" value="Autor" required="true" class="text-white"/>
-                    <x-input style="color: black" wire:model='author' class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" type="text" id="author" name="author" />
+                    <x-input style="color: black" wire:model='author' class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" type="text" id="author" name="author" />
                     <x-input-error for="author" class="mt-2" />
                 </div>
                 <div class="col-span-6">

@@ -23,7 +23,7 @@
                     <!-- Member Email -->
                     <div class="col-span-6 sm:col-span-4">
                         <x-label for="email" value="{{ __('Email') }}" />
-                        <x-input id="email" type="email"  style="color: black" class="mt-1 block w-full bg-white dark:bg-white text-black dark:text-black focus:border-orange-500 dark:focus:border-orange-600 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="addTeamMemberForm.email" />
+                        <x-input id="email" type="email"  style="color: black" class="mt-1 block w-full bg-white dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600" wire:model="addTeamMemberForm.email" />
                         <x-input-error for="email" class="mt-2" />
                     </div>
 
@@ -35,7 +35,7 @@
 
                             <div class="relative z-0 mt-1 border border-white dark:border-white rounded-lg cursor-pointer">
                                 @foreach ($this->roles as $index => $role)
-                                    <button type="button" class="relative px-4 py-3 inline-flex w-full rounded-lg focus:z-10 focus:outline-none focus:border-orange-500 dark:focus:border-orange-600 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-600 {{ $index > 0 ? 'border-t border-gray-200 dark:border-white focus:border-none rounded-t-none' : '' }} {{ ! $loop->last ? 'rounded-b-none' : '' }}"
+                                    <button type="button" class="relative px-4 py-3 inline-flex w-full rounded-lg focus:z-10 focus:outline-none focus:border-blue-500 dark:focus:border-blue-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 {{ $index > 0 ? 'border-t border-gray-200 dark:border-white focus:border-none rounded-t-none' : '' }} {{ ! $loop->last ? 'rounded-b-none' : '' }}"
                                                     wire:click="$set('addTeamMemberForm.role', '{{ $role->key }}')">
                                         <div class="{{ isset($addTeamMemberForm['role']) && $addTeamMemberForm['role'] !== $role->key ? 'opacity-50' : '' }}">
                                             <!-- Role Name -->
