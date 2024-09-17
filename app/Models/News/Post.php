@@ -2,6 +2,7 @@
 
 namespace App\Models\News;
 
+use App\Enums\News\NewsCategories;
 use App\Enums\News\PostStatus;
 use App\Models\User;
 use Carbon\Carbon;
@@ -21,6 +22,7 @@ class Post extends Model implements HasMedia
 
     protected $casts = [
         'status' => PostStatus::class,
+        'category' => NewsCategories::class,
     ];
 
     protected $fillable = [
@@ -33,6 +35,7 @@ class Post extends Model implements HasMedia
         'date',
         'iso_date',
         'status',
+        'category',
         'slug'
     ];
 

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin\News;
 
+use App\Enums\News\NewsCategories;
 use App\Enums\News\PostStatus;
 use App\Models\News\Post;
 use App\Models\Team;
@@ -27,8 +28,9 @@ class Edit extends Component
     public $date;
     public $content;
     public $status;
-    public $postTags = [];
-    public $iteration = 0;
+    public $category;
+    // public $postTags = [];
+    // public $iteration = 0;
 
 
     public function mount($post)
@@ -41,16 +43,10 @@ class Edit extends Component
         $this->date = $this->post->date;
         $this->status = ($this->post->status->value == PostStatus::DRAFT->value) ? true : false;
         $this->content = $this->post->content;
-        $this->postTags = $this->post->tags->pluck('name')->toArray();
+        $this->category = $this->post->category->value ?? '';
         $this->dispatch('loadPage');
     }
 
-    #[On('tag-created')]
-        public function updatingTags()
-        {
-            $this->dispatch('loadPage');
-            $this->iteration++;
-        }
     // public function addImage()
     // {
     //     if (count($this->images) <= 9) {
@@ -98,6 +94,7 @@ class Edit extends Component
                 'content' => $this->content,
                 'author' => $this->author,
                 'status' => ($this->status) ? PostStatus::DRAFT->value : PostStatus::PUBLISHED->value,
+                'category' => $this->category,
                 'date' => $this->date,
                 'iso_date' => ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
             ]);
@@ -120,7 +117,7 @@ class Edit extends Component
     {
 
         return view('livewire.admin.news.edit',[
-            'tags' => Tag::all()
+            'categories' => NewsCategories::cases()
         ]);
     }
 }

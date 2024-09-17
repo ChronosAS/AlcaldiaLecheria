@@ -19,7 +19,7 @@
                             <button id="tags" data-dropdown-toggle="tagsDropdown"
                               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full  text-sm mx-3 sm:mx-3 md:mx-2 md:px-2 px-4 p-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                               type="button">
-                               Etiquetas
+                                Categorias
                               <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -29,23 +29,19 @@
                             <!-- Dropdown menu -->
                             <div id="tagsDropdown" class=" hidden sm:w-[18rem] p-3 bg-white rounded-lg border border-gray-500 shadow z-[5]">
                                 <h6 class="mb-3 text-sm font-medium text-gray-900">
-                                    Etiquetas
+                                    Categorias
                                 </h6>
                                 <ul class="space-y-2 text-sm" aria-labelledby="tags">
-                                    @forelse ($allTags as $key => $tag)
+                                    @foreach ($allCategories as $key => $category)
                                         <li class="flex items-center">
-                                            <input wire:model.live='tags' type="checkbox" value="{{ $tag->id }}"
+                                            <input wire:model.live='categories' type="checkbox" value="{{ $category->value }}"
                                                 class="w-4 h-4 bg-white border-gray-300 rounded text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 " />
 
                                             <label class="ml-2 text-sm font-medium text-gray-900">
-                                                {{ $tag->name }}
+                                                {{ $category->label() }}
                                             </label>
                                         </li>
-                                    @empty
-                                        <li class="flex items-center text-white">
-                                            No hay etiquetas.
-                                        </li>
-                                    @endforelse
+                                    @endforeach
 
                                 </ul>
                             </div>
@@ -59,9 +55,7 @@
                         @forelse ($this->posts as $post)
                             <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl shadow-md max-h-[47rem]">
                                 <div class="order-1 sm:ml-6 xl:ml-0 ">
-                                    @foreach ($post->tags as $tag)
-                                        <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ">{{ $tag->name }}</span>
-                                    @endforeach
+                                    <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ">{{ $post->category?->label() }}</span>
                                     <h3 class="mb-1 text-slate-900 font-semibold mx-3 break-all ">
                                         <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3 ">{{ $post->iso_date }}</span>{{ $post->title }}
                                     </h3>

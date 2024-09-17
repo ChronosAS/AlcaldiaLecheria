@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('date');
             $table->string('iso_date',100);
             $table->string('status')->default(App\Enums\News\PostStatus::DRAFT->value);
+            $table->string('category')->default(App\Enums\News\NewsCategories::NONE->value);
             $table->timestamps();
             $table->softDeletes();
         });

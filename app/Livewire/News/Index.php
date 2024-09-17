@@ -4,6 +4,7 @@
 namespace App\Livewire\News;
 
 use App\Concerns\LivewireCustomPagination;
+use App\Enums\News\NewsCategories;
 use App\Enums\News\PostStatus;
 use App\Models\News\Post;
 use Livewire\Attributes\Computed;
@@ -18,7 +19,7 @@ class Index extends Component
     public $date = null;
     public $status = null;
     public $sortField = null;
-    public $tags = [];
+    public $categories = [];
 
     protected $queryString = [
         'status' => ['except'=>''],
@@ -40,6 +41,7 @@ class Index extends Component
             'iso_date',
             'user_id',
             'status',
+            'category',
             'created_at',
             'updated_at',
             'deleted_at'
@@ -48,10 +50,8 @@ class Index extends Component
         ->when($this->date, function ($query) {
             return $query->where('date', $this->date);
         })
-        ->when($this->tags, function($query){
-            return $query->whereHas('tags',function($q){
-                $q->whereIn('id',$this->tags);
-            });
+        ->when($this->categories, function($query){
+            return $query->whereIn('category',$this->categories);
         })
         ->withAggregate('user','name')
         ->search($this->search)
@@ -63,7 +63,7 @@ class Index extends Component
     public function render()
     {
         return view('livewire.news.index',[
-            'allTags' => Tag::all()
+            'allCategories' => NewsCategories::cases()
         ]);
     }
 }

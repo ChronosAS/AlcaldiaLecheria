@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{sub-categories: @entangle('subCategories')}" class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 bg-blue-900 rounded-lg">
+    <div class="max-w-7xl mx-auto py-10 sm:px-6 mt-5 lg:px-8 bg-blue-900 rounded-lg">
         <x-one-column-form-section submit="save">
             <x-slot name="title">
                 Detalles
@@ -47,23 +47,13 @@
                         Crear Etiqueta
                     </x-button> --}}
                     <x-label for="category" value="Categoria" class="text-white"/>
-                    <select wire:model.live='postCategory' name="categorie" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
+                    <select wire:model.live='category' name="category" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="categorySelect">
                         <option selected value=''>Elija una categoria</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->value }}">{{ $category->label() }}</option>
                         @endforeach
                     </select>
                 </div>
-                {{-- @if(count($subCategories)>0) --}}
-                <div x-cloak x-show="sub-categories.lenght > 0" class="col-span-6 sm:col-span-3">
-                    <x-label for="sub_categories" value="Sub-Categorias" class="text-white"/>
-                    <select wire:model='subCategories' name="sub_categories" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="tagsSelect">
-                        @foreach ($subCategories as $sub_category)
-                            <option value="{{ $sub_category['name'] }}">{{ $sub_category['label'] }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                {{-- @endif --}}
                <!-- <div class="col-span-6 sm:col-span-3">
                 <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500"  />
                 <div>-->

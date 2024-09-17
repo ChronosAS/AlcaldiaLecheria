@@ -26,8 +26,7 @@ class Create extends Component
     public $content;
     public $status = true;
     public $images = [];
-    public $postCategory;
-    public $subCategories = [];
+    public $category;
     // public $iteration = 0;
 
 
@@ -102,6 +101,7 @@ class Create extends Component
                 'user_id' => auth()->user()->id,
                 'author' => $this->author,
                 'status' => ($this->status) ? PostStatus::DRAFT->value : PostStatus::PUBLISHED->value,
+                'category' => $this->category,
                 'date' => $this->date,
                 'iso_date' => ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))
             ]),function($post){
@@ -128,11 +128,6 @@ class Create extends Component
 
     public function render()
     {
-        $this->reset('subCategories');
-        if(!empty($this->postCategory)){
-            $this->subCategories = NewsCategories::from($this->postCategory)->subCategories();
-        }
-
         return view('livewire.admin.news.create',[
             'categories' => NewsCategories::cases()
         ]);
