@@ -92,30 +92,11 @@
                 data-twe-nav-link-ref
                 >NOTICIAS</a
               >
-            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+            {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
                 class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 sm:px-2 [&.active]:text-blue-500"
                 href="{{ route('app.directives') }}"
-                data-twe-nav-link-ref
-                >DIRECTORIO</a
-              >
-              {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-orange-400 sm:px-2 [&.active]:text-blue-500"
-                href="{{ route('app.mayor') }}"
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
-                href="https://lecheria.bmeurl.co/10FF3CFB"
-                target="_blank"
-                data-twe-nav-link-ref
-                >BOLETÍN DE NOTICIAS</a
-              >
-            </li> --}}
-            {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-                <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }}"
-                href="{{ route('app.info') }}"
-                data-twe-nav-link-ref
-                >NUESTRO MUNICIPIO</a>
+                data-twe-nav-link-ref>DIRECTORIO</a>
             </li> --}}
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
@@ -134,47 +115,6 @@
                       </ul>
                   </div>
             </li>
-             {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }}"
-
-                data-twe-nav-link-ref
-                >ORDENANZAS</a>
-            </li> --}}
-            {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-dropdown-ref>
-                <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 [&.active]:text-blue-500 font-sans"
-                wire:navigate href="#"
-                type="button"
-                id="dropdownMenuButton2"
-                data-twe-dropdown-toggle-ref
-                aria-expanded="false">
-                DROPDOWN
-                <span class=" absolute [&>svg]:w-5">
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                        fill-rule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clip-rule="evenodd" />
-                    </svg>
-                </span>
-                </a>
-                <ul
-                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-blue-800 bg-clip-padding text-left text-base shadow-lg font-sans data-[twe-dropdown-show]:block  text-md p-5 sm:p-0"
-                aria-labelledby="dropdownMenuButton1"
-                data-twe-dropdown-menu-ref>
-                <li>
-                    <a
-                    class="block w-full whitespace-nowrap bg-blue-800 px-4 py-2 text-sm font-normal focus:outline-none active:no-underline  text-white hover:bg-neutral-800/25 focus:bg-neutral-800/25 active:bg-neutral-800/25"
-                    wire:navigate href="#"
-                    data-twe-dropdown-item-ref
-                    >ORDENANZA</a>
-                </li>
-                </ul>
-            </li> --}}
           </ul>
         </div>
 
