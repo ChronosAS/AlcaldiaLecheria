@@ -46,7 +46,7 @@
                         Crear Etiqueta
                     </x-button> --}}
                     <x-label for="category" value="Categoria" class="text-white"/>
-                    <select wire:model.live='category' name="category" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" id="categorySelect">
+                    <select wire:model.live='category' name="category" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" id="categorySelect">
                         <option selected value=''>Elija una categoria</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->value }}">{{ $category->label() }}</option>
