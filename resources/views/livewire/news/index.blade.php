@@ -55,7 +55,9 @@
                         @forelse ($this->posts as $post)
                             <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl shadow-md max-h-[47rem]">
                                 <div class="order-1 sm:ml-6 xl:ml-0 ">
-                                    <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ">{{ $post->category?->label() }}</span>
+                                    @if ($post->category)
+                                        <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-600 text-white ">{{ $post->category->label() }}</span>
+                                    @endif
                                     <h3 class="mb-1 text-slate-900 font-semibold mx-3 break-all ">
                                         <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3 ">{{ $post->iso_date }}</span>{{ $post->title }}
                                     </h3>

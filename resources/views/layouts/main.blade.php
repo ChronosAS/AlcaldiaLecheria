@@ -34,7 +34,7 @@
                 <span class="flex flex-wrap items-center sm:text text-white sm:text-center  mx-12">
                     Copyright © Alcaldía de Lechería 2024
                 </span>
-                <ul class="flex flex-wrap items-center mt-3  font-medium text-gray-500 dark:text-gray-400 sm:text-center">
+                <ul class="flex flex-wrap items-center mt-3  font-medium text-white sm:text-center">
                     <li><a href="{{ route('login') }}" class="hover:underline me-4 md:me-6">Admin</a></li>
                 </ul>
             </div>

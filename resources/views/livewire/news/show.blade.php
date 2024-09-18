@@ -114,9 +114,10 @@
                                 </address>
                                 <h1 class="mb-1 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl break-all">{{ $post->title }}</h1>
                                 <h3 class="mb-4 text-md text-center font-bold leading-tight text-gray-900 lg:mb-6 lg:text-xl break-all">{{ $post->subtitle }}</h3>
-                                @foreach ($post->tags as $tag)
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $tag->name }}</span>
-                                @endforeach
+                                @if ($post->category)
+                                    <span class="bg-blue-600 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded">{{ $post->category->label() }}</span>
+                                @endif
+
                             </header>
                             <div class=" break-all ">
                                 {!! $post->content !!}
@@ -130,33 +131,35 @@
                                 </div> --}}
                             </div>
                         </article>
-                        
+
                         <div class="mt-10 text-center">
                             <h1 class="text-2xl font-extrabold"> OTRAS NOTICIAS<h1>
                         </div>
                         <ul class="grid grid-cols-1 sm:grid-cols-5 gap-y-10 gap-x-6 items-start p-8">
-                            @foreach ($navPosts as $post)
-                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
-                                <div class="order-1 sm:ml-6 xl:ml-0">
-                                    <h3 class="mb-1 text-slate-900 font-semibold break-all">
-                                        <span class="mb-1 block text-sm leading-6 text-indigo-500">{{ $post->postedAt }}</span>{{ $post->title }}
-                                    </h3>
-                                    <div class="prose prose-slate prose-sm text-slate-600">
-                                        <p>{{ $post->subtitle }}</p>
+                            @forelse ($navPosts as $post)
+                                <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
+                                    <div class="order-1 sm:ml-6 xl:ml-0">
+                                        <h3 class="mb-1 text-slate-900 font-semibold break-all">
+                                            <span class="mb-1 block text-sm leading-6 text-indigo-500">{{ $post->postedAt }}</span>{{ $post->title }}
+                                        </h3>
+                                        <div class="prose prose-slate prose-sm text-slate-600">
+                                            <p>{{ $post->subtitle }}</p>
+                                        </div>
+                                        <a
+                                            class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
+                                            href="{{ route('app.news.show',$post->id) }}">Ver...
+                                            <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                                                width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M0 0L3 3L0 6"></path>
+                                            </svg>
+                                        </a>
                                     </div>
-                                    <a
-                                        class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
-                                        href="{{ route('app.news.show',$post->id) }}">Ver...
-                                        <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
-                                            width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M0 0L3 3L0 6"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
-                            </li>
-                            @endforeach
+                                    <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                                </li>
+                            @empty
+
+                            @endforelse
                         </ul>
                     </x-slot>
                 </div>
