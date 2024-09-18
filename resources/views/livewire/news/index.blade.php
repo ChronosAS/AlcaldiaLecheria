@@ -3,8 +3,8 @@
         <h1 class="text-7xl" >Noticias</h1>
     </x-main-header>
 
-    <div class=" flex sm:grid sm:grid-cols-10 sm:grid-rows-6 xl:grid xl:grid-cols-10 xl:grid-rows-6 md:grid-cols-1 md:grid gap-4">
-        <div class="sm:col-span-8 xl:col-span-8 xl:row-span-6 sm:row-span-6 md:col-span-1 my-8 mt-0 space-y-4 p-4 mx-auto max-w-7xl">
+    <div class=" flex sm:grid sm:grid-cols-10 sm:grid-rows-6 xl:grid xl:grid-cols-10 xl:grid-rows-6 md:grid-cols-1 md:grid gap-4 min-h-svh">
+        <div class="sm:col-span-8 xl:col-span-8 xl:row-span-6 sm:row-span-6 md:col-span-1 my-8 mt-0 space-y-4 p-4 mx-auto max-w-7xl ">
             <x-full-card class=" ">
                 <x-slot name="title">
                     <div class=" text-3xl grid  sm:grid-cols-1  2xl:grid-cols-6 xl:grid-cols-5 md:grid-cols-5 sm:grid-rows-1 2xl:grid-rows-1 xl:grid-rows-1 sm:gap-4 md:gap-2">
