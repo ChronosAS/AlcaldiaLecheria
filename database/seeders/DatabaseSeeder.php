@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $user = \App\Models\User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Admin',
+            'email' => 'admin@lecheria.gov.ve',
         ]);
 
         \App\Models\Team::factory()->create([
@@ -31,5 +31,15 @@ class DatabaseSeeder extends Seeder
             'user_id' => $user->id,
             'personal_team' => true
         ]);
+
+        // \App\Models\Team::factory()->create([
+        //     'name' => 'Despacho',
+        //     'user_id' => $user->id,
+        //     'personal_team' => true
+        // ]);
+
+        // \App\Models\News\Post::factory(20)->create([
+        //     'user_id' => (User::where('name','Test User')->first())->id
+        // ]);
     }
 }

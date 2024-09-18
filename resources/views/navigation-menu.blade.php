@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-blue-950 dark:bg-blue-950 border-b border-gray-100 dark:border-gray-700">
+<nav x-data="{ open: false }" class="bg-blue-950  border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -15,11 +15,16 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    @if(Auth::user()->currentTeam->name == 'Prensa')
-                        <x-nav-link href="{{ route('news.index') }}" :active="request()->routeIs('news.index')">
+                    @if(Auth::user()->currentTeam->name == 'Prensa' || Auth::user()->isAdmin())
+                        <x-nav-link href="{{ route('admin.news.index') }}" :active="request()->routeIs('admin.news.index')">
                             Noticias
                         </x-nav-link>
                     @endif
+                    {{-- @if(Auth::user()->currentTeam->name == 'Despacho' || Auth::user()->isAdmin())
+                        <x-nav-link href="{{ route('admin.ordinance.index') }}" :active="request()->routeIs('admin.ordinance.index')">
+                            Ordenanzas
+                        </x-nav-link>
+                    @endif --}}
                 </div>
             </div>
 
@@ -30,7 +35,7 @@
                         <x-dropdown align="right" width="60" contentClasses="bg-blue-600">
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-white dark:bg-blue-800 hover:text-slate-100 dark:hover:text-slate-100 focus:outline-none focus:bg-gray-50 dark:focus:bg-blue-600 active:bg-gray-50 dark:active:bg-blue-600 transition ease-in-out duration-150">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-blue-800 dark:bg-blue-800 hover:text-slate-100 dark:hover:text-slate-100 focus:outline-none  dark:focus:bg-blue-600 focus:bg-blue-600  dark:active:bg-blue-600 active:bg-blue-600 transition ease-in-out duration-150">
                                         {{ Auth::user()->currentTeam->name }}
 
                                         <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -48,12 +53,12 @@
                                     </div>
 
                                     <!-- Team Settings -->
-                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
+                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" class="text-white dark:text-white hover:bg-blue-400 dark:hover:bg-blue-400 focus:bg-blue-500 dark:focus:bg-blue-500">
                                         {{ __('Team Settings') }}
                                     </x-dropdown-link>
 
                                     @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                        <x-dropdown-link href="{{ route('teams.create') }}" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
+                                        <x-dropdown-link href="{{ route('teams.create') }}" class="text-white dark:text-white hover:bg-blue-400 dark:hover:bg-blue-400 focus:bg-blue-500 dark:focus:bg-blue-500">
                                             {{ __('Create New Team') }}
                                         </x-dropdown-link>
                                     @endcan
@@ -86,7 +91,7 @@
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-white dark:bg-blue-800 hover:text-slate-100 dark:hover:text-slate-100 focus:outline-none focus:bg-gray-50 dark:focus:bg-blue-600 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-blue-800 dark:bg-blue-800 hover:text-slate-100 dark:hover:text-slate-100 focus:outline-none  dark:focus:bg-blue-600 focus:bg-blue-600 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
                                         {{ Auth::user()->name }}
 
                                         <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -103,12 +108,12 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
+                            <x-dropdown-link href="{{ route('profile.show') }}" class="text-white dark:text-white hover:bg-blue-400 dark:hover:bg-blue-400 focus:bg-blue-500 dark:focus:bg-blue-500">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                <x-dropdown-link href="{{ route('api-tokens.index') }}" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
+                                <x-dropdown-link href="{{ route('api-tokens.index') }}" class="text-white dark:text-white hover:bg-blue-400 dark:hover:bg-blue-400 focus:bg-blue-500 dark:focus:bg-blue-500">
                                     {{ __('API Tokens') }}
                                 </x-dropdown-link>
                             @endif
@@ -120,7 +125,7 @@
                                 @csrf
 
                                 <x-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();" class="text-white dark:text-white hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500">
+                                         @click.prevent="$root.submit();" class="text-white dark:text-white hover:bg-blue-400 dark:hover:bg-blue-400 focus:bg-blue-500 dark:focus:bg-blue-500">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
@@ -131,7 +136,7 @@
 
             <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
+                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-200 dark:text-gray-500 hover:text-gray-400 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -147,6 +152,12 @@
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('admin.news.index') }}" :active="request()->routeIs('admin.news.index')">
+                Noticias
+            </x-responsive-nav-link>
+            {{-- <x-responsive-nav-link href="{{ route('admin.ordinance.index') }}" :active="request()->routeIs('admin.ordinance.index')">
+                Ordenanzas
+            </x-responsive-nav-link> --}}
         </div>
 
         <!-- Responsive Settings Options -->
@@ -159,7 +170,7 @@
                 @endif
 
                 <div>
-                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-base text-gray-200">{{ Auth::user()->name }}</div>
                     <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
                 </div>
             </div>
@@ -188,7 +199,7 @@
 
                 <!-- Team Management -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="border-t border-gray-200 dark:border-gray-600 hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500"></div>
+                    <div class="border-t border-gray-200 dark:border-gray-600 hover:bg-blue-400 dark:hover:bg-blue-400 focus:bg-blue-500 dark:focus:bg-blue-500"></div>
 
                     <div class="block px-4 py-2 text-xs text-gray-400">
                         {{ __('Manage Team') }}
@@ -207,7 +218,7 @@
 
                     <!-- Team Switcher -->
                     @if (Auth::user()->allTeams()->count() > 1)
-                        <div class="border-t border-gray-200 dark:border-gray-600 hover:bg-orange-400 dark:hover:bg-orange-400 focus:bg-orange-500 dark:focus:bg-orange-500"></div>
+                        <div class="border-t border-gray-200 dark:border-gray-600 hover:bg-blue-400 dark:hover:bg-blue-400 focus:bg-blue-500 dark:focus:bg-blue-500"></div>
 
                         <div class="block px-4 py-2 text-xs text-gray-400">
                             {{ __('Switch Teams') }}

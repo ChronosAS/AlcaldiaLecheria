@@ -10,23 +10,23 @@
             @csrf
 
             <div>
-                <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full dark:bg-white dark:text-black bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-label for="name" value="{{ __('Name') }}" class="text-white"/>
+                <x-input id="name" style="color: black" class="block mt-1 w-full  bg-white dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-500 focus:ring-blue-500 dark:focus:ring-blue-600" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full dark:bg-white dark:text-black bg-white text-blackfocus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                <x-label for="email" value="{{ __('Email') }}" class="text-white"/>
+                <x-input id="email"  style="color: black" class="block mt-1 w-full  text-black dark:bg-white dark:text-black bg-white focus:border-blue-500 dark:focus:border-blue-500 focus:ring-blue-500 dark:focus:ring-blue-600" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
             <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full dark:bg-white dark:text-black bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="password" name="password" required autocomplete="new-password" />
+                <x-label for="password" value="{{ __('Password') }}" class="text-white"/>
+                <x-input id="password"  style="color: black" class="block mt-1 w-full  bg-white dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-500 focus:ring-blue-500 dark:focus:ring-blue-600" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full dark:bg-white dark:text-black bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" type="password" name="password_confirmation" required autocomplete="new-password" />
+                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" class="text-white"/>
+                <x-input id="password_confirmation" style="color: black" class="block mt-1 w-full  bg-white dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-500 focus:ring-blue-500 dark:focus:ring-blue-600" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -47,7 +47,7 @@
             @endif
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-white dark:text-white hover:text-orange-500 dark:hover:text-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 dark:focus:ring-offset-orange-400" href="{{ route('login') }}">
+                <a class="underline text-sm text-white dark:text-white hover:text-blue-500 dark:hover:text-blue-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 dark:focus:ring-offset-blue-400" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
 

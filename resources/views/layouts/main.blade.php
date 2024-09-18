@@ -6,7 +6,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-
+        <!-- X feed -->
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- Icon -->
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <!-- FontAwesome icons -->
@@ -17,27 +18,28 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> --}}
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css','resources/css/components.css','resources/js/app.js'])
+        @viteReactRefresh
+        @vite(['resources/css/app.css','resources/css/components.css','resources/js/app.jsx'])
         @stack('styles')
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body {{ $attributes->merge(['class'=>'bg-gray-500 h-full']) }} x-data="{ showBar: false }">
+    <body {{ $attributes->merge(['class'=>'bg-gray-500 h-full']) }} x-data="{}">
         @livewire('main-nav')
         <main>
             {{ $slot }}
         </main>
-        <footer class="bg-white shadow m-auto dark:bg-white">
+        <footer class="bg-blue-900 shadow m-auto" >
             <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between sm:items-center sm:justify-center">
-                <span class="flex flex-wrap items-center sm:text text-gray-500 sm:text-center dark:text-gray-400 mx-12">
+                <span class="flex flex-wrap items-center sm:text text-white sm:text-center  mx-12">
                     Copyright © Alcaldía de Lechería 2024
                 </span>
-                {{-- <ul class="flex flex-wrap items-center mt-3  font-medium text-gray-500 dark:text-gray-400 sm:text-center">
+                <ul class="flex flex-wrap items-center mt-3  font-medium text-white sm:text-center">
                     <li><a href="{{ route('login') }}" class="hover:underline me-4 md:me-6">Admin</a></li>
-                </ul> --}}
+                </ul>
             </div>
         </footer>
-
+        @stack('modals')
         @livewireScripts
         @stack('scripts')
     </body>

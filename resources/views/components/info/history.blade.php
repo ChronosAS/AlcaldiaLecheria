@@ -12,7 +12,7 @@
         </div>
         </x-slot>
         <x-slot name="content">
-            <div class="font-serif m-5">
+            <div class="font-serif m-5 ">
                 <h1 class="font-bold text-xl">
                 Sinopsis Histórica
             </h1>

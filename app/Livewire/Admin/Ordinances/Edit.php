@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\News;
+namespace App\Livewire\Admin\Ordinances;
 
 use Livewire\Component;
 
@@ -8,6 +8,6 @@ class Edit extends Component
 {
     public function render()
     {
-        return view('livewire.news.edit');
+        return view('livewire.admin.ordinances.edit');
     }
 }

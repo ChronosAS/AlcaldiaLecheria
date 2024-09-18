@@ -16,8 +16,8 @@
                 <img class="w-12 h-12 rounded-full object-cover" src="{{ $team->owner->profile_photo_url }}" alt="{{ $team->owner->name }}">
 
                 <div class="ms-4 leading-tight">
-                    <div class="text-gray-900 dark:text-white">{{ $team->owner->name }}</div>
-                    <div class="text-gray-700 dark:text-gray-300 text-sm">{{ $team->owner->email }}</div>
+                    <div class="text-white">{{ $team->owner->name }}</div>
+                    <div class="text-gray-300 text-sm">{{ $team->owner->email }}</div>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
 
             <x-input id="name"
                         type="text"
-                        class="mt-1 block w-full bg-white dark:bg-white text-black dark:text-black focus:border-orange-500 dark:focus:border-orange-600 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-600"
+                        class="mt-1 block w-full bg-white dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600"
                         wire:model="state.name"
                         :disabled="! Gate::check('update', $team)" 
                         style="color: black"/>

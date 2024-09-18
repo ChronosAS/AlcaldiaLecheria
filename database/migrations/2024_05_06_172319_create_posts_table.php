@@ -13,10 +13,16 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->uuid('id');
-            $table->string('title',80);
+            $table->string('title',200);
             $table->text('subtitle')->nullable();
             $table->text('content');
             $table->string('slug', 100)->nullable()->unique();
+            $table->foreignUuid('user_id')->constrained('users');
+            $table->string('author',200)->nullable();
+            $table->date('date');
+            $table->string('iso_date',100);
+            $table->string('status')->default(App\Enums\News\PostStatus::DRAFT->value);
+            $table->string('category')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

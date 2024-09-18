@@ -8,7 +8,7 @@
                 {{ $subTitle ?? '' }}
             </p>
         </div>
-        <div class="mt-5 space-y-4 md:space-y-6">
+        <div class="mt-5 space-y-4 md:space-y-6 rounded-xl ">
             {{ $content }}
         </div>
     </div>
