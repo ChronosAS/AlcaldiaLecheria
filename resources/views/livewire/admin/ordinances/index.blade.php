@@ -26,7 +26,7 @@
                                         <x-table.th-sortable title="Fecha" field="date" :sortAsc="$sortAsc" :sortField="$sortField" />
                                     </x-table.th>
                                     <x-table.th>
-                                        @if(auth()->user()->hasTeamPermission(auth()->user()->team,'create') || auth()->user()->isAdmin())
+                                        @if(auth()->user()->hasTeamPermission(auth()->user()->currentTeam,'create') || auth()->user()->isAdmin())
                                             <x-buttons.primary-href title="Agregar" class="" wire:navigate.hover href="{{ route('admin.ordinance.create') }}" role="button"/>
                                         @endif
                                     </x-table.th>

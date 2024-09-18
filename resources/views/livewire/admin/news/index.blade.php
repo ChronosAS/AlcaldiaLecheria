@@ -38,7 +38,7 @@
                                         <x-table.th-sortable title="Estado" field="status" :sortAsc="$sortAsc" :sortField="$sortField" />
                                     </x-table.th>
                                     <x-table.th>
-                                        @if(auth()->user()->hasTeamPermission(auth()->user()->team,'create') || auth()->user()->isAdmin())
+                                        @if(auth()->user()->hasTeamPermission(auth()->user()->currentTeam,'create') || auth()->user()->isAdmin())
                                             <x-buttons.primary-href title="Crear" class="" href="{{ route('admin.news.create') }}" role="button"/>
                                         @endif
                                     </x-table.th>
