@@ -14,11 +14,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\Tags\HasTags;
 
 class Post extends Model implements HasMedia
 {
-    use HasFactory, InteractsWithMedia, SoftDeletes, HasUuids, HasTags;
+    use HasFactory, InteractsWithMedia, SoftDeletes, HasUuids;
 
     protected $casts = [
         'status' => PostStatus::class,

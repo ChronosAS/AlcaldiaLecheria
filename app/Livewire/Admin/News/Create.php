@@ -11,7 +11,6 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use Spatie\Tags\Tag;
 
 #[Layout('layouts.admin',['header'=>'Crear Noticia'])]
 class Create extends Component

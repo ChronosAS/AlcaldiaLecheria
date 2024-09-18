@@ -92,7 +92,7 @@
             </x-slot>
         </x-one-column-form-section>
         @livewire('admin.news.add-image-modal',['post' => $post])
-        @livewire('admin.news.tags.create')
+        {{-- @livewire('admin.news.tags.create') --}}
     </div>
     @push('styles')
         <style>
@@ -105,25 +105,25 @@
     @script
         <script type="module">
 
-            $wire.on('loadPage',function(){
-                $(document).ready(function(){
-                    $('#tagsSelect').select2({
-                        placeholder: "Seleccione etiquetas",
-                        allowClear: true,
-                        language: {
-                            noResults: function () {
-                                return 'No se encontraron resultados';
-                            },
-                        }
-                    });
-                    $('#tagsSelect').val($wire.postTags);
-                    $('#tagsSelect').on('change',function(){
-                        let data = $(this).val();
-                        $wire.postTags = data;
-                    });
+            // $wire.on('loadPage',function(){
+            //     $(document).ready(function(){
+            //         $('#tagsSelect').select2({
+            //             placeholder: "Seleccione etiquetas",
+            //             allowClear: true,
+            //             language: {
+            //                 noResults: function () {
+            //                     return 'No se encontraron resultados';
+            //                 },
+            //             }
+            //         });
+            //         $('#tagsSelect').val($wire.postTags);
+            //         $('#tagsSelect').on('change',function(){
+            //             let data = $(this).val();
+            //             $wire.postTags = data;
+            //         });
 
-                })
-            })
+            //     })
+            // })
 
             ClassicEditor
             .create( document.querySelector( '#editor' ), {
