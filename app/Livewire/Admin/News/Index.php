@@ -6,6 +6,7 @@ use App\Concerns\LivewireCustomPagination;
 use App\Enums\News\PostStatus;
 use App\Models\News\Post;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 
 class Index extends Component
@@ -67,29 +68,32 @@ class Index extends Component
     //     (Post::withTrashed()->find($post))->restore();
     // }
 
-    // public function changeStatus($id)
-    // {
-    //     $post = Post::where('id',$id)->first();
+    public function toggleStatus($id)
+    {
+        $post = Post::where('id',$id)->first();
 
-    //     switch ($post->status) {
-    //         case PostStatus::DRAFT->value:
-    //             $post->status = PostStatus::PUBLISHED->value;
-    //             break;
+        switch ($post->status->value) {
+            case PostStatus::DRAFT->value:
+                $post->status = PostStatus::PUBLISHED->value;
+                break;
 
-    //         case PostStatus::PUBLISHED->value:
-    //             $post->status = PostStatus::DRAFT->value;
-    //             break;
+            case PostStatus::PUBLISHED->value:
+                $post->status = PostStatus::DRAFT->value;
+                break;
 
-    //         default:
-    //             # code...
-    //             break;
-    //     }
+            default:
+                # code...
+                break;
+        }
 
-    //     $post->save();
-    // }
+        $post->save();
 
+
+    }
+
+    #[Layout('layouts.admin',['header'=>'Noticias'])]
     public function render()
     {
-        return view('livewire.admin.news.index')->layout('layouts.admin',['header'=>'Noticias']);
+        return view('livewire.admin.news.index');
     }
 }
