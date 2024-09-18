@@ -14,8 +14,8 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-        Post::factory(20)->create([
-            'user_id' => (User::where('name','Test User')->first())->id
-        ]);
+        // Post::factory(20)->create([
+        //     'user_id' => (User::where('name','Test User')->first())->id
+        // ]);
     }
 }
