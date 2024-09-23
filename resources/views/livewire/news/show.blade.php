@@ -119,7 +119,7 @@
                                 @endif
 
                             </header>
-                            <div class="  ">
+                            <div class=" break-all ">
                                 {!! $post->content !!}
                             </div>
                             <div class="flex justify-self-center sm:text-center">
