@@ -112,14 +112,14 @@
                                         </div>
                                     </div>
                                 </address>
-                                <h1 class="mb-1 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl ">{{ $post->tiucfirst($post->title)
+                                <h1 class="mb-1 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl ">{{ $post->title }}</h1>
                                 <h3 class="mb-4 text-md text-center font-bold leading-tight text-gray-900 lg:mb-6 lg:text-xl ">{{ $post->subtitle }}</h3>
                                 @if ($post->category)
                                     <span class="bg-blue-600 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded">{{ $post->category->label() }}</span>
                                 @endif
 
                             </header>
-                            <div class=" break-all ">
+                            <div class=" ">
                                 {!! $post->content !!}
                             </div>
                             <div class="flex justify-self-center sm:text-center">
@@ -140,7 +140,7 @@
                                 <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
                                     <div class="order-1 sm:ml-6 xl:ml-0">
                                         <h3 class="mb-1 text-slate-900 font-semibold ">
-                                            <span class="mb-1 block text-sm leading-6 text-indigo-500">{{ $post->postedAt }}</span>{{ ucfirst($post->title) }}
+                                            <span class="mb-1 block text-sm leading-6 text-indigo-500">{{ $post->postedAt }}</span>{{ $post->title }}
                                         </h3>
                                         <div class="prose prose-slate prose-sm text-slate-600">
                                             <p>{{ $post->subtitle }}</p>
