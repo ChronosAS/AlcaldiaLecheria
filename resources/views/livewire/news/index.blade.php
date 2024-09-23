@@ -59,7 +59,7 @@
                                         <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-600 text-white ">{{ $post->category->label() }}</span>
                                     @endif
                                     <h3 class="mb-1 text-slate-900 font-semibold mx-3  ">
-                                        <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3 ">{{ $post->iso_date }}</span>{{ $post->title }}
+                                        <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3 ">{{ $post->iso_date }}</span>{{ ucfirst($post->title) }}
                                     </h3>
                                     <div class="prose prose-slate prose-sm text-slate-600 ">
                                         <p class="mx-3">{{ $post->subtitle }}</p>
