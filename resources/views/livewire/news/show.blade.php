@@ -112,7 +112,7 @@
                                         </div>
                                     </div>
                                 </address>
-                                <h1 class="mb-1 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl ">{{ $post->tiucfirst($post->title)
+                                <h1 class="mb-1 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl ">{{ ucfirst($post->title) }}</h1>
                                 <h3 class="mb-4 text-md text-center font-bold leading-tight text-gray-900 lg:mb-6 lg:text-xl ">{{ $post->subtitle }}</h3>
                                 @if ($post->category)
                                     <span class="bg-blue-600 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded">{{ $post->category->label() }}</span>
