@@ -90,8 +90,15 @@
                 class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
                 href="{{ route('app.news') }}"
                 data-twe-nav-link-ref
-                >NOTICIAS</a
-              >
+                >NOTICIAS</a>
+            </li>
+            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+              <a
+                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
+                href="{{ route('app.civil-registry') }}"
+                data-twe-nav-link-ref
+                >REGISTRO CIVIL</a>
+            </li>
             {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
                 class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 sm:px-2 [&.active]:text-blue-500"
@@ -100,20 +107,21 @@
             </li> --}}
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class=" transition duration-200 cursor-pointer hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2  [&.active]:text-blue-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
-                data-twe-nav-link-ref
-                id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO</a>
-                  <div id="dropdownDelay" class="z-10 hidden divide-y divide-blue-100  shadow w-44 bg-blue-800">
-                      <ul class="py-2 text-sm text-white" aria-labelledby="dropdownDelayButton">
-                        <li>
-                          <a  class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
-                        </li>
-                        {{-- <li>
-                          <a href="{{ route('app.ordinances') }}" class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
-                        </li> --}}
-                      </ul>
-                  </div>
+                <a
+                    class=" transition duration-200 cursor-pointer hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2  [&.active]:text-blue-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
+                    data-twe-nav-link-ref
+                    id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO
+                </a>
+                <div id="dropdownDelay" class="z-10 hidden divide-y divide-blue-100  shadow w-44 bg-blue-800">
+                    <ul class="py-2 text-sm text-white" aria-labelledby="dropdownDelayButton">
+                    <li>
+                        <a  class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
+                    </li>
+                    {{-- <li>
+                        <a href="{{ route('app.ordinances') }}" class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
+                    </li> --}}
+                    </ul>
+                </div>
             </li>
           </ul>
         </div>

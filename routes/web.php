@@ -30,7 +30,9 @@ Route::get('/informacion', function (){
     return view('info');
 })->name('app.info');
 
-
+Route::get('/registro-civil', function (){
+    return view('civil-registry');
+})->name('app.civil-registry');
 Route::get('/noticias', App\Livewire\News\Index::class)->name('app.news');
 Route::get('/noticias/{post}', App\Livewire\News\Show::class)->name('app.news.show');
 
