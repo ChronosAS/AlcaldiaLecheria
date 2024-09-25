@@ -29,7 +29,7 @@
                                     <a href="{{ route('app.news.show',$post->id) }}" class="relative">
                                         <img class="w-full object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
                                         <div class="absolute flex truncate bg-slate-300">
-                                            <h5 class="text-xs font-bold tracking-tight text-black  truncate flex flex-col text-wrap  ">{{ $post->title }}</h5>
+                                            <h5 class="text-xs font-bold tracking-tight text-black  truncate flex flex-col text-wrap  ">{{ ucfirst($post->title) }}</h5>
                                         </div>
                                     </a>
                                 </div>
@@ -43,7 +43,7 @@
                                             <div class="relative max-w-lg ">
                                                 <img class=" h-60  w-72 object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
                                                 <div class="static  truncate flex flex-col text-wrap  max-h-16  bg-slate-200">
-                                                    <h5 class=" text-xs font-bold tracking-tight text-black ">{{ $post->title }}</h5>
+                                                    <h5 class=" text-xs font-bold tracking-tight text-black ">{{ ucfirst($post->title) }}</h5>
                                                 </div>
                                             </div>
                                         </a>
