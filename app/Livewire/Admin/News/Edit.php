@@ -70,8 +70,6 @@ class Edit extends Component
     public function update()
     {
 
-        $this->title= Str::lower($this->title);
-
         $this->validate([
             'title' => ['required','string','max:90'],
             'subtitle' => ['nullable','string','max:200'],
