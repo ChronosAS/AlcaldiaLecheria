@@ -18,6 +18,41 @@ Route::get('/', App\Livewire\Main::class)->name('app');
 // Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');
 // Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');
 
+Route::prefix('registro-civil')->group(function(){
+
+    Route::get('/buena-conducta',function(){
+        return view('civil-registry.conducta');
+    })->name('app.civil-reg.conducta');
+
+    Route::get('/fe-de-vida',function(){
+        return view('civil-registry.fe-de-vida');
+    })->name('app.civil-reg.fe-de-vida');
+
+    Route::get('/matrimonio',function(){
+        return view('civil-registry.matrimonios');
+    })->name('app.civil-reg.matri');
+
+    Route::get('/matrimonios-art-70',function(){
+        return view('civil-registry.matrimonios-70');
+    })->name('app.civil-reg.matri-70');
+
+    Route::get('/nacimientos',function(){
+        return view('civil-registry.nacimientos');
+    })->name('app.civil-reg.nacimientos');
+
+    Route::get('/constancia-de-residencia',function(){
+        return view('civil-registry.residencia');
+    })->name('app.civil-reg.residencia');
+
+    Route::get('/solteria',function(){
+        return view('civil-registry.solteria');
+    })->name('app.civil-reg.solteria');
+
+    Route::get('/permiso-de-mudanza',function(){
+        return view('civil-registry.mudanza');
+    })->name('app.civil-reg.mudanza');
+});
+
 Route::get('/directorio', function (){
     return view('directive.directive-team');
 })->name('app.directives');
