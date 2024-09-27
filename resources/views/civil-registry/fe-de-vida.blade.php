@@ -7,7 +7,7 @@
             <x-full-card>
                 <x-slot name="title">
                     <div class=" text-3xl">
-                        
+
                     </div>
                 </x-slot>
                 <x-slot name="subTitle">
@@ -35,7 +35,7 @@
                             </div>
                             <div x-show="selectedTab === 'info'" id="tabpanelInfo" role="tabpanel" aria-label="info" class="text-center">
                                <ul class="max-w-xl text-lg font-black  text-black bg-white border border-blue-200 rounded-lg">
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">    En caso del interesado no poder presentarse, por impedimento físico o de salud, debe acudir algún familiar directo, con:- Informe médico debidamente firmado y sellado, donde conste la imposibilidad de la persona de trasladarse, el cual bajo ningún concepto deberá ser mayor a 3 meses su emisión. </li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">    En caso del interesado no poder presentarse, por impedimento físico o de salud, debe acudir algún familiar directo, con:<br/>- Informe médico debidamente firmado y sellado, donde conste la imposibilidad de la persona de trasladarse, el cual bajo ningún concepto deberá ser mayor a 3 meses su emisión. </li>
                                 </ul>
                             </div>
                         </div>
