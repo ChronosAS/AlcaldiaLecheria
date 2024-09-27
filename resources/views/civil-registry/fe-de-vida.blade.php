@@ -3,8 +3,8 @@
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl" x-text='title' ></h1>
         </x-main-header>
-        <div>
-            <x-full-card>
+        <div class="my-8 mt-0 space-y-4 px-4 mx-auto max-w-5xl">
+            <x-full-card class="">
                 <x-slot name="title">
                     <div class=" text-3xl">
 
@@ -13,7 +13,7 @@
                 <x-slot name="subTitle">
                     <div class="text-xl">
                         <div class="flex items-center justify-center">
-                        <img src="{{asset('assets/img/civil-registry/registry-info/fe.webp')}}" class="h-[7rem] m-4 transition duration-300 ease-in-out hover:shadow-lg ">
+                        <img src="{{asset('assets/img/civil-registry/registry-info/fe.webp')}}" class="min-h-[15rem] max-h-[18rem] min-w-[30rem] max-w-[35rem]  m-4 transition duration-300 ease-in-out hover:shadow-lg rounded-lg">
                         </div>
                     </div>
                 </x-slot>
@@ -26,7 +26,7 @@
                         <div class="px-2 py-4 text-slate-700 ">
                             <div x-show="selectedTab === 'requirements'" id="tabpanelRequirements" role="tabpanel" aria-label="requirements" class="text-center">
                                 <div><h1 class="text-black text-2xl font-extrabold">Requisitos</h1></div>
-                                <ul class="max-w-xl text-sm font-medium  text-black bg-white border border-blue-200 rounded-lg">
+                                <ul class="max-w-xl text-md font-medium  text-black bg-white border border-blue-200 rounded-lg">
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Acudir personalmente el interesado con Original de la Cédula de Identidad. </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- En caso del interesado no poder presentarse, por impedimento físico o de salud, debe acudir algún familiar directo, con:<br><br>- Informe médico debidamente firmado y sellado, donde conste la imposibilidad de la persona de trasladarse, el cual bajo ningún concepto deberá ser mayor a 3 meses su emisión.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Presentar algún documento que indique su residencia en el Municipio.</li>

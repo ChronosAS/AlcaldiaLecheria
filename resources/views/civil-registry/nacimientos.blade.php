@@ -3,7 +3,7 @@
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl" x-text='title' ></h1>
         </x-main-header>
-        <div>
+        <div class="my-8 mt-0 space-y-4 px-4 mx-auto max-w-5xl">
             <x-full-card>
                 <x-slot name="title">
                     <div class=" text-3xl">
@@ -13,20 +13,20 @@
                 <x-slot name="subTitle">
                     <div class="text-xl">
                         <div class="flex items-center justify-center">
-                        <img src="{{asset('assets/img/civil-registry/registry-info/nacer.webp')}}" class="h-[7rem] m-4 transition duration-300 ease-in-out hover:shadow-lg ">
+                        <img src="{{asset('assets/img/civil-registry/registry-info/nacer.webp')}}" class="min-h-[15rem] max-h-[18rem] min-w-[30rem] max-w-[35rem] m-4 transition duration-300 ease-in-out hover:shadow-lg rounded-lg">
                         </div>
                     </div>
                 </x-slot>
                <x-slot name="content" class="center">
                     <div x-data="{ selectedTab: 'requeriments' }" class="max-w-xl mt-4 px-4 mx-auto">
                         <div @keydown.right.prevent="$focus.wrap().next()" @keydown.left.prevent="$focus.wrap().previous()" class="flex gap-2 overflow-x-auto border-b border-slate-300 justify-evenly " role="tablist" aria-label="tab options">
-                            <button @click="selectedTab = 'requeriments'" :aria-selected="selectedTab === 'requeriments'" :tabindex="selectedTab === 'requeriments' ? '0' : '-1'" :class="selectedTab === 'requeriments' ? 'font-bold text-blue-700 border-b-2 border-blue-700  ' : 'text-slate-700 font-medium    hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-sm" type="button" role="tab" aria-controls="tabpanelRequeriments" >Requisitos de Presentaciones</button>
-                            <button @click="selectedTab = 'special'" :aria-selected="selectedTab === 'special'" :tabindex="selectedTab === 'special' ? '0' : '-1'" :class="selectedTab === 'special' ? 'font-bold text-blue-700 border-b-2 border-blue-700  ' : 'text-slate-700 font-medium    hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-sm" type="button" role="tab" aria-controls="tabpanelSpecial" >Nacidos en el exterior de Padre o Madre venezolanos </button>
-                            <button @click="selectedTab = 'info'" :aria-selected="selectedTab === 'info'" :tabindex="selectedTab === 'info' ? '0' : '-1'" :class="selectedTab === 'info' ? 'font-bold text-blue-700 border-b-2 border-blue-700 ' : 'text-slate-700 font-medium hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-sm" type="button" role="tab" aria-controls="tabpanelInfo" >Información Importante</button>
+                            <button @click="selectedTab = 'requeriments'" :aria-selected="selectedTab === 'requeriments'" :tabindex="selectedTab === 'requeriments' ? '0' : '-1'" :class="selectedTab === 'requeriments' ? 'font-bold text-blue-700 border-b-2 border-blue-700  ' : 'text-slate-700 font-medium    hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-md" type="button" role="tab" aria-controls="tabpanelRequeriments" >Requisitos de Presentaciones</button>
+                            <button @click="selectedTab = 'special'" :aria-selected="selectedTab === 'special'" :tabindex="selectedTab === 'special' ? '0' : '-1'" :class="selectedTab === 'special' ? 'font-bold text-blue-700 border-b-2 border-blue-700  ' : 'text-slate-700 font-medium    hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-md" type="button" role="tab" aria-controls="tabpanelSpecial" >Nacidos en el exterior de Padre o Madre venezolanos </button>
+                            <button @click="selectedTab = 'info'" :aria-selected="selectedTab === 'info'" :tabindex="selectedTab === 'info' ? '0' : '-1'" :class="selectedTab === 'info' ? 'font-bold text-blue-700 border-b-2 border-blue-700 ' : 'text-slate-700 font-medium hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-md" type="button" role="tab" aria-controls="tabpanelInfo" >Información Importante</button>
                         </div>
                         <div class="px-2 py-4 text-slate-700 ">
                             <div x-show="selectedTab === 'requeriments'" id="tabpanelRequeriments" role="tabpanel" aria-label="requeriments" class="text-justify">
-                                <ul class="max-w-xl text-sm font-medium  text-black bg-white border border-blue-200 rounded-lg" class="text-center">
+                                <ul class="max-w-xl text-md font-medium  text-black bg-white border border-blue-200 rounded-lg" class="text-center">
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Acudir a la oficina de registro civil con los certificados de nacimiento EV-25 emitidos por el centro de salud.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Original y 3 copias de la cédula de identidad de ambos padres. </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Copia del acta de matrimonio si son casados.</li>
@@ -35,7 +35,7 @@
                                 </ul>
                             </div>
                             <div x-show="selectedTab === 'special'" id="tabpanelSpecial" role="tabpanel" aria-label="special" class="text-center">
-                                <ul class="max-w-xl text-sm font-medium  text-black bg-white border border-blue-200 rounded-lg">
+                                <ul class="max-w-xl text-md font-medium  text-black bg-white border border-blue-200 rounded-lg">
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Original del Acta de Nacimiento legalizada, apostillada y de ser necesario traducida al español.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Acta de Nacimiento de ambos padres. </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Una (1) Copia de los pasaportes de ambos padres.</li>
