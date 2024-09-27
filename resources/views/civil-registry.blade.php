@@ -3,7 +3,7 @@
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl" x-text='title' ></h1>
         </x-main-header>
-        <div  class=" mx-auto max-w-7xl ">
+        <div  class=" mx-auto max-w-5xl ">
             <ul
                 class="flex flex-wrap -mb-px  font-medium text-center items-center gap-y-4 sm:justify-evenly justify-evenly xl:pl-10 xl:pr-10 2xl:pl-5 2xl:pr-5 py-10"
                 id="civil-registry-tab">

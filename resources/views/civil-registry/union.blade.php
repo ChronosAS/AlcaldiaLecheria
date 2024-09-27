@@ -1,7 +1,7 @@
 <x-main-layout class="bg-slate-300">
-    <div x-data="{ title: 'unión Estable de Hecho' }">
+    <div x-data="{ title: 'Unión Estable de Hecho' }">
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
-            <h1 class="text-7xl" x-text='title' ></h1>
+            <h1 class="text-5xl" x-text='title' ></h1>
         </x-main-header>
         <div class="my-8 mt-0 space-y-4 px-4 mx-auto max-w-5xl">
             <x-full-card>
