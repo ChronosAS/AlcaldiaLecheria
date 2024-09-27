@@ -42,16 +42,16 @@
                         <img class="sm:min-w-[17rem] sm:min-h-[13rem] sm:max-w-[17rem] sm:max-h-[13rem] min-w-[7rem] min-h-[3rem] max-w-[9rem] max-h-[6rem]" src="{{asset('assets/img/civil-registry/solteria.webp')}}"/>
                     </a>
                 </li>
-                {{-- <li class="pb-0 p-2 hover:border-blue-900  border-transparent border-4" >
-                    <a   href="{{ route('app.civil-reg.conducta') }}" class="inline-block cursor-pointer  " id="conduct-tab" >
-                        <img class="sm:min-w-[17rem]  sm:min-h-[13rem] sm:max-w-[17rem] sm:max-h-[13rem] min-w-[7rem] min-h-[3rem] max-w-[9rem] max-h-[6rem]" src="{{asset('assets/img/civil-registry/uniones.webp')}}"/>
+                <li class="pb-0 p-2 hover:border-blue-900  border-transparent border-4" >
+                    <a   href="{{ route('app.civil-reg.union') }}" class="inline-block cursor-pointer  ">
+                        <img class="sm:min-w-[17rem]  sm:min-h-[13rem] sm:max-w-[17rem] sm:max-h-[13rem] min-w-[7rem] min-h-[3rem] max-w-[9rem] max-h-[6rem]" src="{{asset('assets/img/civil-registry/union.webp')}}"/>
                     </a>
                 </li>
                 <li class="pb-0 p-2 hover:border-blue-900  border-transparent border-4" >
-                    <a   href="{{ route('app.civil-reg.conducta') }}" class="inline-block cursor-pointer  " id="conduct-tab" >
-                        <img class="sm:min-w-[17rem]  sm:min-h-[13rem] sm:max-w-[17rem] sm:max-h-[13rem] min-w-[7rem] min-h-[3rem] max-w-[9rem] max-h-[6rem]" src="{{asset('assets/img/civil-registry/defunciones.webp')}}"/>
+                    <a   href="{{ route('app.civil-reg.defunciones') }}" class="inline-block cursor-pointer  ">
+                        <img class="sm:min-w-[17rem]  sm:min-h-[13rem] sm:max-w-[17rem] sm:max-h-[13rem] min-w-[7rem] min-h-[3rem] max-w-[9rem] max-h-[6rem]" src="{{ asset('assets/img/civil-registry/defunciones.webp') }}"/>
                     </a>
-                </li> --}}
+                </li>
             </ul>
             {{-- <h1 class="text-center text-3xl font-bold pt-16">Todas las citas y solicitudes de tramites se realizaran <br> de Lunes a Jueves de 8:00am a 11:30am</h1> --}}
         </div>

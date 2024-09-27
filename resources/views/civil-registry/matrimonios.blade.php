@@ -7,7 +7,7 @@
             <x-full-card>
                 <x-slot name="title">
                     <div class=" text-3xl">
-                       
+
                     </div>
                 </x-slot>
                 <x-slot name="subTitle">
@@ -29,12 +29,12 @@
                         <div class="px-2 py-4 text-slate-700 ">
                             <div x-show="selectedTab === 'requirements'" id="tabpanelRequirements" role="tabpanel" aria-label="requirements" class="text-center">
                                 <ul class="max-w-3xl text-md font-medium  text-black bg-white border border-blue-200 rounded-lg">
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Imprimir y llenar el Formato (En Letra Molde Legible) después que tome la Cita.  <br> <a class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar Aqui</a></li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Imprimir y llenar el Formato (En Letra Molde Legible) después que tome la Cita.  <br> <a href="{{ asset('assets/docs/civil-registry/matrimonios.pdf') }}" target="_blank" class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar</a></li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Adicionalmente, el interesado debe presentar cualquier documento que pruebe que alguno de los contrayentes o ambos residen legalmente en el Municipio..</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Presentar original y 2 copias de las cédulas de identidad de los contrayentes.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">4.- Partidas de nacimiento originales y copias de ambos contrayentes.</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">5.- Cartas de soltería de ambos contrayentes<a class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar Aqui</a></li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">6.- Descargar e Imprimir el Acta de Esponsalicia.<a class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar Aqui</a></li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">5.- Cartas de soltería de ambos contrayentes.<br/><a href="{{ asset('assets/docs/civil-registry/carta-de-solteria.pdf') }}" target="_blank" class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar</a></li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">6.- Descargar e Imprimir el Acta de Esponsalicia.<br/><a href="{{ asset('assets/docs/civil-registry/acta-eponsalicia.pdf') }}" target="_blank" class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar</a></li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">7.- Copias de las Cédulas de Identidad de dos testigos, mayores de 21 años de edad, venezolanos. (No pueden ser los padres)</li>
                                 </ul>
                             </div>
@@ -47,7 +47,7 @@
                             </div>
                             <div x-show="selectedTab === 'article'" id="tabpaneArticle" role="tabpanel" aria-label="article" class="text-center">
                                 <ul class="max-w-3xl text-md font-medium  text-black bg-white border border-blue-200 rounded-lg">
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Imprimir y llenar el Formato (En Letra Molde Legible) después que tome la Cita. <br> <a class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar Aqui</a></li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Imprimir y llenar el Formato (En Letra Molde Legible) después que tome la Cita. <br/> <a href="{{ asset('assets/docs/civil-registry/matrimonios.pdf') }}" target="_blank" class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar</a></li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Adicionalmente, el interesado debe presentar cualquier documento que pruebe que alguno de los contrayentes o ambos residen legalmente en el Municipio.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Presentar original y 2 copias de las cédulas de identidad de los contrayentes.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">4.- Partidas de nacimiento originales y copias de ambos contrayentes.</li>
@@ -71,8 +71,6 @@
                     </div>
                     <div class="flex  flex-row items-center justify-center space-x-5 ">
                         <a  href="{{ route('app.civil-registry') }}" class=" cursor-pointer whitespace-nowrap rounded-xl bg-blue-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed ">Regresar</a>
-                        
-                        <a  href="" class=" cursor-pointer whitespace-nowrap rounded-xl bg-green-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed  ">Descargar Formulario</a> 
                     </div>
                 </x-slot>
             </x-full-card>

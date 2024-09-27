@@ -7,7 +7,7 @@
             <x-full-card>
                 <x-slot name="title">
                     <div class=" text-3xl">
-                  
+
                     </div>
                 </x-slot>
                 <x-slot name="subTitle">
@@ -45,7 +45,7 @@
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">7.- Permiso de presentación extemporánea emitido por el CPNNA (Consejo de Protección del Niño, Niña y Adolecentes) en caso de que el niño tenga más de 90 días de nacido .</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">8.- Si los padres no son casados deben estar presente ambos para la presentación del bebé.</li>
                                 </ul>
-                          
+
                             </div>
                              <div x-show="selectedTab === 'info'" id="tabpanelInfo" role="tabpanel" aria-label="info" class="text-center">
                                 <ul class="max-w-xl text-lg  font-black  text-black bg-white border border-blue-200 rounded-lg">
@@ -57,8 +57,8 @@
                     </div>
                     <div class="flex  flex-row items-center justify-center space-x-5 ">
                         <a  href="{{ route('app.civil-registry') }}" class=" cursor-pointer whitespace-nowrap rounded-xl bg-blue-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed ">Regresar</a>
-                        
-                        <a  href="" class=" cursor-pointer whitespace-nowrap rounded-xl bg-green-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed  ">Descargar Formulario</a>
+
+                        {{-- <a  href="" class=" cursor-pointer whitespace-nowrap rounded-xl bg-green-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed  ">Descargar Formulario</a> --}}
                     </div>
                 </x-slot>
             </x-full-card>

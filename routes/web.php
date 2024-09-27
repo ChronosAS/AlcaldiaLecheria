@@ -51,6 +51,14 @@ Route::prefix('registro-civil')->group(function(){
     Route::get('/permiso-de-mudanza',function(){
         return view('civil-registry.mudanza');
     })->name('app.civil-reg.mudanza');
+
+    Route::get('/union-estable-de-hecho',function(){
+        return view('civil-registry.union');
+    })->name('app.civil-reg.union');
+
+    Route::get('/defunciones',function(){
+        return view('civil-registry.defunciones');
+    })->name('app.civil-reg.defunciones');
 });
 
 Route::get('/directorio', function (){
