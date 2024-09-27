@@ -18,26 +18,42 @@
                     </div>
                 </x-slot>
                 <x-slot name="content" class="center">
-                    <div x-data="{ selectedTab: 'groups' }" class="max-w-xl mt-4 px-4 mx-auto">
+                    <div x-data="{ selectedTab: 'requirements' }" class="max-w-xl mt-4 px-4 mx-auto">
                         <div @keydown.right.prevent="$focus.wrap().next()" @keydown.left.prevent="$focus.wrap().previous()" class="flex gap-2 overflow-x-auto border-b border-slate-300 justify-evenly " role="tablist" aria-label="tab options">
-                            <button @click="selectedTab = 'groups'" :aria-selected="selectedTab === 'groups'" :tabindex="selectedTab === 'groups' ? '0' : '-1'" :class="selectedTab === 'groups' ? 'font-bold text-blue-700 border-b-2 border-blue-700  ' : 'text-slate-700 font-medium    hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-sm" type="button" role="tab" aria-controls="tabpanelGroups" >Groups</button>
-                            <button @click="selectedTab = 'likes'" :aria-selected="selectedTab === 'likes'" :tabindex="selectedTab === 'likes' ? '0' : '-1'" :class="selectedTab === 'likes' ? 'font-bold text-blue-700 border-b-2 border-blue-700  ' : 'text-slate-700 font-medium    hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-sm" type="button" role="tab" aria-controls="tabpanelLikes" >Likes</button>
+                            <button @click="selectedTab = 'requirements'" :aria-selected="selectedTab === 'requirements'" :tabindex="selectedTab === 'requirements' ? '0' : '-1'" :class="selectedTab === 'requirements' ? 'font-bold text-blue-700 border-b-2 border-blue-700  ' : 'text-slate-700 font-medium    hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-sm" type="button" role="tab" aria-controls="tabpaneRequeriments" >Articulo 70</button>
+                            <button @click="selectedTab = 'special'" :aria-selected="selectedTab === 'special'" :tabindex="selectedTab === 'special' ? '0' : '-1'" :class="selectedTab === 'special' ? 'font-bold text-blue-700 border-b-2 border-blue-700  ' : 'text-slate-700 font-medium    hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-sm" type="button" role="tab" aria-controls="tabpanelSpecial" >Casos especiales</button>
+                            <button @click="selectedTab = 'info'" :aria-selected="selectedTab === 'info'" :tabindex="selectedTab === 'info' ? '0' : '-1'" :class="selectedTab === 'info' ? 'font-bold text-blue-700 border-b-2 border-blue-700 ' : 'text-slate-700 font-medium hover:border-b-2 hover:border-b-slate-800 hover:text-black'" class="h-min px-4 py-2 text-sm" type="button" role="tab" aria-controls="tabpanelInfo" >Información Importante</button>
                         </div>
                         <div class="px-2 py-4 text-slate-700 ">
-                            <div x-show="selectedTab === 'groups'" id="tabpanelGroups" role="tabpanel" aria-label="groups" class="text-justify">
-                                <ul class="max-w-xl text-sm font-medium  text-blue-900 bg-white border border-blue-200 rounded-lg">
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Debe acudir personalmente el interesado.</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Solicitar ante la sede de la Policía del Municipio constancia de no poseer antecedente policiales. </li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Dirigirse al registro civil con dicho documento y copia de la cedula de identidad y solicitar la buena conducta.</li>
-
+                            <div x-show="selectedTab === 'requirements'" id="tabpaneRequeriments" role="tabpanel" aria-label="requirements" class="text-center">
+                                <ul class="max-w-xl text-sm font-medium  text-black bg-white border border-blue-200 rounded-lg">
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Imprimir y llenar el Formato (En Letra Molde Legible) después que tome la Cita. <br> <a class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar Aqui</a></li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Adicionalmente, el interesado debe presentar cualquier documento que pruebe que alguno de los contrayentes o ambos residen legalmente en el Municipio.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Presentar original y 2 copias de las cédulas de identidad de los contrayentes.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">4.- Partidas de nacimiento originales y copias de ambos contrayentes.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">5.- Copias de las Cédulas de Identidad de los testigos mayores de edad, venezolanos. (No pueden ser los padres)</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">6- Copia de constancia de CONCUBINATO o UNIÓN ESTABLE DE HECHO.</li>
                                 </ul>
                             </div>
-                            <div x-show="selectedTab === 'likes'" id="tabpanelLikes" role="tabpanel" aria-label="likes">
+                            <div x-show="selectedTab === 'special'" id="tabpanelSpecial" role="tabpanel" aria-label="special" class="text-center">
+                                <ul class="max-w-xl text-sm font-medium  text-black bg-white border border-blue-200 rounded-lg">
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">* Si uno o ambos de los contrayentes es Adolescente además de los requisitos antes mencionados deberá consignar:<br> <br>- Copia de las Cédulas de Identidad de los representantes legales los cuales deben estar presente obligatoriamente el día del acto.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">* Si uno o ambos de los contrayentes es Divorciado o Viudo además de los requisitos antes mencionados deberá consignar:<br> <br>- Copia certificada de la sentencia de divorcio o del acta de defunción.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">* Si uno o ambos de los contrayentes es Extranjero, además de los requisitos antes mencionados deberá consignar:<br><br>- Original y copia del pasaporte.<br>- Partida de nacimiento debidamente legalizada, Apostillada y traducida al español.<br>- Carta de soltería legalizada (todos los documentos traducidos al español)</li>
+                                </ul>
                             </div>
+                            <div x-show="selectedTab === 'info'" id="tabpanelInfo" role="tabpanel" aria-label="info" class="text-center">
+                                <ul class="max-w-xl text-lg  font-black  text-black bg-white border border-blue-200 rounded-lg">
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">Los requisitos para Matrimonios deberán ser consignados por lo menos con quince (15) días de antelación a la realización del acto para su verificación. Y previa reservación de la fecha del acto.</li>
+                                </ul>
+                            </div>
+                            
                         </div>
                     </div>
+                    <div class="flex flex-col items-center">
+                        <a  href="{{ route('app.civil-registry') }}" class=" cursor-pointer whitespace-nowrap rounded-xl bg-blue-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed dark:bg-blue-600 dark:text-slate-100 dark:focus-visible:outline-blue-600">Regresar</a>
+                    </div>
                 </x-slot>
-            
             </x-full-card>
         </div>
     </div>
