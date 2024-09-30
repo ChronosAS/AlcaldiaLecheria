@@ -53,7 +53,7 @@
                     <!-- inspired by tailwindcss.com -->
                     <ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
                         @forelse ($this->posts as $post)
-                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl shadow-md max-h-[47rem]">
+                            <li class="relative sm:flex-row xl:flex-col  flex flex-col items-center border border-slate-200 rounded-xl shadow-md max-h-[47rem]">
                                 <div class="order-1 sm:ml-6 xl:ml-0 ">
                                     @if ($post->category)
                                         <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-600 text-white ">{{ $post->category->label() }}</span>
@@ -73,7 +73,9 @@
                                         </svg>
                                     </a>
                                 </div>
-                                <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50  w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full min-h-[25rem] max-h-[29rem]" width="1216" >
+                                <a href="{{ route('app.news.show',$post->id) }}" class="cursor-pointer ">
+                                    <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50  sm:mb-0 xl:mb-6 xl:w-full min-h-[25rem] max-h-[29rem]"  >
+                                </a>
                             </li>
                         @empty
                             No hay noticias que concuerden con su busqueda.

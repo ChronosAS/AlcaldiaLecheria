@@ -71,7 +71,8 @@
                             </div>
                         </div>
 
-                        <img class="static w-full h-full rounded-xl inset-0  text-slate-300 " x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
+                        {{-- <img class="static w-full h-full rounded-xl inset-0  text-slate-300 " x-bind:src="slide.image" x-bind:alt="slide.imageAlt" /> --}}
+                        <img class="static w-full h-full inset-0 object-scale-down text-slate-700 dark:text-slate-300" x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
                     </div>
                 </template>
             </div>
