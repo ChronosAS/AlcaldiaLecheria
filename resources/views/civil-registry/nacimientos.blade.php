@@ -3,7 +3,7 @@
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl" x-text='title' ></h1>
         </x-main-header>
-        <div class="my-8 mt-0 space-y-4 px-4 mx-auto max-w-5xl">
+        <div class="my-10  space-y-4 px-4 mx-auto max-w-5xl">
             <x-full-card>
                 <x-slot name="title">
                     <div class=" text-3xl">
@@ -11,11 +11,7 @@
                     </div>
                 </x-slot>
                 <x-slot name="subTitle">
-                    <div class="text-xl">
-                        <div class="flex items-center justify-center">
-                        <img src="{{asset('assets/img/civil-registry/registry-info/nacer.webp')}}" class="min-h-[15rem] max-h-[18rem] min-w-[30rem] max-w-[35rem] m-4 transition duration-300 ease-in-out hover:shadow-lg rounded-lg">
-                        </div>
-                    </div>
+                    
                 </x-slot>
                <x-slot name="content" class="center">
                     <div x-data="{ selectedTab: 'requeriments' }" class="max-w-xl mt-4 px-4 mx-auto">

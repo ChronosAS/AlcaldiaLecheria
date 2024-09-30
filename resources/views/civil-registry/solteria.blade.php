@@ -3,7 +3,7 @@
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl" x-text='title' ></h1>
         </x-main-header>
-        <div class="my-8 mt-0 space-y-4 px-4 mx-auto max-w-5xl">
+        <div class="my-10 space-y-4 px-4 mx-auto max-w-5xl py-4">
             <x-full-card>
                 <x-slot name="title">
                     <div class=" text-3xl">
@@ -11,11 +11,7 @@
                     </div>
                 </x-slot>
                 <x-slot name="subTitle">
-                    <div class="text-xl">
-                        <div class="flex items-center justify-center">
-                        <img src="{{asset('assets/img/civil-registry/registry-info/carta-de-solteria.webp')}}" class="min-h-[15rem] max-h-[18rem] min-w-[30rem] max-w-[35rem] m-4 transition duration-300 ease-in-out hover:shadow-lg rounded-lg">
-                        </div>
-                    </div>
+                    
                 </x-slot>
                <x-slot name="content" class="center">
                     <div x-data="{ selectedTab: 'requirements' }" class="max-w-xl mt-4 px-4 mx-auto">
@@ -41,7 +37,7 @@
                     <div class="flex  flex-row items-center justify-center space-x-5 ">
                         <a  href="{{ route('app.civil-registry') }}" class=" cursor-pointer whitespace-nowrap rounded-xl bg-blue-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed ">Regresar</a>
 
-                        {{-- <a  href="" class=" cursor-pointer whitespace-nowrap rounded-xl bg-green-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed  ">Descargar Formulario</a> --}}
+                        <a  href="{{ asset('assets/docs/civil-registry/carta-de-solteria.pdf') }}" target="_blank" class=" cursor-pointer whitespace-nowrap rounded-xl bg-green-700 px-4 py-2 text-lg font-medium tracking-wide text-slate-100 transition hover:opacity-75 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed  ">Descargar Planilla</a>
                     </div>
                 </x-slot>
             </x-full-card>
