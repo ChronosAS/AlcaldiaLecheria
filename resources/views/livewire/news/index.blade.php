@@ -51,31 +51,33 @@
                 </x-slot>
                 <x-slot name="content" class="">
                     <!-- inspired by tailwindcss.com -->
-                    <ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
+                    <ul class="grid grid-cols-1  xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
                         @forelse ($this->posts as $post)
-                            <li class="relative sm:flex-row xl:flex-col  flex flex-col items-center border border-slate-200 rounded-xl shadow-md max-h-[47rem]">
-                                <div class="order-1 sm:ml-6 xl:ml-0 ">
-                                    @if ($post->category)
-                                        <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-600 text-white ">{{ $post->category->label() }}</span>
-                                    @endif
-                                    <h3 class="mb-1 text-slate-900 font-semibold mx-3  ">
-                                        <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3 ">{{ $post->iso_date }}</span>{{ $post->title }}
-                                    </h3>
-                                    <div class="prose prose-slate prose-sm text-slate-600 ">
-                                        <p class="mx-3">{{ $post->subtitle }}</p>
-                                    </div>
-                                    <a class="group mx-3 my-2 inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 "
-                                        href="{{ route('app.news.show',$post->id) }}">Ver...
-                                        <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
-                                            width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M0 0L3 3L0 6"></path>
-                                        </svg>
+                            <li class="relative sm:flex-row xl:flex-col  flex flex-col items-center">
+                                <article class="group flex rounded-xl max-w-sm flex-col overflow-hidden border border-slate-300 bg-slate-100 text-slate-700  shadow-md">
+                                    <a href="{{ route('app.news.show',$post->id) }}" class="cursor-pointer h-44 md:h-64 overflow-hidden ">
+                                        <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt=""class="object-cover transition duration-700 ease-out group-hover:scale-105"  >
                                     </a>
-                                </div>
-                                <a href="{{ route('app.news.show',$post->id) }}" class="cursor-pointer ">
-                                    <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50  sm:mb-0 xl:mb-6 xl:w-full min-h-[25rem] max-h-[29rem]"  >
-                                </a>
+                                    <div class="">
+                                        @if ($post->category)
+                                            <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-600 text-white ">{{ $post->category->label() }}</span>
+                                        @endif
+                                        <h3 class="mb-1 text-slate-900 font-semibold mx-3  ">
+                                            <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3 " aria-describedby="featureDescription" >{{ $post->iso_date }}</span>{{ $post->title }}
+                                        </h3>
+                                        <div class="prose prose-slate prose-sm text-slate-600 ">
+                                            <p class="mx-3">{{ $post->subtitle }}</p>
+                                        </div>
+                                        <a class="group mx-3 my-2 inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 "
+                                            href="{{ route('app.news.show',$post->id) }}">Ver...
+                                            <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                                                width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M0 0L3 3L0 6"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </article>
                             </li>
                         @empty
                             No hay noticias que concuerden con su busqueda.
