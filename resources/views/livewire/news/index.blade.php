@@ -87,7 +87,7 @@
             </x-full-card>
             {{ $this->posts->links('vendor.livewire.tailwind') }}
         </div>
-       <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.8] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[20rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:-right-4 2xl:right-10 justify-self-center fixed hidden sm:inline-block md:hidden xl:inline-block">
+       <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.8] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[20rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:-right-5 xl:ml-6 2xl:right-10 justify-self-center fixed hidden sm:inline-block md:hidden xl:inline-block">
            <a class="twitter-timeline" data-lang="es" data-width="450" data-height="450" data-dnt="true" data-theme="light" class=" 2xl:h-[450px] xl:h-[550px]" href="https://twitter.com/manuelferreiraG?ref_src=twsrc%5Etfw">Tweets by Manuel ferreira</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
         </div>
     </div>
