@@ -54,8 +54,8 @@
                     <ul class="grid grid-cols-1  xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
                         @forelse ($this->posts as $post)
                             <li class="relative sm:flex-row xl:flex-col  flex flex-col items-center">
-                                <article class="group flex rounded-xl max-w-sm flex-col overflow-hidden border border-slate-300 bg-slate-100 text-slate-700  shadow-md">
-                                    <a href="{{ route('app.news.show',$post->id) }}" class="cursor-pointer h-44 md:h-64 overflow-hidden ">
+                                <article class="group flex rounded-xl max-w-sm flex-col overflow-hidden border border-slate-300 bg-slate-100 text-slate-700  shadow-md ">
+                                    <a href="{{ route('app.news.show',$post->id) }}" class="cursor-pointer min-h-44  max-h-56  overflow-hidden ">
                                         <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt=""class="object-cover transition duration-700 ease-out group-hover:scale-105"  >
                                     </a>
                                     <div class="">
