@@ -8,7 +8,7 @@
         <x-slot name="subTitle">
         <div class="text-xl">
             <h1>Escrito por: Maximilian Kopp M.</h1>
-            <hr class="border border-blue-400 px-10">
+            <hr class="border border-blue-400 mx-56">
         </div>
         </x-slot>
         <x-slot name="content">
@@ -16,7 +16,7 @@
                 <h1 class="font-bold text-xl">
                 Sinopsis Histórica
             </h1>
-            <div class="m-4 p-2 text-wrap text-justify tracking-wide leading-loose space-y-2">
+            <div class="m-4 p-2 text-wrap text-justify leading-loose space-y-2 text-lg">
                 <p>Desde los tiempos prehispánicos hasta la actualidad, el territorio de 18 Km2 que hoy ocupa la Ciudad de Lechería siempre ha sido un lugar de encuentros y oportunidades<br>
                 Así lo fue para la Cacica la Magdalena y los Cumanagotos que en armonía vivieron con la naturaleza en El Morro; también lo fue para los conquistadores Jerónimo de Ortal y Antonio Sedeño quienes en busca del camino al Dorado se establecieron brevemente en 1535 en las Bocas del Río Neverí cuyo prospero Puerto de Barcelona atrajo a corsarios holandeses especializados en el contrabando y en especial del aprovechamiento ilícito del riquezas del “Oro Blanco” es decir la sal lo cual obligo a la corona a española a levantar a fines del Siglo XVIII a el Fortín de La Magdalena el cual fue visitado por Alejandro Von Humboltd “El Primer Turista de El Morro” cuya vista al igual que los numerosos visitantes que le precedieron los han dejado encantados. Otros que se encontraron en estas tierras fueron los patriotas y realistas quedando para la historia los pasos de El Libertador en 1817 y la toma efectuada por el General Rafael Urdaneta en 1819.<br>
                 El siglo XX se inició con la llegada de los margariteños.<br>
@@ -30,7 +30,7 @@
                 En Gaceta Oficial del Estado Anzoátegui de fecha 9 de julio de 1953 fue creada la Parroquia Lic. Diego Bautista Urbaneja del Distrito (actual Municipio) Bolívar. Luego de un estudio de factibilidad económica y de acuerdo a la tasa poblacional mínima exigida por la Ley Orgánica de Régimen Municipal de 1989, La Asamblea Legislativa del Estado Anzoátegui aprobó la creación de la nueva municipalidad con el nombre oficial de Municipio Turístico El Morro Lic. Diego Bautista Urbaneja, publicado en la Gaceta Oficial Nº (91) extraordinario de fecha 22 de enero de 1992.</p>
             </div>
             <h1 class="font-bold text-xl">Efemérides de Lechería</h1>
-            <ul class="list-inside list-disc p-4 m-4 tracking-wide leading-relaxed  space-y-5">
+            <ul class="list-inside list-disc p-4 m-4 tracking-wide leading-relaxed  space-y-5 text-justify text-lg">
                 <li><b><u>04 de Marzo de 1734:</b></u> En Soria (España) nace el ingeniero militar Casimiro Isava Olivier. Fue quien elaboró los planos del Fortín de la Magdalena de El Morro.</li>
                 <li><b><u>17 de Noviembre 1800: El</b></u> padre de la geografía moderna, Alejandro de Humboltd y el botánico Aime Bompland visita el Fortín de la Magdalena de El Morro. En su libro Viaje a las Regiones Equinocciales del Nuevo Continente Afirmaron: “La Perspectiva que se goza de lo alto de El Morro es bastante hermosa”.</li>
                 <li><b><u>08 de Diciembre de 1802:</b></u> En Cumaná (Edo. Sucre) muere el ingeniero militar español Casimiro Isava Olivier. Fue quien levantó los planos del Fortín de la Magdalena de El Morro.</li>

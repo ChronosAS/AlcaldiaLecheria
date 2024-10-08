@@ -11,11 +11,11 @@
             <div class="flex items-center justify-center">
             <img src="{{asset('assets/img/bandera.jpg')}}" class="h-[7rem] m-4 transition duration-300 ease-in-out hover:shadow-lg ">
             </div>
-            <hr class="border border-blue-400 px-10">
+            <hr class="border border-blue-400 mx-56">
         </div>
         </x-slot>
         <x-slot name="content">
-            <div class="font-serif m-5 text-justify tracking-wide space-y-2">
+            <div class="font-serif m-5 text-justify tracking-wide space-y-2 text-lg">
             <p>
             La Bandera del Municipio Urbaneja fue escogida mediante concurso en cabildo abierto el 15 de Marzo de 2001. 
             La ganadora fue Francia Zaurin presentando un estandarte compuesto por tres franjas horizontales de diferente tamaño. 
