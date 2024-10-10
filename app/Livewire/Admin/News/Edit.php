@@ -37,7 +37,7 @@ class Edit extends Component
         $this->title = $this->post->title;
         $this->subtitle = $this->post->subtitle;
         $this->date = $this->post->date;
-        $this->status = ($this->post->status->value == PostStatus::DRAFT->value) ? true : false;
+        $this->status = ($this->post->status->value == (PostStatus::DRAFT)->value) ? true : false;
         $this->content = $this->post->content;
         $this->category = $this->post->category->value ?? '';
         $this->dispatch('loadPage');
@@ -87,7 +87,7 @@ class Edit extends Component
                 'subtitle' => $this->subtitle,
                 'content' => $this->content,
                 'author' => $this->author,
-                'status' => ($this->status) ? PostStatus::DRAFT->value : PostStatus::PUBLISHED->value,
+                'status' => ($this->status) ? (PostStatus::DRAFT)->value : (PostStatus::PUBLISHED)->value,
                 'category' => $this->category,
                 'date' => $this->date,
                 'iso_date' => ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))

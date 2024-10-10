@@ -53,6 +53,7 @@
                             <option value="{{ $category->value }}">{{ $category->label() }}</option>
                         @endforeach
                     </select>
+                    <x-input-error for="category" class="mt-2" />
                 </div>
                <!-- <div class="col-span-6 sm:col-span-3">
                 <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500"  />
@@ -152,7 +153,6 @@
                 </div>
             </x-slot>
         </x-one-column-form-section>
-        <livewire:admin.news.tags.create>
     </div>
     @push('styles')
         <style>
