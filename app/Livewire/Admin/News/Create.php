@@ -71,10 +71,8 @@ class Create extends Component
     public function save()
     {
 
-        $this->title= Str::lower($this->title);
-
         $this->validate([
-            'title' => ['required','string','max:90','unique:posts'],
+            'title' => ['required','string','max:90'],
             'subtitle' => ['nullable','string','max:200'],
             'date' => ['required','date'],
             'author' => ['nullable','string','max:200'],
