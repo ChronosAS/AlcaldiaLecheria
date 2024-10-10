@@ -17,10 +17,17 @@
     </style>
 @endpush
 <div>
-    <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
-        <div class="text-center">
-            <h1 class="sm:text-7xl text-6xl">LECHERÍA</h1>
-            <h1 class="sm:text-4xl text-3xl">¡UN ESTILO DE VIDA!</h1>
+    <x-main-header bg_img="../assets/img/lecheria-bg.jpg" >
+        <div class="sm:flex  sm:flex-row sm:items-center sm:gap-x-[65rem] lg:gap-x-[35rem] md:gap-x-1 xl:gap-x-[26rem] 2xl:gap-x-[65rem] ">
+            <div class="    bg-gray-600/50    object-scale-down justify-items-start mb-6 sm:mb-0 ">
+                <x-weather-widget/>
+            </div>
+            
+            <div class=" sm:mt-20 text-center">
+                <h1 class="sm:text-7xl text-6xl">LECHERÍA</h1>
+                <h1 class="sm:text-4xl text-3xl">¡UN ESTILO DE VIDA!</h1>
+            </div>
+           
         </div>
     </x-main-header>
     <header class=" bg-white max-h-150" id="header2" >
