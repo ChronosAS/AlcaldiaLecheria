@@ -7,6 +7,7 @@ use App\Enums\News\PostStatus;
 use App\Models\News\Post;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -76,12 +77,14 @@ class Create extends Component
             'subtitle' => ['nullable','string','max:200'],
             'date' => ['required','date'],
             'author' => ['nullable','string','max:200'],
+            'category' => ['required',Rule::enum(NewsCategories::class)],
             'images.*.image' => ['required','image','max:4096'],
             'images.*.description' => ['nullable','string','max:150'],
             'images' => ['required','max:10']
         ],[
             'title.required' => 'Porfavor ingrese un titulo.',
             'title.unique' => 'Ya existe un post con este titulo.',
+            'category.required' => 'Porfavor agregue una categoria',
             'max' => 'Maximo de caracteres exedido.',
             'date.required' => 'Porfavor elija una fecha.',
             'images.max' => 'Ingrese un maximo de 10 imagenes.',
@@ -97,7 +100,7 @@ class Create extends Component
                 'content' => $this->content,
                 'user_id' => auth()->user()->id,
                 'author' => $this->author,
-                'status' => ($this->status) ? PostStatus::DRAFT->value : PostStatus::PUBLISHED->value,
+                'status' => ($this->status) ? (PostStatus::DRAFT)->value : (PostStatus::PUBLISHED)->value,
                 'category' => $this->category,
                 'date' => $this->date,
                 'iso_date' => ucwords(Carbon::parse($this->date)->isoFormat('dddd, D')).' de '.ucwords(Carbon::parse($this->date)->isoFormat('MMMM YYYY'))

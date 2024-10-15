@@ -26,7 +26,7 @@
                     <x-input-error for="date" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
-                    <x-label for="author" value="Autor" required="true" class="text-white"/>
+                    <x-label for="author" value="Autor"  class="text-white"/>
                     <x-input style="color: black" wire:model='author' class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" type="text" id="author" name="author" />
                     <x-input-error for="author" class="mt-2" />
                 </div>
@@ -46,13 +46,14 @@
                     <x-button class="mt-2" type="button" @click="$dispatch('create-tag')">
                         Crear Etiqueta
                     </x-button> --}}
-                    <x-label for="category" value="Categoria" class="text-white"/>
+                    <x-label for="category" value="Categoria" required="true" class="text-white"/>
                     <select wire:model.live='category' name="category" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" id="categorySelect">
                         <option selected value=''>Elija una categoria</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->value }}">{{ $category->label() }}</option>
                         @endforeach
                     </select>
+                    <x-input-error for="category" class="mt-2" />
                 </div>
                <!-- <div class="col-span-6 sm:col-span-3">
                 <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500"  />
@@ -152,7 +153,6 @@
                 </div>
             </x-slot>
         </x-one-column-form-section>
-        <livewire:admin.news.tags.create>
     </div>
     @push('styles')
         <style>

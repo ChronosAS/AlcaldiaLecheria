@@ -58,7 +58,7 @@
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <!-- Projects link -->
                 <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 {{ request()->routeIs('app.vdv') ? 'active pointer-events-none' : '' }} [&.active]:text-blue-500"
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 md:px-0 xl:px-2 focus:text-neutral-300 sm:px-2 {{ request()->routeIs('app.vdv') ? 'active pointer-events-none' : '' }} [&.active]:text-blue-500"
                 href="{{ route('app.vdv') }}" data-twe-nav-link-ref>
                             VDV2024
                 </a>
@@ -66,7 +66,7 @@
             <!-- About me link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 "
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 md:px-0 xl:px-2 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 "
                 href="http://200.41.118.109/appweb/"
                 target="_blank"
                 data-twe-nav-link-ref
@@ -77,7 +77,7 @@
             @if (request()->routeIs('app'))
                 <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
                 <a
-                    class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
+                    class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400  focus:text-neutral-300 md:px-0 xl:px-2 sm:px-2 [&.active]:text-blue-500"
                     :class="{ 'active': contact }"
                     href="#contact"
                     data-twe-nav-link-ref
@@ -87,14 +87,14 @@
             <!-- Contact link -->
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
+                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 sm:px-2 md:px-0 xl:px-2 [&.active]:text-blue-500"
                 href="{{ route('app.news') }}"
                 data-twe-nav-link-ref
                 >NOTICIAS</a>
             </li>
             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
               <a
-                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500"
+                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 md:px-0 xl:px-2 sm:px-2 [&.active]:text-blue-500"
                 href="{{ route('app.civil-registry') }}"
                 data-twe-nav-link-ref
                 >REGISTRO CIVIL</a>
@@ -108,7 +108,7 @@
             <!-- information link -->
              <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
                 <a
-                    class=" transition duration-200 cursor-pointer hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2  [&.active]:text-blue-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
+                    class=" transition duration-200 cursor-pointer hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 md:px-0 xl:px-2 sm:px-2  [&.active]:text-blue-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
                     data-twe-nav-link-ref
                     id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO
                 </a>

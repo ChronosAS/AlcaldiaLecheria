@@ -51,29 +51,33 @@
                 </x-slot>
                 <x-slot name="content" class="">
                     <!-- inspired by tailwindcss.com -->
-                    <ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
+                    <ul class="grid grid-cols-1  xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
                         @forelse ($this->posts as $post)
-                            <li class="relative flex flex-col sm:flex-row xl:flex-col items-start border border-slate-200 rounded-xl shadow-md max-h-[47rem]">
-                                <div class="order-1 sm:ml-6 xl:ml-0 ">
-                                    @if ($post->category)
-                                        <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-600 text-white ">{{ $post->category->label() }}</span>
-                                    @endif
-                                    <h3 class="mb-1 text-slate-900 font-semibold mx-3  ">
-                                        <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3 ">{{ $post->iso_date }}</span>{{ $post->title }}
-                                    </h3>
-                                    <div class="prose prose-slate prose-sm text-slate-600 ">
-                                        <p class="mx-3">{{ $post->subtitle }}</p>
-                                    </div>
-                                    <a class="group mx-3 my-2 inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 "
-                                        href="{{ route('app.news.show',$post->id) }}">Ver...
-                                        <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
-                                            width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M0 0L3 3L0 6"></path>
-                                        </svg>
+                            <li class="relative sm:flex-row xl:flex-col  flex flex-col items-center">
+                                <article class="group flex rounded-xl max-w-sm flex-col overflow-hidden border border-slate-300 bg-slate-100 text-slate-700  shadow-md ">
+                                    <a href="{{ route('app.news.show',$post->id) }}" class="cursor-pointer min-h-44  max-h-56  overflow-hidden ">
+                                        <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt=""class="object-cover transition duration-700 ease-out group-hover:scale-105"  >
                                     </a>
-                                </div>
-                                <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50  w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full min-h-[25rem] max-h-[29rem]" width="1216" >
+                                    <div class="">
+                                        @if ($post->category)
+                                            <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-600 text-white ">{{ $post->category->label() }}</span>
+                                        @endif
+                                        <h3 class="mb-1 text-slate-900 font-semibold mx-3 break-words">
+                                            <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3" aria-describedby="featureDescription" >{{ $post->iso_date }}</span>{{ $post->title }}
+                                        </h3>
+                                        <div class="prose prose-slate prose-sm text-slate-600 ">
+                                            <p class="mx-3">{{ $post->subtitle }}</p>
+                                        </div>
+                                        <a class="group mx-3 my-2 inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 "
+                                            href="{{ route('app.news.show',$post->id) }}">Ver...
+                                            <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                                                width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M0 0L3 3L0 6"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </article>
                             </li>
                         @empty
                             No hay noticias que concuerden con su busqueda.
@@ -83,8 +87,8 @@
             </x-full-card>
             {{ $this->posts->links('vendor.livewire.tailwind') }}
         </div>
-        <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.7] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[18rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:right-4 2xl:right-10 justify-self-center fixed hidden sm:inline-block md:hidden xl:inline-block">
-            <a class="twitter-timeline" href="https://twitter.com/Urbanejalcaldia?ref_src=twsrc%5Etfw">Tweets Urbanejalcaldia</a>
+       <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.8] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[20rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:-right-5 xl:ml-6 2xl:right-10 justify-self-center fixed hidden sm:inline-block md:hidden xl:inline-block">
+           <a class="twitter-timeline" data-lang="es" data-width="450" data-height="450" data-dnt="true" data-theme="light" class=" 2xl:h-[450px] xl:h-[550px]" href="https://twitter.com/manuelferreiraG?ref_src=twsrc%5Etfw">Tweets by Manuel ferreira</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
         </div>
     </div>
 </div>

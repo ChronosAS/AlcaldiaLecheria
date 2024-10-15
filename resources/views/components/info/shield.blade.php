@@ -11,14 +11,14 @@
             <div class="flex items-center justify-center">
             <img src="{{asset('assets/img/Escudo.png')}}" class="h-[15rem] transition duration-300 ease-in-out hover:shadow-lg rounded-full ">
             </div>
-            <hr class="border border-blue-400 px-10">
+            <hr class="border border-blue-400 mx-56">
         </div>
         </x-slot>
         <x-slot name="content">
             <div class="font-serif m-5 text-justify tracking-wide space-y-2">
            
 </div>
-<div class="text-justify font-serif space-y-3 tracking-wide leading-loose p-3 m-4">
+<div class="text-justify font-serif space-y-3 tracking-wide leading-loose p-3 m-4 text-lg">
 <p>
 <b class="text-xl">- Atributos:</b><br>
 Campo de contorno germánico medio partido y cortado (dividido en tres cuarteles: dos superiores y uno inferior).
