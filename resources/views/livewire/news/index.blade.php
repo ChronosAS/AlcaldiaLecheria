@@ -4,7 +4,7 @@
     </x-main-header>
 
     <div class=" flex sm:grid sm:grid-cols-10 sm:grid-rows-6 xl:grid xl:grid-cols-10 xl:grid-rows-6 md:grid-cols-1 md:grid gap-4 min-h-svh">
-        <div class="sm:col-span-8 xl:col-span-8 xl:row-span-6 sm:row-span-6 md:col-span-1 my-8 mt-0 space-y-4 p-4 mx-auto max-w-7xl ">
+        <div class=" xl:col-span-10 xl:row-span-6  my-8 mt-0 space-y-4 p-4 mx-auto max-w-7xl ">
             <x-full-card class=" ">
                 <x-slot name="title">
                     <div class=" text-3xl grid  sm:grid-cols-1  2xl:grid-cols-6 xl:grid-cols-5 md:grid-cols-5 sm:grid-rows-1 2xl:grid-rows-1 xl:grid-rows-1 sm:gap-4 md:gap-2">
@@ -87,8 +87,8 @@
             </x-full-card>
             {{ $this->posts->links('vendor.livewire.tailwind') }}
         </div>
-       <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.8] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[20rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:-right-5 xl:ml-6 2xl:right-10 justify-self-center fixed hidden sm:inline-block md:hidden xl:inline-block">
+       {{-- <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.8] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[20rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:-right-5 xl:ml-6 2xl:right-10 justify-self-center fixed hidden sm:inline-block md:hidden xl:inline-block">
            <a class="twitter-timeline" data-lang="es" data-width="450" data-height="450" data-dnt="true" data-theme="light" class=" 2xl:h-[450px] xl:h-[550px]" href="https://twitter.com/manuelferreiraG?ref_src=twsrc%5Etfw">Tweets by Manuel ferreira</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-        </div>
+        </div> --}}
     </div>
 </div>
