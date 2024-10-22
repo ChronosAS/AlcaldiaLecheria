@@ -17,6 +17,7 @@ class AddImageModal extends Component
     public Post $post;
 
     public $image;
+    public $name;
     public $description;
 
     public function mount(Post $post)
@@ -26,10 +27,13 @@ class AddImageModal extends Component
 
     public function saveImage()
     {
+        $this->name = $this->image->getClientOriginalName();
         $this->validate([
             'image' => ['required','image','max:4096'],
+            'name' => ['nullable','string','max:50'],
             'description' => ['nullable','string','max:150'],
         ],[
+            'name.max' => 'Nombre de la imagen no debe exeder 50 caracteres.',
             'image.required' => 'El campo de imagen no puede estar vacio.',
             'image.image' => 'El archivo debe ser una imagen',
             'image.max' => 'Imagen exede el tamaño maximo de 4mb.'

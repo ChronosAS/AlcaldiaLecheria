@@ -65,12 +65,20 @@ class Create extends Component
     {
         return [
             'image',
-            'description'
+            'description',
+            'name'
         ];
     }
 
     public function save()
     {
+        if($this->images)
+        {
+            foreach($this->images as $index => $image)
+            {
+                $this->images[$index]['name'] = $image['image']->getClientOriginalName();
+            }
+        }
 
         $this->validate([
             'title' => ['required','string','max:90'],
@@ -80,6 +88,7 @@ class Create extends Component
             'category' => ['required',Rule::enum(NewsCategories::class)],
             'images.*.image' => ['required','image','max:4096'],
             'images.*.description' => ['nullable','string','max:150'],
+            'images.*.name' => ['nullable','string','max:50'],
             'images' => ['required','max:10']
         ],[
             'title.required' => 'Porfavor ingrese un titulo.',
@@ -89,6 +98,7 @@ class Create extends Component
             'date.required' => 'Porfavor elija una fecha.',
             'images.max' => 'Ingrese un maximo de 10 imagenes.',
             'images.*.image.max' => 'Imagen exede el tamaño maximo de 4mb.',
+            'images.*.name.max' => 'Nombre de la imagen no debe exeder 50 caracteres.',
             'images.required' => 'Ingrese un minimo de 1 imagen.',
             'images.*.image.required' => 'El campo de imagen no puede estar vacio.',
         ]);

@@ -14,6 +14,7 @@
                 </label>
                 <input class="mt-1 hidden sm:block w-full text-black bg-white dark:bg-white dark:text-black focus:border-orange-500 dark:focus:border-orange-400 focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-500 rounded-md shadow-sm" wire:model="image" type="file" id="image">
                 <x-input-error for="image" class="mt-2" />
+                <x-input-error for="name" class="mt-2" />
             </div>
             <div class="mt-5">
                 <x-label for="description" value="Sub Titulo"/>

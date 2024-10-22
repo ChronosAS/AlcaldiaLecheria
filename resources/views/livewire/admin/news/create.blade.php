@@ -106,6 +106,9 @@
                                         @error('images.*.image')
                                             <span class="text-danger"><b>{{ $message }}</b></span>
                                         @enderror
+                                        @error('images.*.name')
+                                            <span class="text-danger"><b>{{ $message }}</b></span>
+                                        @enderror
                                     </x-table.td>
                                     <x-table.td>
                                         <input class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm"
