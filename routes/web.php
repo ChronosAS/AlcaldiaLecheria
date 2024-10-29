@@ -1,7 +1,9 @@
 <?php
 
 use App\Livewire\Main;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', App\Livewire\Main::class)->name('app');
+
+Route::get('/telegram/log/test', function(){
+    Log::info("Telegram test");
+});
 
 // Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');
 // Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');

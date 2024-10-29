@@ -9,6 +9,7 @@
         "amendozaaguiar/laravel-lat-es": "^11.0",
         "amendozaaguiar/laraveles-spanish-for-jetstream": "^1.7",
         "guzzlehttp/guzzle": "^7.2",
+        "irazasyed/telegram-bot-sdk": "^3.14",
         "laravel/framework": "^10.10",
         "laravel/jetstream": "^4.3",
         "laravel/sanctum": "^3.3",
