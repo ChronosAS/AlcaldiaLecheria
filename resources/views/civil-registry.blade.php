@@ -3,15 +3,10 @@
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl" x-text='title' ></h1>
         </x-main-header>
-        <div  class=" mx-auto max-w-5xl ">
+        <div  class=" mx-auto max-w-7xl ">
             <ul
                 class="flex flex-wrap -mb-px  font-medium text-center items-center gap-y-4 sm:justify-evenly justify-evenly xl:pl-10 xl:pr-10 2xl:pl-5 2xl:pr-5 py-10"
                 id="civil-registry-tab">
-                <li class="pb-0 p-2 hover:border-blue-900  border-transparent border-4" >
-                    <a   href="{{ route('app.civil-reg.conducta') }}" class="inline-block cursor-pointer  " id="conduct-tab" >
-                        <img class="sm:min-w-[17rem]  sm:min-h-[13rem] sm:max-w-[17rem] sm:max-h-[13rem] min-w-[7rem] min-h-[3rem] max-w-[9rem] max-h-[6rem]" src="{{asset('assets/img/civil-registry/conducta.webp')}}"/>
-                    </a>
-                </li>
                 <li class="pb-0 p-2  hover:border-blue-900  border-transparent border-4" >
                     <a  href="{{ route('app.civil-reg.fe-de-vida') }}" class="inline-block cursor-pointer ">
                         <img class="sm:min-w-[17rem] sm:min-h-[13rem] sm:max-w-[17rem] sm:max-h-[13rem] min-w-[7rem] min-h-[3rem] max-w-[9rem] max-h-[6rem]" src="{{asset('assets/img/civil-registry/fe-de-vida.webp')}}"/>

@@ -24,9 +24,9 @@
                             <div x-show="selectedTab === 'requeriments'" id="tabpanelRequeriments" role="tabpanel" aria-label="requeriments" class="text-justify">
                                 <ul class="max-w-xl text-md font-medium  text-black bg-white border border-blue-200 rounded-lg" class="text-center">
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Acudir a la oficina de registro civil con los certificados de nacimiento EV-25 emitidos por el centro de salud.</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Original y 3 copias de la cédula de identidad de ambos padres. </li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Copia del acta de matrimonio si son casados.</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">4.- Permiso de presentación extemporánea emitido por el CPNNA (Consejo de Protección de los Niños, Niñas y Adolescentes) si tiene más de 90 días de nacido.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Dos (2) copias de la cédula de identidad de ambos padres. </li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Copia del acta de matrimonio (si son casados) o unión estable (puede venir uno solo).</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">4.- Permiso de presentación extemporánea emitido por el CPNNA (Consejo de Protección de los Niños, Niñas y Adolescentes) Si el niño nacio antes del 15-03-2020.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">5.- Dos (2) testigos mayores de edad con 1 copia de C.I. c/u.</li>
                                 </ul>
                             </div>
@@ -36,14 +36,21 @@
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Acta de Nacimiento de ambos padres. </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Una (1) Copia de los pasaportes de ambos padres.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">4.- Dos (2) copias de las de cedulas de identidad de ambos padres.</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">5.- Copia del acta de matrimonio de los padres. </li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">6.- Dos (2) testigos mayores de edad con copia de su cedula, venezolanos. </li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">7.- Permiso de presentación extemporánea emitido por el CPNNA (Consejo de Protección del Niño, Niña y Adolecentes) en caso de que el niño tenga más de 90 días de nacido .</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">8.- Si los padres no son casados deben estar presente ambos para la presentación del bebé.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">5.- Copia del acta de matrimonio (si son casados) o unión estable (puede venir uno solo). </li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">6.- Copia del acta de nacimiento de ambos padres. </li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">7.- Dos (2) testigos mayores de edad con copia de su cedula, venezolanos. </li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">8.- Permiso de presentación extemporánea emitido por el CPNNA (Consejo de Protección de los Niños, Niñas y Adolescentes) Si el niño nacio antes del 15-03-2020.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">9.- Si los padres no son casados deben estar presente ambos para la presentación del bebé.</li>
                                 </ul>
 
                             </div>
                              <div x-show="selectedTab === 'info'" id="tabpanelInfo" role="tabpanel" aria-label="info" class="text-center">
+                                <ul class="max-w-xl text-lg  font-black  text-black bg-white border border-blue-200 rounded-lg">
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">- El trámite es por cita, la misma se otorga una vez que presenten todos los requisitos aquí mencionados.</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">- Las presentaciones de Niños y Niñas se realizan en el Registro Civil en la Av. Anzoátegui con Calle Los Almendrones, Quinta Araguaney, Diagonal a la Plaza “El Parque”.</li>
+                                </ul>
+                            </div>
+                              <div x-show="selectedTab === 'info'" id="tabpanelInfo" role="tabpanel" aria-label="info" class="text-center">
                                 <ul class="max-w-xl text-lg  font-black  text-black bg-white border border-blue-200 rounded-lg">
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">- El trámite es por cita, la misma se otorga una vez que presenten todos los requisitos aquí mencionados.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">- Las presentaciones de Niños y Niñas se realizan en el Registro Civil en la Av. Anzoátegui con Calle Los Almendrones, Quinta Araguaney, Diagonal a la Plaza “El Parque”.</li>
