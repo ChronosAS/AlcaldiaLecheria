@@ -30,6 +30,6 @@ export default {
           pattern: /^bg-\w+-\d{2,3}$/,
         }
       ],
-    plugins: [forms, typography,require("tw-elements/plugin.cjs"),require("flowbite/plugin"),flowbite.plugin()],
+    plugins: [forms, typography,require("tw-elements/plugin.cjs"),require("flowbite/plugin"),flowbite.plugin(),require('tailwindcss-animated')],
 
 };
