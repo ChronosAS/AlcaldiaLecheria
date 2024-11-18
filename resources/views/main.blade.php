@@ -45,14 +45,15 @@
     </header>
     @livewire('news.main')
     <section id="contact">
-        <div class="text-center">
-            <div class=" sm:text-lg text-gray-400 sm:justify-center">
-                    <div class="text-center py-8 space-y-3">
-                        <h1 class="section-heading text-uppercase text-[3rem] text-white ">Contactanos</h1>
-                        <h2 class="section-subheading text-black text-xl">Nuestra directora de Atención al Ciudadano esta atenta a sus solicitudes.</h2>
-                    </div>
-                <div class="mx-auto">
-                    <iframe id="contact" class="  w-full h-[1500px] sm:h-[1300px] block" scrolling="no" src="https://docs.google.com/forms/d/e/1FAIpQLSf8D1hrbKl8u-q1yiWVlEKszUWWd8Wo7uY7fT6OLIxPIpE5sg/viewform?embedded=true" >Cargando…</iframe>
+        <div class="text-center ">
+            <div class=" sm:text-lg text-gray-400 ">
+                <div class="text-center py-8 space-y-3 sm:justify-center">
+                    <h1 class="section-heading text-uppercase text-[3rem] text-white ">Contactanos</h1>
+                    <h2 class="section-subheading text-black text-xl">Nuestra directora de Atención al Ciudadano esta atenta a sus solicitudes.</h2>
+                </div>
+                <div class="container  mx-auto px-[30rem] pb-10">
+                    {{-- <iframe id="contact" class="  w-full h-[1500px] sm:h-[1300px] block" scrolling="no" src="https://docs.google.com/forms/d/e/1FAIpQLSf8D1hrbKl8u-q1yiWVlEKszUWWd8Wo7uY7fT6OLIxPIpE5sg/viewform?embedded=true" >Cargando…</iframe> --}}
+                    <livewire:contact-form/>
                 </div>
             </div>
         </div>
