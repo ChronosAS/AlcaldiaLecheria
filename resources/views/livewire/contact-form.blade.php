@@ -7,23 +7,23 @@
         <hr class="border border-blue-400 mx-auto mb-5">
         <div class="">
             <x-label for="title" value="Nombre y Apellido" required="true" class="text-xl text-left px-5"/>
-            <x-input id="title"  type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="title" />
+            <x-input id="title" placeholder="Tu respuesta"  type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="title" />
             <x-input-error for="title" class="mt-2" />
         </div>
 
         <div class="">
             <x-label for="subtitle" value="Cédula " required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="">
             <x-label for="subtitle" value="Correo electrónico" required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="">
             <x-label for="subtitle" value="Número Teléfonico" required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="">
@@ -57,7 +57,7 @@
         </div>
         <div class="">
             <x-label for="subtitle" value="Solicitud" required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+            <x-input id="subtitle" min="0 " placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="pt-5">
