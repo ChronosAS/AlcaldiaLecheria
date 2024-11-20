@@ -1,10 +1,11 @@
 @push('styles')
     <style>
         section#contact {
+           
             background-color: gray;
-            background-image: url("../assets/img/map-image.png") !important;
+           /* background-image: url("../assets/img/map-image.png") !important;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: center;*/
         }
 
         /* #header1 {

@@ -1,5 +1,5 @@
 <div class="">
-    <div class="max-w-7xl mx-auto py-10  mt-5 lg:px-8 rounded-xl ">
+    <div class="max-w-7xl mx-auto py-10  mt-5 lg:px-8 rounded-xl bg-blue-800 ">
         <div class="pb-5">
             <h1 class="section-heading text-uppercase text-[3rem] text-white text-left ">Atención al Ciudadano</h1>
             <h1 class="section-subheading text-uppercase text-xl text-white text-left">Oficina de Atención al Ciudadano</h1>
@@ -57,7 +57,7 @@
         </div>
         <div class="">
             <x-label for="subtitle" value="Solicitud" required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0 " placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+            <textarea id="subtitle" min="0 " placeholder="Tu respuesta" type="text" style="color: black" class="mt-1 h-20  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle"></textarea>
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="pt-5">
