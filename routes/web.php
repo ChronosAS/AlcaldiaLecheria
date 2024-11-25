@@ -1,7 +1,9 @@
 <?php
 
 use App\Livewire\Main;
+use App\Mail\ContactUs;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Telegram\Bot\Laravel\Facades\Telegram;
 
@@ -16,6 +18,10 @@ use Telegram\Bot\Laravel\Facades\Telegram;
 |
 */
 Route::get('/', App\Livewire\Main::class)->name('app');
+
+Route::get('/mailtest',function(){
+    Mail::to('ale.aroutin@gmail.com')->send(new ContactUs());
+});
 
 Route::get('/telegram/log/test', function(){
     Log::info("Telegram test");
