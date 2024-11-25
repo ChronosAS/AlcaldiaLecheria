@@ -57,7 +57,7 @@
         </div>
         <div class="">
             <x-label for="subtitle" value="Solicitud" required="true" class="text-white text-xl text-left px-5"/>
-            <textarea id="subtitle" min="0 " placeholder="Tu respuesta" type="text" style="color: black" class="mt-1 h-20  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle"></textarea>
+            <textarea id="subtitle" min="0 " placeholder="Tu respuesta" type="text" style="color: black" class="mt-1 h-24 resize-none  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle"></textarea>
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="pt-5">
