@@ -1,34 +1,36 @@
 <div class="">
     <div class="max-w-7xl mx-auto py-10  mt-5 lg:px-8 rounded-xl bg-blue-800 ">
         <div class="pb-5">
-            <h1 class="section-heading text-uppercase text-[3rem] text-white text-left ">Atención al Ciudadano</h1>
-            <h1 class="section-subheading text-uppercase text-xl text-white text-left">Oficina de Atención al Ciudadano</h1>
+            <h1 class="section-heading xl:text-[2.5rem] text-uppercase text-[3rem] text-white text-left pb-3">Atención al Ciudadano</h1>
+            <div>
+                <h1 class="section-subheading text-uppercase text-xl text-white text-left">Oficina de Atención al Ciudadano</h1>
+            </div>
         </div>
         <hr class="border border-blue-400 mx-auto mb-5">
         <div class="">
             <x-label for="title" value="Nombre y Apellido" required="true" class="text-xl text-left px-5"/>
-            <x-input id="title" placeholder="Tu respuesta"  type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="title" />
+            <x-input id="title" placeholder="Tu respuesta"  type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="title" />
             <x-input-error for="title" class="mt-2" />
         </div>
 
         <div class="">
             <x-label for="subtitle" value="Cédula " required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="">
             <x-label for="subtitle" value="Correo electrónico" required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="">
             <x-label for="subtitle" value="Número Teléfonico" required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="">
-            <x-label for="subtitle" value="Dirección o Dpto" required="true" class="text-white text-xl text-left px-5"/>
-            <select id="subtitle" min="0" type="text" style="color: black" class="mt-1  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 cursor-pointer" wire:model="subtitle">
+            <x-label for="subtitle" value="Dirección o Dpto" required="true" class="text-white text-xl text-left px-5 rounded-md"/>
+            <select id="subtitle" min="0" type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] rounded-md text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 cursor-pointer" wire:model="subtitle">
             <option selected value=''>Elige</option>
             <option  value='' >Administración y Finanzas </option>
             <option  value='' >Administración Tributaria</option>
@@ -57,7 +59,7 @@
         </div>
         <div class="">
             <x-label for="subtitle" value="Solicitud" required="true" class="text-white text-xl text-left px-5"/>
-            <textarea id="subtitle" min="0 " placeholder="Tu respuesta" type="text" style="color: black" class="mt-1 h-24 resize-none  w-[30rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle"></textarea>
+            <textarea id="subtitle" min="0 " placeholder="Tu respuesta" type="text" style="color: black" class="mt-1 h-24 rounded-md resize-none  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle"></textarea>
             <x-input-error for="subtitle" class="mt-2" />
         </div>
         <div class="pt-5">
