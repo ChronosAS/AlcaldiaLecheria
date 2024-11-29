@@ -26,10 +26,6 @@ Route::get('/telegram/log/test', function(){
 
 Route::prefix('registro-civil')->group(function(){
 
-    Route::get('/buena-conducta',function(){
-        return view('civil-registry.conducta');
-    })->name('app.civil-reg.conducta');
-
     Route::get('/fe-de-vida',function(){
         return view('civil-registry.fe-de-vida');
     })->name('app.civil-reg.fe-de-vida');
