@@ -1,12 +1,12 @@
 <div class="">
     <div class="max-w-7xl mx-auto py-10  mt-5 lg:px-8 rounded-xl bg-blue-800 ">
-        <div class="pb-5">
+        <div class="pb-5 md:pl-5 sm:pl-5 pl-3">
             <h1 class="section-heading xl:text-[2.5rem] text-uppercase text-[3rem] text-white text-left pb-3">Atención al Ciudadano</h1>
             <div>
                 <h1 class="section-subheading text-uppercase text-xl text-white text-left">Oficina de Atención al Ciudadano</h1>
             </div>
         </div>
-        <hr class="border border-blue-400 mx-auto mb-5">
+        <hr class="border border-blue-400 mx-5 md:mx-5 sm:mx-auto mb-5">
         <div class="">
             <x-label for="title" value="Nombre y Apellido" required="true" class="text-xl text-left px-5"/>
             <x-input id="title" placeholder="Tu respuesta"  type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="title" />
