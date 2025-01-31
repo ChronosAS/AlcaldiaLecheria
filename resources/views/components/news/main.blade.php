@@ -6,7 +6,7 @@
                     <div class="text-center py-8 space-y-3">
                         <h1 class="section-heading text-uppercase text-[3rem] text-white ">Noticias</h1>
                     </div>
-                    <div class=" sm:grid sm:grid-cols-7 sm:grid-rows-4 sm:gap-4 sm:mx-10 mb-10 md:grid md:grid-cols-1 xl:grid-cols-7 xl:grid xl:grid-rows-4">
+                    <div class=" sm:grid sm:grid-cols-7 sm:grid-rows-4 sm:gap-4 sm:mx-10 mb-10 md:grid md:grid-cols-1 xl:grid-cols-7 xl:grid 2xl:grid-rows-4 2xl:grid-cols-8 2xl:grid xl:grid-rows-4">
                         <div class="md:col-span-1 xl:col-span-3 row-span-4  {{ ($sidePosts) ? 'xl:col-start-2' : 'xl:col-start-3' }} ">
                             @livewire('news.news-carousel',['posts' => $this->carouselPosts])
                         </div>
@@ -36,7 +36,7 @@
                             </div>
                         @endforeach--}}
                         @if($sidePosts)
-                            <div class="container xl:col-span-3 2xl:col-span-2 col-span-2 row-span-4 col-start-5 md:hidden xl:inline-flex flex-wrap">
+                            <div class="container-xl xl:col-span-3 2xl:col-span-3   col-span-2 row-span-4 col-start-5 md:hidden xl:inline-flex flex-wrap">
                                 @foreach ( $sidePosts as $post)
                                     <div class="hidden md:hidden xl:inline-block max-w-60 p-2 px-2 sm:inline-block">
                                         <a href="{{ route('app.news.show',$post->id) }}">
