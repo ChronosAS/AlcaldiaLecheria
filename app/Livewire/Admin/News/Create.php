@@ -81,7 +81,7 @@ class Create extends Component
         }
 
         $this->validate([
-            'title' => ['required','string','max:90'],
+            'title' => ['required','string','max:150'],
             'subtitle' => ['nullable','string','max:200'],
             'date' => ['required','date'],
             'author' => ['nullable','string','max:200'],
