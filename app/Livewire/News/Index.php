@@ -26,6 +26,11 @@ class Index extends Component
         'sortAsc' => ['except' => false],
     ];
 
+    public function test($test)
+    {
+        return $test;
+    }
+
     #[Computed]
     private function posts()
     {

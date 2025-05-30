@@ -8,6 +8,7 @@ use App\Models\News\Post;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 class Index extends Component
 {
@@ -56,6 +57,16 @@ class Index extends Component
         ->orderBy($this->sortField ?? 'id', $this->sortAsc ? 'ASC' : 'DESC')
         ->paginate($this->perPage);
 
+    }
+
+    public function test()
+    {
+        Telegram::sendMessage([
+            'chat_id' => -1002325072014,
+            'text' => 'Hello World',
+        ]);
+
+        dd('message sent');
     }
 
     public function delete($post)

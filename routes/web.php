@@ -18,7 +18,8 @@ use Telegram\Bot\Laravel\Facades\Telegram;
 Route::get('/', App\Livewire\Main::class)->name('app');
 
 Route::get('/telegram/log/test', function(){
-    Log::info("Telegram test");
+    $test = ['a','b','c'];
+    Log::debug('test',$test);
 });
 
 // Route::get('/ordenanzas', App\Livewire\OrdinancesViewComponent::class)->name('app.ordinances');

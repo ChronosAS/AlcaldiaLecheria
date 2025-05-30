@@ -5,6 +5,7 @@
                 <div class="p-6 lg:p-8 bg-blue-800 dark:bg-gradient-to-bl from-blue-700/50 dark:via-transparent border-b border-blue-700">
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <div class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">
+                            <a href="#" wire:click='test'>Test</a>
                             <label for="table-search" class="sr-only">Buscar</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
