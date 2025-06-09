@@ -61,10 +61,12 @@
         </ul>
         <!-- Social Icons -->
         <div class="flex items-center space-x-4">
-            <a href="https://x.com/Urbanejalcaldia" target="_blank" class="text-white hover:text-blue-300 text-2xl">
+            <a href="https://x.com/Urbanejalcaldia" target="_blank" class="text-white hover:text-black text-2xl">
                 <i class="fab fa-x-twitter"></i>
             </a>
-            <a href="https://www.instagram.com/alcaldiadelecheria/" target="_blank" class="text-white hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded text-2xl">
+            <a href="https://www.instagram.com/alcaldiadelecheria/" target="_blank"
+               class="inline-flex items-center justify-center text-white text-2xl rounded-md
+                      hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 transition">
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" class="text-white hover:text-red-500 text-2xl">
@@ -118,12 +120,15 @@
             <a href="https://x.com/Urbanejalcaldia" target="_blank" class="text-white hover:text-blue-500 text-2xl">
                 <i class="fab fa-x-twitter"></i>
             </a>
-            <a href="https://www.instagram.com/alcaldiadelecheria/" target="_blank" class="text-white hover:text-pink-500 text-2xl">
-                <i class="fab fa-instagram "></i>
+            <a href="https://www.instagram.com/alcaldiadelecheria/" target="_blank"
+               class="inline-flex items-center justify-center text-white text-2xl rounded-md 
+                      hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 transition">
+                <i class="fab fa-instagram"></i>
             </a>
             <a href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" class="text-white hover:text-red-500 text-2xl">
                 <i class="fab fa-youtube"></i>
             </a>
         </div>
+            
     </div>
 </nav>

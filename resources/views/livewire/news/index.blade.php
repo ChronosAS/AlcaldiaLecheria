@@ -4,8 +4,8 @@
     </x-main-header>
 
     <div class="flex flex-col min-h-svh bg-gradient-to-b from-white via-blue-50 to-slate-100">
-        <div class="my-8 space-y-4 p-4 mx-auto max-w-7xl w-full">
-            <x-full-card class="bg-white/90 shadow-xl border-0">
+        <div class="my-8 space-y-4 p-4 mx-auto  w-full">
+            <x-full-card class="bg-white/90 shadow-xl border-0 ">
                 <x-slot name="title">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div class="relative w-full max-w-xs">
@@ -49,7 +49,7 @@
                     </div>
                 </x-slot>
                 <x-slot name="content">
-                    <!-- inspired by tailwindcss.com -->
+                    
                     <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 p-4">
                         @forelse ($this->posts as $post)
                             <li>

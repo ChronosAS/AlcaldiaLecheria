@@ -32,7 +32,7 @@
                 this.autoplayIntervalTime = newIntervalTime
                 this.autoplay()
             },
-        }" x-init="autoplay" class="relative w-full rounded-2xl shadow-xl bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+        }" x-init="autoplay" class="relative w-full shadow-xl bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
 
             <!-- Slides -->
             <div class="min-h-[44svh] sm:min-h-[60svh] w-full relative" 
@@ -49,9 +49,9 @@
                         x-transition:leave-start="opacity-100 scale-100 translate-x-0"
                         x-transition:leave-end="opacity-0 scale-95 -translate-x-10"
                     >
-                        <img class="w-full h-full object-cover object-center rounded-2xl brightness-95 transition-transform duration-700 group-hover:scale-105"
+                        <img class="w-full h-full object-cover object-center  brightness-95 transition-transform duration-700 group-hover:scale-105"
                              x-bind:src="slide.image" x-bind:alt="slide.imageAlt" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-blue-900/20 to-transparent rounded-2xl"></div>
+                        
                         <div class="absolute bottom-0 left-0 right-0 px-6 py-8 flex flex-col items-center">
                             <div class="bg-white/80 backdrop-blur-md rounded-xl px-6 py-4 shadow-lg max-w-2xl w-full transition-all duration-500 hover:scale-105">
                                 <h3 @click="$wire.show(slide.id)" class="cursor-pointer text-base md:text-lg font-bold text-blue-900 text-center truncate" x-text="slide.title"></h3>

@@ -30,7 +30,7 @@
            
         </div>
     </x-main-header>
-    <header class=" bg-white max-h-150" id="header2" >
+    <header   style="background-image: url('../assets/img/lecheria-bg.jpg');  background-origin: content-box;  background-position: center;" class=" bg-white max-h-150" id="header2" >
         <div class="place-items-center sm:grid sm:grid-cols-5 sm:grid-rows-5 gap-4">
             <div class="sm:col-span-2 sm:row-span-5 sm:h-auto sm:w-auto h-0 w-0">
                 <img src="{{asset('assets/img/alcalde.webp')}}" class="sm:h-[40rem]" alt="Alcalde Manuel Ferreira">
@@ -44,15 +44,16 @@
         </div>
     </header>
     @livewire('news.main')
-    <section id="contact">
-        <div class="text-center">
-            <div class=" sm:text-lg text-gray-400 sm:justify-center">
-                    <div class="text-center py-8 space-y-3">
-                        <h1 class="section-heading text-uppercase text-[3rem] text-white ">Contactanos</h1>
-                        <h2 class="section-subheading text-white text-xl">Nuestra directora de Atención al Ciudadano esta atenta a sus solicitudes.</h2>
-                    </div>
-                <div class="mx-auto">
-                    <iframe id="contact" class="  w-full h-[1500px] sm:h-[1300px] block" scrolling="no" src="https://docs.google.com/forms/d/e/1FAIpQLSf8D1hrbKl8u-q1yiWVlEKszUWWd8Wo7uY7fT6OLIxPIpE5sg/viewform?embedded=true" >Cargando…</iframe>
+     <section id="contact">
+        <div class="text-center ">
+            <div class=" sm:text-lg text-gray-400 ">
+                <div class="text-center py-8 space-y-3 sm:justify-center">
+                    <h1 class="section-heading text-uppercase text-[3rem] text-white ">Contactanos</h1>
+                    <h2 class="section-subheading text-white text-xl">Nuestra directora de Atención al Ciudadano esta atenta a sus solicitudes.</h2>
+                </div>
+                <div class="container  mx-auto 2xl:px-[30rem] xl:px-[22rem] md:px-[8rem] sm:px-[2rem] pb-10">
+                    {{-- <iframe id="contact" class="  w-full h-[1500px] sm:h-[1300px] block" scrolling="no" src="https://docs.google.com/forms/d/e/1FAIpQLSf8D1hrbKl8u-q1yiWVlEKszUWWd8Wo7uY7fT6OLIxPIpE5sg/viewform?embedded=true" >Cargando…</iframe> --}}
+                    <livewire:contact-form/> 
                 </div>
             </div>
         </div>
