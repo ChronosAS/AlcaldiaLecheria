@@ -80,34 +80,34 @@
     </div>
     <!-- Mobile Menu -->
     <div x-show="showBar" x-transition class="md:hidden bg-blue-900/90 backdrop-blur-md px-4 py-4 space-y-4 text-lg font-semibold">
-        <a href="http://200.41.118.109/appweb/" target="_blank" class="block text-white hover:text-blue-500 flex items-center space-x-2">
+        <a href="http://200.41.118.109/appweb/" target="_blank" class=" text-white hover:text-blue-500 flex items-center space-x-2">
             <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M7 7V3a1 1 0 011-1h8a1 1 0 011 1v18a1 1 0 01-1 1H8a1 1 0 01-1-1v-4"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10"/>
             </svg>
             <span>Declaración</span>
         </a>
-        <a href="#contact" class="block text-white hover:text-blue-500 flex items-center space-x-2">
+        <a href="#contact" class=" text-white hover:text-blue-500 flex items-center space-x-2">
             <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 21l1.8-4A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
             </svg>
             <span>Atención</span>
         </a>
-        <a href="{{ route('app.news') }}" class="block text-white hover:text-blue-500 flex items-center space-x-2">
+        <a href="{{ route('app.news') }}" class=" text-white hover:text-blue-500 flex items-center space-x-2">
             <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <rect width="20" height="14" x="2" y="5" rx="2" ry="2"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 9h8M8 13h6"/>
             </svg>
             <span>Noticias</span>
         </a>
-        <a href="{{ route('app.civil-registry') }}" class="block text-white hover:text-blue-500 flex items-center space-x-2">
+        <a href="{{ route('app.civil-registry') }}" class=" text-white hover:text-blue-500 flex items-center space-x-2">
             <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <circle cx="12" cy="7" r="4"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5.5 21a8.38 8.38 0 0113 0"/>
             </svg>
             <span>Registro Civil</span>
         </a>
-        <a href="{{ route('app.info') }}" class="block text-white hover:text-blue-500 flex items-center space-x-2">
+        <a href="{{ route('app.info') }}" class=" text-white hover:text-blue-500 flex items-center space-x-2">
             <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-4M12 8h.01"/>
