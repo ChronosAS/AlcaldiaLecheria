@@ -1,50 +1,31 @@
 <div>
     @if(count($carouselPosts) > 0)
         <section id="news">
-            <div class="text-center">
-                <div class=" sm:justify-center">
-                    <div class="text-center py-8 space-y-3">
-                        <h1 class="section-heading text-uppercase text-[3rem] text-white ">Noticias</h1>
+            <div class="text-center ">
+                <div class="sm:justify-center">
+                    <div class="text-center py-10 space-y-4">
+                        <h1 class="section-heading text-uppercase text-[3.5rem] font-extrabold tracking-wide text-white drop-shadow-lg">
+                            Noticias
+                        </h1>
                     </div>
-                    <div class=" sm:grid sm:grid-cols-7 sm:grid-rows-4 sm:gap-4 sm:mx-10 mb-10 md:grid md:grid-cols-1 xl:grid-cols-7 xl:grid 2xl:grid-rows-4 2xl:grid-cols-8 2xl:grid xl:grid-rows-4">
-                        <div class="md:col-span-1 xl:col-span-3 row-span-4  {{ ($sidePosts) ? 'xl:col-start-2' : 'xl:col-start-3' }} ">
+                    <div class="sm:grid sm:grid-cols-8 sm:grid-rows-2 sm:gap-6 sm:mx-10 mb-14 md:grid md:grid-cols-1 xl:grid-cols-8 xl:grid xl:grid-rows-2">
+                        <!-- Carousel pushed to the left -->
+                        <div class="md:col-span-1 xl:col-span-3 xl:row-span-2 xl:col-start-1 xl:row-start-1">
                             @livewire('news.news-carousel',['posts' => $this->carouselPosts])
                         </div>
-                    {{-- @foreach ($sidePosts as $key => $post)
-                            <div class=" flex-row row-span-2 h-auto col-start-5 hidden max-w-60 min-h-64 sm:inline-block bg-white rounded-lg shadow-md
-                                @switch($key)
-                                    @case(5)
-                                        row-span-2 col-start-6
-                                        @break
-                                    @case(6)
-                                        row-span-2 col-start-5 row-start-3
-                                        @break
-                                    @case(7)
-                                        row-span-2 col-start-6 row-start-3
-                                        @break
-                                    @default
-
-                                @endswitch">
-                                <div class="relative max-w-lg">
-                                    <a href="{{ route('app.news.show',$post->id) }}" class="relative">
-                                        <img class="w-full object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
-                                        <div class="absolute flex truncate bg-slate-300">
-                                            <h5 class="text-xs font-bold tracking-tight text-black  truncate flex flex-col text-wrap  ">{{ ucfirst($post->title) }}</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        @endforeach--}}
                         @if($sidePosts)
-                            <div class="container-xl xl:col-span-3 2xl:col-span-3   col-span-2 row-span-4 col-start-5 md:hidden xl:inline-flex flex-wrap">
-                                @foreach ( $sidePosts as $post)
-                                    <div class="hidden md:hidden xl:inline-block max-w-60 p-2 px-2 sm:inline-block">
-                                        <a href="{{ route('app.news.show',$post->id) }}">
-                                            <div class="relative max-w-lg ">
-                                                <img class=" h-60  w-72 object-cover" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
-                                                <div class="static  truncate flex flex-col text-wrap  max-h-16  bg-slate-200">
-                                                    <h5 class=" text-xs font-bold tracking-tight text-black ">{{ ucfirst($post->title) }}</h5>
-                                                </div>
+                            <!-- Side cards: grid 4 columns x 2 rows, right of carousel (hidden on mobile) -->
+                            <div class="hidden sm:grid col-span-5 row-span-2 xl:col-start-4 xl:row-start-1 grid-cols-4 grid-rows-2 gap-5">
+                                @foreach ($sidePosts as $post)
+                                    <div class="bg-white/95 rounded-2xl shadow-xl border-2 border-blue-200 transition-all hover:shadow-2xl hover:scale-105 flex flex-col w-56 min-h-[13rem] group">
+                                        <a href="{{ route('app.news.show',$post->id) }}" class="flex flex-col h-full">
+                                            <div class="relative w-full aspect-[4/3]">
+                                                <img class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105 rounded-t-2xl" src="{{ $post->image }}" alt="{{ $post->imageAlt }}">
+                                            </div>
+                                            <div class="flex flex-col flex-1 justify-center">
+                                                <h5 class="px-3 mt-3 text-base font-bold text-blue-900 text-center w-full leading-tight group-hover:text-blue-700 transition-colors break-words whitespace-normal">
+                                                    {{ ucfirst($post->title) }}
+                                                </h5>
                                             </div>
                                         </a>
                                     </div>

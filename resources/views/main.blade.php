@@ -1,8 +1,8 @@
 @push('styles')
     <style>
         section#contact {
-            background-color: gray;
-            background-image: url("../assets/img/map-image.png") !important;
+            background-size: cover;
+            background-image: url("../assets/img/Lecheria1.jpg") !important;
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -17,10 +17,10 @@
     </style>
 @endpush
 <div>
-    <x-main-header bg_img="../assets/img/lecheria-bg.jpg" >
+    <x-main-header bg_img="../assets/img/lecheria2.jpg" >
         <div class="sm:flex  sm:flex-row sm:items-center sm:gap-x-[65rem] lg:gap-x-[35rem] md:gap-x-1 xl:gap-x-[26rem] 2xl:gap-x-[65rem] ">
             <div class="    bg-gray-600/50    object-scale-down justify-items-start mb-6 sm:mb-0 ">
-                <x-weather-widget/>
+                {{-- <x-weather-widget/> --}}
             </div>
             
             <div class=" sm:mt-20 text-center">
@@ -49,7 +49,7 @@
             <div class=" sm:text-lg text-gray-400 sm:justify-center">
                     <div class="text-center py-8 space-y-3">
                         <h1 class="section-heading text-uppercase text-[3rem] text-white ">Contactanos</h1>
-                        <h2 class="section-subheading text-black text-xl">Nuestra directora de Atención al Ciudadano esta atenta a sus solicitudes.</h2>
+                        <h2 class="section-subheading text-white text-xl">Nuestra directora de Atención al Ciudadano esta atenta a sus solicitudes.</h2>
                     </div>
                 <div class="mx-auto">
                     <iframe id="contact" class="  w-full h-[1500px] sm:h-[1300px] block" scrolling="no" src="https://docs.google.com/forms/d/e/1FAIpQLSf8D1hrbKl8u-q1yiWVlEKszUWWd8Wo7uY7fT6OLIxPIpE5sg/viewform?embedded=true" >Cargando…</iframe>
@@ -58,4 +58,44 @@
         </div>
     </section>
     @livewire('main-page-modal')
+    <div x-data="{ showWeather: false }">
+        <!-- Toggle Button -->
+        <button 
+            @click="showWeather = !showWeather"
+            class="fixed bottom-6 right-6 sm:top-6 sm:left-6 sm:bottom-auto sm:right-auto z-50 bg-blue-700 text-white rounded-full shadow-lg p-3 hover:bg-blue-800 transition"
+            aria-label="Mostrar clima"
+            x-show="!showWeather"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-75"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-75"
+        >
+            <i class="fas fa-cloud-sun text-xl"></i>
+        </button>
+
+        <!-- Weather Widget -->
+        <div 
+            x-show="showWeather"
+            @click.away="showWeather = false"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-8 scale-90"
+            x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+            x-transition:leave-end="opacity-0 translate-y-8 scale-90"
+            class="fixed bottom-6 right-6 sm:top-6 sm:left-6 sm:bottom-auto sm:right-auto z-50 bg-transparent rounded-2xl shadow-2xl p-4 text-black w-80 max-w-full"
+        >
+            <button 
+                @click="showWeather = false"
+                class="absolute top-2 right-2 text-black hover:text-blue-700 z-10"
+                aria-label="Cerrar clima"
+            >
+                <i class="fas fa-times"></i>
+            </button>
+            <x-weather-widget/>
+        </div>
+    </div>
 </div>
+
