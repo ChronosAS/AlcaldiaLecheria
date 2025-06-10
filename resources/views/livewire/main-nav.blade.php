@@ -1,5 +1,8 @@
 <!-- Minimalist Navbar Example -->
-<nav x-data="{ showBar: false }" class="fixed top-0 left-0 w-full z-50 bg-blue-900/90 backdrop-blur-md shadow-none transition-all">
+<nav x-data="{ showBar: false, scrolled: false }"
+     x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 10 })"
+     :class="scrolled ? 'bg-blue-900 shadow-lg backdrop-blur-none translate-y-0 opacity-100' : 'bg-transparent shadow-none  translate-y-2 opacity-90'"
+     class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out transform">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         <!-- Mobile Logo -->
         
