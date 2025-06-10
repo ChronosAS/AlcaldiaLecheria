@@ -2,7 +2,7 @@
     <style>
         section#contact {
             background-size: cover;
-            background-image: url("../assets/img/Lecheria1.jpg") !important;
+             
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -17,7 +17,7 @@
     </style>
 @endpush
 <div>
-    <x-main-header bg_img="../assets/img/lecheria2.jpg" >
+    <x-main-header bg_img="../assets/img/lecheria-bg.jpg" >
         <div class="sm:flex  sm:flex-row sm:items-center sm:gap-x-[65rem] lg:gap-x-[35rem] md:gap-x-1 xl:gap-x-[26rem] 2xl:gap-x-[65rem] ">
             <div class="    bg-gray-600/50    object-scale-down justify-items-start mb-6 sm:mb-0 ">
                 {{-- <x-weather-widget/> --}}
@@ -30,7 +30,7 @@
            
         </div>
     </x-main-header>
-    <header   style="background-image: url('../assets/img/lecheria-bg.jpg');  background-origin: content-box;  background-position: center;" class=" bg-white max-h-150" id="header2" >
+    <header   class=" bg-white max-h-150" id="header2" >
         <div class="place-items-center sm:grid sm:grid-cols-5 sm:grid-rows-5 gap-4">
             <div class="sm:col-span-2 sm:row-span-5 sm:h-auto sm:w-auto h-0 w-0">
                 <img src="{{asset('assets/img/alcalde.webp')}}" class="sm:h-[40rem]" alt="Alcalde Manuel Ferreira">
