@@ -3,9 +3,9 @@
         <h1 class="text-7xl font-extrabold text-white drop-shadow-lg tracking-wide">Noticias</h1>
     </x-main-header>
 
-    <div class="flex flex-col min-h-svh bg-gradient-to-b from-white via-blue-50 to-slate-100">
+    <div class="flex flex-col min-h-svh bg-white">
         <div class="my-8 space-y-4 p-4 mx-auto  w-full">
-            <x-full-card class="bg-white/90 shadow-xl border-0 ">
+            <x-full-card class="bg-white border-0 ">
                 <x-slot name="title">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div class="relative w-full max-w-xs">
@@ -50,10 +50,10 @@
                 </x-slot>
                 <x-slot name="content">
                     
-                    <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 p-4">
+                    <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
                         @forelse ($this->posts as $post)
                             <li>
-                                <article class="group rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
+                                <article class="group overflow-hidden bg-white border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full w-full">
                                     <a href="{{ route('app.news.show',$post->id) }}" class="block relative aspect-video overflow-hidden">
                                         <img src="{{ $post->getFirstMediaUrl('post-image') }}"
                                             alt=""
