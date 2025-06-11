@@ -1,5 +1,5 @@
 <div class="my-10 space-y-6 px-4 mx-auto max-w-4xl">
-    <x-full-card>
+    <x-full-card class="shadow-none">
         <x-slot name="title">
             <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
                 <span class="inline-block w-2 h-8 bg-blue-400 rounded-full animate-pulse"></span>

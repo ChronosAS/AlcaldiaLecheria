@@ -1,4 +1,4 @@
-<x-main-layout class="bg-white">
+<x-main-layout class="bg-blue-700">
     <div x-data="{ title: 'Registro Civil' }">
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl font-extrabold text-white drop-shadow-lg tracking-wide" x-text='title'></h1>
@@ -22,7 +22,7 @@
                     ];
                 @endphp
                 @foreach($tramites as $tramite)
-                <li class="group transition-all duration-300 p-2 rounded-2xl border-2 border-transparent hover:border-blue-700 hover:bg-blue-50/60 shadow hover:shadow-xl">
+                <li class="group bg-white transition-all duration-300 p-2 rounded-2xl border-2 border-transparent hover:border-blue-700 hover:bg-blue-50/60 shadow hover:shadow-xl">
                     <a href="{{ route($tramite['route']) }}" class="flex flex-col items-center gap-2 cursor-pointer">
                         <img 
                             class="transition-transform duration-300 rounded-xl shadow-md border-2 border-blue-200 group-hover:scale-105 group-hover:shadow-lg bg-white

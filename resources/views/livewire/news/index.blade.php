@@ -1,11 +1,11 @@
-<div>
+<div class="text-black">
     <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
         <h1 class="text-7xl font-extrabold text-white drop-shadow-lg tracking-wide">Noticias</h1>
     </x-main-header>
 
-    <div class="flex flex-col min-h-svh bg-white">
-        <div class="my-8 space-y-4 p-4 mx-auto  w-full">
-            <x-full-card class="bg-white border-0 ">
+    <div class="flex flex-col min-h-svh bg-blue-700">
+        <div class="my-8 space-y-4 p-4 mx-auto  max-w-[100rem] ">
+            <x-full-card class="bg-blue-700 border-0 m">
                 <x-slot name="title">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div class="relative w-full max-w-xs">
@@ -81,12 +81,12 @@
                                 </article>
                             </li>
                         @empty
-                            <li class="col-span-full text-center text-slate-500 py-12 text-lg">No hay noticias que concuerden con su búsqueda.</li>
+                            <li class="col-span-full text-center text-black py-12 text-lg">No hay noticias que concuerden con su búsqueda.</li>
                         @endforelse
                     </ul>
                 </x-slot>
             </x-full-card>
-            <div class="flex justify-center mt-4">
+            <div class="flex justify-center mt-4 text-black">
                 {{ $this->posts->links('vendor.livewire.tailwind') }}
             </div>
         </div>

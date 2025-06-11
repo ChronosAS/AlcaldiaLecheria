@@ -1,4 +1,4 @@
-<x-main-layout class="bg-slate-300">
+<x-main-layout class="bg-blue-700">
     <div x-data="{ title: 'Fe de Vida' }">
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
             <h1 class="text-7xl font-extrabold text-white drop-shadow-lg tracking-wide" x-text='title'></h1>

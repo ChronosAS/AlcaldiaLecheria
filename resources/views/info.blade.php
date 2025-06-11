@@ -1,4 +1,4 @@
-<x-main-layout class="dark:bg-slate-300">
+<x-main-layout class="bg-blue-700">
     <div 
         x-data="{
             selectedTab: 'historia',
@@ -61,7 +61,7 @@
                 </div>
 
                 <!-- Tab Panels with Fade/Slide Animation -->
-                <div class="w-full mt-8 bg-white/90 rounded-2xl shadow-xl p-8 min-h-[300px] relative overflow-hidden">
+                <div class="w-full mt-8  p-8 min-h-[300px] relative overflow-hidden">
                     <div x-show="selectedTab === 'historia'" x-transition:enter="transition ease-out duration-500"
                         x-transition:enter-start="opacity-0 translate-y-8"
                         x-transition:enter-end="opacity-100 translate-y-0"
