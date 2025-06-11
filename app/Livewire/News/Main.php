@@ -28,8 +28,8 @@ class Main extends Component
             $post->imageAlt = Str::kebab($post->title).'-img';
             return $post;
         });
-        if(count($posts)>5){
-            $this->sidePosts = $posts->take(5-count($posts));
+        if(count($posts)>1){
+            $this->sidePosts = $posts->take(1-count($posts));
 
         }
         $this->carouselPosts = $posts->take(5);
