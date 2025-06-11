@@ -5,7 +5,7 @@
             <h2 class="font-semibold text-lg md:text-2xl text-white mb-4">Oficina de Atención al Ciudadano</h2>
         </div>
         <hr class="border-blue-300 mb-8">
-        <form class="space-y-6">
+        <form wire:submit='send' class="space-y-6">
             <div>
                 <x-label for="title" value="Nombre y Apellido" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
                 <x-input id="title" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="title" />

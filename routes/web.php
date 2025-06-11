@@ -93,7 +93,7 @@ Route::get('/virgendelvalle2024', function (){
         'verified',
     ])->group(function () {
 
-        Route::get('dashboard', function () {
+        Route::get('admin', function () {
             return view('dashboard');
         })->name('dashboard');
 
