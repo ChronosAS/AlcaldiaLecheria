@@ -61,7 +61,13 @@
                 <x-input-error for="solicitud" class="mt-2" />
             </div>
             <div class="pt-4 flex justify-end">
-                <x-button class="bg-blue-800 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all duration-200 ease-in-out text-lg">Enviar</x-button>
+                <x-button
+                    wire:loading.attr='disabled'
+                    wire:loading.class.remove='transition-all duration-200 ease-in-out '
+                    class="bg-blue-800 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all duration-200 ease-in-out text-lg disabled:bg-blue-400 disabled:cursor-progress"
+                >
+                    Enviar
+                </x-button>
             </div>
         </form>
     </div>
