@@ -63,7 +63,7 @@
         <!-- Toggle Button -->
         <button 
             @click="showWeather = !showWeather"
-            class="fixed xl:top-20 2xl:top-16 bottom-6 right-6 sm:top-6 sm:left-6 sm:bottom-auto sm:right-auto z-50 bg-blue-700 text-white rounded-full shadow-lg p-3 hover:bg-blue-800 transition"
+            class="absolute  top-24 left-6   z-10 hidden sm:inline-block  bg-blue-700 text-white rounded-full shadow-lg p-3 hover:bg-blue-800 transition"
             aria-label="Mostrar clima"
             x-show="!showWeather"
             x-transition:enter="transition ease-out duration-300"
@@ -86,11 +86,11 @@
             x-transition:leave="transition ease-in duration-200"
             x-transition:leave-start="opacity-100 translate-y-0 scale-100"
             x-transition:leave-end="opacity-0 translate-y-8 scale-90"
-            class="fixed xl:top-32 2xl:top-24 bottom-6 right-6 sm:top-6 sm:left-6 sm:bottom-auto sm:right-auto z-50 bg-transparent rounded-2xl shadow-2xl p-4 text-black w-80 max-w-full"
+            class="absolute top-24 left-6  z-10 hidden sm:inline-block  bg-transparent rounded-2xl shadow-2xl p-4 text-black w-80 max-w-full"
         >
             <button 
                 @click="showWeather = false"
-                class="absolute top-2 right-2 text-black hover:text-blue-700 z-10"
+                class="absolute top-2 right-2   text-black hover:text-blue-700 z-10"
                 aria-label="Cerrar clima"
             >
                 <i class="fas fa-times"></i>

@@ -23,10 +23,25 @@
         @stack('styles')
         <!-- Styles -->
         @livewireStyles
+        <style>
+            /* Hide vertical scrollbar but allow scrolling */
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            .no-scrollbar {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+        </style>
     </head>
-    <body {{ $attributes->merge(['class'=>'bg-blue-800 h-full']) }} x-data="{}">
+    <body 
+        x-data="{}" 
+        {{ $attributes->merge(['class'=>'bg-blue-800 h-full [&::-webkit-scrollbar]:hidden']) }}
+    >
         @livewire('main-nav')
-        <main>
+        <main >
             {{ $slot }}
         </main>
         <footer class="bg-blue-900/90 text-gray-100 text-center">
