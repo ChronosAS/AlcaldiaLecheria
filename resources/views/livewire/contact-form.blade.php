@@ -7,14 +7,14 @@
         <hr class="border-blue-300 mb-8">
         <form wire:submit='send' class="space-y-6">
             <div>
-                <x-label for="title" value="Nombre y Apellido" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
-                <x-input id="title" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="title" />
-                <x-input-error for="title" class="mt-2" />
+                <x-label for="fullName" value="Nombre y Apellido" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <x-input id="fullName" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="fullName" />
+                <x-input-error for="fullName" class="mt-2" />
             </div>
             <div>
-                <x-label for="cedula" value="Cédula" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
-                <x-input id="cedula" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="cedula" />
-                <x-input-error for="cedula" class="mt-2" />
+                <x-label for="document" value="Cédula" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <x-input id="document" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="document" />
+                <x-input-error for="document" class="mt-2" />
             </div>
             <div>
                 <x-label for="email" value="Correo electrónico" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
@@ -22,13 +22,13 @@
                 <x-input-error for="email" class="mt-2" />
             </div>
             <div>
-                <x-label for="telefono" value="Número Teléfonico" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
-                <x-input id="telefono" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="telefono" />
-                <x-input-error for="telefono" class="mt-2" />
+                <x-label for="phone" value="Número Teléfonico" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <x-input id="phone" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="phone" />
+                <x-input-error for="phone" class="mt-2" />
             </div>
             <div>
-                <x-label for="departamento" value="Dirección o Dpto" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
-                <select id="departamento" class="mt-2 w-full rounded-lg text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition cursor-pointer" wire:model="departamento">
+                <x-label for="department" value="Dirección o Dpto" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <select id="department" class="mt-2 w-full rounded-lg text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition cursor-pointer" wire:model="department">
                     <option selected value=''>Elige</option>
                     <option value='Administración y Finanzas'>Administración y Finanzas</option>
                     <option value='Administración Tributaria'>Administración Tributaria</option>
@@ -53,12 +53,12 @@
                     <option value='Tecnología y Sistemas'>Tecnología y Sistemas</option>
                     <option value='Otro...'>Otro...</option>
                 </select>
-                <x-input-error for="departamento" class="mt-2" />
+                <x-input-error for="department" class="mt-2" />
             </div>
             <div>
-                <x-label for="solicitud" value="Solicitud" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
-                <textarea id="solicitud" placeholder="Describe tu solicitud" class="mt-2 w-full h-28 rounded-lg resize-none text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="solicitud"></textarea>
-                <x-input-error for="solicitud" class="mt-2" />
+                <x-label for="content" value="Solicitud" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <textarea id="content" placeholder="Describe tu content" class="mt-2 w-full h-28 rounded-lg resize-none text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="content"></textarea>
+                <x-input-error for="content" class="mt-2" />
             </div>
             <div class="pt-4 flex justify-end">
                 <x-button

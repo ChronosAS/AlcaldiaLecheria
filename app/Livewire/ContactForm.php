@@ -8,11 +8,19 @@ use Livewire\Component;
 
 class ContactForm extends Component
 {
+    public $fullName;
+    public $document;
+    public $email;
+    public $phone;
+    public $department;
+    public $request;
 
     public function send()
     {
-        Mail::to('ale.aroutin@gmail.com')->send(new CitizenService());
-        dd('correo enviado');
+        $this->validate([]);
+        dd($this->department);
+
+        // Mail::to('ale.aroutin@gmail.com')->send(new CitizenService());
     }
 
     public function render()
