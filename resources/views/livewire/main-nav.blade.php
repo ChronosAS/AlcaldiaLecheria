@@ -44,7 +44,7 @@
           <!-- Logo -->
           <a
             class="mb-4 me-5 ms-2 mt-3 flex items-center hover:text-neutral-400 focus:text-neutral-400 sm:mb-0 sm:mt-0"
-            wire:navigate href="{{ route('app') }}">
+            href="{{ route('app') }}">
             <img
               src="{{ asset('assets/img/logo-lecheria.png') }}"
               style="height: 35px"
