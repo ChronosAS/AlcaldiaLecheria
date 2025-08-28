@@ -31,7 +31,49 @@
                     <p class="mb-4">
                         El Himno del Municipio Urbaneja, denominado <span class="font-bold text-blue-900">“Himno de Lechería”</span>, letra y música de José Enrique (Chelique) Sarabia y arreglos corales de Ali Agüero, fue establecido mediante Resolución Nº 018/2003 del 05 de Septiembre de 2003 y su letra es la siguiente:
                     </p>
-                    <div class="bg-blue-50/70 rounded-xl p-6 shadow-inner text-center leading-loose space-y-6 text-lg text-gray-800">
+                    <div class="bg-blue-50/70 rounded-xl p-6 shadow-inner text-center leading-loose space-y-6 text-lg text-gray-800 relative" x-ref="copyHymn" x-data="{ copied: false }">
+                        <button
+                            @click="
+                                let text = $refs.copyHymn.innerText;
+                                if (navigator.clipboard) {
+                                    navigator.clipboard.writeText(text).then(() => {
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    }, () => {
+                                        fallbackCopy(text);
+                                    });
+                                } else {
+                                    fallbackCopy(text);
+                                }
+                                function fallbackCopy(txt) {
+                                    let textarea = document.createElement('textarea');
+                                    textarea.value = txt;
+                                    document.body.appendChild(textarea);
+                                    textarea.select();
+                                    try {
+                                        document.execCommand('copy');
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    } catch (err) {
+                                        // Puedes mostrar otro mensaje si lo deseas
+                                    }
+                                    document.body.removeChild(textarea);
+                                }
+                            "
+                            class="absolute top-2 right-2 px-2 py-1 bg-blue-500 bg-opacity-60 text-white opacity-60 rounded shadow hover:bg-blue-800 hover:opacity-100 transition text-sm flex items-center gap-2"
+                            aria-label="Copiar texto"
+                        >
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <div
+                            x-show="copied"
+                            x-transition
+                            class="absolute top-10 right-2 bg-blue-700 text-white px-4 py-2 rounded shadow-lg text-sm font-semibold flex items-center gap-2"
+                            style="z-index:100;"
+                        >
+                            <i class="fas fa-check-circle"></i>
+                            Texto copiado
+                        </div>
                         <div>
                             <span class="block text-blue-700 font-bold text-xl mb-2">I</span>
                             El clarín de los vientos<br>

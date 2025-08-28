@@ -27,7 +27,49 @@
                         <i class="fas fa-award text-blue-400"></i>
                         Atributos
                     </h2>
-                    <div class="bg-blue-50/70 rounded-xl p-6 shadow-inner space-y-4">
+                    <div class="bg-blue-50/70 rounded-xl p-6 shadow-inner space-y-4 relative" x-ref="copyAttributes" x-data="{ copied: false }">
+                        <button
+                            @click="
+                                let text = $refs.copyAttributes.innerText;
+                                if (navigator.clipboard) {
+                                    navigator.clipboard.writeText(text).then(() => {
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    }, () => {
+                                        fallbackCopy(text);
+                                    });
+                                } else {
+                                    fallbackCopy(text);
+                                }
+                                function fallbackCopy(txt) {
+                                    let textarea = document.createElement('textarea');
+                                    textarea.value = txt;
+                                    document.body.appendChild(textarea);
+                                    textarea.select();
+                                    try {
+                                        document.execCommand('copy');
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    } catch (err) {
+                                        // Puedes mostrar otro mensaje si lo deseas
+                                    }
+                                    document.body.removeChild(textarea);
+                                }
+                            "
+                            class="absolute top-2 right-2 px-2 py-1 bg-blue-500 bg-opacity-60 text-white opacity-60 rounded shadow hover:bg-blue-800 hover:opacity-100 transition text-sm flex items-center gap-2"
+                            aria-label="Copiar texto"
+                        >
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <div
+                            x-show="copied"
+                            x-transition
+                            class="absolute top-10 right-2 bg-blue-700 text-white px-4 py-2 rounded shadow-lg text-sm font-semibold flex items-center gap-2"
+                            style="z-index:100;"
+                        >
+                            <i class="fas fa-check-circle"></i>
+                            Texto copiado
+                        </div>
                         <p>
                             Campo de contorno germánico medio partido y cortado (dividido en tres cuarteles: dos superiores y uno inferior).
                             El Primer Cuartel de campo Celeste (variación del Azur o azul heráldico) presenta la figura de Nuestra Señora del Valle del Espíritu Santo sobre un peñero de madera puesto de frente.
@@ -39,12 +81,6 @@
                             <span class="font-semibold text-blue-900">“MUNICIPIO TURÍSTICO EL MORRO LICENCIADO DIEGO BAUTISTA URBANEJA”</span> en la parte superior y 
                             <span class="font-semibold text-blue-900">“1953 – LECHERÍA – 1992”</span> en la parte inferior, realizadas en letras góticas capitales de Oro y separados entre sí mediante viñetas circulares del mismo metal.
                         </p>
-                        <div class="flex items-center justify-center">
-                            <span class="inline-block w-16 h-1 bg-blue-300 rounded-full animate-pulse"></span>
-                        </div>
-                        <p class="italic text-blue-700 text-base">
-                            Parágrafo 4: Podrá omitirse el anillo cuando sea necesario de acuerdo a lo que establezcan las Autoridades Municipales competentes.
-                        </p>
                     </div>
                 </div>
                 <div>
@@ -52,7 +88,49 @@
                         <i class="fas fa-lightbulb text-blue-400"></i>
                         Semiología
                     </h2>
-                    <div class="bg-blue-50/70 rounded-xl p-6 shadow-inner space-y-4">
+                    <div class="bg-blue-50/70 rounded-xl p-6 shadow-inner space-y-4 relative" x-data="{ copied: false }" x-ref="copyShield">
+                        <button
+                            @click="
+                                let text = $refs.copyShield.innerText;
+                                if (navigator.clipboard) {
+                                    navigator.clipboard.writeText(text).then(() => {
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    }, () => {
+                                        fallbackCopy(text);
+                                    });
+                                } else {
+                                    fallbackCopy(text);
+                                }
+                                function fallbackCopy(txt) {
+                                    let textarea = document.createElement('textarea');
+                                    textarea.value = txt;
+                                    document.body.appendChild(textarea);
+                                    textarea.select();
+                                    try {
+                                        document.execCommand('copy');
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    } catch (err) {
+                                        // Puedes mostrar otro mensaje si lo deseas
+                                    }
+                                    document.body.removeChild(textarea);
+                                }
+                            "
+                            class="absolute top-2 right-2 px-2 py-1 bg-blue-500 bg-opacity-60 text-white opacity-60 rounded shadow hover:bg-blue-800 hover:opacity-100 transition text-sm flex items-center gap-2"
+                            aria-label="Copiar texto"
+                        >
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <div
+                            x-show="copied"
+                            x-transition
+                            class="absolute top-10 right-2 bg-blue-700 text-white px-4 py-2 rounded shadow-lg text-sm font-semibold flex items-center gap-2"
+                            style="z-index:100;"
+                        >
+                            <i class="fas fa-check-circle"></i>
+                            Texto copiado
+                        </div>
                         <p>
                             El Primer Cuartel simboliza los ideales de la buena fe, la esperanza y la protección que por siempre ha brindado a los ciudadanos de Lechería su patrona sentimental, La Virgen del Valle (la popular Vallita) quien en sus fiestas (8 de Septiembre) es seguida por sus feligreses en su ya tradicional paseo en bote por el mar: la más colorida procesión marina del oriente venezolano y que tanto distingue a Lechería del resto de la región.
                         </p>
