@@ -54,8 +54,8 @@
                         
                         <div class="absolute bottom-0 left-0 right-0 px-6 py-8 flex flex-col items-center">
                             <div class="bg-white/80 backdrop-blur-md rounded-xl px-6 py-4 shadow-lg max-w-2xl w-full transition-all duration-500 hover:scale-105">
-                                <h3 @click="$wire.show(slide.id)" class="cursor-pointer text-base md:text-lg font-bold text-blue-900 text-center truncate" x-text="slide.title"></h3>
-                                <p class="mt-1 text-xs md:text-sm text-gray-700 text-center" x-text="slide.subtitle"></p>
+                                <h3 @click="$wire.show(slide.id)" class="cursor-pointer text-[0.65rem] sm:text-sm font-bold text-blue-900 text-center truncate text-wrap" x-text="slide.title"></h3>
+                                <p class="mt-1 text-[0.60rem] md:text-sm text-gray-700 text-center" x-text="slide.subtitle"></p>
                             </div>
                         </div>
                     </div>

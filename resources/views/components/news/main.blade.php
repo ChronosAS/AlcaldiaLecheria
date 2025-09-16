@@ -32,7 +32,7 @@
                                                 <div 
                                                     x-show="hover"
                                                     x-transition
-                                                    class="absolute inset-0 flex items-center justify-center bg-blue-700/70 text-white text-lg font-bold"
+                                                    class="absolute inset-0 flex items-center justify-center bg-blue-700/70 text-white text-sm font-bold text-wrap"
                                                 >
                                                     {{ ucfirst($post->title) }}
                                                 </div>
