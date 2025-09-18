@@ -30,28 +30,28 @@
                 <x-label for="department" value="Dirección o Dpto" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
                 <select id="department" class="mt-2 w-full rounded-lg text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition cursor-pointer" wire:model="department">
                     <option selected value=''>Elige</option>
-                    <option value='Administración y Finanzas'>Administración y Finanzas</option>
-                    <option value='Administración Tributaria'>Administración Tributaria</option>
-                    <option value='Asuntos Públicos'>Asuntos Públicos</option>
-                    <option value='Bienestar Social'>Bienestar Social</option>
-                    <option value='Clínica Municipal'>Clínica Municipal</option>
-                    <option value='Consultoría jurídica'>Consultoría jurídica</option>
-                    <option value='Despacho del Alcalde'>Despacho del Alcalde</option>
-                    <option value='Dirección de Catastro'>Dirección de Catastro</option>
-                    <option value='Dirección de Cultura'>Dirección de Cultura</option>
-                    <option value='Dirección de Obras'>Dirección de Obras</option>
-                    <option value='Dirección de Presupuesto'>Dirección de Presupuesto</option>
-                    <option value='Fundación Gestión Social'>Fundación Gestión Social</option>
-                    <option value='Gerencia de Gestión Urbana'>Gerencia de Gestión Urbana</option>
-                    <option value='Inquilinato'>Inquilinato</option>
-                    <option value='Instituto de Deporte'>Instituto de Deporte</option>
-                    <option value='Planeamiento Urbano'>Planeamiento Urbano</option>
-                    <option value='Prensa y Comunicaciones'>Prensa y Comunicaciones</option>
-                    <option value='Protección Civil'>Protección Civil</option>
-                    <option value='Registro Civil'>Registro Civil</option>
-                    <option value='Servicios Generales'>Servicios Generales</option>
-                    <option value='Tecnología y Sistemas'>Tecnología y Sistemas</option>
-                    <option value='Otro...'>Otro...</option>
+                    <option value='administracion_finanzas'>Administración y Finanzas</option>
+                    <option value='administracion_tributaria'>Administración Tributaria</option>
+                    <option value='asuntos_publicos'>Asuntos Públicos</option>
+                    <option value='bienestar_social'>Bienestar Social</option>
+                    <option value='clinica_municipal'>Clínica Municipal</option>
+                    <option value='consultoria_juridica'>Consultoría jurídica</option>
+                    <option value='despacho_alcalde'>Despacho del Alcalde</option>
+                    <option value='direccion_catastro'>Dirección de Catastro</option>
+                    <option value='direccion_cultura'>Dirección de Cultura</option>
+                    <option value='direccion_obras'>Dirección de Obras</option>
+                    <option value='direccion_presupuesto'>Dirección de Presupuesto</option>
+                    <option value='fundacion_gestion_social'>Fundación Gestión Social</option>
+                    <option value='gerencia_destion_urbana'>Gerencia de Gestión Urbana</option>
+                    <option value='inquilinato'>Inquilinato</option>
+                    <option value='instituto_deporte'>Instituto de Deporte</option>
+                    <option value='planeamiento_urbano'>Planeamiento Urbano</option>
+                    <option value='prensa_comunicaciones'>Prensa y Comunicaciones</option>
+                    <option value='proteccion_civil'>Protección Civil</option>
+                    <option value='registro_civil'>Registro Civil</option>
+                    <option value='servicios_generales'>Servicios Generales</option>
+                    <option value='tecnologia_sistemas'>Tecnología y Sistemas</option>
+                    <option value='otro'>Otro...</option>
                 </select>
                 <x-input-error for="department" class="mt-2" />
             </div>
