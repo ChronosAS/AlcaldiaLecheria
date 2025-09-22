@@ -5,7 +5,7 @@
         </x-main-header>
         <div class="mx-auto max-w-6xl">
             <ul
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-12"
+                class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-2 py-8"
                 id="civil-registry-tab"
             >
                 @php
@@ -22,18 +22,20 @@
                     ];
                 @endphp
                 @foreach($tramites as $tramite)
-                <li class="group bg-white transition-all duration-300 p-2 rounded-2xl border-2 border-transparent hover:border-blue-700 hover:bg-blue-50/60 shadow hover:shadow-xl">
-                    <a href="{{ route($tramite['route']) }}" class="flex flex-col items-center gap-2 cursor-pointer">
-                        <img
-                            class="transition-transform duration-300 rounded-xl shadow-md border-2 border-blue-200 group-hover:scale-105 group-hover:shadow-lg bg-white
-                                sm:min-w-[17rem] sm:min-h-[13rem] sm:max-w-[17rem] sm:max-h-[13rem]
-                                min-w-[7rem] min-h-[3rem] max-w-[9rem] max-h-[6rem]"
-                            src="{{ asset('assets/img/civil-registry/' . $tramite['img']) }}"
-                            alt="{{ $tramite['label'] }}"
-                        />
-                        <span class="mt-2 text-lg font-semibold text-blue-900 group-hover:text-blue-700 transition-colors text-center">{{ $tramite['label'] }}</span>
-                    </a>
-                </li>
+                <a href="{{ route($tramite['route']) }}"
+                   class="group cursor-pointer bg-white transition-all duration-300 p-2 rounded-2xl border-2 border-transparent hover:border-blue-700 hover:bg-blue-50/60 shadow hover:shadow-xl min-h-[15rem] sm:min-h-[17rem] flex flex-col justify-center items-center gap-2"
+                   style="text-decoration: none;">
+                    <img
+                        class="transition-transform duration-300 rounded-xl shadow-md border-2 border-blue-200 group-hover:scale-105 group-hover:shadow-lg bg-white
+                            sm:min-w-[13rem] sm:min-h-[10rem] sm:max-w-[13rem] sm:max-h-[10rem]
+                            min-w-[9rem] min-h-[7rem] max-w-[10rem] max-h-[8rem]"
+                        src="{{ asset('assets/img/civil-registry/' . $tramite['img']) }}"
+                        alt="{{ $tramite['label'] }}"
+                    />
+                    <span class="mt-2 text-lg sm:text-xl font-semibold text-blue-900 group-hover:text-blue-700 transition-colors text-center">
+                       Trámite de {{ $tramite['label'] }}
+                    </span>
+                </a>
                 @endforeach
             </ul>
         </div>
