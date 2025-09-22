@@ -1,37 +1,143 @@
-<div class="my-8 mt-0 space-y-4 px-4 mx-auto max-w-7xl">
-    <x-full-card>
+<div class="my-10 space-y-6 px-4 mx-auto max-w-4xl">
+    <x-full-card class="shadow-none">
         <x-slot name="title">
-        <div class=" text-3xl">
-            Bandera Municipal
+            <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
+                <span class="inline-block w-2 h-8 bg-blue-400 rounded-full animate-pulse"></span>
+                Bandera Municipal
             </div>
         </x-slot>
         <x-slot name="subTitle">
-        <div class="text-xl">
-            <h1>Diseñado por: Francia Zaurin</h1>
-            <div class="flex items-center justify-center">
-            <img src="{{asset('assets/img/bandera.jpg')}}" class="h-[7rem] m-4 transition duration-300 ease-in-out hover:shadow-lg ">
+            <div class="text-xl font-medium text-blue-700 flex flex-col items-center gap-2">
+                <h1 class="mb-2 flex items-center gap-2">
+                    <i class="fas fa-paint-brush text-blue-400"></i>
+                    Diseñado por: <span class="font-bold text-blue-900">Francia Zaurin</span>
+                </h1>
+                <div class="flex items-center justify-center">
+                    <img src="{{asset('assets/img/bandera.jpg')}}" 
+                         class="h-[8rem] m-4 rounded-xl shadow-lg border-4 border-blue-200 transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-white" 
+                         alt="Bandera Municipal">
+                </div>
+                <hr class="border-2 border-blue-400 w-2/3 my-2 rounded-full">
             </div>
-            <hr class="border border-blue-400 mx-56">
-        </div>
         </x-slot>
         <x-slot name="content">
-            <div class="font-serif m-5 text-justify tracking-wide space-y-2 text-lg">
-            <p>
-            La Bandera del Municipio Urbaneja fue escogida mediante concurso en cabildo abierto el 15 de Marzo de 2001. 
-            La ganadora fue Francia Zaurin presentando un estandarte compuesto por tres franjas horizontales de diferente tamaño. 
-            La superior e inferior son de color azul oscuro y representan el cielo y el mar respectivamente; 
-            la franja del central es de color blanco y representa el desarrollo, la juventud, el progreso y la pureza; y en esta, 
-            destaca la composición de un sol amarillo en semicírculo atravesado por la figura marrón del Cerro Morro que representan el potencial turístico y la esencia geográfica misma del municipio.
-            </p><br>
-            <p>
-            <b>Atributos:</b> Consta de un paño de proporción vexilológica aproximada 2:3;
-             esto es, cuadrado y medio de largo dividido en tres franjas horizontales de distinto tamaño: 
-             azul oscuro la superior e inferior equivalentes a una cuarta parte (¼) de la anchura del paño cada una y blanca la central, ocupando el espacio restante y en cuyo centro aparece una colina marrón simétrica y estilizada de la que surge un semicírculo amarillo dorado. 
-             Semiología Las franjas azules aluden respectivamente el cielo y el mar, mientras que la blanca simboliza el desarrollo, la juventud, el progreso y la pureza. 
-             La colina representa al “Cerro El Morro” y el semicírculo recuerda el sol: figuras que en conjunto aluden al potencial turístico, esencia existencial y geográfica del Municipio.
-            </p>
+            <div class="font-serif m-5 space-y-8 text-justify tracking-wide text-lg text-gray-800 leading-relaxed">
+                <div>
+                    <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
+                        <i class="fas fa-flag text-blue-400"></i>
+                        Historia y Significado
+                    </h2>
+                    <div class="bg-blue-50/70 rounded-xl p-6 shadow-inner space-y-4 relative" x-data="{ copied: false }" x-ref="copytext">
+                        <p>
+                            La <span class="font-bold text-blue-900">Bandera del Municipio Urbaneja</span> fue escogida mediante concurso en cabildo abierto el <span class="text-blue-700 font-semibold">15 de Marzo de 2001</span>. 
+                            La ganadora fue Francia Zaurin presentando un estandarte compuesto por tres franjas horizontales de diferente tamaño. 
+                            La superior e inferior son de color azul oscuro y representan el cielo y el mar respectivamente; 
+                            la franja central es de color blanco y representa el desarrollo, la juventud, el progreso y la pureza. En esta, 
+                            destaca la composición de un sol amarillo en semicírculo atravesado por la figura marrón del Cerro Morro, que representan el potencial turístico y la esencia geográfica misma del municipio.
+                        </p>
+                        <button
+                            @click="
+                                let text = $refs.copytext.innerText;
+                                if (navigator.clipboard) {
+                                    navigator.clipboard.writeText(text).then(() => {
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    }, () => {
+                                        fallbackCopy(text);
+                                    });
+                                } else {
+                                    fallbackCopy(text);
+                                }
+                                function fallbackCopy(txt) {
+                                    let textarea = document.createElement('textarea');
+                                    textarea.value = txt;
+                                    document.body.appendChild(textarea);
+                                    textarea.select();
+                                    try {
+                                        document.execCommand('copy');
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    } catch (err) {}
+                                    document.body.removeChild(textarea);
+                                }
+                            "
+                            class="absolute top-2 right-2 px-2 py-1 bg-blue-500 bg-opacity-60 text-white opacity-60 rounded shadow hover:bg-blue-800 hover:opacity-100 transition text-sm flex items-center gap-2"
+                            aria-label="Copiar texto"
+                        >
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <div
+                            x-show="copied"
+                            x-transition
+                            class="absolute top-10 right-2 bg-blue-700 text-white px-4 py-2 rounded shadow-lg text-xs font-semibold flex items-center gap-2"
+                            style="z-index:100;"
+                        >
+                            <i class="fas fa-check-circle text-green-300"></i>
+                            ¡Texto copiado!
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <span class="inline-block w-16 h-1 bg-blue-300 rounded-full animate-pulse"></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
+                        <i class="fas fa-award text-blue-400"></i>
+                        Atributos y Semiología
+                    </h2>
+                    <div x-data="{ copied: false }" x-ref="copyAtributos" class="bg-blue-50/70 rounded-xl p-6 shadow-inner space-y-4 relative">
+                        <p>
+                            <b class="text-blue-800">Atributos:</b> Consta de un paño de proporción vexilológica aproximada <span class="font-semibold">2:3</span>;
+                            esto es, cuadrado y medio de largo dividido en tres franjas horizontales de distinto tamaño: 
+                            azul oscuro la superior e inferior equivalentes a una cuarta parte (¼) de la anchura del paño cada una y blanca la central, ocupando el espacio restante y en cuyo centro aparece una colina marrón simétrica y estilizada de la que surge un semicírculo amarillo dorado. 
+                        </p>
+                        <p>
+                            <span class="font-semibold text-blue-700">Semiología:</span> Las franjas azules aluden respectivamente al cielo y el mar, mientras que la blanca simboliza el desarrollo, la juventud, el progreso y la pureza. 
+                            La colina representa al “Cerro El Morro” y el semicírculo recuerda el sol: figuras que en conjunto aluden al potencial turístico, esencia existencial y geográfica del Municipio.
+                        </p>
+                        <button
+                            @click="
+                                let text = $refs.copyAtributos.innerText;
+                                if (navigator.clipboard) {
+                                    navigator.clipboard.writeText(text).then(() => {
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    }, () => {
+                                        fallbackCopy(text);
+                                    });
+                                } else {
+                                    fallbackCopy(text);
+                                }
+                                function fallbackCopy(txt) {
+                                    let textarea = document.createElement('textarea');
+                                    textarea.value = txt;
+                                    document.body.appendChild(textarea);
+                                    textarea.select();
+                                    try {
+                                        document.execCommand('copy');
+                                        copied = true;
+                                        setTimeout(() => copied = false, 2000);
+                                    } catch (err) {}
+                                    document.body.removeChild(textarea);
+                                }
+                            "
+                            class="absolute top-2 right-2 px-2 py-1 bg-blue-500 bg-opacity-60 text-white opacity-60 rounded shadow hover:bg-blue-800 hover:opacity-100 transition text-sm flex items-center gap-2"
+                            aria-label="Copiar texto"
+                        >
+                            <i class="fas fa-copy"></i> 
+                        </button>
+                        <div
+                            x-show="copied"
+                            x-transition
+                            class="absolute top-10 right-2 bg-blue-700 text-white px-4 py-2 rounded shadow-lg text-xs font-semibold flex items-center gap-2"
+                            style="z-index:100;"
+                        >
+                            <i class="fas fa-check-circle text-green-300"></i>
+                            ¡Texto copiado!
+                        </div>
+                    </div>
+                </div>
             </div>
         </x-slot>
-    
     </x-full-card>
 </div>

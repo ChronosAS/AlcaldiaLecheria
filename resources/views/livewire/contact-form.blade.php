@@ -1,71 +1,74 @@
-<div class="">
-    <div class="max-w-7xl mx-auto py-10  mt-5 lg:px-8 rounded-xl bg-blue-800 ">
-        <div class="pb-5 md:pl-5 sm:pl-5 pl-3">
-            <h1 class="section-heading xl:text-[2.5rem] text-uppercase text-[3rem] text-white text-left pb-3">Atención al Ciudadano</h1>
+<div class="flex justify-center items-center min-h-screen ">
+    <div class="w-full max-w-2xl mx-auto py-10 px-6 rounded-3xl shadow-2xl bg-blue-700 backdrop-blur-md ">
+        <div class="pb-5 pl-2">
+            <h1 class="font-extrabold text-4xl md:text-5xl text-white tracking-tight mb-2 drop-shadow-lg">Atención al Ciudadano</h1>
+            <h2 class="font-semibold text-lg md:text-2xl text-white mb-4">Oficina de Atención al Ciudadano</h2>
+        </div>
+        <hr class="border-blue-300 mb-8">
+        <form wire:submit='send' class="space-y-6">
             <div>
-                <h1 class="section-subheading text-uppercase text-xl text-white text-left">Oficina de Atención al Ciudadano</h1>
+                <x-label for="fullName" value="Nombre y Apellido" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <x-input id="fullName" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="fullName" />
+                <x-input-error for="fullName" class="mt-2" />
             </div>
-        </div>
-        <hr class="border border-blue-400 mx-5 md:mx-5 sm:mx-auto mb-5">
-        <div class="">
-            <x-label for="title" value="Nombre y Apellido" required="true" class="text-xl text-left px-5"/>
-            <x-input id="title" placeholder="Tu respuesta"  type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="title" />
-            <x-input-error for="title" class="mt-2" />
-        </div>
-
-        <div class="">
-            <x-label for="subtitle" value="Cédula " required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
-            <x-input-error for="subtitle" class="mt-2" />
-        </div>
-        <div class="">
-            <x-label for="subtitle" value="Correo electrónico" required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
-            <x-input-error for="subtitle" class="mt-2" />
-        </div>
-        <div class="">
-            <x-label for="subtitle" value="Número Teléfonico" required="true" class="text-white text-xl text-left px-5"/>
-            <x-input id="subtitle" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
-            <x-input-error for="subtitle" class="mt-2" />
-        </div>
-        <div class="">
-            <x-label for="subtitle" value="Dirección o Dpto" required="true" class="text-white text-xl text-left px-5 rounded-md"/>
-            <select id="subtitle" min="0" type="text" style="color: black" class="mt-1  sm:w-[30rem] w-[18rem] rounded-md text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 cursor-pointer" wire:model="subtitle">
-            <option selected value=''>Elige</option>
-            <option  value='' >Administración y Finanzas </option>
-            <option  value='' >Administración Tributaria</option>
-            <option  value='' >Asuntos Públicos</option>
-            <option  value='' >Bienestar Social</option>
-            <option  value='' >Clínica Municipal</option>
-            <option  value='' >Consultoría jurídica</option>
-            <option  value='' >Despacho del Alcalde</option>
-            <option  value='' >Dirección de Catastro</option>
-            <option  value='' >Dirección de Cultura</option>
-            <option  value='' >Dirección de Obras</option>
-            <option  value='' >Dirección de Presupuesto</option>
-            <option  value='' >Fundación Gestión Social</option>
-            <option  value='' >Gerencia de Gestión Urbana</option>
-            <option  value='' >Inquilinato</option>
-            <option  value='' >Instituto de Deporte</option>
-            <option  value='' >Planeamiento Urbano</option>
-            <option  value='' >Prensa y Comunicaciones</option>
-            <option  value='' >Protección Civil</option>
-            <option  value='' >Registro Civil</option>
-            <option  value='' >Servicios Generales</option>
-            <option  value='' >Tecnología y Sistemas</option>
-            <option  value='' >Otro...</option>
-            </select>
-            <x-input-error for="subtitle" class="mt-2" />
-        </div>
-        <div class="">
-            <x-label for="subtitle" value="Solicitud" required="true" class="text-white text-xl text-left px-5"/>
-            <textarea id="subtitle" min="0 " placeholder="Tu respuesta" type="text" style="color: black" class="mt-1 h-24 rounded-md resize-none  sm:w-[30rem] w-[18rem] text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle"></textarea>
-            <x-input-error for="subtitle" class="mt-2" />
-        </div>
-        <div class="pt-5">
-            <x-button>
-                Enviar
-            </x-button>
-        </div>
+            <div>
+                <x-label for="document" value="Cédula" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <x-input id="document" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="document" />
+                <x-input-error for="document" class="mt-2" />
+            </div>
+            <div>
+                <x-label for="email" value="Correo electrónico" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <x-input id="email" placeholder="Tu respuesta" type="email" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="email" />
+                <x-input-error for="email" class="mt-2" />
+            </div>
+            <div>
+                <x-label for="phone" value="Número Teléfonico" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <x-input id="phone" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="phone" />
+                <x-input-error for="phone" class="mt-2" />
+            </div>
+            <div>
+                <x-label for="department" value="Dirección o Dpto" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <select id="department" class="mt-2 w-full rounded-lg text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition cursor-pointer" wire:model="department">
+                    <option selected value=''>Elige</option>
+                    <option value='administracion_finanzas'>Administración y Finanzas</option>
+                    <option value='administracion_tributaria'>Administración Tributaria</option>
+                    <option value='asuntos_publicos'>Asuntos Públicos</option>
+                    <option value='bienestar_social'>Bienestar Social</option>
+                    <option value='clinica_municipal'>Clínica Municipal</option>
+                    <option value='consultoria_juridica'>Consultoría jurídica</option>
+                    <option value='despacho_alcalde'>Despacho del Alcalde</option>
+                    <option value='direccion_catastro'>Dirección de Catastro</option>
+                    <option value='direccion_cultura'>Dirección de Cultura</option>
+                    <option value='direccion_obras'>Dirección de Obras</option>
+                    <option value='direccion_presupuesto'>Dirección de Presupuesto</option>
+                    <option value='fundacion_gestion_social'>Fundación Gestión Social</option>
+                    <option value='gerencia_destion_urbana'>Gerencia de Gestión Urbana</option>
+                    <option value='inquilinato'>Inquilinato</option>
+                    <option value='instituto_deporte'>Instituto de Deporte</option>
+                    <option value='planeamiento_urbano'>Planeamiento Urbano</option>
+                    <option value='prensa_comunicaciones'>Prensa y Comunicaciones</option>
+                    <option value='proteccion_civil'>Protección Civil</option>
+                    <option value='registro_civil'>Registro Civil</option>
+                    <option value='servicios_generales'>Servicios Generales</option>
+                    <option value='tecnologia_sistemas'>Tecnología y Sistemas</option>
+                    <option value='otro'>Otro...</option>
+                </select>
+                <x-input-error for="department" class="mt-2" />
+            </div>
+            <div>
+                <x-label for="content" value="Solicitud" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                <textarea id="content" placeholder="Describe tu content" class="mt-2 w-full h-28 rounded-lg resize-none text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="content"></textarea>
+                <x-input-error for="content" class="mt-2" />
+            </div>
+            <div class="pt-4 flex justify-end">
+                <x-button
+                    wire:loading.attr='disabled'
+                    wire:loading.class.remove='transition-all duration-200 ease-in-out '
+                    class="bg-blue-800 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all duration-200 ease-in-out text-lg disabled:bg-blue-400 disabled:cursor-progress"
+                >
+                    Enviar
+                </x-button>
+            </div>
+        </form>
     </div>
 </div>

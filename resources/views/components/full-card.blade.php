@@ -1,4 +1,4 @@
-<div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+<div class="bg-white px-4 py-5 sm:rounded-lg sm:p-6">
     <div>
         <div class=" text-center">
             <h3 class="text-lg font-medium leading-6 text-slate-900">
