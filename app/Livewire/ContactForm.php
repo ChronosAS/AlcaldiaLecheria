@@ -17,10 +17,10 @@ class ContactForm extends Component
 
     public function send()
     {
-        $this->validate([]);
-        dd($this->department);
+        //  $this->validate([]);
 
-        // Mail::to('ale.aroutin@gmail.com')->send(new CitizenService());
+
+        // Mail::to($this->email)->send(new ContactUsMail());
     }
 
     public function render()
