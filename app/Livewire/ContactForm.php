@@ -28,7 +28,7 @@ class ContactForm extends Component
             dd($this->getErrorBag());
             return;
         }
-        Mail::to('ale.aroutin@gmail.com')->send(new ContactUsMail()); // atencionciudadano.lecheria@gmail.com
+        Mail::to('leddinlozada@gmail.com')->send(new ContactUsMail()); // atencionciudadano.lecheria@gmail.com
     }
 
     public function render()
