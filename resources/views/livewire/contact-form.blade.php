@@ -46,6 +46,7 @@
                 </div>
                 <div class="pt-4 flex justify-end">
                     <x-input-error for="rateLimit" class="mt-2 me-auto text-lg"/>
+                    <x-input-error for="connectionError" class="mt-2 me-auto text-lg"/>
                     <x-button
                         wire:loading.attr='disabled'
                         wire:loading.class.remove='transition-all duration-200 ease-in-out '

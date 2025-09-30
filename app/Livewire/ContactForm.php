@@ -83,7 +83,12 @@ class ContactForm extends Component
             'content' => $this->content,
         ];
 
-        Mail::to('leddinlozada@gmail.com')->send(new ContactUsMail($data)); // atencionciudadano.lecheria@gmail.com
+        try{
+            Mail::to('leddinlozada@gmail.com')->send(new ContactUsMail($data)); // atencionciudadano.lecheria@gmail.com
+        }catch(\Exception $e){
+            $this->addError('conectionError', 'Error al enviar el correo. Por favor, inténtelo de nuevo más tarde.');
+            return;
+        }
 
         Cache::put($this->cacheKey,true,$this->submissionInterval);
         $this->formDisabled = true;
