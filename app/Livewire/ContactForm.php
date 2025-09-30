@@ -2,9 +2,11 @@
 
 namespace App\Livewire;
 
+use App\Enums\Departments;
 use App\Mail\ContactUsMail;
-use Illuminate\Support\Facades\Mail;
 use DanHarrin\LivewireRateLimiting\WithRateLimiting;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
 class ContactForm extends Component
@@ -17,11 +19,26 @@ class ContactForm extends Component
     public $phone;
     public $department;
     public $content;
+    public $submissionInterval;
     public $formDisabled = false;
-    public $disableSeconds = 60; // seconds
+    public $ipAddress;
+    public $cacheKey;
+
+    public function mount()
+    {
+        $this->ipAddress = request()->ip();
+        $this->cacheKey = 'submit_limit_'.$this->ipAddress;
+        $this->submissionInterval = 3 * 60 * 60;
+
+        if(Cache::has($this->cacheKey)){
+            $this->formDisabled = true;
+            return;
+        }
+    }
 
     public function send()
     {
+
         $this->validate([
             'fullName' => 'required|string|max:255',
             'document' => 'required|string|max:20',
@@ -50,7 +67,7 @@ class ContactForm extends Component
         ]);
 
         try {
-            $this->rateLimit(2);
+            $this->rateLimit(5);
         } catch (\DanHarrin\LivewireRateLimiting\Exceptions\TooManyRequestsException $e) {
             $this->addError('rateLimit', 'Demasiados intentos. Por favor, inténtelo de nuevo más tarde.');
 
@@ -62,23 +79,20 @@ class ContactForm extends Component
             'document' => $this->document,
             'email' => $this->email,
             'phone' => $this->phone,
-            'department' => $this->department,
+            'department' => Departments::from($this->department)->label() ?? '' ,
             'content' => $this->content,
         ];
 
-        Mail::to('leddinlozada@gmail.com')->send(new ContactUsMail($data));
+        Mail::to('leddinlozada@gmail.com')->send(new ContactUsMail($data)); // atencionciudadano.lecheria@gmail.com
 
+        Cache::put($this->cacheKey,true,$this->submissionInterval);
         $this->formDisabled = true;
-        $this->dispatch('start-timer');
-    }
-
-    public function enableForm()
-    {
-        $this->formDisabled = false;
     }
 
     public function render()
     {
-        return view('livewire.contact-form');
+        return view('livewire.contact-form',[
+            'departmentsOptions' => Departments::cases(),
+        ]);
     }
 }

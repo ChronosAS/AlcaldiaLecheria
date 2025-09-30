@@ -1,31 +1,12 @@
 <div class="flex justify-center items-center min-h-screen ">
+    <x-banner />
     <div class="w-full max-w-2xl mx-auto py-10 px-6 rounded-3xl shadow-2xl bg-blue-700 backdrop-blur-md ">
         <div class="pb-5 pl-2">
             <h1 class="font-extrabold text-4xl md:text-5xl text-white tracking-tight mb-2 drop-shadow-lg">Atención al Ciudadano</h1>
             <h2 class="font-semibold text-lg md:text-2xl text-white mb-4">Oficina de Atención al Ciudadano</h2>
         </div>
         <hr class="border-blue-300 mb-8">
-        <div
-            x-data="{
-                disabled: @entangle('formDisabled'),
-                seconds: @entangle('disableSeconds'),
-                timer: null,
-                startTimer() {
-                    if (this.disabled) {
-                        this.seconds = 60;
-                        this.timer = setInterval(() => {
-                            this.seconds--;
-                            if (this.seconds <= 0) {
-                                clearInterval(this.timer);
-                                this.disabled = false;
-                                $wire.enableForm();
-                            }
-                        }, 1000);
-                    }
-                }
-            }"
-            x-init="$wire.on('start-timer', () => { disabled = true; startTimer(); })"
-        >
+        <div>
             <form wire:submit.prevent="send" class="space-y-6">
                 <div>
                     <x-label for="fullName" value="Nombre y Apellido" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
@@ -49,30 +30,12 @@
                 </div>
                 <div>
                     <x-label for="department" value="Dirección o Dpto" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+
                     <select id="department" class="mt-2 w-full rounded-lg text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition cursor-pointer" wire:model="department">
                         <option selected value=''>Elige</option>
-                        <option value='administracion_finanzas'>Administración y Finanzas</option>
-                        <option value='administracion_tributaria'>Administración Tributaria</option>
-                        <option value='asuntos_publicos'>Asuntos Públicos</option>
-                        <option value='bienestar_social'>Bienestar Social</option>
-                        <option value='clinica_municipal'>Clínica Municipal</option>
-                        <option value='consultoria_juridica'>Consultoría jurídica</option>
-                        <option value='despacho_alcalde'>Despacho del Alcalde</option>
-                        <option value='direccion_catastro'>Dirección de Catastro</option>
-                        <option value='direccion_cultura'>Dirección de Cultura</option>
-                        <option value='direccion_obras'>Dirección de Obras</option>
-                        <option value='direccion_presupuesto'>Dirección de Presupuesto</option>
-                        <option value='fundacion_gestion_social'>Fundación Gestión Social</option>
-                        <option value='gerencia_destion_urbana'>Gerencia de Gestión Urbana</option>
-                        <option value='inquilinato'>Inquilinato</option>
-                        <option value='instituto_deporte'>Instituto de Deporte</option>
-                        <option value='planeamiento_urbano'>Planeamiento Urbano</option>
-                        <option value='prensa_comunicaciones'>Prensa y Comunicaciones</option>
-                        <option value='proteccion_civil'>Protección Civil</option>
-                        <option value='registro_civil'>Registro Civil</option>
-                        <option value='servicios_generales'>Servicios Generales</option>
-                        <option value='tecnologia_sistemas'>Tecnología y Sistemas</option>
-                        <option value='otro'>Otro...</option>
+                        @foreach ($departmentsOptions as $department)
+                            <option value='{{ $department->value }}'>{{ $department->label() }}</option>
+                        @endforeach
                     </select>
                     <x-input-error for="department" class="mt-2" />
                 </div>
@@ -82,13 +45,13 @@
                     <x-input-error for="content" class="mt-2" />
                 </div>
                 <div class="pt-4 flex justify-end">
+                    <x-input-error for="rateLimit" class="mt-2 me-auto text-lg"/>
                     <x-button
                         wire:loading.attr='disabled'
                         wire:loading.class.remove='transition-all duration-200 ease-in-out '
-                        class="bg-blue-800 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all duration-200 ease-in-out text-lg disabled:bg-blue-400 disabled:cursor-progress"
-                    >
-                        <span x-show="!disabled">Enviar</span>
-                        <span x-show="disabled">Espere <span x-text="seconds"></span>s...</span>
+                        class="bg-blue-800 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all duration-200 ease-in-out text-lg disabled:bg-green-600 disabled:hover:bg-green-600"
+                        :disabled="$formDisabled">
+                        {{ $formDisabled ? 'Enviado' : 'Enviar' }}
                     </x-button>
                 </div>
             </form>
