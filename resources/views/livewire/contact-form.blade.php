@@ -24,7 +24,7 @@
                     <x-input-error for="email" class="mt-2" />
                 </div>
                 <div>
-                    <x-label for="phone" value="Número Teléfonico" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                    <x-label for="phone" value="Número Teléfonico"  class="text-lg text-blue-900 font-semibold px-2"/>
                     <x-input id="phone" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="phone" />
                     <x-input-error for="phone" class="mt-2" />
                 </div>
