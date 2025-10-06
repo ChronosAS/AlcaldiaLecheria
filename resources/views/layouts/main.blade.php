@@ -50,9 +50,9 @@
                     Copyright © {{ date('Y') }} Alcaldía de Lechería. G-20001136-0. Todos los derechos reservados.
                 </span>
                 <ul class="flex space-x-4 justify-center border-t">
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('login') }}" class="text-gray-200 hover:text-white text-md transition hidden">Admin</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="https://x.com/Urbanejalcaldia" target="_blank" class="text-gray-300 hover:text-black transition text-xl">
                             <i class="fab fa-x-twitter"></i>
