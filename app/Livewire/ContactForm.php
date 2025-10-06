@@ -6,6 +6,7 @@ use App\Enums\Departments;
 use App\Mail\ContactUsMail;
 use DanHarrin\LivewireRateLimiting\WithRateLimiting;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
@@ -85,6 +86,7 @@ class ContactForm extends Component
             Mail::to('leddinlozada@gmail.com')->send(new ContactUsMail($data)); // atencionciudadano.lecheria@gmail.com
         } catch (\Exception $e) {
             $this->addError('conectionError', 'Error al enviar el correo. Por favor, inténtelo de nuevo más tarde.');
+            Log::error('Error sending contact form email: '.$e->getMessage());
             return;
         }
 

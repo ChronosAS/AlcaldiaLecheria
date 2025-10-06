@@ -28,7 +28,7 @@ class ContactUsMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Correo de Contactanos',
+            subject: 'Correo de Atención Al Ciudadano',
         );
     }
 
