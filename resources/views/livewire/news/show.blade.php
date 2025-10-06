@@ -18,6 +18,8 @@
                                         touchEndX: null,
                                         isPaused: false,
                                         autoplayInterval: null,
+                                        showModal: false,
+                                        modalImage: null,
                                         previous() {
                                             this.currentSlideIndex = this.currentSlideIndex > 1 ? this.currentSlideIndex - 1 : this.slides.length;
                                         },
@@ -41,6 +43,8 @@
                                             this.autoplayIntervalTime = newIntervalTime
                                             this.autoplay()
                                         },
+                                        openModal(img) { this.modalImage = img; this.showModal = true; },
+                                        closeModal() { this.showModal = false; this.modalImage = null; },
                                     }"
                                     x-init="autoplay"
                                     class="relative w-full rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-blue-50 via-white to-blue-100"
@@ -59,9 +63,10 @@
                                                 x-transition:leave-end="opacity-0 scale-95"
                                             >
                                                 <img 
-                                                    class="object-cover w-full h-full rounded-2xl shadow-md border border-blue-100"
+                                                    class="object-cover w-full h-full rounded-2xl shadow-md border border-blue-100 cursor-pointer"
                                                     :src="slide.url"
                                                     :alt="slide.alt"
+                                                    @click="openModal(slide.url)"
                                                 />
                                             </div>
                                         </template>
@@ -111,6 +116,26 @@
                                                 ></button>
                                             </template>
                                         </div>
+                                    </div>
+
+                                    <!-- Modal para mostrar la imagen completa -->
+                                    <div
+                                        x-show="showModal"
+                                        x-transition
+                                        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+                                        @click.self="closeModal"
+                                        style="display: none;"
+                                    >
+                                        <img
+                                            :src="modalImage"
+                                            alt="Imagen ampliada"
+                                            class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-white"
+                                        />
+                                        <button
+                                            @click="closeModal"
+                                            class="absolute top-6 right-8 text-white text-3xl font-bold hover:text-blue-300"
+                                            aria-label="Cerrar"
+                                        >&times;</button>
                                     </div>
                                 </div>
                                 <address class="flex items-center mb-6 not-italic">
@@ -174,6 +199,26 @@
                     </x-slot>
                 </div>
             </div>
+    <!-- Modal para mostrar la imagen completa -->
+            <div
+                x-show="showModal"
+                x-transition
+                class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+                @click.self="closeModal"
+                style="display: none;"
+            >
+                <img
+                    :src="modalImage"
+                    alt="Imagen ampliada"
+                    class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border-4 border-white"
+                />
+                <button
+                    @click="closeModal"
+                    class="absolute top-6 right-8 text-white text-3xl font-bold hover:text-blue-300"
+                    aria-label="Cerrar"
+                >&times;</button>
+            </div>
         </x-full-card>
     </main>
+
 </div>
