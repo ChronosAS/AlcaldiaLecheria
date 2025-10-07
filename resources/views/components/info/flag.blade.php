@@ -28,13 +28,6 @@
                         Historia y Significado
                     </h2>
                     <div class="bg-blue-50/70 rounded-xl p-6 shadow-inner space-y-4 relative" x-data="{ copied: false }" x-ref="copytext">
-                        <p>
-                            La <span class="font-bold text-blue-900">Bandera del Municipio Urbaneja</span> fue escogida mediante concurso en cabildo abierto el <span class="text-blue-700 font-semibold">15 de Marzo de 2001</span>. 
-                            La ganadora fue Francia Zaurin presentando un estandarte compuesto por tres franjas horizontales de diferente tamaño. 
-                            La superior e inferior son de color azul oscuro y representan el cielo y el mar respectivamente; 
-                            la franja central es de color blanco y representa el desarrollo, la juventud, el progreso y la pureza. En esta, 
-                            destaca la composición de un sol amarillo en semicírculo atravesado por la figura marrón del Cerro Morro, que representan el potencial turístico y la esencia geográfica misma del municipio.
-                        </p>
                         <button
                             @click="
                                 let text = $refs.copytext.innerText;
@@ -75,6 +68,13 @@
                             <i class="fas fa-check-circle text-green-300"></i>
                             ¡Texto copiado!
                         </div>
+                        <p>
+                            La <span class="font-bold text-blue-900">Bandera del Municipio Urbaneja</span> fue escogida mediante concurso en cabildo abierto el <span class="text-blue-700 font-semibold">15 de Marzo de 2001</span>. 
+                            La ganadora fue Francia Zaurin presentando un estandarte compuesto por tres franjas horizontales de diferente tamaño. 
+                            La superior e inferior son de color azul oscuro y representan el cielo y el mar respectivamente; 
+                            la franja central es de color blanco y representa el desarrollo, la juventud, el progreso y la pureza. En esta, 
+                            destaca la composición de un sol amarillo en semicírculo atravesado por la figura marrón del Cerro Morro, que representan el potencial turístico y la esencia geográfica misma del municipio.
+                        </p>
                         <div class="flex items-center justify-center">
                             <span class="inline-block w-16 h-1 bg-blue-300 rounded-full animate-pulse"></span>
                         </div>
@@ -86,15 +86,6 @@
                         Atributos y Semiología
                     </h2>
                     <div x-data="{ copied: false }" x-ref="copyAtributos" class="bg-blue-50/70 rounded-xl p-6 shadow-inner space-y-4 relative">
-                        <p>
-                            <b class="text-blue-800">Atributos:</b> Consta de un paño de proporción vexilológica aproximada <span class="font-semibold">2:3</span>;
-                            esto es, cuadrado y medio de largo dividido en tres franjas horizontales de distinto tamaño: 
-                            azul oscuro la superior e inferior equivalentes a una cuarta parte (¼) de la anchura del paño cada una y blanca la central, ocupando el espacio restante y en cuyo centro aparece una colina marrón simétrica y estilizada de la que surge un semicírculo amarillo dorado. 
-                        </p>
-                        <p>
-                            <span class="font-semibold text-blue-700">Semiología:</span> Las franjas azules aluden respectivamente al cielo y el mar, mientras que la blanca simboliza el desarrollo, la juventud, el progreso y la pureza. 
-                            La colina representa al “Cerro El Morro” y el semicírculo recuerda el sol: figuras que en conjunto aluden al potencial turístico, esencia existencial y geográfica del Municipio.
-                        </p>
                         <button
                             @click="
                                 let text = $refs.copyAtributos.innerText;
@@ -135,6 +126,15 @@
                             <i class="fas fa-check-circle text-green-300"></i>
                             ¡Texto copiado!
                         </div>
+                        <p>
+                            <b class="text-blue-800">Atributos:</b> Consta de un paño de proporción vexilológica aproximada <span class="font-semibold">2:3</span>;
+                            esto es, cuadrado y medio de largo dividido en tres franjas horizontales de distinto tamaño: 
+                            azul oscuro la superior e inferior equivalentes a una cuarta parte (¼) de la anchura del paño cada una y blanca la central, ocupando el espacio restante y en cuyo centro aparece una colina marrón simétrica y estilizada de la que surge un semicírculo amarillo dorado. 
+                        </p>
+                        <p>
+                            <span class="font-semibold text-blue-700">Semiología:</span> Las franjas azules aluden respectivamente al cielo y el mar, mientras que la blanca simboliza el desarrollo, la juventud, el progreso y la pureza. 
+                            La colina representa al “Cerro El Morro” y el semicírculo recuerda el sol: figuras que en conjunto aluden al potencial turístico, esencia existencial y geográfica del Municipio.
+                        </p>
                     </div>
                 </div>
             </div>
