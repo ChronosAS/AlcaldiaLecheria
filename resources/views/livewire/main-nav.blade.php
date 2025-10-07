@@ -5,7 +5,7 @@
      class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out transform">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         <!-- Mobile Logo -->
-        
+
         <!-- Logo -->
         <a href="{{ route('app') }}" class="flex items-center space-x-2">
             <img src="{{ asset('assets/img/logo-lecheria.png') }}" alt="Logo" class="h-10 w-auto" />
@@ -22,15 +22,17 @@
                     <span>Declaración</span>
                 </a>
             </li>
-            <li>
-                <a href="#contact" class="hover:text-blue-300 transition flex items-center space-x-2">
-                    <!-- Chat SVG -->
-                    <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 21l1.8-4A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                    </svg>
-                    <span>Atención</span>
-                </a>
-            </li>
+            @if(Route::currentRouteName() === 'app')
+                <li>
+                    <a href="#contact" class="hover:text-blue-300 transition flex items-center space-x-2">
+                        <!-- Chat SVG -->
+                        <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 21l1.8-4A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                        <span>Atención</span>
+                    </a>
+                </li>
+            @endif
             <li>
                 <a href="{{ route('app.news') }}" class="hover:text-blue-300 transition flex items-center space-x-2">
                     <!-- Newspaper SVG -->
@@ -124,7 +126,7 @@
                 <i class="fab fa-x-twitter"></i>
             </a>
             <a href="https://www.instagram.com/alcaldiadelecheria/" target="_blank"
-               class="inline-flex items-center justify-center text-white text-2xl rounded-md 
+               class="inline-flex items-center justify-center text-white text-2xl rounded-md
                       hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 transition">
                 <i class="fab fa-instagram"></i>
             </a>
@@ -132,6 +134,6 @@
                 <i class="fab fa-youtube"></i>
             </a>
         </div>
-            
+
     </div>
 </nav>
