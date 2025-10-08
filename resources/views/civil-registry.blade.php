@@ -4,8 +4,13 @@
             <h1 class="text-7xl font-extrabold text-white drop-shadow-lg tracking-wide" x-text='title'></h1>
         </x-main-header>
         <div class="mx-auto max-w-6xl">
+            <div class="text-center ">
+                <h1 class="section-heading text-uppercase text-[2.5rem] font-extrabold tracking-wide text-white drop-shadow-lg">
+                    Tramites
+                </h1>
+            </div>
             <ul
-                class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-2 py-8"
+                class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-2 py-3"
                 id="civil-registry-tab"
             >
                 @php
@@ -23,18 +28,16 @@
                 @endphp
                 @foreach($tramites as $tramite)
                 <a href="{{ route($tramite['route']) }}"
-                   class="group cursor-pointer bg-white transition-all duration-300 p-2 rounded-2xl border-2 border-transparent hover:border-blue-700 hover:bg-blue-50/60 shadow hover:shadow-xl min-h-[15rem] sm:min-h-[17rem] flex flex-col justify-center items-center gap-2"
+                   class="group cursor-pointer  transition-all duration-300 rounded-2xl border-2 border-transparent flex flex-col justify-center items-center "
                    style="text-decoration: none;">
                     <img
-                        class="transition-transform duration-300 rounded-xl shadow-md border-2 border-blue-200 group-hover:scale-105 group-hover:shadow-lg bg-white
-                            sm:min-w-[13rem] sm:min-h-[10rem] sm:max-w-[13rem] sm:max-h-[10rem]
-                            min-w-[9rem] min-h-[7rem] max-w-[10rem] max-h-[8rem]"
+                        class="transition-transform duration-300  shadow-md border-2 border-blue-200 sm:group-hover:scale-105 group-hover:shadow-lg bg-white"
                         src="{{ asset('assets/img/civil-registry/' . $tramite['img']) }}"
                         alt="{{ $tramite['label'] }}"
                     />
-                    <span class="mt-2 text-lg sm:text-xl font-semibold text-blue-900 group-hover:text-blue-700 transition-colors text-center">
+                    {{-- <span class="mt-2 text-lg sm:text-xl font-semibold text-blue-900 group-hover:text-blue-700 transition-colors text-center">
                        Trámite de {{ $tramite['label'] }}
-                    </span>
+                    </span> --}}
                 </a>
                 @endforeach
             </ul>
