@@ -14,7 +14,7 @@
                         ['route' => 'app.civil-reg.fe-de-vida', 'img' => 'fe-de-vida.webp', 'label' => 'Fe de Vida'],
                         ['route' => 'app.civil-reg.matri', 'img' => 'matrimonios.webp', 'label' => 'Matrimonios'],
                         ['route' => 'app.civil-reg.mudanza', 'img' => 'mudanza.webp', 'label' => 'Mudanza'],
-                        ['route' => 'app.civil-reg.nacimientos', 'img' => 'nac.webp', 'label' => 'Nacimientos'],
+                        ['route' => 'app.civil-reg.nacimientos', 'img' => 'nacimientos.webp', 'label' => 'Nacimientos'],
                         ['route' => 'app.civil-reg.residencia', 'img' => 'residencia.webp', 'label' => 'Residencia'],
                         ['route' => 'app.civil-reg.solteria', 'img' => 'solteria.webp', 'label' => 'Soltería'],
                         ['route' => 'app.civil-reg.union', 'img' => 'union.webp', 'label' => 'Unión Estable'],
