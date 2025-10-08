@@ -105,7 +105,7 @@
                             <i class="fas fa-arrow-left mr-2"></i> Regresar
                         </a>
                         <a
-                            href="{{ asset('assets/docs/civil-registry/FE-DE-VIDA.pdf') }}" target="_blank"
+                            href="{{ asset('assets/docs/civil-registry/constancia-de-fe-de-vida.pdf') }}" target="_blank"
                             class="cursor-pointer whitespace-nowrap rounded-xl bg-green-700 sm:px-6 px-4 sm:py-3 py-2 sm:text-lg text-base font-semibold tracking-wide text-slate-100 transition hover:opacity-80 hover:scale-105 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed shadow w-full sm:w-auto"
                         >
                             <i class="fas fa-download mr-2"></i> Descargar Planilla
