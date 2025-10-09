@@ -21,7 +21,7 @@
                         <div class="flex items-center gap-3">
                             <div wire:ignore class="relative">
                                 <button id="tags" data-dropdown-toggle="tagsDropdown"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2.5 transition"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2 transition"
                                     type="button">
                                     Categorías
                                     <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <x-input id="date" type="date" style="color: black" class=" flex 2xl:col-start-6 xl:col-start-5 md:col-start-5 w-full sm:w-[10rem]  xl:w-[10rem]  lg:w-[10rem] md:w-[10rem] 2xl:w-[10rem]  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
+                            <x-input id="date" type="date" style="color: black" class="mt-2  sm:mt-1 flex 2xl:col-start-6 xl:col-start-5 md:col-start-5 w-full sm:w-[10rem]  xl:w-[10rem]  lg:w-[10rem] md:w-[10rem] 2xl:w-[10rem]  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
                         </div>
                     </div>
                 </x-slot>
@@ -64,22 +64,20 @@
                                             </span>
                                         @endif
                                     </a>
-                                    <a href="{{ route('app.news.show',$post->id) }}" class="block overflow-hidden">
-                                        <div class="flex flex-col flex-1 p-5">
-                                            <span class="text-xs text-blue-500 font-semibold mb-1">{{ $post->iso_date }}</span>
-                                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-tight line-clamp-2">{{ $post->title }}</h3>
-                                            <p class="text-slate-600 text-sm mb-4 line-clamp-3">{{ $post->subtitle }}</p>
-                                            <div class="mt-auto">
-                                                <a href="{{ route('app.news.show',$post->id) }}"
-                                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm hover:bg-blue-100 transition">
-                                                    Ver más
-                                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
+                                    <div class="flex flex-col flex-1 p-5">
+                                        <span class="text-xs text-blue-500 font-semibold mb-1">{{ $post->iso_date }}</span>
+                                        <h3 class="text-lg font-bold text-slate-900 mb-2 leading-tight line-clamp-2">{{ $post->title }}</h3>
+                                        <p class="text-slate-600 text-sm mb-4 line-clamp-3">{{ $post->subtitle }}</p>
+                                        <div class="mt-auto">
+                                            <a href="{{ route('app.news.show',$post->id) }}"
+                                                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm hover:bg-blue-100 transition">
+                                                Ver más
+                                                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                                </svg>
+                                            </a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </article>
                             </li>
                         @empty
