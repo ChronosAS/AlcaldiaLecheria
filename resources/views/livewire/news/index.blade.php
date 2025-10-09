@@ -64,20 +64,22 @@
                                             </span>
                                         @endif
                                     </a>
-                                    <div class="flex flex-col flex-1 p-5">
-                                        <span class="text-xs text-blue-500 font-semibold mb-1">{{ $post->iso_date }}</span>
-                                        <h3 class="text-lg font-bold text-slate-900 mb-2 leading-tight line-clamp-2">{{ $post->title }}</h3>
-                                        <p class="text-slate-600 text-sm mb-4 line-clamp-3">{{ $post->subtitle }}</p>
-                                        <div class="mt-auto">
-                                            <a href="{{ route('app.news.show',$post->id) }}"
-                                                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm hover:bg-blue-100 transition">
-                                                Ver más
-                                                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                                </svg>
-                                            </a>
+                                    <a href="{{ route('app.news.show',$post->id) }}" class="block overflow-hidden">
+                                        <div class="flex flex-col flex-1 p-5">
+                                            <span class="text-xs text-blue-500 font-semibold mb-1">{{ $post->iso_date }}</span>
+                                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-tight line-clamp-2">{{ $post->title }}</h3>
+                                            <p class="text-slate-600 text-sm mb-4 line-clamp-3">{{ $post->subtitle }}</p>
+                                            <div class="mt-auto">
+                                                <a href="{{ route('app.news.show',$post->id) }}"
+                                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm hover:bg-blue-100 transition">
+                                                    Ver más
+                                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </article>
                             </li>
                         @empty
