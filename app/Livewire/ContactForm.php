@@ -22,7 +22,7 @@ class ContactForm extends Component
     public $content;
     public $formDisabled = false;
 
-    protected $submissionInterval = 10800; // 3 hours in seconds
+    protected $submissionInterval = 3600; // 1h
 
     protected $rules = [
         'fullName' => 'required|string|max:255',
@@ -48,7 +48,7 @@ class ContactForm extends Component
         'department.required' => 'El departamento es obligatorio.',
         'department.string' => 'El departamento debe ser una cadena de texto.',
         'department.max' => 'El departamento no puede exceder 100 caracteres.',
-        'content.required' => 'El contenido es obligatorio.',
+        'content.required' => 'La descripción de la solicitud es obligatoria.',
         'content.string' => 'El contenido debe ser una cadena de texto.',
         'content.max' => 'El contenido no puede exceder 5000 caracteres.',
     ];

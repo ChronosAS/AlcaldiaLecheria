@@ -41,7 +41,7 @@
                 </div>
                 <div>
                     <x-label for="content" value="Solicitud" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
-                    <textarea id="content" placeholder="Describe tu content" class="mt-2 w-full h-28 rounded-lg resize-none text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="content"></textarea>
+                    <textarea id="content" placeholder="Describe tu solicitud" class="mt-2 w-full h-28 rounded-lg resize-none text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="content"></textarea>
                     <x-input-error for="content" class="mt-2" />
                 </div>
                 <div class="pt-4 flex justify-end">
