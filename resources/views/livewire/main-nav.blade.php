@@ -6,20 +6,31 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         <!-- Mobile Logo -->
 
-        <!-- Logo -->
-        <a href="{{ route('app') }}" class="flex items-center space-x-2">
-            <img src="{{ asset('assets/img/logo-lecheria.png') }}" alt="Logo" class="h-10 w-auto" />
-        </a>
-        <!-- Desktop Links -->
-        <ul class="hidden md:flex space-x-8 text-white text-lg font-semibold">
-            <li>
-                <a href="http://200.41.118.109/appweb/" target="_blank" class="hover:text-blue-300 transition flex items-center space-x-2">
-                    <!-- Document SVG -->
-                    <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 7V3a1 1 0 011-1h8a1 1 0 011 1v18a1 1 0 01-1 1H8a1 1 0 01-1-1v-4"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10"/>
-                    </svg>
-                    <span>Declaración</span>
+        <!-- Collapsible navigation container -->
+        <div
+          class="!visible hidden flex-grow basis-[100%] items-center sm:!flex sm:basis-auto"
+          id="navbarSupportedContent1"
+          data-twe-collapse-item>
+          <!-- Logo -->
+          <a
+            class="mb-4 me-5 ms-2 mt-3 flex items-center hover:text-neutral-400 focus:text-neutral-400 sm:mb-0 sm:mt-0"
+            href="{{ route('app') }}">
+            <img
+              src="{{ asset('assets/img/logo-lecheria.png') }}"
+              style="height: 35px"
+              alt="Logo Lecheria"
+              loading="lazy" />
+          </a>
+          <!-- Left navigation links -->
+          <ul
+            class="text-md list-style-none me-auto flex flex-col ps-0 sm:flex-row"
+            data-twe-navbar-nav-ref>
+            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
+              <!-- Projects link -->
+                <a
+                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 md:px-0 xl:px-2 focus:text-neutral-300 sm:px-2 {{ request()->routeIs('app.vdv') ? 'active pointer-events-none' : '' }} [&.active]:text-blue-500"
+                href="{{ route('app.vdv') }}" data-twe-nav-link-ref>
+                            VDV2024
                 </a>
             </li>
             @if(Route::currentRouteName() === 'app')
