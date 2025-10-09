@@ -15,13 +15,13 @@
                                 </svg>
                             </div>
                             <input wire:model.live='search' type="text" name="search" id="search"
-                                class="block w-full pl-10 pr-4 py-2 rounded-lg border border-slate-300 bg-slate-50 text-slate-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition"
+                                class="block w-full pl-10 pr-4 py-2 border border-slate-300 bg-slate-50 text-slate-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition"
                                 placeholder="Buscar...">
                         </div>
                         <div class="flex items-center gap-3">
                             <div wire:ignore class="relative">
                                 <button id="tags" data-dropdown-toggle="tagsDropdown"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 transition"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2 transition"
                                     type="button">
                                     Categorías
                                     <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -29,13 +29,13 @@
                                     </svg>
                                 </button>
                                 <!-- Dropdown menu -->
-                                <div id="tagsDropdown" class="hidden absolute z-10 mt-2 w-56 bg-white rounded-xl border border-slate-200 shadow-lg p-4">
+                                <div id="tagsDropdown" class="hidden absolute z-10 mt-2 w-56 bg-white border border-slate-200 shadow-lg p-4">
                                     <h6 class="mb-3 text-sm font-semibold text-slate-700">Categorías</h6>
                                     <ul class="space-y-2 text-sm">
                                         @foreach ($allCategories as $key => $category)
                                             <li class="flex items-center">
                                                 <input wire:model.live='categories' type="checkbox" value="{{ $category->value }}"
-                                                    class="w-4 h-4 border-slate-300 rounded text-blue-600 focus:ring-blue-500" />
+                                                    class="w-4 h-4 border-blue-800  text-blue-600 focus:ring-blue-500" />
                                                 <label class="ml-2 text-sm font-medium text-slate-700">
                                                     {{ $category->label() }}
                                                 </label>
@@ -53,7 +53,7 @@
                     <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
                         @forelse ($this->posts as $post)
                             <li>
-                                <article class="group overflow-hidden bg-white border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full w-full">
+                                <article class="group overflow-hidden bg-white border border-blue-800 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full w-full">
                                     <a href="{{ route('app.news.show',$post->id) }}" class="block relative aspect-video overflow-hidden">
                                         <img src="{{ $post->getFirstMediaUrl('post-image') }}"
                                             alt=""

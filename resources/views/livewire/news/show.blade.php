@@ -170,27 +170,35 @@
                         <div class="mt-10 text-center">
                             <h1 class="text-2xl font-extrabold"> OTRAS NOTICIAS<h1>
                         </div>
-                        <ul class="grid grid-cols-1 sm:grid-cols-5 gap-y-10 gap-x-6 items-start p-8">
+                        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
                             @forelse ($navPosts as $post)
-                                <li class="relative flex flex-col sm:flex-row xl:flex-col items-start">
-                                    <div class="order-1 sm:ml-6 xl:ml-0">
-                                        <h3 class="mb-1 text-slate-900 font-semibold break-all">
-                                            <span class="mb-1 block text-sm leading-6  text-indigo-500">{{ $post->postedAt }}</span>{{ $post->title }}
-                                        </h3>
-                                        <div class="prose prose-slate prose-sm text-slate-600 break-all">
-                                            <p>{{ $post->subtitle }}</p>
-                                        </div>
-                                        <a
-                                            class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
-                                            href="{{ route('app.news.show',$post->id) }}">Ver...
-                                            <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
-                                                width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M0 0L3 3L0 6"></path>
-                                            </svg>
+                                <li>
+                                    <article class="group overflow-hidden bg-white border border-blue-800 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full w-full">
+                                        <a href="{{ route('app.news.show', $post->id) }}" class="block relative aspect-video overflow-hidden">
+                                            <img src="{{ $post->getFirstMediaUrl('post-image') }}"
+                                                alt=""
+                                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
+                                            @if ($post->category)
+                                                <span class="absolute top-3 left-3 bg-blue-600/90 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                                                    {{ $post->category->label() }}
+                                                </span>
+                                            @endif
                                         </a>
-                                    </div>
-                                    <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640">
+                                        <div class="flex flex-col flex-1 p-4">
+                                            <span class="text-xs text-blue-500 font-semibold mb-1">{{ $post->postedAt }}</span>
+                                            <h3 class="text-base font-bold text-slate-900 mb-2 leading-tight line-clamp-2">{{ $post->title }}</h3>
+                                            <p class="text-slate-600 text-xs mb-2 line-clamp-3">{{ $post->subtitle }}</p>
+                                            <div class="mt-auto">
+                                                <a href="{{ route('app.news.show', $post->id) }}"
+                                                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold text-xs hover:bg-blue-100 transition">
+                                                    Ver más
+                                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>
                                 </li>
                             @empty
 

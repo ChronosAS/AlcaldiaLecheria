@@ -23,7 +23,7 @@ class Show extends Component
             $media->alt = str_replace(' ','-',$this->post->title).'-img';
             return $media;
         });
-        $this->navPosts = Post::where('id', '!=' , $post->id)->latest()->take(5)->get();
+        $this->navPosts = Post::where('id', '!=' , $post->id)->latest()->take(6)->get();
     }
 
     // public function getImages()

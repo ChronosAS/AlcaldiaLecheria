@@ -28,7 +28,7 @@
                 class="relative flex flex-col items-center max-w-7xl mx-auto mt-8"
             >
                 <!-- Tab Buttons -->
-                <div class="flex flex-wrap justify-center gap-8 bg-blue-900/95 rounded-xl shadow-2xl px-6 py-4 relative">
+                <div class="flex flex-wrap justify-center sm:gap-8 bg-blue-900/95 rounded-xl shadow-2xl px-6 py-4 relative">
                     <template x-for="tab in [
                         { key: 'historia', label: 'Historia' },
                         { key: 'Himno', label: 'Himno' },
