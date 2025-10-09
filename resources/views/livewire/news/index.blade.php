@@ -21,7 +21,7 @@
                         <div class="flex items-center gap-3">
                             <div wire:ignore class="relative">
                                 <button id="tags" data-dropdown-toggle="tagsDropdown"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2 transition"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2.5 transition"
                                     type="button">
                                     Categorías
                                     <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <x-input id="date" type="date" style="color: black" class="mt-2  sm:mt-1 flex 2xl:col-start-6 xl:col-start-5 md:col-start-5 w-full sm:w-[10rem]  xl:w-[10rem]  lg:w-[10rem] md:w-[10rem] 2xl:w-[10rem]  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
+                            <x-input id="date" type="date" style="color: black" class=" flex 2xl:col-start-6 xl:col-start-5 md:col-start-5 w-full sm:w-[10rem]  xl:w-[10rem]  lg:w-[10rem] md:w-[10rem] 2xl:w-[10rem]  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
                         </div>
                     </div>
                 </x-slot>
