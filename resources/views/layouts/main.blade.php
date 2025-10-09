@@ -23,19 +23,51 @@
         @stack('styles')
         <!-- Styles -->
         @livewireStyles
+        <style>
+            /* Hide vertical scrollbar but allow scrolling */
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            .no-scrollbar {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+        </style>
     </head>
-    <body {{ $attributes->merge(['class'=>'bg-gray-500 h-full']) }} x-data="{}">
+    <body 
+        x-data="{}" 
+        {{ $attributes->merge(['class'=>'bg-blue-800 h-full [&::-webkit-scrollbar]:hidden']) }}
+    >
         @livewire('main-nav')
-        <main>
+        <main >
             {{ $slot }}
         </main>
-        <footer class="bg-blue-900 shadow m-auto" >
-            <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between sm:items-center sm:justify-center">
-                <span class="flex flex-wrap items-center sm:text text-white sm:text-center  mx-12">
-                    Copyright © Alcaldía de Lechería 2024
+        <footer class="bg-blue-900/90 text-gray-100 text-center">
+            <div class="max-w-screen-xl mx-auto px-4 py-6 flex flex-col items-center justify-center gap-4">
+                <span class="text-md text-gray-100 text-center">
+                    Copyright © {{ date('Y') }} Alcaldía de Lechería. G-20001136-0. Todos los derechos reservados.
                 </span>
-                <ul class="flex flex-wrap items-center mt-3  font-medium text-white sm:text-center">
-                    <li><a href="{{ route('login') }}" class="hover:underline me-4 md:me-6">Admin</a></li>
+                <ul class="flex space-x-4 justify-center border-t">
+                    {{-- <li>
+                        <a href="{{ route('login') }}" class="text-gray-200 hover:text-white text-md transition hidden">Admin</a>
+                    </li> --}}
+                    <li>
+                        <a href="https://x.com/Urbanejalcaldia" target="_blank" class="text-gray-300 hover:text-black transition text-xl">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/alcaldiadelecheria/" target="_blank" class="text-gray-300 transition text-xl">
+                            <i class="fab fa-instagram hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  rounded"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" class="text-gray-300 hover:text-red-400 transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </footer>

@@ -1,94 +1,96 @@
-<div>
+<div class="text-black">
     <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
-        <h1 class="text-7xl" >Noticias</h1>
+        <h1 class="text-7xl font-extrabold text-white drop-shadow-lg tracking-wide">Noticias</h1>
     </x-main-header>
 
-    <div class=" flex sm:grid sm:grid-cols-10 sm:grid-rows-6 xl:grid xl:grid-cols-10 xl:grid-rows-6 md:grid-cols-1 md:grid gap-4 min-h-svh">
-        <div class=" xl:col-span-10 xl:row-span-6  my-8 mt-0 space-y-4 p-4 mx-auto max-w-7xl ">
-            <x-full-card class=" ">
+    <div class="flex flex-col min-h-svh bg-blue-700">
+        <div class="my-8 space-y-4 p-4 mx-auto  max-w-[100rem] ">
+            <x-full-card class="bg-blue-700 border-0 m">
                 <x-slot name="title">
-                    <div class=" text-3xl grid  sm:grid-cols-1  2xl:grid-cols-6 xl:grid-cols-5 md:grid-cols-5 sm:grid-rows-1 2xl:grid-rows-1 xl:grid-rows-1 sm:gap-4 md:gap-2">
-                        <div class="relative sm:mt-1 mt-2">
-                            <div class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none ">
-                                <svg class="w-5 h-5 text-black" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="relative w-full max-w-xs">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/>
+                                </svg>
                             </div>
-                            <input wire:model.live='search' type="text" name="search" id="search" class=" flex p-2 ps-10 text-sm text-gray-900 border border-black rounded-lg  w-full sm:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700   " placeholder="Buscar...">
+                            <input wire:model.live='search' type="text" name="search" id="search"
+                                class="block w-full pl-10 pr-4 py-2 border border-slate-300 bg-slate-50 text-slate-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition"
+                                placeholder="Buscar...">
                         </div>
-
-                        <div wire:ignore class="flex mt-2 sm:mt-1  2xl:col-start-5  xl:col-start-4 md:col-start-4">
-                            <button id="tags" data-dropdown-toggle="tagsDropdown"
-                              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full  text-sm mx-3 sm:mx-3 md:mx-2 md:px-2 px-4 p-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                              type="button">
-                                Categorias
-                              <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                              </svg>
-                            </button>
-
-                            <!-- Dropdown menu -->
-                            <div id="tagsDropdown" class=" hidden sm:w-[18rem] p-3 bg-white rounded-lg border border-gray-500 shadow z-[5]">
-                                <h6 class="mb-3 text-sm font-medium text-gray-900">
-                                    Categorias
-                                </h6>
-                                <ul class="space-y-2 text-sm" aria-labelledby="tags">
-                                    @foreach ($allCategories as $key => $category)
-                                        <li class="flex items-center">
-                                            <input wire:model.live='categories' type="checkbox" value="{{ $category->value }}"
-                                                class="w-4 h-4 bg-white border-gray-300 rounded text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 " />
-
-                                            <label class="ml-2 text-sm font-medium text-gray-900">
-                                                {{ $category->label() }}
-                                            </label>
-                                        </li>
-                                    @endforeach
-
-                                </ul>
+                        <div class="flex items-center gap-3">
+                            <div wire:ignore class="relative">
+                                <button id="tags" data-dropdown-toggle="tagsDropdown"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm px-4 py-2.5 transition"
+                                    type="button">
+                                    Categorías
+                                    <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="tagsDropdown" class="hidden absolute z-10 mt-2 w-56 bg-white border border-slate-200 shadow-lg p-4">
+                                    <h6 class="mb-3 text-sm font-semibold text-slate-700">Categorías</h6>
+                                    <ul class="space-y-2 text-sm">
+                                        @foreach ($allCategories as $key => $category)
+                                            <li class="flex items-center">
+                                                <input wire:model.live='categories' type="checkbox" value="{{ $category->value }}"
+                                                    class="w-4 h-4 border-blue-800  text-blue-600 focus:ring-blue-500" />
+                                                <label class="ml-2 text-sm font-medium text-slate-700">
+                                                    {{ $category->label() }}
+                                                </label>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
+                            <x-input id="date" type="date" style="color: black" class=" flex 2xl:col-start-6 xl:col-start-5 md:col-start-5 w-full sm:w-[10rem]  xl:w-[10rem]  lg:w-[10rem] md:w-[10rem] 2xl:w-[10rem]  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
                         </div>
-                        <x-input id="date" type="date" style="color: black" class="mt-2  sm:mt-1 flex 2xl:col-start-6 xl:col-start-5 md:col-start-5 w-full sm:w-[10rem]  xl:w-[10rem]  lg:w-[10rem] md:w-[10rem] 2xl:w-[10rem]  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
                     </div>
                 </x-slot>
-                <x-slot name="content" class="">
-                    <!-- inspired by tailwindcss.com -->
-                    <ul class="grid grid-cols-1  xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 ">
+                <x-slot name="content">
+                    
+                    <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
                         @forelse ($this->posts as $post)
-                            <li class="relative sm:flex-row xl:flex-col  flex flex-col items-center">
-                                <article class="group flex rounded-xl max-w-sm flex-col overflow-hidden border border-slate-300 bg-slate-100 text-slate-700  shadow-md ">
-                                    <a href="{{ route('app.news.show',$post->id) }}" class="cursor-pointer min-h-44  max-h-56  overflow-hidden ">
-                                        <img src="{{ $post->getFirstMediaUrl('post-image') }}" alt=""class="object-cover transition duration-700 ease-out group-hover:scale-105"  >
-                                    </a>
-                                    <div class="">
+                            <li>
+                                <article class="group overflow-hidden bg-white border border-blue-800 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full w-full">
+                                    <a href="{{ route('app.news.show',$post->id) }}" class="block relative aspect-video overflow-hidden">
+                                        <img src="{{ $post->getFirstMediaUrl('post-image') }}"
+                                            alt=""
+                                            class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
                                         @if ($post->category)
-                                            <span class=" mx-3 text-xs font-medium me-2  px-2.5 py-0.5 rounded bg-blue-600 text-white ">{{ $post->category->label() }}</span>
+                                            <span class="absolute top-3 left-3 bg-blue-600/90 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                                                {{ $post->category->label() }}
+                                            </span>
                                         @endif
-                                        <h3 class="mb-1 text-slate-900 font-semibold mx-3 break-words">
-                                            <span class="mb-1 block text-sm leading-6 text-indigo-500 mx-3" aria-describedby="featureDescription" >{{ $post->iso_date }}</span>{{ $post->title }}
-                                        </h3>
-                                        <div class="prose prose-slate prose-sm text-slate-600 ">
-                                            <p class="mx-3">{{ $post->subtitle }}</p>
+                                    </a>
+                                    <a href="{{ route('app.news.show',$post->id) }}" class="block overflow-hidden">
+                                        <div class="flex flex-col flex-1 p-5">
+                                            <span class="text-xs text-blue-500 font-semibold mb-1">{{ $post->iso_date }}</span>
+                                            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-tight line-clamp-2">{{ $post->title }}</h3>
+                                            <p class="text-slate-600 text-sm mb-4 line-clamp-3">{{ $post->subtitle }}</p>
+                                            <div class="mt-auto">
+                                                <a href="{{ route('app.news.show',$post->id) }}"
+                                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm hover:bg-blue-100 transition">
+                                                    Ver más
+                                                    <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
-                                        <a class="group mx-3 my-2 inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 "
-                                            href="{{ route('app.news.show',$post->id) }}">Ver...
-                                            <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
-                                                width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M0 0L3 3L0 6"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
+                                    </a>
                                 </article>
                             </li>
                         @empty
-                            No hay noticias que concuerden con su busqueda.
+                            <li class="col-span-full text-center text-black py-12 text-lg">No hay noticias que concuerden con su búsqueda.</li>
                         @endforelse
                     </ul>
                 </x-slot>
             </x-full-card>
-            {{ $this->posts->links('vendor.livewire.tailwind') }}
+            <div class="flex justify-center mt-4 text-black">
+                {{ $this->posts->links('vendor.livewire.tailwind') }}
+            </div>
         </div>
-       {{-- <div wire:ignore class="row-start-1 col-start-9  flex-row  xl:scale-[.8] md:scale-[.7]  lg:scale-[.7] scale-[.7] 2xl:scale-100  right-1  xl:w-[20rem]  2xl:w-[25rem] overscroll-y-contain 2xl:bottom-auto xl:bottom-25 mx-auto md:bottom-25 lg:bottom-25 lg:right-0 md:right-0  xl:-right-5 xl:ml-6 2xl:right-10 justify-self-center fixed hidden sm:inline-block md:hidden xl:inline-block">
-           <a class="twitter-timeline" data-lang="es" data-width="450" data-height="450" data-dnt="true" data-theme="light" class=" 2xl:h-[450px] xl:h-[550px]" href="https://twitter.com/manuelferreiraG?ref_src=twsrc%5Etfw">Tweets by Manuel ferreira</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-        </div> --}}
     </div>
 </div>

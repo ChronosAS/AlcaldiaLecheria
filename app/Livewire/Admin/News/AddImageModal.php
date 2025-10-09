@@ -40,7 +40,7 @@ class AddImageModal extends Component
         ]);
 
         $this->post->addMedia($this->image->getRealPath())
-            ->withCustomProperties(['description' => $this->description])
+            ->withCustomProperties(['descrip tion' => $this->description])
             ->usingName($this->image->getClientOriginalName())
             ->toMediaCollection('post-image');
 

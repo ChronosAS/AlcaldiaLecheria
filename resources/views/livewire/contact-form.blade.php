@@ -1,0 +1,61 @@
+<div class="flex justify-center items-center min-h-screen ">
+    <x-banner />
+    <div class="w-full max-w-2xl mx-auto py-10 px-6 rounded-3xl shadow-2xl bg-blue-700 backdrop-blur-md ">
+        <div class="pb-5 pl-2">
+            <h1 class="font-extrabold text-4xl md:text-5xl text-white tracking-tight mb-2 drop-shadow-lg">Atención al Ciudadano</h1>
+            <h2 class="font-semibold text-lg md:text-2xl text-white mb-4">Oficina de Atención al Ciudadano</h2>
+        </div>
+        <hr class="border-blue-300 mb-8">
+        <div>
+            <form wire:submit.prevent="send" class="space-y-6">
+                <div>
+                    <x-label for="fullName" value="Nombre y Apellido" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                    <x-input id="fullName" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="fullName" />
+                    <x-input-error for="fullName" class="mt-2" />
+                </div>
+                <div>
+                    <x-label for="document" value="Cédula" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                    <x-input id="document" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="document" />
+                    <x-input-error for="document" class="mt-2" />
+                </div>
+                <div>
+                    <x-label for="email" value="Correo electrónico" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                    <x-input id="email" placeholder="Tu respuesta" type="email" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="email" />
+                    <x-input-error for="email" class="mt-2" />
+                </div>
+                <div>
+                    <x-label for="phone" value="Número Teléfonico"  class="text-lg text-blue-900 font-semibold px-2"/>
+                    <x-input id="phone" min="0" placeholder="Tu respuesta" type="text" style="color: black" class="mt-2 w-full text-black bg-white border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="phone" />
+                    <x-input-error for="phone" class="mt-2" />
+                </div>
+                <div>
+                    <x-label for="department" value="Dirección o Dpto" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+
+                    <select id="department" class="mt-2 w-full rounded-lg text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition cursor-pointer" wire:model="department">
+                        <option selected value=''>Elige</option>
+                        @foreach ($departmentsOptions as $department)
+                            <option value='{{ $department->value }}'>{{ $department->label() }}</option>
+                        @endforeach
+                    </select>
+                    <x-input-error for="department" class="mt-2" />
+                </div>
+                <div>
+                    <x-label for="content" value="Solicitud" required="true" class="text-lg text-blue-900 font-semibold px-2"/>
+                    <textarea id="content" placeholder="Describe tu solicitud" class="mt-2 w-full h-28 rounded-lg resize-none text-black bg-white border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition" wire:model="content"></textarea>
+                    <x-input-error for="content" class="mt-2" />
+                </div>
+                <div class="pt-4 flex justify-end">
+                    <x-input-error for="rateLimit" class="mt-2 me-auto text-lg"/>
+                    <x-input-error for="connectionError" class="mt-2 me-auto text-lg"/>
+                    <x-button
+                        wire:loading.attr='disabled'
+                        wire:loading.class.remove='transition-all duration-200 ease-in-out '
+                        class="bg-blue-800 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all duration-200 ease-in-out text-lg disabled:bg-green-600 disabled:hover:bg-green-600"
+                        :disabled="$formDisabled">
+                        {{ $formDisabled ? 'Enviado' : 'Enviar' }}
+                    </x-button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,7 @@
         "php": "^8.1",
         "amendozaaguiar/laravel-lat-es": "^11.0",
         "amendozaaguiar/laraveles-spanish-for-jetstream": "^1.7",
+        "danharrin/livewire-rate-limiting": "^2.1",
         "guzzlehttp/guzzle": "^7.2",
         "irazasyed/telegram-bot-sdk": "^3.14",
         "laravel/framework": "^10.10",

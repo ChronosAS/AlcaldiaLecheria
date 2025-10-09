@@ -72,13 +72,6 @@ class Create extends Component
 
     public function save()
     {
-        if($this->images)
-        {
-            foreach($this->images as $index => $image)
-            {
-                $this->images[$index]['name'] = $image['image']->getClientOriginalName();
-            }
-        }
 
         $this->validate([
             'title' => ['required','string','max:150'],
@@ -102,6 +95,14 @@ class Create extends Component
             'images.required' => 'Ingrese un minimo de 1 imagen.',
             'images.*.image.required' => 'El campo de imagen no puede estar vacio.',
         ]);
+
+        if($this->images)
+        {
+            foreach($this->images as $index => $image)
+            {
+                $this->images[$index]['name'] = $image['image']->getClientOriginalName();
+            }
+        }
 
         if($this->content){
             tap(Post::create([

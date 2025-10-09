@@ -1,40 +1,10 @@
-<!-- Navbar -->
-<div x-data="{ contact: false, showBar: false, route: '{{ Route::currentRouteName() }}' }">
-    <nav
-      :class="{ 'bg-blue-900 shadow transition duration-100' : showBar, 'bg-blue-900 sm:bg-transparent' : !showBar }"
-      @scroll.window="
-        showBar = (window.pageYOffset > 20)
-            ? true
-            : false,
-        contact = ((route === 'app') && (window.pageYOffset > document.querySelector('#contact').getBoundingClientRect().top))
-            ? true
-            : false"
-      class=" flex-no-wrap z-10 fixed top-0 flex w-full items-center justify-between py-2 sm:flex-wrap sm:justify-start sm:py-4"
-      >
-      <div class="flex w-full flex-wrap items-center justify-between px-3 text-neutral-200">
-        <!-- Hamburger button for mobile view -->
-        <button
-          class="block border-0 bg-transparent px-2  hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 sm:hidden"
-          type="button"
-          data-twe-collapse-init
-          data-twe-target="#navbarSupportedContent1"
-          aria-controls="navbarSupportedContent1"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <!-- Hamburger icon -->
-          <span class="[&>svg]:w-7">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-7 w-7">
-              <path
-                fill-rule="evenodd"
-                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                clip-rule="evenodd" />
-            </svg>
-          </span>
-        </button>
+<!-- Minimalist Navbar Example -->
+<nav x-data="{ showBar: false, scrolled: false }"
+     x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 10 })"
+     :class="scrolled ? 'bg-blue-900 shadow-lg backdrop-blur-none -translate-y-0 opacity-100' : 'bg-transparent shadow-none  -translate-y-2 opacity-90'"
+     class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out transform">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+        <!-- Mobile Logo -->
 
         <!-- Collapsible navigation container -->
         <div
@@ -63,79 +33,118 @@
                             VDV2024
                 </a>
             </li>
-            <!-- About me link -->
-            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 md:px-0 xl:px-2 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 "
-                href="http://200.41.118.109/appweb/"
-                target="_blank"
-                data-twe-nav-link-ref
-                >DECLARACIÓN EN LÍNEA</a
-              >
-            </li>
-            <!-- Testimonials link -->
-            @if (request()->routeIs('app'))
-                <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-                <a
-                    class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400  focus:text-neutral-300 md:px-0 xl:px-2 sm:px-2 [&.active]:text-blue-500"
-                    :class="{ 'active': contact }"
-                    href="#contact"
-                    data-twe-nav-link-ref
-                    >ATENCIÓN AL CIUDADANO</a>
+            @if(Route::currentRouteName() === 'app')
+                <li>
+                    <a href="#contact" class="hover:text-blue-300 transition flex items-center space-x-2">
+                        <!-- Chat SVG -->
+                        <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 21l1.8-4A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                        <span>Atención</span>
+                    </a>
                 </li>
             @endif
-            <!-- Contact link -->
-            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 sm:px-2 md:px-0 xl:px-2 [&.active]:text-blue-500"
-                href="{{ route('app.news') }}"
-                data-twe-nav-link-ref
-                >NOTICIAS</a>
-            </li>
-            <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class="transition duration-200  hover:ease-in-out  disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 focus:text-neutral-300 md:px-0 xl:px-2 sm:px-2 [&.active]:text-blue-500"
-                href="{{ route('app.civil-registry') }}"
-                data-twe-nav-link-ref
-                >REGISTRO CIVIL</a>
-            </li>
-            {{-- <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-              <a
-                class="transition duration-200  hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none text-neutral-200 hover:text-blue-400 sm:px-2 [&.active]:text-blue-500"
-                href="{{ route('app.directives') }}"
-                data-twe-nav-link-ref>DIRECTORIO</a>
-            </li> --}}
-            <!-- information link -->
-             <li class="mb-4 sm:mb-0 sm:pe-2" data-twe-nav-item-ref>
-                <a
-                    class=" transition duration-200 cursor-pointer hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 md:px-0 xl:px-2 sm:px-2  [&.active]:text-blue-500 {{ (request()->routeIs('app.info') || request()->routeIs('app.ordinances')) ? 'active' : '' }}"
-                    data-twe-nav-link-ref
-                    id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" type="button">NUESTRO MUNICIPIO
+            <li>
+                <a href="{{ route('app.news') }}" class="hover:text-blue-300 transition flex items-center space-x-2">
+                    <!-- Newspaper SVG -->
+                    <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect width="20" height="14" x="2" y="5" rx="2" ry="2"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 9h8M8 13h6"/>
+                    </svg>
+                    <span>Noticias</span>
                 </a>
-                <div id="dropdownDelay" class="z-10 hidden divide-y divide-blue-100  shadow w-44 bg-blue-800">
-                    <ul class="py-2 text-sm text-white" aria-labelledby="dropdownDelayButton">
-                    <li>
-                        <a  class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.info') ? 'active pointer-events-none' : '' }} text-lg font-sans" href="{{ route('app.info') }}" >Historia y Simbolos</a>
-                    </li>
-                    {{-- <li>
-                        <a href="{{ route('app.ordinances') }}" class=" transition duration-200 hover:ease-in-out motion-reduce:transition-none hover:text-blue-400 focus:text-neutral-300 sm:px-2 [&.active]:text-blue-500 {{ request()->routeIs('app.ordinances') ? 'active pointer-events-none' : '' }} text-lg font-sans">Ordenanzas</a>
-                    </li> --}}
-                    </ul>
-                </div>
             </li>
-          </ul>
+            <li>
+                <a href="{{ route('app.civil-registry') }}" class="hover:text-blue-300 transition flex items-center space-x-2">
+                    <!-- User SVG -->
+                    <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="7" r="4"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.5 21a8.38 8.38 0 0113 0"/>
+                    </svg>
+                    <span>Registro Civil</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('app.info') }}" class="hover:text-blue-300 transition flex items-center space-x-2">
+                    <!-- Info SVG -->
+                    <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                    <span>Nuestro Municipio</span>
+                </a>
+            </li>
+        </ul>
+        <!-- Social Icons -->
+        <div class="flex items-center space-x-4">
+            <a href="https://x.com/Urbanejalcaldia" target="_blank" class="text-white hover:text-black text-2xl">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/alcaldiadelecheria/" target="_blank"
+               class="inline-flex items-center justify-center text-white text-2xl rounded-md
+                      hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 transition">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" class="text-white hover:text-red-500 text-2xl">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+        <!-- Hamburger for Mobile -->
+        <button class="md:hidden text-white focus:outline-none" @click="showBar = !showBar">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div x-show="showBar" x-transition class="md:hidden bg-blue-900/90 backdrop-blur-md px-4 py-4 space-y-4 text-lg font-semibold">
+        <a href="http://200.41.118.109/appweb/" target="_blank" class=" text-white hover:text-blue-500 flex items-center space-x-2">
+            <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 7V3a1 1 0 011-1h8a1 1 0 011 1v18a1 1 0 01-1 1H8a1 1 0 01-1-1v-4"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10"/>
+            </svg>
+            <span>Declaración</span>
+        </a>
+        <a href="#contact" class=" text-white hover:text-blue-500 flex items-center space-x-2">
+            <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 21l1.8-4A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+            <span>Atención</span>
+        </a>
+        <a href="{{ route('app.news') }}" class=" text-white hover:text-blue-500 flex items-center space-x-2">
+            <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect width="20" height="14" x="2" y="5" rx="2" ry="2"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 9h8M8 13h6"/>
+            </svg>
+            <span>Noticias</span>
+        </a>
+        <a href="{{ route('app.civil-registry') }}" class=" text-white hover:text-blue-500 flex items-center space-x-2">
+            <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="7" r="4"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.5 21a8.38 8.38 0 0113 0"/>
+            </svg>
+            <span>Registro Civil</span>
+        </a>
+        <a href="{{ route('app.info') }}" class=" text-white hover:text-blue-500 flex items-center space-x-2">
+            <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-4M12 8h.01"/>
+            </svg>
+            <span>Nuestro Municipio</span>
+        </a>
+        <div class="flex items-center space-x-4 pt-2">
+            <a href="https://x.com/Urbanejalcaldia" target="_blank" class="text-white hover:text-blue-500 text-2xl">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/alcaldiadelecheria/" target="_blank"
+               class="inline-flex items-center justify-center text-white text-2xl rounded-md
+                      hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 transition">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" class="text-white hover:text-red-500 text-2xl">
+                <i class="fab fa-youtube"></i>
+            </a>
         </div>
 
-        <!-- Right elements -->
-        <div class="relative flex items-center">
-            <div class="m-2 text-center text-xl space-x-3">
-                <a class="btn btn-lg text-white text-blak text-center sm:text-center  "  href="https://x.com/Urbanejalcaldia" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a class="btn btn-lg text-violet-400 text-center sm:text-center"  href="https://www.instagram.com/alcaldiadelecheria/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-lg text-red-500 text-center sm:text-center "  href="https://www.youtube.com/@alcaldiadelecheria9429" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-      </div>
-    </nav>
-</div>
-
-<!-- Navbar -->
+    </div>
+</nav>
