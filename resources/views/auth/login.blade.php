@@ -36,17 +36,17 @@
                     ¿No tienes una cuenta?
                 </a>
             </div> --}}
-            {{-- <div class="flex items-center justify-between ">
-                @if (Route::has('password.request'))
+             <div class="flex items-center justify-between ">
+                {{-- @if (Route::has('password.request'))
                     <a class="underline text-sm text-white   hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 " href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
-                @endif
+                @endif --}}
 
                 <x-button class="bg-blue-600 ms-4 text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2">    
                     {{ __('Login') }}
                 </x-button>
-            </div> --}}
+            </div> 
         </form>
     </x-authentication-card>
 </x-blank-layout>
