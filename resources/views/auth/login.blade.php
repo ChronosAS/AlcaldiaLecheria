@@ -25,28 +25,28 @@
                 <x-input id="password"  style="color: black" class="block mt-1 w-full dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-500  focus:ring-blue-500 dark:focus:ring-blue-600 bg-white" type="password" name="password" required autocomplete="current-password" style="color:black"/>
             </div>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
+            <div class=" mt-4 flex items-center justify-between">
+                {{-- <label for="remember_me" class="flex items-center">
                     <x-checkbox id="remember_me" name="remember" class="focus:ring-blue-600 dark:focus:ring-blue-500 dark:focus:ring-offset-blue-300 dark:bg-white border-gray-300 dark:border-gray-700 text-blue-500" />
                     <span class="ms-2 text-sm text-white dark:text-white ">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-            <div class="">
+                </label> --}}
+            
+            {{-- <div class="">
                 <a class="underline text-sm text-white   hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 " href="{{ route('register') }}">
                     ¿No tienes una cuenta?
                 </a>
-            </div>
-            <div class="flex items-center justify-between ">
-                @if (Route::has('password.request'))
+            </div> --}}
+             
+                {{-- @if (Route::has('password.request'))
                     <a class="underline text-sm text-white   hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 " href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
-                @endif
+                @endif --}}
 
                 <x-button class="bg-blue-600 ms-4 text-white hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2">    
                     {{ __('Login') }}
                 </x-button>
-            </div>
+            </div> 
         </form>
     </x-authentication-card>
 </x-blank-layout>

@@ -47,13 +47,13 @@
             @endif
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-white dark:text-white hover:text-blue-500 dark:hover:text-blue-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 dark:focus:ring-offset-blue-400" href="{{ route('login') }}">
+                {{-- <a class="underline text-sm text-white dark:text-white hover:text-blue-500 dark:hover:text-blue-500 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 dark:focus:ring-offset-blue-400" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
 
                 <x-button class="ms-4 text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2">
                     {{ __('Register') }}
-                </x-button>
+                </x-button> --}}
             </div>
         </form>
     </x-authentication-card>
