@@ -55,27 +55,27 @@
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="name" value="{{ __('Name') }}" />
-            <x-profile-input id="name" type="text" style="color: black" class="mt-1 block w-full dark:bg-white dark:text-black  bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="state.name" required autocomplete="name" />
+            <x-profile-input id="name" type="text" style="color: black" class="mt-1 block w-full   bg-white text-black focus:border-orange-500 focus:ring-orange-600" wire:model="state.name" required autocomplete="name" />
             <x-input-error for="name" class="mt-2" />
         </div>
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="email" value="{{ __('Email') }}" />
-            <x-profile-input id="email" type="email" style="color: black" class="mt-1 block w-full dark:bg-white dark:text-black bg-white text-black focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" wire:model="state.email" required autocomplete="username" />
+            <x-profile-input id="email" type="email" style="color: black" class="mt-1 block w-full  bg-white text-black focus:border-orange-500 focus:ring-orange-600" wire:model="state.email" required autocomplete="username" />
             <x-input-error for="email" class="mt-2" />
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) && ! $this->user->hasVerifiedEmail())
-                <p class="text-sm mt-2 dark:text-white">
+                <p class="text-sm mt-2 text-white">
                     {{ __('Your email address is unverified.') }}
 
-                    <button type="button" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-orange-600 focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600" wire:click.prevent="sendEmailVerification">
+                    <button type="button" class="underline text-sm text-gray-400 hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-orange-600 focus:border-orange-500 focus:ring-orange-600" wire:click.prevent="sendEmailVerification">
                         {{ __('Click here to re-send the verification email.') }}
                     </button>
                 </p>
 
                 @if ($this->verificationLinkSent)
-                    <p class="mt-2 font-medium text-sm text-green-600 dark:text-green-400">
+                    <p class="mt-2 font-medium text-sm text-green-400">
                         {{ __('A new verification link has been sent to your email address.') }}
                     </p>
                 @endif
@@ -88,7 +88,7 @@
             {{ __('Saved.') }}
         </x-action-message>
 
-        <x-button wire:loading.attr="disabled" wire:target="photo" class="focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600 dark:focus:ring-offset-orange-600">
+        <x-button wire:loading.attr="disabled" wire:target="photo" class="focus:border-orange-500 focus:ring-orange-600 focus:ring-offset-orange-600">
             {{ __('Save') }}
         </x-button>
     </x-slot>
