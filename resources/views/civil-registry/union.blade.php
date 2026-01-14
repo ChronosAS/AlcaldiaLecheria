@@ -64,18 +64,12 @@
                                 <div><h1 class="text-black text-2xl font-extrabold mb-4">Requisitos</h1></div>
                                 <ul class="max-w-xl text-md font-medium text-black bg-white border border-blue-200 rounded-lg shadow">
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg">1.- Imprimir y llenar el Formato de solicitud (En Letra Molde Legible).</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300">2.- Presentar Original y Copia de algún documento que pruebe fehacientemente que residen legalmente en el municipio:<br>
-                                        - Recibo de Servicio Público a nombre de alguno de los solicitantes.<br>
-                                        - Documento de Propiedad<br>
-                                        - Contrato de Arrendamiento<br>
-                                        - Rif personal actualizado<br>
-                                        - Constancia de residencia del condominio o consejo comunal.
+                                    <li class="w-full px-4 py-2 border-b border-blue-300">2.- Presentar Original y Copia de de la Constancia de Residencia del Condominio o Consejo Comunal.
                                     </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300">3.- Presentar original y dos (2) copias de las cédulas de identidad de los interesados.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300">4.- Copias de las Cédulas de Identidad de dos (2) testigos mayores de 21 años, que no sean familiares, los cuales deben estar presentes el día indicado. (OBLIGATORIO).</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300">5.- Datos de los padres o copia de la cédula de identidad.</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300">6.- En caso de tener hijos procreados bajo la Unión Estable de Hecho presentar copias de las Actas de Nacimientos (así sean mayores de edad).</li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300">7.- En caso de ser divorciados presentar Original y Copia de sentencia de divorcio (OBLIGATORIO).</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300">5.- En caso de tener hijos procreados bajo la Unión Estable de Hecho presentar copias de las Actas de Nacimientos (así sean mayores de edad).</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300">6.- En caso de ser divorciados presentar Original y Copia de sentencia de divorcio (OBLIGATORIO).</li>
                                 </ul>
                             </div>
                             <div 

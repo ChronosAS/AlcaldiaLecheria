@@ -78,8 +78,8 @@
                         <div class="px-2 py-4 text-slate-700 ">
                             <div x-show="selectedTab === 'requirements'" id="tabpanelRequirements" role="tabpanel" aria-label="requirements" class="text-center">
                                 <ul class="max-w-3xl text-md font-medium  text-black bg-white border border-blue-200 rounded-lg">
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Imprimir y llenar el Formato (En Letra Molde Legible) después que tome la Cita.  <br> <a href="{{ asset('assets/docs/civil-registry/matrimonios.pdf') }}" target="_blank" class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar </a></li>
-                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Adicionalmente, el interesado debe presentar cualquier documento que pruebe que alguno de los contrayentes o ambos residen legalmente en el Municipio..</li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg ">1.- Imprimir y llenar el Formato (En Letra Molde Legible)  <br> <a href="{{ asset('assets/docs/civil-registry/matrimonios.pdf') }}" target="_blank" class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar </a></li>
+                                    <li class="w-full px-4 py-2 border-b border-blue-300 ">2.- Presentar constancia de residencia de algunos de los contrayentes (Condominio o Consejo Comunal)</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">3.- Presentar original y 2 copias de las cédulas de identidad de los contrayentes.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">4.- Partidas de nacimiento originales y copias de ambos contrayentes.</li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 ">5.- Cartas de soltería de ambos contrayentes.<br/><a href="{{ asset('assets/docs/civil-registry/carta-de-solteria-matrimonios.pdf') }}" target="_blank" class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar </a></li>
@@ -123,11 +123,11 @@
                                 id="tabpaneArticle" role="tabpanel" aria-label="article" class="text-center">
                                 <ul class="max-w-3xl text-md font-medium text-black bg-white border border-blue-200 rounded-lg shadow space-y-0">
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg transition-all duration-200 hover:bg-blue-50">
-                                        1.- Imprimir y llenar el Formato (En Letra Molde Legible) después que tome la Cita. <br/>
+                                        1.- Imprimir y llenar el Formato (En Letra Molde Legible)  <br/>
                                         <a href="{{ asset('assets/docs/civil-registry/matrimonios.pdf') }}" target="_blank" class="cursor-pointer text-blue-700 hover:text-blue-500">Descargar </a>
                                     </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 transition-all duration-200 hover:bg-blue-50">
-                                        2.- Adicionalmente, el interesado debe presentar cualquier documento que pruebe que alguno de los contrayentes o ambos residen legalmente en el Municipio.
+                                        2.- Presentar constancia de residencia de algunos de los contrayentes (Condominio o Consejo Comunal)
                                     </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 transition-all duration-200 hover:bg-blue-50">
                                         3.- Presentar original y 2 copias de las cédulas de identidad de los contrayentes.
