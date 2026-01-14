@@ -68,7 +68,7 @@
                         {{ __('Added.') }}
                     </x-action-message>
 
-                    <x-button>
+                    <x-button class="bg-green-600 hover:bg-green-500 focus:bg-green-700 focus:ring-green-800 text-white">
                         {{ __('Add') }}
                     </x-button>
                 </x-slot>

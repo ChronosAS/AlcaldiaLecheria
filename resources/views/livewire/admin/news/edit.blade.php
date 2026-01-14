@@ -84,7 +84,7 @@
             <x-slot name="actions">
                 <div class="flex mx-3 space-x-3 items-center text-white">
                     <x-custom-checkbox name="status" title="Borrador" value="true"/>
-                    <x-button>
+                    <x-button class="bg-yellow-600 hover:bg-yellow-500 focus:bg-yellow-700 focus:ring-yellow-800 text-white">
                         Actualizar
                     </x-button>
                     <x-button-href wire:navigate route="{{ route('admin.news.index') }}">Regresar</x-button-href>

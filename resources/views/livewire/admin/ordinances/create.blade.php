@@ -34,7 +34,7 @@
 
             <x-slot name="actions">
                 <div class="">
-                    <x-button data-twe-ripple-init data-twe-ripple-color="light">
+                    <x-button data-twe-ripple-init data-twe-ripple-color="light" class="bg-green-600 hover:bg-green-500 focus:bg-green-700 focus:ring-green-800 text-white">
                         Agregar
                     </x-button>
                     <a class="inline-flex items-center px-4 py-2 bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-gray-800 uppercase tracking-widest hover:bg-white focus:bg-white active:bg-gray-300 focus:outline-none focus:ring-2  focus:ring-offset-2focus:ring-offset-gray-800 transition ease-in-out duration-150" wire:navigate href="{{ route('ordinance.index') }}">Regresar</a>
