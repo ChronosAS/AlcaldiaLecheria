@@ -63,10 +63,10 @@
                             >
                                 <ul class="max-w-xl text-md font-medium text-black bg-white border border-blue-200 rounded-lg shadow space-y-0">
                                     <li class="w-full px-4 py-2 border-b border-blue-300 rounded-t-lg transition-all duration-200 hover:bg-blue-50">
-                                        1.- Original y dos (2) copias de la Cédula de Identidad. En caso de ENVIAR A UN TERCERO emitir una autorización con copia de la Cédula.
+                                        1.- Original y dos (2) copias de la Cédula de Identidad. 
                                     </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 transition-all duration-200 hover:bg-blue-50">
-                                        2.- Presentar Original y Copia de algún documento que pruebe que es propietario o inquilino del lugar del cual sale la mudanza.
+                                        2.- Presentar Constancia de Condominio o Consejo Comunal.
                                     </li>
                                     <li class="w-full px-4 py-2 border-b border-blue-300 transition-all duration-200 hover:bg-blue-50">
                                         3.- Original y una (1) copia del inventario de los bienes a trasladar.
