@@ -7,7 +7,7 @@
         <x-validation-errors class="mb-4" />
 
         @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
+            <div class="mb-4 font-medium text-sm text-green-600 ">
                 {{ session('status') }}
             </div>
         @endif
@@ -17,18 +17,18 @@
 
             <div>
                 <x-label for="email" value="{{ __('Email') }}" class="text-white"/>
-                <x-input id="email"  style="color: black" class="block mt-1 w-full bg-white dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-500 focus:ring-blue-500 dark:focus:ring-blue-600" type="email" name="email" :value="old('email')" required autofocus autocomplete="username"  style="color:black"/>
+                <x-input id="email"  style="color: black" class="block mt-1 w-full bg-white  text-black  focus:border-blue-500  focus:ring-blue-600" type="email" name="email" :value="old('email')" required autofocus autocomplete="username"  style="color:black"/>
             </div>
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" class="text-white"/>
-                <x-input id="password"  style="color: black" class="block mt-1 w-full dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-500  focus:ring-blue-500 dark:focus:ring-blue-600 bg-white" type="password" name="password" required autocomplete="current-password" style="color:black"/>
+                <x-input id="password"  style="color: black" class="block mt-1 w-full  text-black  focus:border-blue-500  focus:ring-blue-600 bg-white" type="password" name="password" required autocomplete="current-password" style="color:black"/>
             </div>
 
             <div class=" mt-4 flex items-center justify-between">
                 {{-- <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" class="focus:ring-blue-600 dark:focus:ring-blue-500 dark:focus:ring-offset-blue-300 dark:bg-white border-gray-300 dark:border-gray-700 text-blue-500" />
-                    <span class="ms-2 text-sm text-white dark:text-white ">{{ __('Remember me') }}</span>
+                    <x-checkbox id="remember_me" name="remember" class="focus:ring-blue-600  focus:ring-offset-blue-300 bg-white yorder-gray-300 text-blue-500" />
+                    <span class="ms-2 text-sm text-white ">{{ __('Remember me') }}</span>
                 </label> --}}
             
             {{-- <div class="">

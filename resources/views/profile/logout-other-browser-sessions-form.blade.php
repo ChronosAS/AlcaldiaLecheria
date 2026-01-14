@@ -3,12 +3,12 @@
         {{ __('Browser Sessions') }}
     </x-slot>
 
-    <x-slot name="description" class="text-white dark:text-white">
+    <x-slot name="description" class="text-white">
         {{ __('Manage and log out your active sessions on other browsers and devices.') }}
     </x-slot>
 
     <x-slot name="content">
-        <div class="max-w-xl text-sm text-white dark:text-white">
+        <div class="max-w-xl text-sm text-white">
             {{ __('If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.') }}
         </div>
 
@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="ms-3">
-                            <div class="text-sm text-white dark:text-white">
+                            <div class="text-sm text-white">
                                 {{ $session->agent->platform() ? $session->agent->platform() : __('Unknown') }} - {{ $session->agent->browser() ? $session->agent->browser() : __('Unknown') }}
                             </div>
 

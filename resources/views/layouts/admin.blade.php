@@ -24,12 +24,12 @@
     </head>
     <body class="font-sans antialiased">
 
-        <div class="min-h-screen bg-white dark:bg-white">
+        <div class="min-h-screen bg-white">
             @livewire('navigation-menu')
             <x-banner/>
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-blue-900 dark:bg-blue-900 shadow">
+                <header class="bg-blue-900 shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-white">
                         {{ $header }}
                     </div>

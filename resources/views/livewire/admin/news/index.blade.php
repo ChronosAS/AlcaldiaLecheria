@@ -2,7 +2,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-blue-900 overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="p-6 lg:p-8 bg-blue-800 dark:bg-gradient-to-bl from-blue-700/50 dark:via-transparent border-b border-blue-700">
+                <div class="p-6 lg:p-8 bg-blue-800 bg-gradient-to-bl from-blue-700/50 via-transparent border-b border-blue-700">
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <div class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">
                             <label for="table-search" class="sr-only">Buscar</label>
@@ -10,7 +10,7 @@
                                 <div class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
                                     <svg class="w-5 h-5 text-black" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                                 </div>
-                                <input wire:model.live='search' type="text" name="search" id="search" class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar...">
+                                <input wire:model.live='search' type="text" name="search" id="search" class="block p-2 ps-10 text-sm  border  rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500  border-gray-600 placeholder-gray-400 text-black " placeholder="Buscar...">
                             </div>
                             <div class="grid w-full sm:w-auto sm:grid-cols-2 sm:grid-rows-1 sm:gap-4">
                                 <x-select
@@ -19,7 +19,7 @@
                                     placeholder="Estado"
                                     :values="App\Enums\News\PostStatus::options()"
                                 />
-                                <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
+                                <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white  focus:border-blue-400 focus:ring-2 focus:ring-blue-500 " wire:model.live="date" />
                             </div>
                         </div>
                         <x-table.table-rounded>
@@ -75,7 +75,7 @@
                             </x-slot>
                         </x-table.table-rounded>
                     </div>
-                    <div class="m-4 text-white dark:text-white">
+                    <div class="m-4 text-white ">
                         {{ $this->posts->links('vendor.livewire.tailwind') }}
                     </div>
                 </div>

@@ -22,16 +22,16 @@ $maxWidth = [
     class="jetstream-modal fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50"
     style="display: none;"
 >
-    <div x-show="show" class="fixed inset-0 transform transition-all {{ ($transparent) ? 'bg-opacity-0 dark:bg-opacity-0' : ''}}" x-on:click="show = false" x-transition:enter="ease-out duration-100 bg-opacity-0"
+    <div x-show="show" class="fixed inset-0 transform transition-all {{ ($transparent) ? 'bg-opacity-0 ' : ''}}" x-on:click="show = false" x-transition:enter="ease-out duration-100 bg-opacity-0"
                     x-transition:enter-start="opacity-0"
                     x-transition:enter-end="opacity-100"
                     x-transition:leave="ease-in duration-100"
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0">
-        <div class="absolute inset-0 bg-blue-500 dark:bg-blue-900 opacity-75"></div>
+        <div class="absolute inset-0 bg-blue-900 opacity-75"></div>
     </div>
 
-    <div x-show="show" class="mb-6 bg-white dark:bg-gray-800 rounded-lg overflow-hidden  transform transition-all sm:w-full {{ $maxWidth }} sm:mx-auto {{ ($transparent) ? 'bg-opacity-0 dark:bg-opacity-0' : 'shadow-xl'}}"
+    <div x-show="show" class="mb-6 bg-gray-800 rounded-lg overflow-hidden  transform transition-all sm:w-full {{ $maxWidth }} sm:mx-auto {{ ($transparent) ? 'bg-opacity-0 ' : 'shadow-xl'}}"
                     x-trap.inert.noscroll="show"
                     x-transition:enter="ease-out duration-100"
                     x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"

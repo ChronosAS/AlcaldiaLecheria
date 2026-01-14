@@ -28,7 +28,7 @@
 
             <x-input id="name"
                         type="text"
-                        class="mt-1 block w-full bg-white dark:bg-white text-black dark:text-black focus:border-blue-500 dark:focus:border-blue-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600"
+                        class="mt-1 block w-full bg-white  text-black focus:border-blue-600 focus:ring-2 focus:ring-blue-600"
                         wire:model="state.name"
                         :disabled="! Gate::check('update', $team)" 
                         style="color: black"/>
@@ -43,7 +43,7 @@
                 {{ __('Saved.') }}
             </x-action-message>
 
-            <x-button>
+            <x-button class="bg-green-600 hover:bg-green-500 focus:bg-green-700 focus:ring-green-800 text-white">
                 {{ __('Save') }}
             </x-button>
         </x-slot>

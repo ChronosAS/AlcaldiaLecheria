@@ -44,7 +44,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <x-input id="date" type="date" style="color: black" class="mt-2  sm:mt-1 flex 2xl:col-start-6 xl:col-start-5 md:col-start-5 w-full sm:w-[10rem]  xl:w-[10rem]  lg:w-[10rem] md:w-[10rem] 2xl:w-[10rem]  text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model.live="date" />
+                            <x-input id="date" type="date" style="color: black" class="mt-2  sm:mt-1 flex 2xl:col-start-6 xl:col-start-5 md:col-start-5 w-full sm:w-[10rem]  xl:w-[10rem]  lg:w-[10rem] md:w-[10rem] 2xl:w-[10rem]  text-black bg-white  focus:border-blue-500  focus:ring-2 focus:ring-blue-500 " wire:model.live="date" />
                         </div>
                     </div>
                 </x-slot>

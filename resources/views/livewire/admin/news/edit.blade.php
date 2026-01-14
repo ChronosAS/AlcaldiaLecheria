@@ -11,29 +11,29 @@
             <x-slot name="form">
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="title" value="Titulo" required="true" class="text-white"/>
-                    <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="title" />
+                    <x-input id="title"  type="text" style="color: black" class="mt-1 block w-full text-black bg-white  focus:border-blue-500  focus:ring-2 focus:ring-blue-500 " wire:model="title" />
                     <x-input-error for="title" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="subtitle" value="Sub Titulo" class="text-white"/>
-                    <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="subtitle" />
+                    <x-input id="subtitle" min="0" type="text" style="color: black" class="mt-1 block w-full text-black bg-white  focus:border-blue-500  focus:ring-2 focus:ring-blue-500 " wire:model="subtitle" />
                     <x-input-error for="subtitle" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="date" value="Fecha" required="true" class="text-white"/>
-                    <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500" wire:model="date" />
+                    <x-input id="date" type="date" style="color: black" class="mt-1 block w-full text-black bg-white  focus:border-blue-500  focus:ring-2 focus:ring-blue-500 " wire:model="date" />
                     <x-input-error for="date" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <x-label for="author" value="Autor"  class="text-white"/>
-                    <x-input style="color: black" wire:model='author' class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" type="text" id="author" name="author" />
+                    <x-input style="color: black" wire:model='author' class="mt-1 block w-full text-black bg-white  focus:border-blue-500  focus:ring-2 focus:ring-blue-500  rounded-md shadow-sm" type="text" id="author" name="author" />
                     <x-input-error for="author" class="mt-2" />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     {{-- <div wire:key="tags-select-version-{{ $iteration }}">
                         <div wire:ignore>
                             <x-label for="tags" value="Etiquetas" class="text-white"/>
-                            <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" id="tagsSelect">
+                            <select wire:model='postTags' multiple name="tags" class="mt-1 block w-full text-black bg-white  focus:border-blue-500  focus:ring-2 focus:ring-blue-500  rounded-md shadow-sm" id="tagsSelect">
                                 @forelse ($tags as $tag)
                                     <option value="{{ $tag->name }}">{{ $tag->name }}</option>
                                 @empty
@@ -46,7 +46,7 @@
                         Crear Etiqueta
                     </x-button> --}}
                     <x-label for="category" value="Categoria" required="true" class="text-white"/>
-                    <select wire:model.live='category' name="category" class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" id="categorySelect">
+                    <select wire:model.live='category' name="category" class="mt-1 block w-full text-black bg-white  focus:border-blue-500  focus:ring-2 focus:ring-blue-500  rounded-md shadow-sm" id="categorySelect">
                         <option selected value=''>Elija una categoria</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->value }}">{{ $category->label() }}</option>
@@ -56,7 +56,7 @@
 
                 {{-- <div class="col-span-6 sm:col-span-3">
                     <x-label for="user" value="Creado Por" required="true"/>
-                    <select class="mt-1 block w-full text-black bg-white dark:bg-white dark:text-black focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 rounded-md shadow-sm" wire:model='user' name="user" id="user">
+                    <select class="mt-1 block w-full text-black bg-white  focus:border-blue-500  focus:ring-2 focus:ring-blue-500  rounded-md shadow-sm" wire:model='user' name="user" id="user">
                         <option value="" selected disabled>Elija uno...</option>
                         @foreach ($users as $user)
                             <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="col-span-6">
                     @if (session()->has('message'))
-                        <p class='text-sm text-red-600 dark:text-red-400'>{{  session('message') }}</p>
+                        <p class='text-sm text-red-600 '>{{  session('message') }}</p>
                     @endif
                     <div wire:ignore class="pt-4">
                         <textarea
@@ -84,7 +84,7 @@
             <x-slot name="actions">
                 <div class="flex mx-3 space-x-3 items-center text-white">
                     <x-custom-checkbox name="status" title="Borrador" value="true"/>
-                    <x-button>
+                    <x-button class="bg-yellow-600 hover:bg-yellow-500 focus:bg-yellow-700 focus:ring-yellow-800 text-white">
                         Actualizar
                     </x-button>
                     <x-button-href wire:navigate route="{{ route('admin.news.index') }}">Regresar</x-button-href>

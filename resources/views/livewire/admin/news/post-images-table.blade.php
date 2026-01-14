@@ -1,7 +1,7 @@
 <div>
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead class='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
+        <table class="w-full text-sm text-left rtl:text-right text-gray-400">
+            <thead class='text-xs  uppercase  bg-gray-700 text-gray-400'>
                 <tr class="bg-blue-900 text-white">
                     <x-table.th class="text-white">
                         Imagenes
@@ -31,7 +31,7 @@
                     <x-table.td>
                         <div class="btn-group">
 
-                            <x-button type="button" class="bg-red-600 text-white focus:bg-red-700 dark:focus:bg-red-700 hover:bg-red-500 dark:hover:bg-red-500 dark:bg-red-600 border-red-600 dark:border-red-600" wire:click="deleteImage('{{ $image->uuid }}')" wire:confirm='Seguro que desea borrar esta imagen?' wire:loading.attr='disabled'>
+                            <x-button type="button" class="bg-red-600 text-white focus:bg-red-700  hover:bg-red-500  border-red-600" wire:click="deleteImage('{{ $image->uuid }}')" wire:confirm='Seguro que desea borrar esta imagen?' wire:loading.attr='disabled'>
                                 <i class="fas fa-window-close"></i>
                             </x-button>
 
@@ -78,16 +78,16 @@
                     <x-table.td>
                         <div class="btn-group">
                             @if ($index != 0)
-                                <x-button-href route="" class="bg-blue-500 text-white dark:bg-blue-500" wire:click.debounce.100ms="moveImageUp({{ $image->order_column }})" wire:loading.attr='disabled'>
+                                <x-button-href route="" class="bg-blue-500 text-white " wire:click.debounce.100ms="moveImageUp({{ $image->order_column }})" wire:loading.attr='disabled'>
                                     <i class="fas fa-arrow-up"></i>
                                 </x-button-href>
                             @endif
                             @if($index != count($images)-1)
-                                <x-button-href route="" class="bg-blue-500 text-white dark:bg-blue-500" wire:click.debounce.10000ms="moveImageDown({{ $image->order_column }})" wire:loading.attr='disabled'>
+                                <x-button-href route="" class="bg-blue-500 text-white " wire:click.debounce.10000ms="moveImageDown({{ $image->order_column }})" wire:loading.attr='disabled'>
                                     <i class="fas fa-arrow-down"></i>
                                 </x-button-href>
                             @endif
-                            <x-button-href route="" class="bg-red-600 text-white focus:bg-red-700 dark:focus:bg-red-700 hover:bg-red-500 dark:hover:bg-red-500 dark:bg-red-600 border-red-600 dark:border-red-600" wire:click.live="deleteImage({{ $index }})" wire:confirm='Seguro que desea borrar esta imagen?' wire:loading.attr='disabled'>
+                            <x-button-href route="" class="bg-red-600 text-white focus:bg-red-700  hover:bg-red-500   border-red-600 " wire:click.live="deleteImage({{ $index }})" wire:confirm='Seguro que desea borrar esta imagen?' wire:loading.attr='disabled'>
                                 <i class="fas fa-window-close"></i>
                             </x-button-href>
 
