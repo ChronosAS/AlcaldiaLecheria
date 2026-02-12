@@ -83,7 +83,7 @@ class ContactForm extends Component
         ];
 
         try {
-            Mail::to('leddinlozada@gmail.com')->queue(new ContactUsMail($data)); // atencionciudadano.lecheria@gmail.com
+            Mail::to('atencionalciudadano@lecheria.gov.ve')->queue(new ContactUsMail($data)); // atencionalciudadano@lecheria.gov.ve
         } catch (\Exception $e) {
             $this->addError('conectionError', 'Error al enviar el correo. Por favor, inténtelo de nuevo más tarde.');
             Log::error('Error sending contact form email: '.$e->getMessage());
