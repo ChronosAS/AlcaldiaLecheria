@@ -78,7 +78,7 @@
                                         1.- Original y cuatro (04) copias de la cédula de identidad del exponente, el cual debe ser un familiar directo (Padres, hijos o cónyuge).
                                     </li>
                                     <li class="w-full px-4 py-3 border-b border-blue-300 transition-all duration-200 hover:bg-blue-50">
-                                        2.- Original y cuatro (01) Copia del Certificado de defunción expedido por la entidad hospitalaria o clínica (debidamente firmada y sellado).
+                                        2.- Original y una (01) Copia del Certificado de defunción expedido por la entidad hospitalaria o clínica (debidamente firmada y sellado).
                                     </li>
                                     <li class="w-full px-4 py-3 border-b border-blue-300 transition-all duration-200 hover:bg-blue-50">
                                         3.- Cuatro (04) Copias de la Cédula de Identidad del difunto(a).
