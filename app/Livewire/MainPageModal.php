@@ -12,7 +12,7 @@ class MainPageModal extends Component
     #[On('show-ordinance')]
     public function toggleModal()
     {
-        $this->ordinanceModal = !$this->modalOpen;
+        $this->ordinanceModal = !$this->ordinanceModal;
     }
 
     public function render()
