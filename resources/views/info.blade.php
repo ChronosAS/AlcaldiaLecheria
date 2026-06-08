@@ -1,22 +1,18 @@
-<x-main-layout class="bg-blue-700">
+<x-main-layout class="bg-blue-700 mt-20">
     <div 
         x-data="{
             selectedTab: 'historia',
             underlineX: 0,
             underlineW: 0,
             headers: {
-                historia: 'Historia y Símbolos',
-                Himno: 'Himno Municipal',
+                historia: 'Historia',
+                Simbolos: 'Simbolos Municipal',
                 Escudo: 'Escudo Municipal',
                 Bandera: 'Bandera Municipal'
             }
         }"
     >
-        <x-main-header bg_img="../assets/img/lecheria-bg.jpg">
-            <h1 
-                class="text-7xl font-extrabold text-white drop-shadow-lg tracking-wide"
-                x-text="headers[selectedTab]"
-            >Historia y Símbolos</h1>
+        <x-main-header bg_img="../assets/img/lecheria-bg.jpg" class="hidden">
         </x-main-header>
         <div>
             <div 
@@ -28,10 +24,10 @@
                 class="relative flex flex-col items-center max-w-7xl mx-auto mt-8"
             >
                 <!-- Tab Buttons -->
-                <div class="flex flex-wrap justify-center sm:gap-8 bg-blue-900/95 rounded-xl shadow-2xl px-6 py-4 relative">
+                <div class="flex flex-wrap justify-center font-sans font-medium sm:gap-4 bg-blue-900/95 rounded-3xl shadow-2xl px-2 py-2 relative">
                     <template x-for="tab in [
                         { key: 'historia', label: 'Historia' },
-                        { key: 'Himno', label: 'Himno' },
+                        { key: 'Simbolos', label: 'Simbolos' },
                         { key: 'Escudo', label: 'Escudo' },
                         { key: 'Bandera', label: 'Bandera' }
                     ]" :key="tab.key">
@@ -44,9 +40,9 @@
                                 underlineW = btn.offsetWidth;
                             "
                             :class="selectedTab === tab.key 
-                                ? 'text-blue-400 font-extrabold' 
-                                : 'text-white font-medium hover:text-blue-300 transition-colors'"
-                            class="relative px-6 py-2 text-2xl sm:text-3xl focus:outline-none transition-all duration-300"
+                                ? 'text-blue-400 ' 
+                                : 'text-white font-sans font-medium hover:text-blue-300 transition-colors'"
+                            class="relative px-4 py-2 text-xl sm:text-xl focus:outline-none transition-all duration-300"
                             :aria-selected="selectedTab === tab.key"
                             :tabindex="selectedTab === tab.key ? '0' : '-1'"
                             role="tab"
@@ -54,10 +50,7 @@
                         ></button>
                     </template>
                     <!-- Animated Underline -->
-                    <span 
-                        class="absolute bottom-0 h-1 bg-blue-400 rounded transition-all duration-300"
-                        :style="`left: ${underlineX}px; width: ${underlineW}px;`"
-                    ></span>
+                   
                 </div>
 
                 <!-- Tab Panels with Fade/Slide Animation -->
@@ -71,13 +64,13 @@
                         id="tabpanelHistoria" role="tabpanel" aria-label="historia">
                         <x-info.history/>
                     </div>
-                    <div x-show="selectedTab === 'Himno'" x-transition:enter="transition ease-out duration-500"
+                    <div x-show="selectedTab === 'Simbolos'" x-transition:enter="transition ease-out duration-500"
                         x-transition:enter-start="opacity-0 translate-y-8"
                         x-transition:enter-end="opacity-100 translate-y-0"
                         x-transition:leave="transition ease-in duration-300"
                         x-transition:leave-start="opacity-100 translate-y-0"
                         x-transition:leave-end="opacity-0 -translate-y-8"
-                        id="tabpanelHimno" role="tabpanel" aria-label="Himno">
+                        id="tabpanelSimbolos" role="tabpanel" aria-label="Simbolos">
                         <x-info.hymn/>
                     </div>
                     <div x-show="selectedTab === 'Escudo'" x-transition:enter="transition ease-out duration-500"
