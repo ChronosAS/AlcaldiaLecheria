@@ -1,5 +1,5 @@
 <x-main-layout class="bg-blue-700 mt-20">
-    <div 
+    <div
         x-data="{
             selectedTab: 'historia',
             underlineX: 0,
@@ -15,11 +15,11 @@
         <x-main-header bg_img="../assets/img/lecheria-bg.jpg" class="hidden">
         </x-main-header>
         <div>
-            <div 
-                x-init="$nextTick(() => { 
-                    let btn = $refs.historiaBtn; 
-                    underlineX = btn.offsetLeft; 
-                    underlineW = btn.offsetWidth; 
+            <div
+                x-init="$nextTick(() => {
+                    let btn = $refs.historiaBtn;
+                    underlineX = btn.offsetLeft;
+                    underlineW = btn.offsetWidth;
                 })"
                 class="relative flex flex-col items-center max-w-7xl mx-auto mt-8"
             >
@@ -28,8 +28,8 @@
                     <template x-for="tab in [
                         { key: 'historia', label: 'Historia' },
                         { key: 'Simbolos', label: 'Simbolos' },
-                        { key: 'Escudo', label: 'Escudo' },
-                        { key: 'Bandera', label: 'Bandera' }
+                        {{-- { key: 'Escudo', label: 'Escudo' },
+                        { key: 'Bandera', label: 'Bandera' } --}}
                     ]" :key="tab.key">
                         <button
                             :ref="tab.key === 'historia' ? 'historiaBtn' : null"
@@ -39,8 +39,8 @@
                                 underlineX = btn.offsetLeft;
                                 underlineW = btn.offsetWidth;
                             "
-                            :class="selectedTab === tab.key 
-                                ? 'text-blue-400 ' 
+                            :class="selectedTab === tab.key
+                                ? 'text-blue-400 '
                                 : 'text-white font-sans font-medium hover:text-blue-300 transition-colors'"
                             class="relative px-4 py-2 text-xl sm:text-xl focus:outline-none transition-all duration-300"
                             :aria-selected="selectedTab === tab.key"
@@ -50,7 +50,7 @@
                         ></button>
                     </template>
                     <!-- Animated Underline -->
-                   
+
                 </div>
 
                 <!-- Tab Panels with Fade/Slide Animation -->
@@ -71,9 +71,9 @@
                         x-transition:leave-start="opacity-100 translate-y-0"
                         x-transition:leave-end="opacity-0 -translate-y-8"
                         id="tabpanelSimbolos" role="tabpanel" aria-label="Simbolos">
-                        <x-info.hymn/>
+                        <x-info.symbols/>
                     </div>
-                    <div x-show="selectedTab === 'Escudo'" x-transition:enter="transition ease-out duration-500"
+                    {{-- <div x-show="selectedTab === 'Escudo'" x-transition:enter="transition ease-out duration-500"
                         x-transition:enter-start="opacity-0 translate-y-8"
                         x-transition:enter-end="opacity-100 translate-y-0"
                         x-transition:leave="transition ease-in duration-300"
@@ -90,7 +90,7 @@
                         x-transition:leave-end="opacity-0 -translate-y-8"
                         id="tabpanelBandera" role="tabpanel" aria-label="Bandera">
                         <x-info.flag/>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
