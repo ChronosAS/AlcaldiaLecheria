@@ -1,4 +1,4 @@
-<div class="my-10 space-y-6 px-4 mx-auto max-w-7xl">
+<div class="my-10 space-y-6 px-4 mx-auto max-w-8xl">
     <x-full-card>
         <x-slot name="title">
             <div class="text-2xl font-extrabold text-blue-900 justify-center">

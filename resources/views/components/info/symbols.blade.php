@@ -1,4 +1,4 @@
-<div class="my-10 space-y-6 px-4 mx-auto max-w-7xl">
+<div class="my-10 space-y-6 px-4 mx-auto max-w-8xl">
     <x-full-card >
         <x-slot name="title">
             <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
@@ -17,7 +17,7 @@
         </x-slot>
         <x-slot name="content">
             {{-- Bandera  --}}
-            <div class="font-serif m-5 space-y-8 text-justify tracking-wide   grid grid-cols-3 grid-rows-2 gap-4">
+            <div class="font-serif m-5 space-y-8 text-justify    grid grid-cols-3 grid-rows-2 gap-4">
                 <div class="flex items-center justify-center">
                     <img src="{{asset('assets/img/bandera.jpg')}}" 
                          class="h-[8rem] m-4 rounded-xl shadow-lg border-4 border-blue-200 transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-white" 
@@ -92,7 +92,7 @@
                 </div>
             </div>
             {{-- Escudo --}}
-            <div class="font-serif m-5 space-y-8 text-justify tracking-wide  grid grid-cols-3 grid-rows-2 gap-4">
+            <div class="font-serif m-5 space-y-8 text-justify   grid grid-cols-3 grid-rows-2 gap-4">
                 <div class="col-span-2">
                     <div class=" rounded-xl p-6 shadow-inner space-y-4 relative">
                         <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
@@ -153,6 +153,7 @@
                         procesión marina del oriente venezolano y que tanto
                         distingue a Lechería del resto de la región.
                     </p>
+                    <br>
                     <p>
                         El Segundo Cuartel, en síntesis, es un tributo a la
                         naturaleza y de exaltación a los valores de coraje,
@@ -181,6 +182,7 @@
                         debido a que el Astro Rey aparece representado tal y
                         como timbra el Escudo Estatal.
                     </p>
+                    <br>
                     <p>
                         El Ancla simboliza los deseos futuros de afirmación, paz y
                         progreso para el Municipio en tanto que el Anillo, con los
@@ -193,85 +195,98 @@
                 </div> 
             </div>
             {{-- Himno --}}
-            <div class="font-serif m-5 space-y-8 text-justify tracking-wide  ">
+            <div class="font-serif m-5  text-justify   ">
                 <div>
-                    <div>
-                        <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
+                    
+                    <div class=" text-blue-900 flex flex-col items-center justify-center">
+                        <p class="text-2xl font-extrabold">
                             Himno Municipal
-                        </div>
-                        <p class="mb-4">
-                            El Himno del Municipio Urbaneja, denominado <span class="font-bold text-blue-900">“Himno de Lechería”</span>, letra y música de José Enrique (Chelique) Sarabia y arreglos corales de Ali Agüero, fue establecido mediante Resolución Nº 018/2003 del 05 de Septiembre de 2003 y su letra es la siguiente:
                         </p>
-                        <div class="grid grid-cols-2 grid-rows-1 gap-4">
-                            <div class="rounded-xl p-6 shadow-inner text-center leading-loose space-y-6  relative">
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">I</span>
-                                    El clarín de los vientos<br>
-                                    nacido de dos mares<br>
-                                    anunció la llegada<br>
-                                    de un galeón español.
-                                </div>
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">II</span>
-                                    Buscaban el camino<br>
-                                    del mito del Dorado<br>
-                                    y el tropel aborigen<br>
-                                    en la lucha murió.
-                                </div>
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
-                                    Morro de la Magdalena<br>
-                                    vigía del Mar Caribe<br>
-                                    guardián de La Lechería<br>
-                                    de Maguey, arena y sal
-                                </div>
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">III</span>
-                                    Hacedores de patria<br>
-                                    de historia, de futuro<br>
-                                    sembraron esta tierra<br>
-                                    de paz y libertad.
-                                </div>
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">IV</span>
-                                    Ese rincón de Oriente<br>
-                                    sedal de pescadores<br>
-                                    y altar de compromiso<br>
-                                    hoy es nuestra ciudad.
-                                </div>
-                               
-                            </div>
-                            <div>
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
-                                    Morro de la Magdalena<br>
-                                    vigía del Mar Caribe<br>
-                                    guardián de La Lechería<br>
-                                    de Maguey, arena y sal
-                                </div>
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">V</span>
-                                    Los hijos de Urbaneja<br>
-                                    hoy somos pastores<br>
-                                    de un rebaño de sueños<br>
-                                    de esperanza y amor.
-                                </div>
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">VI</span>
-                                    Y por la gracia divina<br>
-                                    de la Virgen del Valle<br>
-                                    es Diego Bautista<br>
-                                    el blasón de honor.
-                                </div>
-                                <div>
-                                    <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
-                                    Morro de la Magdalena<br>
-                                    vigía del Mar Caribe<br>
-                                    guardián de La Lechería<br>
-                                    de Maguey, arena y sal
-                                </div>
-                            </div>
-                        </div>
+                        <p class="text-md">
+                            Letra y música: José Enrique “Chelique” Sarabia
+                        </p>
+                        <p class="text-md">
+                            Arreglos corales: Ali Agüero
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center my-4">
+                        <audio controls class="rounded-lg shadow-md border-2 border-blue-200 bg-white transition-all duration-300 hover:shadow-xl focus:outline-none">
+                            <source src="{{ asset('assets/audio/03 Himno Municipal completa.mp3') }}" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                    <p class="">
+                        El Himno del Municipio Urbaneja, denominado <span class="font-bold text-blue-900">“Himno de Lechería”</span>, letra y música de José Enrique (Chelique) Sarabia y arreglos corales de Ali Agüero, fue establecido mediante Resolución Nº 018/2003 del 05 de Septiembre de 2003 y su letra es la siguiente:
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="grid grid-cols-4 grid-rows-1 gap-4  font-serif ">
+                <div class="col-start-2">
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">I</span>
+                        El clarín de los vientos<br>
+                        nacido de dos mares<br>
+                        anunció la llegada<br>
+                        de un galeón español.
+                    </div>
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">II</span>
+                        Buscaban el camino<br>
+                        del mito del Dorado<br>
+                        y el tropel aborigen<br>
+                        en la lucha murió.
+                    </div>
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
+                        Morro de la Magdalena<br>
+                        vigía del Mar Caribe<br>
+                        guardián de La Lechería<br>
+                        de Maguey, arena y sal
+                    </div>
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">III</span>
+                        Hacedores de patria<br>
+                        de historia, de futuro<br>
+                        sembraron esta tierra<br>
+                        de paz y libertad.
+                    </div>
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">IV</span>
+                        Ese rincón de Oriente<br>
+                        sedal de pescadores<br>
+                        y altar de compromiso<br>
+                        hoy es nuestra ciudad.
+                    </div>
+                </div>
+                <div class="col-start-3">
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
+                        Morro de la Magdalena<br>
+                        vigía del Mar Caribe<br>
+                        guardián de La Lechería<br>
+                        de Maguey, arena y sal
+                    </div>
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">V</span>
+                        Los hijos de Urbaneja<br>
+                        hoy somos pastores<br>
+                        de un rebaño de sueños<br>
+                        de esperanza y amor.
+                    </div>
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">VI</span>
+                        Y por la gracia divina<br>
+                        de la Virgen del Valle<br>
+                        es Diego Bautista<br>
+                        el blasón de honor.
+                    </div>
+                    <div>
+                        <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
+                        Morro de la Magdalena<br>
+                        vigía del Mar Caribe<br>
+                        guardián de La Lechería<br>
+                        de Maguey, arena y sal
                     </div>
                 </div>
             </div>
