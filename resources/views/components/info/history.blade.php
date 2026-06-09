@@ -1,8 +1,7 @@
-<div class="my-10 space-y-6 px-4 mx-auto max-w-5xl">
+<div class="my-10 space-y-6 px-4 mx-auto max-w-7xl">
     <x-full-card>
         <x-slot name="title">
-            <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
-                <span class="inline-block w-2 h-8 bg-blue-400 rounded-full animate-pulse"></span>
+            <div class="text-2xl font-extrabold text-blue-900 justify-center">
                 Lechería: Historia de una ciudad modelo
             </div>
         </x-slot>
@@ -13,39 +12,50 @@
             </div>
         </x-slot>
         <x-slot name="content">
-            <div class="font-serif m-5 space-y-8">
-                <div>
-                    <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
-                        <i class="fas fa-landmark text-blue-400"></i>
-                        Sinopsis Histórica
-                    </h2>
-                    <div class=" rounded-xl p-6 shadow-inner text-justify leading-loose space-y-4 text-lg text-gray-800 relative">
-                        <p x-ref="sinopsisText">
+            <div class="font-serif m-5 ">
+                <div class="grid grid-cols-3 grid-rows-2  text-justify">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-60 w-60" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-60 w-60" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
+                    </div>
+                    <div class="col-span-2">
+                        <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
+                            <i class="fas fa-landmark text-Yellow-400"></i>
+                            Sinopsis Histórica
+                        </h2>
+                        <p >
                             Desde los tiempos prehispánicos hasta la actualidad, el territorio de 18 km²
-                            que hoy ocupa la Ciudad de Lechería siempre ha sido un lugar de encuentros
-                            y oportunidades.
+                            que hoy ocupa la Ciudad de Lechería siempre ha sido un lugar de encuentros y oportunidades.
+                            <br><br>
                             Así lo fue para la Cacica la Magdalena y los Cumanagotos que en armonía
                             vivieron con la naturaleza en El Morro; también lo fue para los conquistadores
                             Jerónimo de Ortal y Antonio Sedeño, quienes en busca del camino a El
                             Dorado se establecieron brevemente en 1535 en las Bocas del Río Neverí,
                             cuyo prospero Puerto de Barcelona atrajo a corsarios holandeses
                             especializados en el contrabando y, en especial, del aprovechamiento ilícito
-                            de las riquezas del “Oro Blanco”
-                            , la sal.
+                            de las riquezas del “Oro Blanco”, la sal.
+                            <br><br>
                             Hecho que obligó a la corona española a levantar, a fines del siglo XVIII, el
                             Fortín de La Magdalena; el cual fue visitado por Alejandro Von Humboltd “El
                             Primer Turista de El Morro” y cuya vista, al igual que los numerosos visitantes
                             que le precedieron, los han dejado encantados.
+                            <br><br>
                             Otros que se encontraron en estas tierras, fueron los patriotas y realistas
                             quedando para la historia los pasos de El Libertador, Simón Bolívar, en 1817 y
                             la toma efectuada por el General Rafael Urdaneta en 1819.
+                        </p>
+                    </div>
+                    <div class="col-span-2 row-start-2 text-justify    relative">
+                        <p>
                             El siglo XX se inició con la llegada de los margariteños.
+                            <br><br>
                             Estos pioneros que hacían vida entre las rancherías de El Morro y La Lechería,
                             vivieron de la venta de leche de las chivas ordeñadas en los corrales de Zoila
                             Rodríguez y Carmen Bustillos, pero también recibían ingresos del comercio del
                             pescado fresco y salado regalado por las bondades del mar y la salina que, tras
                             su modesta explotación artesanal, convirtió este gran territorio en un complejo
                             turístico.
+                            <br><br>
                             Gracias a la visión de Diego Bautista, cuyo desarrollo motivó que el 22 de enero
                             de 1992 fuese creado El Municipio Turístico El Morro Licenciado Diego Bautista
                             Urbaneja, teniendo como sede a la Ciudad de Lechería; la cual en los últimos
@@ -56,13 +66,20 @@
                             por Nuestra Virgen del Valle.
                         </p>
                     </div>
+                    <div class=" text-justify    relative">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-44 w-44" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="grid font-serif grid-cols-2 grid-rows-2">
                 <div>
                     <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
                         <i class="fas fa-signature text-blue-400"></i>
                         Origen del nombre Lechería
                     </h2>
-                    <div class=" rounded-xl p-6 shadow-inner text-justify leading-loose space-y-4 text-lg text-gray-800 relative">
+                    <div class=" rounded-xl p-6 shadow-inner text-justify  relative">
                         <p>
                             Según datos del cronista Rafael Armas Alfonzo, el nombre
                             de la capital municipal surgió a fines del siglo XIX, del
@@ -75,27 +92,31 @@
                             primeros pobladores de El Morro afirman que, por los lados
                             de la actual Plaza Bolívar, Zoila Rodríguez también tuvo su
                             lechera.
-                            Es importante señalar que, previa consulta al Instituto
-                            Geográfico de Venezuela Simón Bolívar, este contestó y
-                            recomendó mediante oficio Nº 780 de fecha 29 de mayo del
-                            2001, que se corrigieron las distorsiones sobre la
-                            denominación oficial e histórica de la capital municipal que
-                            es “Lechería” y no “Lecherías”. Tal posición está
-                            debidamente confirmada por los testimonios aportados por
-                            los primeros pobladores de la zona, por los libros
-                            parroquiales, y por los mapas oficiales de Cartografía
-                            Nacional; donde aparece en las ediciones de 1940, 1945 y
-                            1953 el nombre de “La Lechería” y en las ediciones de
-                            1960, 1972 y 1995 se señala simplemente “Lechería”.
                         </p>
                     </div>
+                </div>
+                <div>
+                    <p>
+                        Es importante señalar que, previa consulta al Instituto
+                        Geográfico de Venezuela Simón Bolívar, este contestó y
+                        recomendó mediante oficio Nº 780 de fecha 29 de mayo del
+                        2001, que se corrigieron las distorsiones sobre la
+                        denominación oficial e histórica de la capital municipal que
+                        es “Lechería” y no “Lecherías”. Tal posición está
+                        debidamente confirmada por los testimonios aportados por
+                        los primeros pobladores de la zona, por los libros
+                        parroquiales, y por los mapas oficiales de Cartografía
+                        Nacional; donde aparece en las ediciones de 1940, 1945 y
+                        1953 el nombre de “La Lechería” y en las ediciones de
+                        1960, 1972 y 1995 se señala simplemente “Lechería”.
+                    </p>
                 </div>
                 <div>
                     <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
                         <i class="fas fa-map-marked-alt text-blue-400"></i>
                         Origen del Nombre del Municipio
                     </h2>
-                    <div class=" rounded-xl p-6 shadow-inner text-justify leading-loose space-y-4 text-lg text-gray-800 relative">
+                    <div class=" rounded-xl p-6 shadow-inner text-justify leading-loose space-y-4   relative">
                         <p>
                             En Gaceta Oficial del Estado Anzoátegui de fecha 9 de julio
                             de 1953 fue creada la Parroquia Lic. Diego Bautista Urbaneja
@@ -108,18 +129,22 @@
                             El Morro Lic. Diego Bautista Urbaneja, publicado en la
                             Gaceta Oficial Nº (91) extraordinaria de fecha 22 de enero
                             de 1992.
-
+    
                         </p>
                     </div>
                 </div>
                 <div>
-                    
+                    <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-44 w-44" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
+                </div>
+            </div>
+            <div>
+                <div class="font-serif">
                     <h2 class="font-bold text-2xl text-blue-800 mb-4 flex items-center gap-2">
                         <i class="fas fa-calendar-alt text-blue-400"></i>
                         Linea de Tiempo de Lechería
                     </h2>
                     <div class="relative">
-                        <ul class="list-inside list-disc p-6  rounded-xl shadow-inner tracking-wide leading-relaxed space-y-4 text-justify text-lg" x-ref="timelineList">
+                        <ul class="list-inside list-disc p-6  rounded-xl shadow-inner tracking-wide leading-relaxed space-y-4 text-justify " x-ref="timelineList">
                             <li>
                                 <b class="text-blue-700"><u>04 de Marzo de 1734:</u></b> En Soria (España) nace el ingeniero militar Casimiro Isava Olivier. Fue quien elaboró los planos del Fortín de la Magdalena de El Morro.
                             </li>
