@@ -1,4 +1,4 @@
-<div class="my-10 space-y-6 px-4 mx-auto max-w-8xl">
+<div class="my-10 space-y-6 px-4 mx-auto max-w-7xl">
     <x-full-card >
         <x-slot name="title">
             <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-start-2 row-start-2">
-                    <div class=" rounded-xl p-6 shadow-inner space-y-4 relative">
+                    <div class="  p-6  space-y-4 relative">
                         <h2 class="font-bold text-2xl text-blue-800  flex items-center gap-2">
                             <i class="fas fa-award text-blue-400"></i>
                             Atributos
@@ -72,7 +72,7 @@
                         <i class="fas fa-award text-blue-400"></i>
                         Semiología
                     </h2>
-                    <div class=" rounded-xl p-6 shadow-inner space-y-4 relative">
+                    <div class=" p-6  space-y-4 relative">
                         <p>
                             Las franjas azules aluden
                             respectivamente al cielo y el mar,
@@ -92,9 +92,9 @@
                 </div>
             </div>
             {{-- Escudo --}}
-            <div class="font-serif  text-justify   grid grid-cols-3 grid-rows-2 gap-4">
-                <div class="col-span-2">
-                    <div class=" rounded-xl  shadow-inner  relative">
+            <div class="font-serif  text-justify  grid grid-cols-3 grid-rows-3 ">
+                <div class="col-span-2 row-span-2">
+                    <div class="   relative">
                         <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
                             Escudo Municipal
                         </div>
@@ -102,28 +102,40 @@
                             <i class="fas fa-flag text-blue-400"></i>
                             Atributos
                         </h2>
-                        <p>
-                            Campo de contorno germánico medio partido y cortado (dividido en tres
-                            cuarteles: dos superiores y uno inferior).
-                            El Primer Cuartel de campo Celeste (variación del Azur o azul heráldico)
-                            presenta la figura de Nuestra Señora del Valle del Espíritu Santo sobre un
-                            peñero de madera puesto de frente.
-                            El Segundo Cuartel de campo en Plata (blanco) muestra una cruz de madera
-                            cargada con una guirnalda de flores en Oro (amarillo), Plata (blanco), Gules
-                            (rojo), Azur (azul) y Sìnople (verde), acompañada por dos peces en Gules (rojo)
-                            puestos en palo (verticalmente).
-                            El Tercer Cuartel esmaltado en Azur (azul) presenta un paisaje donde aparece
-                            en primer plano el mar del cual surge una colina con un sol naciente al fondo,
-                            todo en sus colores.
-                        </p>
+                        <div class="  p-8  space-y-4 relative">
+                            <p>
+                                Campo de contorno germánico medio partido y cortado (dividido en tres
+                                cuarteles: dos superiores y uno inferior).
+                            </p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>
+                                El Primer Cuartel de campo Celeste (variación del Azur o azul heráldico)
+                                presenta la figura de Nuestra Señora del Valle del Espíritu Santo sobre un
+                                peñero de madera puesto de frente.
+                                </li>
+                                <li>
+                                El Segundo Cuartel de campo en Plata (blanco) muestra una cruz de madera
+                                cargada con una guirnalda de flores en Oro (amarillo), Plata (blanco), Gules
+                                (rojo), Azur (azul) y Sìnople (verde), acompañada por dos peces en Gules (rojo)
+                                puestos en palo (verticalmente).
+                                </li>
+                                <li>
+                                El Tercer Cuartel esmaltado en Azur (azul) presenta un paisaje donde aparece
+                                en primer plano el mar del cual surge una colina con un sol naciente al fondo,
+                                todo en sus colores.
+                                </li>
+                            </ul>
+                        </div>
                         
                     </div>
                 </div>
-                <div class="col-start-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-44 w-44" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
+                <div class="row-span-2 col-start-3 relative">
+                    <img src="{{asset('assets/img/Escudo.png')}}" 
+                         class="overflow-hidden p-6 m-6 " 
+                         alt="Escudo Municipal">
                 </div>
-                <div class="col-span-3 row-start-2">
-                    <div class=" rounded-xl p-6 shadow-inner space-y-4 relative">
+                <div class="col-span-3 row-start-3">
+                    <div class="  p-8 space-y-4 relative">
                         <p>
                             Como ornamentos exteriores, el blasón muestra un ancla en Plata acolada (puesta detrás) al Escudo y un anillo en Plata
                             (blanco) con borduras (bordes) en Azur (azul) que contiene las inscripciones: “MUNICIPIO TURÍSTICO EL MORRO
@@ -133,12 +145,12 @@
                     </div>
                 </div>
             </div>
+            <h2 class="font-bold text-2xl text-blue-800  flex items-center gap-2">
+                <i class="fas fa-award text-blue-400"></i>
+                Semiología
+            </h2>
             <div class="grid grid-cols-2 grid-rows-1 gap-4 font-serif">
-                <div>
-                    <h2 class="font-bold text-2xl text-blue-800  flex items-center gap-2">
-                        <i class="fas fa-award text-blue-400"></i>
-                        Semiología
-                    </h2>
+                <div class="space-y-4">
                     <p>
                         El Primer Cuartel simboliza los ideales de la buena fe, la
                         esperanza y la protección que por siempre ha brindado a
@@ -164,8 +176,8 @@
 
                     </p>
                 </div>
-                <div>
-                    <p>
+                <div class="space-y-4">
+                    <p >
                         El Tercer Cuartel, representa los valores de Justicia,
                         Lealtad y Perseverancia cuyas virtudes deben seguir los
                         pobladores de Lechería. Todo ello se representa en un
