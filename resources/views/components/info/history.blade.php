@@ -13,7 +13,7 @@
         </x-slot>
         <x-slot name="content">
             <div class="font-serif m-5 ">
-                <div class="grid grid-cols-3 grid-rows-2  text-justify">
+                <div class="grid grid-cols-3 grid-rows-1 gap-4 text-justify">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-60 w-60" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-60 w-60" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
@@ -45,7 +45,9 @@
                             la toma efectuada por el General Rafael Urdaneta en 1819.
                         </p>
                     </div>
-                    <div class="col-span-2 row-start-2 text-justify    relative">
+                </div>
+                <div class="grid grid-cols-3 grid-rows-1 gap-4 text-justify ">
+                    <div class="col-span-2 col-start-1 row-start-1 text-justify    relative">
                         <p>
                             El siglo XX se inició con la llegada de los margariteños.
                             <br><br>
@@ -66,20 +68,20 @@
                             por Nuestra Virgen del Valle.
                         </p>
                     </div>
-                    <div class=" text-justify    relative">
+                    <div class="col-start-3 row-start-1 text-justify    relative">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-44 w-44" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="grid font-serif grid-cols-2 grid-rows-2">
+            <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
+                <i class="fas fa-signature text-blue-400"></i>
+                Origen del nombre Lechería
+            </h2>
+            <div class="grid font-serif grid-cols-2 grid-rows-1 gap-4">
                 <div>
-                    <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
-                        <i class="fas fa-signature text-blue-400"></i>
-                        Origen del nombre Lechería
-                    </h2>
-                    <div class=" rounded-xl p-6 shadow-inner text-justify  relative">
+                    <div class="  text-justify  relative">
                         <p>
                             Según datos del cronista Rafael Armas Alfonzo, el nombre
                             de la capital municipal surgió a fines del siglo XIX, del
@@ -111,30 +113,34 @@
                         1960, 1972 y 1995 se señala simplemente “Lechería”.
                     </p>
                 </div>
-                <div>
-                    <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
-                        <i class="fas fa-map-marked-alt text-blue-400"></i>
-                        Origen del Nombre del Municipio
-                    </h2>
-                    <div class=" rounded-xl p-6 shadow-inner text-justify leading-loose space-y-4   relative">
-                        <p>
-                            En Gaceta Oficial del Estado Anzoátegui de fecha 9 de julio
-                            de 1953 fue creada la Parroquia Lic. Diego Bautista Urbaneja
-                            del Distrito (actual Municipio) Bolívar.
-                            Luego de un estudio de factibilidad económica y de acuerdo
-                            a la tasa poblacional mínima exigida por la Ley Orgánica de
-                            Régimen Municipal de 1989, La Asamblea Legislativa del
-                            Estado Anzoátegui aprobó la creación de la nueva
-                            municipalidad con el nombre oficial de Municipio Turístico
-                            El Morro Lic. Diego Bautista Urbaneja, publicado en la
-                            Gaceta Oficial Nº (91) extraordinaria de fecha 22 de enero
-                            de 1992.
-    
-                        </p>
+            </div>
+            <div>
+                <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
+                    <i class="fas fa-map-marked-alt text-blue-400"></i>
+                    Origen del Nombre del Municipio
+                </h2>
+                <div class="font-serif grid grid-cols-2 grid-rows-1 gap-4">
+                    <div>
+                        <div class=" rounded-xl p-6 shadow-inner text-justify leading-loose space-y-4   relative">
+                            <p>
+                                En Gaceta Oficial del Estado Anzoátegui de fecha 9 de julio
+                                de 1953 fue creada la Parroquia Lic. Diego Bautista Urbaneja
+                                del Distrito (actual Municipio) Bolívar.
+                                Luego de un estudio de factibilidad económica y de acuerdo
+                                a la tasa poblacional mínima exigida por la Ley Orgánica de
+                                Régimen Municipal de 1989, La Asamblea Legislativa del
+                                Estado Anzoátegui aprobó la creación de la nueva
+                                municipalidad con el nombre oficial de Municipio Turístico
+                                El Morro Lic. Diego Bautista Urbaneja, publicado en la
+                                Gaceta Oficial Nº (91) extraordinaria de fecha 22 de enero
+                                de 1992.
+        
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-44 w-44" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-44 w-44" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
+                    </div>
                 </div>
             </div>
             <div>
