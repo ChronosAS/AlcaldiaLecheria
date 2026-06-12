@@ -121,7 +121,7 @@
                 </h2>
                 <div class="font-serif grid grid-cols-2 grid-rows-1 gap-4">
                     <div>
-                        <div class=" rounded-xl p-6 shadow-inner text-justify leading-loose space-y-4   relative">
+                        <div class="  p-6  text-justify leading-loose space-y-4   relative">
                             <p>
                                 En Gaceta Oficial del Estado Anzoátegui de fecha 9 de julio
                                 de 1953 fue creada la Parroquia Lic. Diego Bautista Urbaneja
