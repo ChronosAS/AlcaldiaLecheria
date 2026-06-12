@@ -13,12 +13,12 @@
         </x-slot>
         <x-slot name="content">
             <div class="font-serif m-5 ">
-                <div class="grid grid-cols-3 grid-rows-1 gap-4 text-justify">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-justify">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-60 w-60" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-60 w-60" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
                     </div>
-                    <div class="col-span-2">
+                    <div class="md:col-span-2">
                         <h2 class="font-bold text-2xl text-blue-800 mb-2 flex items-center gap-2">
                             <i class="fas fa-landmark text-Yellow-400"></i>
                             Sinopsis Histórica
@@ -46,8 +46,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="grid grid-cols-3 grid-rows-1 gap-4 text-justify ">
-                    <div class="col-span-2 col-start-1 row-start-1 text-justify    relative">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-justify ">
+                    <div class="lg:col-span-2 text-justify relative">
                         <p>
                             El siglo XX se inició con la llegada de los margariteños.
                             <br><br>
@@ -68,7 +68,7 @@
                             por Nuestra Virgen del Valle.
                         </p>
                     </div>
-                    <div class="col-start-3 row-start-1 text-justify    relative">
+                    <div class="text-justify relative">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" class="h-44 w-44" clip-rule="evenodd" viewBox="0 0 512 512"><path fill="#1E88E5" d="M116.057 0h279.887C459.775 0 512 52.225 512 116.056v279.887C512 459.774 459.775 512 395.944 512H116.057C52.226 512 0 459.774 0 395.943V116.056C0 52.225 52.226 0 116.057 0z"/></svg>
                         </div>
@@ -79,9 +79,9 @@
                 <i class="fas fa-signature text-blue-400"></i>
                 Origen del nombre Lechería
             </h2>
-            <div class="grid font-serif grid-cols-2 grid-rows-1 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-serif">
                 <div>
-                    <div class="  text-justify  relative">
+                    <div class="text-justify relative">
                         <p>
                             Según datos del cronista Rafael Armas Alfonzo, el nombre
                             de la capital municipal surgió a fines del siglo XIX, del
@@ -119,9 +119,9 @@
                     <i class="fas fa-map-marked-alt text-blue-400"></i>
                     Origen del Nombre del Municipio
                 </h2>
-                <div class="font-serif grid grid-cols-2 grid-rows-1 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-serif">
                     <div>
-                        <div class="  p-6  text-justify leading-loose space-y-4   relative">
+                        <div class="p-6 text-justify leading-loose space-y-4 relative">
                             <p>
                                 En Gaceta Oficial del Estado Anzoátegui de fecha 9 de julio
                                 de 1953 fue creada la Parroquia Lic. Diego Bautista Urbaneja

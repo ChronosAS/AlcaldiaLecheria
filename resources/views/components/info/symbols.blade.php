@@ -18,7 +18,7 @@
         <x-slot name="content">
             {{-- Bandera  --}}
             <div>
-                <div class="font-serif  text-justify  grid grid-cols-3 grid-rows-1 gap-6">
+                <div class="font-serif text-justify grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div class="flex items-center justify-center">
                         <img src="{{asset('assets/img/bandera.jpg')}}" 
                              class="h-full w-full " 
@@ -46,9 +46,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 grid-rows-1 gap-4  font-serif mt-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-serif mt-6">
                     <div class="">
-                        <div class="     relative">
+                        <div class="relative">
                             <h2 class="font-bold text-2xl text-blue-800  flex items-center gap-2">
                                 <i class="fas fa-award text-blue-400"></i>
                                 Atributos
@@ -95,9 +95,9 @@
             </div>
             {{-- Escudo --}}
             <div class="font-serif ">
-                <div class="font-serif  text-justify  grid grid-cols-3 grid-rows-1  ">
-                    <div class="col-span-2 ">
-                        <div class="   relative">
+                <div class="font-serif text-justify grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 ">
+                        <div class="relative">
                             <div class="text-4xl font-extrabold text-blue-900 flex items-center gap-3">
                                 Escudo Municipal
                             </div>
@@ -132,7 +132,7 @@
                             
                         </div>
                     </div>
-                    <div class="col-start-3 pl-8">
+                    <div class="lg:col-start-3 lg:pl-8">
                         <img src="{{asset('assets/img/Escudo.png')}}" 
                             class="overflow-hidden size-80  " 
                             alt="Escudo Municipal">
@@ -154,7 +154,7 @@
                 </h2>
             </div>
             <div>
-                <div class="grid grid-cols-2 grid-rows-1  font-serif">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-serif">
                     <div class="space-y-4">
                         <p>
                             El Primer Cuartel simboliza los ideales de la buena fe, la
@@ -235,68 +235,68 @@
                         
                     </div>
                 </div>
-                <div class="grid grid-cols-6 grid-rows-1  font-serif ">
-                    <div class="col-start-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:xl:grid-cols-6 xl:grid-cols-6 2xl:xl:grid-cols-6 gap-6 font-serif ">
+                    <div class="space-y-6 col-start-3 xl:col-start-3 lg:col-start-3 2xl:col-start-3" >
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">I</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">I</span>
                             El clarín de los vientos<br>
                             nacido de dos mares<br>
                             anunció la llegada<br>
                             de un galeón español.
                         </div>
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">II</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">II</span>
                             Buscaban el camino<br>
                             del mito del Dorado<br>
                             y el tropel aborigen<br>
                             en la lucha murió.
                         </div>
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">Coro</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
                             Morro de la Magdalena<br>
                             vigía del Mar Caribe<br>
                             guardián de La Lechería<br>
                             de Maguey, arena y sal
                         </div>
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">III</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">III</span>
                             Hacedores de patria<br>
                             de historia, de futuro<br>
                             sembraron esta tierra<br>
                             de paz y libertad.
                         </div>
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">IV</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">IV</span>
                             Ese rincón de Oriente<br>
                             sedal de pescadores<br>
                             y altar de compromiso<br>
                             hoy es nuestra ciudad.
                         </div>
                     </div>
-                    <div class="col-start-4">
+                    <div class="space-y-6 col-start-4 xl:col-start-4 lg:col-start-4 2xl:col-start-4" >
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">Coro</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
                             Morro de la Magdalena<br>
                             vigía del Mar Caribe<br>
                             guardián de La Lechería<br>
                             de Maguey, arena y sal
                         </div>
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">V</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">V</span>
                             Los hijos de Urbaneja<br>
                             hoy somos pastores<br>
                             de un rebaño de sueños<br>
                             de esperanza y amor.
                         </div>
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">VI</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">VI</span>
                             Y por la gracia divina<br>
                             de la Virgen del Valle<br>
                             es Diego Bautista<br>
                             el blasón de honor.
                         </div>
                         <div>
-                            <span class="block text-blue-700 font-bold text-xl ">Coro</span>
+                            <span class="block text-blue-700 font-bold text-xl mb-2">Coro</span>
                             Morro de la Magdalena<br>
                             vigía del Mar Caribe<br>
                             guardián de La Lechería<br>
