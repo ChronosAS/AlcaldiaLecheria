@@ -13,7 +13,7 @@
         <!-- Desktop Links -->
         <ul class="hidden md:flex space-x-8 text-white text-lg font-semibold">
             <li>
-                <a href="http://200.41.118.109/appweb/" target="_blank" class="hover:text-blue-300 transition flex items-center space-x-2">
+                <a href="https://lecheria.net/appweb/" target="_blank" class="hover:text-blue-300 transition flex items-center space-x-2">
                     <!-- Document SVG -->
                     <svg class="w-7 h-7 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M7 7V3a1 1 0 011-1h8a1 1 0 011 1v18a1 1 0 01-1 1H8a1 1 0 01-1-1v-4"/>
