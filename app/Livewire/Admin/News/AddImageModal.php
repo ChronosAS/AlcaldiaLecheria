@@ -4,7 +4,6 @@ namespace App\Livewire\Admin\News;
 
 use App\Models\News\Post;
 use Livewire\Attributes\On;
-use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 
@@ -27,21 +26,31 @@ class AddImageModal extends Component
 
     public function saveImage()
     {
-        $this->name = $this->image->getClientOriginalName();
+
         $this->validate([
-            'image' => ['required','image','max:4096'],
+            'image' => ['required','file','image','max:4096'],
             'name' => ['nullable','string','max:50'],
             'description' => ['nullable','string','max:150'],
         ],[
             'name.max' => 'Nombre de la imagen no debe exeder 50 caracteres.',
             'image.required' => 'El campo de imagen no puede estar vacio.',
+            'image.file' => 'El archivo debe ser válido.',
             'image.image' => 'El archivo debe ser una imagen',
             'image.max' => 'Imagen exede el tamaño maximo de 4mb.'
         ]);
 
+        if (blank($this->image)) {
+            $this->addError('image', 'El campo de imagen no puede estar vacio.');
+
+            return;
+        }
+
+        $originalName = $this->image->getClientOriginalName();
+        $this->name = $originalName;
+
         $this->post->addMedia($this->image->getRealPath())
-            ->withCustomProperties(['descrip tion' => $this->description])
-            ->usingName($this->image->getClientOriginalName())
+            ->withCustomProperties(['description' => $this->description])
+            ->usingName($originalName)
             ->toMediaCollection('post-image');
 
         $this->reset(['image','description','addImage']);

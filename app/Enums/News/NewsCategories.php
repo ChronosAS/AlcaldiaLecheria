@@ -216,4 +216,9 @@ gestión social.')]
     // #[SubCategories([])]
     case TURISMO = 'turismo';
 
+    #[Label('Virgen del Valle')]
+    #[Description('Virgen del Valle.')]
+    // #[SubCategories([])]
+    case VDV = 'virgen del valle';
+
 }

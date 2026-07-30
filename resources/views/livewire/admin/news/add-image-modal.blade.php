@@ -24,7 +24,7 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-buttons.primary @click="$wire.saveImage()" title="Agregar" type="button"/>
+            <x-buttons.primary @click="$wire.saveImage()" wire:loading.attr='disabled' wire:loading.class='opacity-50 hover:bg-blue-700 cursor-progress' wire:target='image' title="Agregar" type="button"/>
         </x-slot>
     </x-dialog-modal>
 </div>
