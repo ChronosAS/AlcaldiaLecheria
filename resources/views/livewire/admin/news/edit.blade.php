@@ -65,7 +65,7 @@
                     <x-input-error for="user" class="mt-2" />
                 </div> --}}
                 <div class="col-span-6">
-                @livewire('admin.news.post-images-table',['post'=>$post])
+                    @livewire('admin.news.post-images-table',['post'=>$post])
                 </div>
                 <div class="col-span-6">
                     @if (session()->has('message'))
