@@ -13,7 +13,7 @@
                     Diseñado por: <span class="font-bold text-blue-900">Francia Zaurin</span>
                 </h1>
                 <div class="flex items-center justify-center">
-                    <img src="{{asset('assets/img/bandera.jpg')}}" 
+                    <img src="{{asset('assets/img/bandera.webp')}}" 
                          class="h-[8rem] m-4 rounded-xl shadow-lg border-4 border-blue-200 transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-white" 
                          alt="Bandera Municipal">
                 </div>
